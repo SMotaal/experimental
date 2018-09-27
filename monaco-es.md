@@ -1,11 +1,9 @@
 # Monaco ES (*Experimental*)
 
-Today I decided to take a couple of hours to strip out my (~3 months old) `monaco-es` aspect from the old project and gave it the first "live" test with support for modes.
+**IMPORTANT**: The files used in this experiment may differ from the published [`monaco-es`](https://www.npmjs.com/package/monaco-es) package.
 
 **Notes**
   
-This experiment is a little different than my latest version (0.0.6) of the published npm module `monaco-es` itself, but I thought a (rather ugly but) working proof of concept for those who are interested in pushing this idea forward.
-
 - Custom Rollup plugins were needed to mitigate non-compliance — including [#949](https://github.com/Microsoft/monaco-editor/issues/949)
    > 1. Rollup was only used to make genuine ES modules from the `/esm/…` modules
 
@@ -21,7 +19,8 @@ This experiment is a little different than my latest version (0.0.6) of the publ
    > 2. Requires dynamic imports — did not polyfill (currently affects Firefox & Edge)
    > 3. Require ES modules in worker — can't polyfill (currently affects Safari at least)
 
-**Demo**
+
+## Live Demo
 
 Simply replace `#ts` to switch modes.
 
