@@ -1,9 +1,6 @@
 # Monaco ES (*Experimental*)
 
----
-
 Today I decided to take a couple of hours to strip out my (~3 months old) `monaco-es` aspect from the old project and gave it the first "live" test with support for modes.
-
 
 **Notes**
   
