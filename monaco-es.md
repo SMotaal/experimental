@@ -8,7 +8,8 @@ This experiment is a little different than my latest version (0.0.6) of the publ
 
 > Simply append `#mode` to reload in new mode
 
-- TypeScript: https://smotaal.github.io/experimental/monaco-es/static/monaco-es.html#ts
+- TypeScript
+  > https://smotaal.github.io/experimental/monaco-es/static/monaco-es.html#ts
 
 </summary>
 
