@@ -1,6 +1,6 @@
 # Monaco ES (*Experimental*)
 
-Today I decided to take a couple of hours to strip out my (~3 months old) `monaco-es` aspect from the old project and gave it the first "live" test here: https://smotaal.github.io/experimental/monaco-es/static/monaco-es.html
+Today I decided to take a couple of hours to strip out my (~3 months old) `monaco-es` aspect from the old project and gave it the first "live" test here: https://smotaal.github.io/experimental/monaco-es/static/monaco-es.html#ts (see below for modes)
 
 This experiment is a little different than my latest version (0.0.6) of the published npm module `monaco-es` itself, but I thought a (rather ugly but) working proof of concept for those who are interested in pushing this idea forward.
 
