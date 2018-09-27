@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset=utf-8>
+  <meta name=viewport content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Component Tests</title>
+  <link rel=prefetch href="/static/component-a.mjs" bundle>
+  <script src="/prototypes/prototypes.js"></script>
+  <script src="/caches.js"></script>
+  <style>
+    :root {
+      background: radial-gradient(lightgreen, orange);
+      /* background-color: #AAA9; */
+      background-size: 150%;
+      box-shadow: 0 0 5px #FFF9;
+      box-sizing: border-box;
+      --outer-margin: 1rem;
+      --inner-margin: 1rem;
+    }
+
+    html,
+    body {
+      margin: 0;
+    }
+
+    html {
+      width: 100vw;
+      min-height: 100vh;
+      /* overflow-y: scroll; */
+      /* padding: 1rem; */
+      box-sizing: content-box;
+    }
+
+    body {
+      background: border-box radial-gradient(#EFFD, #EFFD);
+      max-width: 100%;
+      min-height: calc(100vh - 2 * var(--outer-margin, 0));
+      padding: var(--inner-margin, 1rem);
+      margin: var(--outer-margin, 0);
+      box-shadow: 0 0 2.5pt 0.5pt #FFF3,
+      0 0 10pt -5pt #0006,
+      0 0 1.25pt -0.375pt #0009;
+    }
+
+    red {
+      color: red;
+    }
+
+    green {
+      color: green;
+      font-weight: bold;
+    }
+
+    .fill {
+      background-color: var(--fill, red);
+    }
+
+    component-a {
+      contain: layout;
+    }
+
+    ::message {
+      background-color: green;
+    }
+
+    :not(:defined) {
+      contain: layout size;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0.2
+      }
+      100% {
+        opacity: 1.0
+      }
+    }
+
+    :defined {
+      animation: fade-in 1s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <slot name=component-a>
+    <template id=components>
+      <component-a><button slot="button">component-a</button></component-a>
+    </template>
+  </slot>
+
+  <script>
+    GLOBALS: {
+      const replicates = (
+        location.hash && parseInt(location.hash.slice(1))
+      ) || 10;
+
+      const select = (selector, parent = document) =>
+        (parent &&
+          'querySelector' in parent &&
+          (selector = `${selector || ''}`.trim()) &&
+          parent.querySelector(selector)) ||
+        undefined;
+
+      const selectAll = (selector, parent = document) =>
+        (parent &&
+          'querySelectorAll' in parent &&
+          (selector = `${selector || ''}`.trim()) &&
+          parent.querySelectorAll(selector)) ||
+        undefined;
+
+      const rendered = () => new Promise(requestAnimationFrame);
+
+      // const timeline = (label) => (console.timeline(label), () => console.timelineEnd(label));
+
+      const timelined = (label, ƒ) => {
+        let result;
+        try {
+          console.time(label);
+          return result = ƒ();
+        } finally {
+          result && result.then && result.then(() => console.timeEnd(label)) || console.timeEnd(label);
+        }
+      }
+
+      const idle =
+        typeof requestIdleCallback === 'function' ? requestIdleCallback : ƒ => setTimeout(ƒ, 100);
+      const idled = () => new Promise(idle);
+      const timeout = timeout => new Promise(resolve => setTimeout(resolve, timeout));
+
+      Object.defineProperties(self, {
+        replicates: { value: replicates, writable: false },
+        select: { value: select, writable: false },
+        selectAll: { value: selectAll, writable: false },
+        idle: { value: idle, writable: false },
+        timeout: { value: timeout, writable: false },
+        // timeline: { value: timeline, writable: false },
+        timelined: { value: timelined, writable: false },
+        idled: { get: idled },
+        rendered: { get: rendered },
+      });
+    }
+  </script>
+
+  <script type=module src="/static/components.mjs"></script>
+
+</body>
+
+</html>
