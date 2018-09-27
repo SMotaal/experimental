@@ -44,5 +44,6 @@ This experiment is a little different than my latest version (0.0.6) of the publ
 - Proof-of-concept only — not optimized… not efficient… "it just proofs that it works"
    > 1. ES modules are sometimes not stable — "may crash" (currently affects Chrome at least)
    > 2. Requires dynamic imports — did not polyfill (currently affects Firefox & Edge)
-
+   > 3. Require ES modules in worker — can't polyfill (currently affects Safari at least)
+   
 </details>
