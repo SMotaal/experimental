@@ -23,15 +23,23 @@ This experiment is a little different than my latest version (0.0.6) of the publ
 
 **Demo**
 
-<details><summary>TypeScript: https://smotaal.github.io/experimental/monaco-es/static/monaco-es.html#ts …</summary>
+Simply replace `#ts` to switch modes.
 
-HTML: https://smotaal.github.io/experimental/monaco-es/static/monaco-es.html#html
+<details><summary>https://smotaal.github.io/experimental/monaco-es/static/monaco-es.html#ts …</summary>
 
-CSS: https://smotaal.github.io/experimental/monaco-es/static/monaco-es.html#css
+- TypeScript
+   > https://smotaal.github.io/experimental/monaco-es/static/monaco-es.html#ts
 
-JSON: https://smotaal.github.io/experimental/monaco-es/static/monaco-es.html#json
+- HTML
+   > https://smotaal.github.io/experimental/monaco-es/static/monaco-es.html#html
 
-Basic Modes (same idea as above)
-> #bat #bat #coffee #cpp #csharp #csp #dockerfile #fsharp #go #handlebars #ini #java #less #lua #markdown #msdax #mysql #objective-c #pgsql #php #postiats #powershell #pug #python #r #razor #redis #redshift #ruby #rust #sb #scss #solidity #sql #st #swift #ts #vb #xml #yaml
+- CSS
+   > https://smotaal.github.io/experimental/monaco-es/static/monaco-es.html#css
+
+- JSON
+   > https://smotaal.github.io/experimental/monaco-es/static/monaco-es.html#json
+
+- Basic Modes (same idea as above)
+   > … #bat #bat #coffee #cpp #csharp #csp #dockerfile #fsharp #go #handlebars #ini #java #less #lua #markdown #msdax #mysql #objective-c #pgsql #php #postiats #powershell #pug #python #r #razor #redis #redshift #ruby #rust #sb #scss #solidity #sql #st #swift #ts #vb #xml #yaml
 
 </details>
