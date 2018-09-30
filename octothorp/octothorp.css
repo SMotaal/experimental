@@ -1,0 +1,7 @@
+:root {
+  --root-color: purple;
+  --root-background: skyblue;
+  --root-contrast: white;
+  --root-inset: 1ch;
+  --root-font: Arial;
+}
