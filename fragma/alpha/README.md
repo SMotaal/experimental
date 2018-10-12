@@ -4,22 +4,22 @@ Okay, concept means messy and probably requires flags on nightly or the likes, a
 
 **Live Demos**
 
-*throttle* — renders enormous instances of a perpetually changing element
+*throttle* — renders <var>n</var> instances of a perpetually changing element
 
-> &times;100
-> https://smotaal.github.io/experimental/fragma/alpha/throttle#100
+https://smotaal.github.io/experimental/fragma/alpha/throttle#<var>n</var>
 
-> &times;1000
-> https://smotaal.github.io/experimental/fragma/alpha/throttle#1000
 
-> &times;5000
-> https://smotaal.github.io/experimental/fragma/alpha/throttle#5000
+> [#100](https://smotaal.github.io/experimental/fragma/alpha/throttle#100)
 
-> &times;10000
-> https://smotaal.github.io/experimental/fragma/alpha/throttle#10000
+> [#1000](https://smotaal.github.io/experimental/fragma/alpha/throttle#1000)
 
-> &times;20000
-> https://smotaal.github.io/experimental/fragma/alpha/throttle#20000
+> [#2000](https://smotaal.github.io/experimental/fragma/alpha/throttle#2000) — a bit sluggish on iPhone X
+
+> [#5000](https://smotaal.github.io/experimental/fragma/alpha/throttle#5000) — sluggish at best on iPhone X
+
+> [#10000](https://smotaal.github.io/experimental/fragma/alpha/throttle#10000) — a bit sluggish on desktop
+
+> [#20000](https://smotaal.github.io/experimental/fragma/alpha/throttle#20000) — sluggish at best everywhere
 
 **Works**
 
@@ -37,4 +37,3 @@ Okay, concept means messy and probably requires flags on nightly or the likes, a
 
 > *Safari Technology Preview*
 > - IntersectionObserver does not work yet!
-

@@ -16,8 +16,7 @@ html {
 }
 
 body {
-  /* TODO: Fill in the missing credits*/
-  --using-custom-properties: 'Thanks to … at Node+JS Interactive';
+  --using-custom-properties: 'Chris Lorenzo (@chiefcll) fix for chrome recalculate styles bug';
 
   margin: 0;
 
