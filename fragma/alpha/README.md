@@ -1,6 +1,25 @@
 # Fragma (*concept*)
 
-Okay, concept means messy and probably requires flags on nightly or the likes, agreed?
+Okay, concept means messy and probably requires flags on nightly or the likes, agreed? Just don't expect this to be more than what it is!
+
+**Live Demos**
+
+*throttle* — renders enormous instances of a perpetually changing element
+
+> &times;100
+> https://smotaal.github.io/experimental/fragma/alpha/throttle#100
+
+> &times;1000
+> https://smotaal.github.io/experimental/fragma/alpha/throttle#1000
+
+> &times;5000
+> https://smotaal.github.io/experimental/fragma/alpha/throttle#5000
+
+> &times;10000
+> https://smotaal.github.io/experimental/fragma/alpha/throttle#10000
+
+> &times;20000
+> https://smotaal.github.io/experimental/fragma/alpha/throttle#20000
 
 **Works**
 
