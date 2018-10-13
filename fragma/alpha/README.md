@@ -31,4 +31,4 @@ Okay, concept means messy and probably requires flags on nightly or the likes, a
 **Not Yet!**
 
 > - *Safari Technology Preview*
->   IntersectionObserver does not work yet!
+>   Unexpected CSS `content: attr(data-attribute)` behaviour
