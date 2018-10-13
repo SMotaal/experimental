@@ -61,7 +61,7 @@ export default class ComponentA extends Component {
             --text: transparent;
             background-color: var(--fill, #f006);
             color: var(--text, currentcolor);
-            transition: color 250ms 5ms, background 250ms 5ms;
+            /* transition: color 250ms 5ms, background 250ms 5ms; */
           }
 
           :host(.viewable) > * {

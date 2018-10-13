@@ -15,9 +15,8 @@
 <body>
 
   <slot name=component-a>
-    <template id=components>
-      <component-a><button slot="button">component-a</button></component-a>
-    </template>
+    <component-a></component-a>
+    <!-- <template id=components></template> -->
   </slot>
 
 
@@ -28,6 +27,7 @@
 
     self.onhashchange || (self.onhashchange = ({newURL}) => /#\d/.test(newURL) && location.reload());
 
+    // replicate('component-a', ComponentA, select('template#components'), replicates);
     replicate('component-a', ComponentA, select('template#components'), replicates);
 
     async function replicate(tagName, Component, template, replicates) {
@@ -45,56 +45,52 @@
       try {
         element = select(tagName, (template && template.content) || document);
 
-        await idled;
-        await rendered;
-
-        if (element && replicates) {
-          promise(
-            timelined(`Replicating ${tagName} × ${replicates}`, async () => {
-              const fragments = [];
-              let fragment = document.createDocumentFragment();
-
-              for (let n = replicates; --n;) {
-                fragment.appendChild(element.cloneNode(true));
-                n % 1000 || (
-                  fragments.push(fragment),
-                  fragment = document.createDocumentFragment()
-                );
-              }
-
-              fragment.childElementCount && fragments.push(fragment);
-              fragment = null;
-
-              let last = element;
-              for (const fragment of fragments) {
-                const next = fragment.lastElementChild;
-                last.after(fragment);
-                last = next;
-                await rendered;
-              }
-              last = null;
-
-              // for (let n = replicates; --n; fragment.appendChild((element = element.cloneNode(true)))) {
-                // last.after(fragment), last = element,
-                // n % 100 || (await rendered), n % 1000 || (await timeout(100));
-
-
-              // for (let n = replicates; --n; element.after((element = element.cloneNode(true))))
-              //   n % 100 || (await rendered), n % 1000 || (await timeout(100));
-            }),
-          );
-        }
-
-        await rendered;
-
-        await promise(
+        promise(
           timelined(
             `Defining ${tagName}`,
             () => (Component.define(), customElements.whenDefined(tagName)),
           ),
         );
 
-        await rendered;
+        if (element && replicates) {
+          promise(
+            timelined(`Replicating ${tagName} × ${replicates}`, async () => {
+              const fragments = (async function* replicate(element) {
+                let fragment = document.createDocumentFragment();
+                for (let n = replicates; --n;) {
+                  fragment.appendChild(element.cloneNode(true));
+                  if (!(n % 500)) {
+                    yield fragment;
+                    fragment = document.createDocumentFragment();
+                  }
+                }
+                if (fragment.childElementCount) yield fragment;
+              })(element);
+
+              let last = element;
+              for await (const fragment of fragments) {
+                const next = fragment.lastElementChild;
+                await rendered;
+                last.after(fragment);
+                last = next;
+                await timeout(10);
+              }
+
+              last = null;
+          }));
+        }
+
+        // await idled;
+        // await rendered;
+
+        // await promise(
+        //   timelined(
+        //     `Defining ${tagName}`,
+        //     () => (Component.define(), customElements.whenDefined(tagName)),
+        //   ),
+        // );
+
+        // await rendered;
 
         template &&
           promise(
@@ -105,13 +101,14 @@
 
         let n = 0;
         for (const element of selectAll(tagName)) {
-          n++ % 500 || (await rendered);
+          // n++ % 500 || (await rendered);
           promise(element.initialized);
         }
       } finally {
         initialized = await Promise.all(promises).catch(error);
+        console.timeEnd(label);
         errors.length && console.warn(...errors);
-        console.timeEnd(label), console.groupEnd();
+        console.groupEnd();
       }
 
       // template && template.remove();
