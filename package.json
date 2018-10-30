@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "@smotaal/experimental",
+  "description": "TBD",
+  "author": "Saleh Abdel Motaal <saleh@grasppe.com>",
+  "scripts": {
+    "install": "exit 1",
+    "start": "http-server --cors"
+  },
+  "dependencies": {
+    "hackable-loader": "SMotaal/hackable-loader"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "primer": "*",
+    "typescript": "*"
+  }
+}

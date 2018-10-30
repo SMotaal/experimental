@@ -1,0 +1,7 @@
+{
+  "name": "thrope",
+  "display": "minimal-ui",
+  "background_color": "cornflowerblue",
+  "theme_color": "white",
+  "description": "Unified themeable UI primitives"
+}

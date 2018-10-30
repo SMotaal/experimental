@@ -1,0 +1,11 @@
+{
+  "name": "@smotaal/experimental-loader",
+  "version": "0.0.0",
+  "dependencies": {
+    "hackable-loader": "SMotaal/hackable-loader",
+    "electron": "beta"
+  },
+  "scripts": {
+    "start:node": "node node/loader.js"
+  }
+}
