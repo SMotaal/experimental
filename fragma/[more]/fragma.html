@@ -1,0 +1,53 @@
+<html>
+
+<head>
+  <link rel=stylesheet href="../octothorp/octothorp.css" />
+  <link rel=stylesheet href="./fragma.css" />
+</head>
+
+<body>
+  <style>
+    :host, .\#root {
+      --color: var(--root-color, purple);
+      --background: var(--root-background, skyblue);
+      --contrast: var(--root-contrast, white);
+      --inset: var(--root-inset, 1ch);
+      --font: var(--root-font, Arial);
+      color: var(--color);
+      background: var(--background);
+      font-family: var(--font);
+      box-sizing: border-box;
+    }
+
+    .\#reverse {
+      color: var(--background);
+      background: var(--color);
+    }
+
+    .\#reverse.\#contrast {
+      color: var(--background);
+      background: var(--contrast);
+    }
+
+    .\#inset {
+      padding: var(--inset);
+    }
+
+    .\#round {
+      border-radius: var(--inset);
+    }
+
+  </style>
+  <div class="#root">
+    <div class="#inset">
+      <div>
+        <span class="#inset #reverse #contrast #round">Not Designed For</span>
+      </div>
+      <div class="#inset">
+        <span style="font-size: 500%;">Microsoft Edge</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

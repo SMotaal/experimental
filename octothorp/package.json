@@ -1,9 +1,0 @@
-{
-  "name": "octothorp",
-  "author": "Saleh Abdel Motaal <saleh@grasppe.com>",
-  "version": "0.0.0",
-  "description": "A collection of themable CSS primitives",
-  "devDependencies": {
-    "primer": "*"
-  }
-}
