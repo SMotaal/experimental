@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "plugins": [
+      {
+        "name": "typescript-lit-html-plugin",
+        "tags": ["html"]
+      },
+      {
+        "name": "typescript-styled-plugin",
+        "tags": ["css", ".css"]
+      }
+    ]
+  },
+  "include": ["**/*.m?js"],
+  "exclude": ["node_modules", "**/node_modules/*"]
+}

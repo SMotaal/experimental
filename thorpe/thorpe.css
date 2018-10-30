@@ -1,0 +1,4 @@
+body {
+  background-color: var(--app-background-color);
+  color: var(--app-theme-color);
+}
