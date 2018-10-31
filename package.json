@@ -5,7 +5,8 @@
   "author": "Saleh Abdel Motaal <saleh@grasppe.com>",
   "scripts": {
     "install": "exit 1",
-    "start": "http-server --cors"
+    "start": "http-server --cors",
+    "markup": "pushd markup; ./index.mjs"
   },
   "dependencies": {
     "hackable-loader": "SMotaal/hackable-loader"
