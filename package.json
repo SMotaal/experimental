@@ -14,6 +14,7 @@
   "devDependencies": {
     "@types/node": "*",
     "primer": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "rollup": "*"
   }
 }

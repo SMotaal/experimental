@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SMotaal's Modules</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover"
+    />
+  </head>
+
+  <body>
+    <script type="module">
+      import './lib/modules.mjs';
+      import './specs/modules.js';
+      console.clear();
+    </script>
+
+    <!--
+      <script src="./runtime/import-scripts.js"></script>
+      <script defer>
+        (async () => {
+          await importScripts('../packages/modules.js');
+          await importScripts('./specs/modules.js');
+        })();
+      </script>
+    -->
+  </body>
+</html>
