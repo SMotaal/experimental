@@ -6,44 +6,40 @@ export const GlobalScope =
   (typeof global === 'object' && global && global.global) ||
   (() => (1, eval)('this'))();
 
-export const ModuleScope = new Proxy(
-  freeze(
-    // setPrototypeOf(
-    (({eval: $eval}) => ({
-      eval: $eval,
-      Module,
-    }))(GlobalScope),
-    //   GlobalScope,
-    // ),
-  ),
-  {
-    get: (globals, property, receiver) => {
-      if (property in globals) return globals[property];
-      const target = GlobalScope;
-      const value =
-        property in target && typeof property === 'string' ? target[property] : undefined;
-      if (value && typeof value === 'function') {
-        const local = (this.locals || (this.locals = {}))[property];
-        return local && local.value === value
-          ? local.proxy
-          : (this.locals[property] = {
-              value,
-              proxy: new Proxy(value, {
-                apply: (method, thisArg, argArray) =>
-                  Reflect.apply(
-                    method,
-                    ((!thisArg || thisArg === ModuleScope) && target) || thisArg,
-                    argArray,
-                  ),
-              }),
-            }).proxy;
-      }
-      return value;
+const globals = (({eval: $eval}) => ({
+  eval: $eval,
+  Module,
+}))(GlobalScope);
 
-      // property in globals ? globals[property] : GlobalScope[property];
-    },
-    set: (globals, property) => {
-      throw ReferenceError(`${property} is not defined`);
-    },
+const scope = freeze(setPrototypeOf({...globals}, GlobalScope));
+
+const locals = {};
+
+export const ModuleScope = new Proxy(scope, {
+  get: (target, property, receiver) => {
+    if (property in globals) return globals[property];
+    const value =
+      property in GlobalScope && typeof property === 'string' ? GlobalScope[property] : undefined;
+    if (value && typeof value === 'function') {
+      const local = locals[property];
+      const {proxy} =
+        (local && local.value === value && local) ||
+        (locals[property] = {
+          value,
+          proxy: new Proxy(value, {
+            construct: (constructor, argArray, newTarget) =>
+              Reflect.construct(value, argArray, newTarget),
+            apply: (method, thisArg, argArray) =>
+              !thisArg || thisArg === receiver
+                ? value(...argArray)
+                : Reflect.apply(value, thisArg, argArray),
+          }),
+        });
+      return proxy;
+    }
+    return value;
   },
-);
+  set: (globals, property) => {
+    throw ReferenceError(`${property} is not defined`);
+  },
+});

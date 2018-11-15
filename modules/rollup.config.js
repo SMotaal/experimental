@@ -23,6 +23,7 @@ const bundle = (name, format = 'umd', extension = format === 'es' ? '.mjs' : '.j
 export default [
   bundle('markup'),
   bundle('markup', 'es'),
+  bundle('modules', 'es'),
   bundle('modules', 'iife', '.js'),
   // bundle('modules', 'iife', '.js'),
   // bundle('modules', 'es'),
