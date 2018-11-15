@@ -20,7 +20,7 @@ Too early but feel free to inspect the console for now.
 
 ## Browser
 
-> _[./module.html](./module.html)_
+> _[./modules.html](./modules.html)_
 >
 > in Chrome, Safari, Firefox
 
