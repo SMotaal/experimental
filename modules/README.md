@@ -41,3 +41,8 @@ Too early but feel free to inspect the console for now.
 > `> index.js`
 >
 > without `--experimental-modules`
+
+
+<!--
+unpkg:lodash-es
+-->

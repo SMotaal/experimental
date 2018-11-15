@@ -2,6 +2,7 @@ const bundles = {
   markup: {
     input: 'markup/lib/markup.js',
     context: 'this',
+    output: { exports: 'named'},
   },
   modules: {
     // input: 'modules/lib/module-scope.mjs',
