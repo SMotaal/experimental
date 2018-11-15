@@ -1,9 +1,3 @@
-import ModuleScope from './module-scope.mjs';
+import {ModuleScope, GlobalScope} from './scope.mjs';
 
-((global) => {
-  global.ModuleScope = ModuleScope;
-})(
-  (typeof self === 'object' && self && self.self) ||
-  (typeof global === 'object' && global && global.global) ||
-  (() => (1, eval)('this'))()
-)
+GlobalScope.ModuleScope = ModuleScope;

@@ -1,4 +1,5 @@
-const {defineProperty, getOwnPropertyDescriptor} = Reflect;
+export const {defineProperty, getOwnPropertyDescriptor} = Reflect;
+export const {create, freeze, setPrototypeOf} = Object;
 
 export const noop = () => {};
 
@@ -10,3 +11,5 @@ export const bind = (target, property, get, enumerable = false, configurable = f
 
 export const copy = (target, source, identifier, alias = identifier) =>
   defineProperty(target, alias, getOwnPropertyDescriptor(source, identifier));
+
+export const ResolvedPromise = Promise.resolve();
