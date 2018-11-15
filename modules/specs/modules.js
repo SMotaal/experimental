@@ -30,8 +30,9 @@
           test(ƒ => (_an_undefined_variable_ = 1));
           test(ƒ => new Object({a: 1}));
           // This ones causes a Proxy/inspect related error for some reason
-          node || test(ƒ => (Object = 1));
+          test(ƒ => (Object = 1));
           test(ƒ => Array(Object({a: String(1)})));
+          test(ƒ => new Array(new String('a'), new Number(2), new Promise(resolve => resolve(new Error('Not an Error!')))));
           test(ƒ => new Promise(resolve => setTimeout(resolve)));
         });
 
