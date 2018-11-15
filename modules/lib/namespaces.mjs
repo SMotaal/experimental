@@ -1,7 +1,7 @@
+import {Module} from './module.mjs';
 import {define, bind} from './helpers.mjs';
-import Module from './module.mjs';
 
-export default class ModuleNamespaces {
+export class ModuleNamespaces {
   import(url) {
     return (
       this[url] ||
