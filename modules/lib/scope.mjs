@@ -30,7 +30,7 @@ export const ModuleScope = new Proxy(scope, {
             construct: (constructor, argArray, newTarget) =>
               Reflect.construct(value, argArray, newTarget),
             apply: (method, thisArg, argArray) =>
-              !thisArg || thisArg === receiver
+              thisArg == null || thisArg === receiver
                 ? value(...argArray)
                 : Reflect.apply(value, thisArg, argArray),
           }),
