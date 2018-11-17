@@ -109,8 +109,11 @@
         Object.assign(
           {},
           ...v.map(v => {
-            const u = v.replace(/(.)/giu, `$1\u{034F}`);
-            // const u = v.replace(/([a-z])([a-z]*)/u, `$1\u{33DF}$2`);
+            const u = v
+              // Join non-latin
+              // .replace(/(.)([^a-z])/giu, `$1\u{034F}$2`)
+              // Join latin (keywords)
+              .replace(/^([a-z]+)$/iu, `$1\u{034F}`);
             try {
               // eval(`let ${u}, ${v} = '${v}'; v={${v}: ${v} === ${u}}`);
               eval(`let ${u} = () => (${u}.meta = '${u}', {'${v}': '${v}', ${u}}); v=${u}()`);
@@ -124,34 +127,3 @@
     );
   }
 })();
-
-// class Character extends String {
-//   constructor(character, style, base) {
-//     const map = new.target.map || (new.target.map = {});
-//     const code = character.codePointAt(0);
-//     map[character] = map[code] = super(String.fromCodePoint(code));
-//     this.code = code;
-//     this.style = !style || (typeof style !== 'string' && 'none') || style;
-//     this.base = (!base && this) || map[base] || new Character(base);
-//   }
-
-//   set code(value) {
-//     Object.defineProperty(this, 'code', {value});
-//   }
-//   set base(value) {
-//     (value || (value = this)) &&
-//       (!this.style ||
-//         this.style in value ||
-//         Object.defineProperty(value, this.style, {value: this})) &&
-//       Object.defineProperty(this, 'base', {value}) !== value &&
-//       Object.setPrototypeOf(this, value);
-//   }
-//   set style(value) {
-//     Object.defineProperty(this, 'style', {value});
-//   }
-
-//   static base(base) {
-//     ({[base]: base = (this.map[base] = new Character(base))} = this.map || (this.map = {}));
-//     return base; // (this.map || (this.map = {}))[base];
-//   }
-// }
