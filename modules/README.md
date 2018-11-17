@@ -18,30 +18,31 @@ Runtime-strapped Module subsystem.
 
 Too early but feel free to inspect the console for now.
 
+It does not load your modules or anything like that yet, so don't under estimate how much work is in progress!
+
 ## Browser
 
-> _[./modules.html](./modules.html)_
+Works in latest Chrome, Safari, and Firefox (maybe Edge, don't know).
+
+> **From Repo**
 >
-> in Chrome, Safari, Firefox
+> Navigate to [./modules.html](https://smotaal.github.io/experimental/modules/modules.html) and check the console.
 
-
-> _[JSBin (v5 only)](https://jsbin.com/gist/ca92f577fe1be4ff8f4feb4a41062785?result=console)_
+> **From JSBin (v5 only)**
 >
-> in Chrome, Safari, Firefox
-
+> - [This one](https://jsbin.com/gist/ca92f577fe1be4ff8f4feb4a41062785?result=console) inlines the loader for hacking.
+>
+> - If you don't want to hack the actual loader but simply play with modules, consider [this bin instead](https://jsbin.com/gist/efa3165c507f816ed90925599148ae07?result=console) which simply imports the loader from this repo.
 
 ## Node.js
 
-
-> `> index.mjs`
+> **With `--experimental-modules`**
 >
-> with `--experimental-modules`
+> `> node --experimental-modules index.mjs`
 
-
-> `> index.js`
+> **Without `--experimental-modules`**
 >
-> without `--experimental-modules`
-
+> `> node index.js`
 
 <!--
 unpkg:lodash-es

@@ -55,7 +55,7 @@
           `import direct_exports_default from '../level-1/direct-exports'`;
           `import * as direct_exports from '../level-1/direct-exports'`;
           `import {g1, g2} from '../level-1/direct-exports'`;
-          `export { $g1 }`;
+          `export { $g1, g2 as $g2 }`;
           const $g1 = g1;
           exports.default = {g1, g2, direct_exports_default, direct_exports};
         });
