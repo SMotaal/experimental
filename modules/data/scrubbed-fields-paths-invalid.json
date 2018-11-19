@@ -1,0 +1,285 @@
+{
+  "browser": [
+    {
+      "identifier": "bson@4.0.0",
+      "browser": {
+        "./lib/bson.js": "./dist/bson.browser.umd.js",
+        "./dist/bson.esm.js": "./dist/bson.browser.esm.js"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "rsvp@4.8.4",
+      "browser": {
+        "vertx": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "pouchdb@7.0.0",
+      "browser": {
+        "./lib/index.js": "./lib/index-browser.js",
+        "./lib/index.es.js": "./lib/index-browser.es.js"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "opentype.js@0.11.0",
+      "browser": {
+        "fs": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "gsap@2.0.2",
+      "browser": {
+        "./src/uncompressed/TimelineLite.js": "./umd/TimelineLite.js",
+        "./src/uncompressed/TimelineMax.js": "./umd/TimelineMax.js",
+        "./src/uncompressed/TweenLite.js": "./umd/TweenLite.js",
+        "./src/uncompressed/TweenMax.js": "./umd/TweenMax.js",
+        "./src/uncompressed/easing/EasePack.js": "./umd/EasePack.js",
+        "./src/uncompressed/jquery.gsap.js": "./umd/jquery.gsap.js",
+        "./src/uncompressed/plugins/AttrPlugin.js": "./umd/AttrPlugin.js",
+        "./src/uncompressed/plugins/BezierPlugin.js": "./umd/BezierPlugin.js",
+        "./src/uncompressed/plugins/CSSPlugin.js": "./umd/CSSPlugin.js",
+        "./src/uncompressed/plugins/CSSRulePlugin.js": "./umd/CSSRulePlugin.js",
+        "./src/uncompressed/plugins/ColorPropsPlugin.js": "./umd/ColorPropsPlugin.js",
+        "./src/uncompressed/plugins/DirectionalRotationPlugin.js": "./umd/DirectionalRotationPlugin.js",
+        "./src/uncompressed/plugins/EaselPlugin.js": "./umd/EaselPlugin.js",
+        "./src/uncompressed/plugins/EndArrayPlugin.js": "./umd/EndArrayPlugin.js",
+        "./src/uncompressed/plugins/ModifiersPlugin.js": "./umd/ModifiersPlugin.js",
+        "./src/uncompressed/plugins/PixiPlugin.js": "./umd/PixiPlugin.js",
+        "./src/uncompressed/plugins/RaphaelPlugin.js": "./umd/RaphaelPlugin.js",
+        "./src/uncompressed/plugins/RoundPropsPlugin.js": "./umd/RoundPropsPlugin.js",
+        "./src/uncompressed/plugins/ScrollToPlugin.js": "./umd/ScrollToPlugin.js",
+        "./src/uncompressed/plugins/TextPlugin.js": "./umd/TextPlugin.js",
+        "./src/uncompressed/utils/Draggable.js": "./umd/Draggable.js"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "react-intl@2.7.2",
+      "browser": {
+        "./locale-data/index": false,
+        "./locale-data/index.js": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "upyun@3.3.5",
+      "browser": {
+        "./upyun/utils.js": "./upyun/browser-utils.js",
+        "./upyun/form-upload.js": "./upyun/browser-form-upload.js"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "react-textarea-autosize@7.1.0-1",
+      "browser": {
+        "./dist/react-textarea-autosize.cjs.js": "./dist/react-textarea-autosize.cjs.browser.js",
+        "./dist/react-textarea-autosize.esm.js": "./dist/react-textarea-autosize.esm.browser.js"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "vega@4.3.0",
+      "browser": {
+        "buffer": false,
+        "fs": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "vue-resource@1.5.1",
+      "browser": {
+        "got": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "virgil-crypto@3.2.0",
+      "browser": {
+        "./dist/virgil-crypto.cjs.js": "./dist/virgil-crypto.browser.cjs.js",
+        "./dist/virgil-crypto.es.js": "./dist/virgil-crypto.browser.es.js",
+        "./dist/virgil-crypto-pythia.cjs.js": "./dist/virgil-crypto-pythia.browser.cjs.js",
+        "./dist/virgil-crypto-pythia.es.js": "./dist/virgil-crypto-pythia.browser.es.js",
+        "./src/lib/pythia-node.ts": "./src/lib/pythia-browser.ts"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "flagger@2.0.3",
+      "browser": {
+        "./esm.js": "./flagger.js",
+        "./cjs.js": "./flagger.js",
+        "./react.js": "./flagger-react.js",
+        "./compat.js": "./compat-browser.js"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "vast-client@2.0.5",
+      "browser": {
+        "dist/vast-client.min.js": "dist/vast-client.min.js"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "pouchdb-find@7.0.0",
+      "browser": {
+        "./lib/index.js": "./lib/index-browser.js",
+        "./lib/index.es.js": "./lib/index-browser.es.js"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "viz.js@2.1.1",
+      "browser": {
+        "fs": false,
+        "path": false,
+        "crypto": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "react-map-gl@4.0.2",
+      "browser": {
+        "./dist/es5/utils/mapboxgl.js": "./dist/es5/utils/mapboxgl.browser.js",
+        "./dist/esm/utils/mapboxgl.js": "./dist/esm/utils/mapboxgl.browser.js",
+        "./dist/es6/utils/mapboxgl.js": "./dist/es6/utils/mapboxgl.browser.js"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "getstream@3.23.0",
+      "browser": {
+        "request": "xmlhttp-request",
+        "crypto": false,
+        "jsonwebtoken": false,
+        "./lib/lib/batch_operations.js": false,
+        "qs": false,
+        "url": false,
+        "http": false,
+        "https": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "bimserverapi@0.0.149",
+      "browser": {
+        "xhr2": false,
+        "websocket": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "appbase-js@4.0.2-beta.03",
+      "browser": {
+        "ws": "./lib/ws-shim.js"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "blockchain-wallet-client@3.35.0",
+      "browser": {
+        "ws": "./src/ws-browser.js"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "image-js@0.21.4",
+      "browser": {
+        "./src/worker/worker.js": "./src/browser/worker/worker.js",
+        "./src/image/core/environment.js": "./src/browser/environment.js",
+        "fs": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "pouchdb-ajax@6.4.3",
+      "browser": {
+        "./lib/index.js": "./lib/index-browser.js",
+        "./lib/index.es.js": "./lib/index-browser.es.js"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "pouchdb-mapreduce@7.0.0",
+      "browser": {
+        "./lib/index.js": "./lib/index-browser.js",
+        "./lib/index.es.js": "./lib/index-browser.es.js"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "wikipathways-api-client@1.1.6",
+      "browser": {
+        "atob": false,
+        "btoa": false,
+        "cheerio": false,
+        "commander": false,
+        "inquirer": false,
+        "jsdom": false,
+        "xhr2": false,
+        "./src/XMLResponseParsers.ts": "./src/XMLResponseParsers.browser.ts",
+        "./es5/XMLResponseParsers.js": "./es5/XMLResponseParsers.browser.js",
+        "./esnext/XMLResponseParsers.js": "./esnext/XMLResponseParsers.browser.js"
+      },
+      "type": "object"
+    }
+  ],
+  "module:aliases-browser": [
+    {
+      "identifier": "alauda@2.7.0",
+      "module:aliases-browser": {
+        "./history.js": "./lib-module/history.js",
+        "./js-app.js": "./lib-module/js-app.js",
+        "./web-app.js": "./lib-module/web-app.js"
+      },
+      "type": "object"
+    }
+  ],
+  "module:aliases-browser-dev": [
+    {
+      "identifier": "alauda@2.7.0",
+      "module:aliases-browser-dev": {
+        "./history.js": "./lib-module-dev/history.js",
+        "./js-app.js": "./lib-module-dev/js-app.js",
+        "./web-app.js": "./lib-module-dev/web-app.js"
+      },
+      "type": "object"
+    }
+  ],
+  "module:aliases-modern-browsers": [
+    {
+      "identifier": "alauda@2.7.0",
+      "module:aliases-modern-browsers": {
+        "./history.js": "./lib-module-modern-browsers/history.js",
+        "./js-app.js": "./lib-module-modern-browsers/js-app.js",
+        "./web-app.js": "./lib-module-modern-browsers/web-app.js"
+      },
+      "type": "object"
+    }
+  ],
+  "module:aliases-modern-browsers-dev": [
+    {
+      "identifier": "alauda@2.7.0",
+      "module:aliases-modern-browsers-dev": {
+        "./history.js": "./lib-module-modern-browsers-dev/history.js",
+        "./js-app.js": "./lib-module-modern-browsers-dev/js-app.js",
+        "./web-app.js": "./lib-module-modern-browsers-dev/web-app.js"
+      },
+      "type": "object"
+    }
+  ],
+  "esnext": [
+    {
+      "identifier": "qminder-api@2.2.8",
+      "esnext": {
+        "main": "build-node/qminder-api.js",
+        "browser": "build-es6/qminder-api.js"
+      },
+      "type": "object"
+    }
+  ]
+}

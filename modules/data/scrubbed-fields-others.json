@@ -1,0 +1,6369 @@
+{
+  "homepage": [
+    {
+      "identifier": "acorn@6.0.4",
+      "homepage": "https://github.com/acornjs/acorn"
+    },
+    {
+      "identifier": "ramda@0.26.0",
+      "homepage": "https://ramdajs.com/"
+    },
+    {
+      "identifier": "d3@5.7.0",
+      "homepage": "https://d3js.org"
+    },
+    {
+      "identifier": "should@13.2.3",
+      "homepage": "https://github.com/shouldjs/should.js"
+    },
+    {
+      "identifier": "sinon@7.1.1",
+      "homepage": "https://sinonjs.org/"
+    },
+    {
+      "identifier": "punycode@2.1.1",
+      "homepage": "https://mths.be/punycode"
+    },
+    {
+      "identifier": "node-fetch@2.3.0",
+      "homepage": "https://github.com/bitinn/node-fetch"
+    },
+    {
+      "identifier": "deepmerge@2.2.1",
+      "homepage": "https://github.com/KyleAMathews/deepmerge"
+    },
+    {
+      "identifier": "firebase@5.5.8",
+      "homepage": "https://firebase.google.com/"
+    },
+    {
+      "identifier": "should-equal@2.0.0",
+      "homepage": "https://github.com/shouldjs/equal"
+    },
+    {
+      "identifier": "redux@4.0.1",
+      "homepage": "http://redux.js.org"
+    },
+    {
+      "identifier": "crc@3.8.0",
+      "homepage": "https://github.com/alexgorbatchev/node-crc"
+    },
+    {
+      "identifier": "three@0.98.0",
+      "homepage": "https://threejs.org/"
+    },
+    {
+      "identifier": "gl-matrix@2.8.1",
+      "homepage": "http://glmatrix.net"
+    },
+    {
+      "identifier": "vue@2.5.17",
+      "homepage": "https://github.com/vuejs/vue#readme"
+    },
+    {
+      "identifier": "hashids@1.2.2",
+      "homepage": "http://hashids.org/javascript"
+    },
+    {
+      "identifier": "react-bootstrap@0.32.4",
+      "homepage": "https://react-bootstrap.github.io/"
+    },
+    {
+      "identifier": "riot@3.13.1",
+      "homepage": "http://riot.js.org/"
+    },
+    {
+      "identifier": "ractive@1.1.0",
+      "homepage": "https://ractive.js.org"
+    },
+    {
+      "identifier": "radium@0.25.0",
+      "homepage": "https://github.com/formidablelabs/radium"
+    },
+    {
+      "identifier": "lolex@3.0.0",
+      "homepage": "http://github.com/sinonjs/lolex"
+    },
+    {
+      "identifier": "react-redux@5.1.1",
+      "homepage": "https://github.com/reduxjs/react-redux"
+    },
+    {
+      "identifier": "backbone.marionette@4.0.0",
+      "homepage": "https://marionettejs.com/"
+    },
+    {
+      "identifier": "topojson@3.0.2",
+      "homepage": "https://github.com/topojson/topojson"
+    },
+    {
+      "identifier": "promise-polyfill@8.1.0",
+      "homepage": "https://github.com/taylorhakes/promise-polyfill"
+    },
+    {
+      "identifier": "jsondiffpatch@0.3.11",
+      "homepage": "https://github.com/benjamine/jsondiffpatch"
+    },
+    {
+      "identifier": "material-ui@0.20.2",
+      "homepage": "http://material-ui.com/"
+    },
+    {
+      "identifier": "angular-ui-router@1.0.20",
+      "homepage": "https://ui-router.github.io"
+    },
+    {
+      "identifier": "graphql@14.0.2",
+      "homepage": "https://github.com/graphql/graphql-js"
+    },
+    {
+      "identifier": "rxjs@6.3.3",
+      "homepage": "https://github.com/ReactiveX/RxJS"
+    },
+    {
+      "identifier": "kronos-step@5.7.0",
+      "homepage": "https://github.com/Kronos-Integration/kronos-step#readme"
+    },
+    {
+      "identifier": "d3-color@1.2.3",
+      "homepage": "https://d3js.org/d3-color/"
+    },
+    {
+      "identifier": "ml-matrix@5.2.0",
+      "homepage": "https://github.com/mljs/matrix"
+    },
+    {
+      "identifier": "css-animation@1.5.0",
+      "homepage": "http://github.com/yiminghe/css-animation"
+    },
+    {
+      "identifier": "redux-thunk@2.3.0",
+      "homepage": "https://github.com/reduxjs/redux-thunk"
+    },
+    {
+      "identifier": "redux-actions@2.6.4",
+      "homepage": "https://github.com/redux-utilities/redux-actions"
+    },
+    {
+      "identifier": "rollup@0.67.3",
+      "homepage": "https://github.com/rollup/rollup"
+    },
+    {
+      "identifier": "video.js@7.3.0",
+      "homepage": "https://videojs.com"
+    },
+    {
+      "identifier": "rc-animate@2.5.4",
+      "homepage": "https://github.com/react-component/animate"
+    },
+    {
+      "identifier": "d3-dsv@1.0.10",
+      "homepage": "https://d3js.org/d3-dsv/"
+    },
+    {
+      "identifier": "gsap@2.0.2",
+      "homepage": "https://greensock.com/gsap/"
+    },
+    {
+      "identifier": "d3-selection@1.3.2",
+      "homepage": "https://d3js.org/d3-selection/"
+    },
+    {
+      "identifier": "react-intl@2.7.2",
+      "homepage": "https://github.com/yahoo/react-intl"
+    },
+    {
+      "identifier": "rc-trigger@2.6.2",
+      "homepage": "https://github.com/react-component/trigger"
+    },
+    {
+      "identifier": "shapefile@0.6.6",
+      "homepage": "https://github.com/mbostock/shapefile"
+    },
+    {
+      "identifier": "i18next@12.0.0",
+      "homepage": "http://i18next.com"
+    },
+    {
+      "identifier": "cowsay@1.3.1",
+      "homepage": "https://github.com/piuccio/cowsay"
+    },
+    {
+      "identifier": "react-onclickoutside@6.7.1",
+      "homepage": "https://github.com/Pomax/react-onclickoutside"
+    },
+    {
+      "identifier": "es6-error@4.1.1",
+      "homepage": "https://github.com/bjyoungblood/es6-error"
+    },
+    {
+      "identifier": "riot-compiler@3.5.1",
+      "homepage": "https://github.com/riot/compiler#readme"
+    },
+    {
+      "identifier": "rrule@2.5.6",
+      "homepage": "http://jakubroztocil.github.io/rrule/"
+    },
+    {
+      "identifier": "loglevel-mixin@2.0.5",
+      "homepage": "https://github.com/arlac77/loglevel-mixin#readme"
+    },
+    {
+      "identifier": "rollup-pluginutils@2.3.3",
+      "homepage": "https://github.com/rollup/rollup-pluginutils#readme"
+    },
+    {
+      "identifier": "cerebral@5.0.3",
+      "homepage": "https://www.cerebraljs.com"
+    },
+    {
+      "identifier": "expression-expander@6.1.3",
+      "homepage": "https://github.com/arlac77/expression-expander#readme"
+    },
+    {
+      "identifier": "d3-scale@2.1.2",
+      "homepage": "https://d3js.org/d3-scale/"
+    },
+    {
+      "identifier": "route-recognizer@0.3.4",
+      "homepage": "https://github.com/tildeio/route-recognizer"
+    },
+    {
+      "identifier": "core-decorators@0.20.0",
+      "homepage": "https://github.com/jayphelps/core-decorators.js"
+    },
+    {
+      "identifier": "statetransition-mixin@4.0.3",
+      "homepage": "https://github.com/arlac77/statetransition-mixin#readme"
+    },
+    {
+      "identifier": "twemoji@11.2.0",
+      "homepage": "https://github.com/twitter/twemoji"
+    },
+    {
+      "identifier": "nightingale@8.0.8",
+      "homepage": "https://github.com/christophehurpeau/nightingale"
+    },
+    {
+      "identifier": "purify-css@1.2.5",
+      "homepage": "https://github.com/purifycss/purifycss"
+    },
+    {
+      "identifier": "d3-geo-projection@2.4.1",
+      "homepage": "https://d3js.org/d3-geo-projection/"
+    },
+    {
+      "identifier": "d3-time@1.0.10",
+      "homepage": "https://d3js.org/d3-time/"
+    },
+    {
+      "identifier": "kronos-service@4.17.0",
+      "homepage": "https://github.com/Kronos-Integration/kronos-service#readme"
+    },
+    {
+      "identifier": "esri-leaflet@2.2.3",
+      "homepage": "http://esri.github.io/esri-leaflet"
+    },
+    {
+      "identifier": "specificity@0.4.1",
+      "homepage": "https://github.com/keeganstreet/specificity"
+    },
+    {
+      "identifier": "get-form-data@2.0.0",
+      "homepage": "https://github.com/insin/get-form-data"
+    },
+    {
+      "identifier": "postmortem@0.2.6",
+      "homepage": "http://github.com/zeekay/postmortem"
+    },
+    {
+      "identifier": "d3-dispatch@1.0.5",
+      "homepage": "https://d3js.org/d3-dispatch/"
+    },
+    {
+      "identifier": "path-parser@4.2.0",
+      "homepage": "https://github.com/troch/path-parser"
+    },
+    {
+      "identifier": "scope-reporter@3.1.25",
+      "homepage": "https://github.com/arlac77/scope-reporter#readme"
+    },
+    {
+      "identifier": "textures@1.2.0",
+      "homepage": "https://github.com/riccardoscalco/textures"
+    },
+    {
+      "identifier": "kronos-interceptor@2.6.0",
+      "homepage": "https://github.com/Kronos-Integration/kronos-interceptor#readme"
+    },
+    {
+      "identifier": "riot-route@3.1.4",
+      "homepage": "https://github.com/riot/route#readme"
+    },
+    {
+      "identifier": "riot-tmpl@3.0.8",
+      "homepage": "https://github.com/riot/tmpl#readme"
+    },
+    {
+      "identifier": "d3-interpolate@1.3.2",
+      "homepage": "https://d3js.org/d3-interpolate/"
+    },
+    {
+      "identifier": "popmotion@8.5.2",
+      "homepage": "https://popmotion.io"
+    },
+    {
+      "identifier": "preact@8.3.1",
+      "homepage": "https://github.com/developit/preact"
+    },
+    {
+      "identifier": "snabbdom@0.7.2",
+      "homepage": "https://github.com/paldepind/snabbdom#readme"
+    },
+    {
+      "identifier": "elenpi@0.5.1",
+      "homepage": "https://github.com/nomocas/elenpi"
+    },
+    {
+      "identifier": "inferno@6.2.1",
+      "homepage": "https://github.com/infernojs/inferno#readme"
+    },
+    {
+      "identifier": "normalizr@3.3.0",
+      "homepage": "https://github.com/paularmstrong/normalizr"
+    },
+    {
+      "identifier": "indexeddbshim@3.10.0",
+      "homepage": "https://github.com/axemclion/IndexedDBShim"
+    },
+    {
+      "identifier": "@cycle/dom@22.0.0",
+      "homepage": "https://cycle.js.org"
+    },
+    {
+      "identifier": "rc-align@2.4.3",
+      "homepage": "http://github.com/react-component/align"
+    },
+    {
+      "identifier": "d3-array@2.0.2",
+      "homepage": "https://d3js.org/d3-array/"
+    },
+    {
+      "identifier": "object-properties@3.1.0",
+      "homepage": "https://github.com/christophehurpeau/object-properties#readme"
+    },
+    {
+      "identifier": "swiper@4.4.2",
+      "homepage": "http://www.idangero.us/swiper/"
+    },
+    {
+      "identifier": "fody@8.0.0",
+      "homepage": "https://github.com/turacojs/fody#readme"
+    },
+    {
+      "identifier": "json-schema-faker@0.5.0-rc16",
+      "homepage": "http://json-schema-faker.js.org"
+    },
+    {
+      "identifier": "kronos-koa@2.0.0",
+      "homepage": "https://github.com/Kronos-Integration/kronos-koa#readme"
+    },
+    {
+      "identifier": "sleep-promise@8.0.1",
+      "homepage": "https://github.com/brummelte/sleep-promise"
+    },
+    {
+      "identifier": "d3-format@1.3.2",
+      "homepage": "https://d3js.org/d3-format/"
+    },
+    {
+      "identifier": "line-intersect@2.1.1",
+      "homepage": "https://github.com/psalaets/line-intersect"
+    },
+    {
+      "identifier": "alp-limosa@2.6.2",
+      "homepage": "https://github.com/alpjs/alp-limosa#readme"
+    },
+    {
+      "identifier": "cropperjs@1.4.3",
+      "homepage": "https://fengyuanchen.github.io/cropperjs"
+    },
+    {
+      "identifier": "upyun@3.3.5",
+      "homepage": "https://github.com/upyun/node-sdk"
+    },
+    {
+      "identifier": "d3-timer@1.0.9",
+      "homepage": "https://d3js.org/d3-timer/"
+    },
+    {
+      "identifier": "kronos-endpoint@2.15.0",
+      "homepage": "https://github.com/Kronos-Integration/kronos-endpoint#readme"
+    },
+    {
+      "identifier": "dom-align@1.8.0",
+      "homepage": "http://github.com/yiminghe/dom-align"
+    },
+    {
+      "identifier": "rc-tooltip@3.7.3",
+      "homepage": "http://github.com/react-component/tooltip"
+    },
+    {
+      "identifier": "d3-tip@0.9.1",
+      "homepage": "https://github.com/Caged/d3-tip"
+    },
+    {
+      "identifier": "iobuffer@4.0.0",
+      "homepage": "https://github.com/image-js/iobuffer#readme"
+    },
+    {
+      "identifier": "throttle-debounce@2.0.1",
+      "homepage": "https://github.com/niksy/throttle-debounce#readme"
+    },
+    {
+      "identifier": "postcss-custom-properties@8.0.9",
+      "homepage": "https://github.com/postcss/postcss-custom-properties#readme"
+    },
+    {
+      "identifier": "recompose@0.30.0",
+      "homepage": "https://github.com/acdlite/recompose"
+    },
+    {
+      "identifier": "d3-path@1.0.7",
+      "homepage": "https://d3js.org/d3-path/"
+    },
+    {
+      "identifier": "contentful@7.0.5",
+      "homepage": "https://www.contentful.com/developers/documentation/content-delivery-api/"
+    },
+    {
+      "identifier": "postcss-custom-media@7.0.7",
+      "homepage": "https://github.com/postcss/postcss-custom-media#readme"
+    },
+    {
+      "identifier": "rc-checkbox@2.1.5",
+      "homepage": "http://github.com/react-component/checkbox"
+    },
+    {
+      "identifier": "term-ng@0.8.1",
+      "homepage": "https://github.com/MarkGriffiths/term-ng#readme"
+    },
+    {
+      "identifier": "recon-js@0.6.0",
+      "homepage": "https://github.com/swimit/recon-js"
+    },
+    {
+      "identifier": "parse-function@5.2.11",
+      "homepage": "https://github.com/tunnckoCore/parse-function"
+    },
+    {
+      "identifier": "route-node@3.4.2",
+      "homepage": "https://github.com/troch/route-node"
+    },
+    {
+      "identifier": "domtastic@0.15.10",
+      "homepage": "https://domtastic.js.org"
+    },
+    {
+      "identifier": "ix@2.3.5",
+      "homepage": "https://github.com/ReactiveX/IxJS#readme"
+    },
+    {
+      "identifier": "ebml@3.0.0",
+      "homepage": "https://github.com/node-ebml/node-ebml#readme"
+    },
+    {
+      "identifier": "react-modal@3.6.1",
+      "homepage": "https://github.com/reactjs/react-modal"
+    },
+    {
+      "identifier": "async-validator@1.10.0",
+      "homepage": "http://github.com/yiminghe/async-validator"
+    },
+    {
+      "identifier": "upcast@4.0.0",
+      "homepage": "https://github.com/OmgImAlexisj/upcast"
+    },
+    {
+      "identifier": "executive@1.6.3",
+      "homepage": "http://github.com/zeekay/executive"
+    },
+    {
+      "identifier": "console@0.7.2",
+      "homepage": "https://github.com/matthewhudson/console"
+    },
+    {
+      "identifier": "d3-ease@1.0.5",
+      "homepage": "https://d3js.org/d3-ease/"
+    },
+    {
+      "identifier": "bellajs@7.5.0",
+      "homepage": "https://www.npmjs.com/package/bellajs"
+    },
+    {
+      "identifier": "contentful-resolve-response@1.1.4",
+      "homepage": "https://github.com/contentful/contentful-resolve-response"
+    },
+    {
+      "identifier": "vue-resource@1.5.1",
+      "homepage": "https://github.com/pagekit/vue-resource#readme"
+    },
+    {
+      "identifier": "react-icon-base@2.1.2",
+      "homepage": "https://github.com/gorangajic/react-icon-base#readme"
+    },
+    {
+      "identifier": "react-dropzone@7.0.1",
+      "homepage": "https://github.com/react-dropzone/react-dropzone"
+    },
+    {
+      "identifier": "react-blessed@0.4.0",
+      "homepage": "https://github.com/yomguithereal/react-blessed#readme"
+    },
+    {
+      "identifier": "d3plus-color@0.6.2",
+      "homepage": "https://d3plus.org"
+    },
+    {
+      "identifier": "d3-time-format@2.1.3",
+      "homepage": "https://d3js.org/d3-time-format/"
+    },
+    {
+      "identifier": "d3-collection@1.0.7",
+      "homepage": "https://d3js.org/d3-collection/"
+    },
+    {
+      "identifier": "indian-ocean@3.1.0",
+      "homepage": "https://github.com/mhkeller/indian-ocean"
+    },
+    {
+      "identifier": "synchsafe@3.0.1",
+      "homepage": "https://github.com/chrisguttandin/synchsafe"
+    },
+    {
+      "identifier": "floating-scroll@3.0.4",
+      "homepage": "https://amphiluke.github.io/floating-scroll/"
+    },
+    {
+      "identifier": "illuminate-js@1.0.0-alpha.2",
+      "homepage": "https://github.com/vkbansal/illuminate-js#readme"
+    },
+    {
+      "identifier": "router5@6.6.2",
+      "homepage": "https://router5.js.org"
+    },
+    {
+      "identifier": "virtual-audio-graph@1.1.0",
+      "homepage": "https://github.com/benji6/virtual-audio-graph"
+    },
+    {
+      "identifier": "react-leaflet@2.1.2",
+      "homepage": "https://github.com/PaulLeCam/react-leaflet"
+    },
+    {
+      "identifier": "eventbrite@1.0.3",
+      "homepage": "https://github.com/eventbrite/eventbrite-sdk-javascript#readme"
+    },
+    {
+      "identifier": "tinyqueue@2.0.0",
+      "homepage": "https://github.com/mourner/tinyqueue"
+    },
+    {
+      "identifier": "preact-render-to-string@4.1.0",
+      "homepage": "https://github.com/developit/preact-render-to-string"
+    },
+    {
+      "identifier": "antd@3.10.8",
+      "homepage": "http://ant.design/"
+    },
+    {
+      "identifier": "tiny-binary-search@1.0.3",
+      "homepage": "https://github.com/patrickarlt/tiny-binary-search"
+    },
+    {
+      "identifier": "leaflet-virtual-grid@1.0.7",
+      "homepage": "https://github.com/patrickarlt/leaflet-virtual-grid#readme"
+    },
+    {
+      "identifier": "react-datepicker@2.0.0",
+      "homepage": "https://github.com/Hacker0x01/react-datepicker"
+    },
+    {
+      "identifier": "geojson-vt@3.2.1",
+      "homepage": "https://github.com/mapbox/geojson-vt"
+    },
+    {
+      "identifier": "postcss-custom-selectors@5.1.2",
+      "homepage": "https://github.com/postcss/postcss-custom-selectors#readme"
+    },
+    {
+      "identifier": "material-colors@1.2.6",
+      "homepage": "https://github.com/shuhei/material-colors"
+    },
+    {
+      "identifier": "rc-menu@7.4.19",
+      "homepage": "http://github.com/react-component/menu"
+    },
+    {
+      "identifier": "react-google-maps-loader@4.2.3",
+      "homepage": "https://github.com/xuopled/react-google-maps-loader#readme"
+    },
+    {
+      "identifier": "broken@0.1.13",
+      "homepage": "https://github.com/zeekay/broken#readme"
+    },
+    {
+      "identifier": "kronos-service-koa@4.0.7",
+      "homepage": "https://github.com/Kronos-Integration/kronos-service-koa#readme"
+    },
+    {
+      "identifier": "rc-select@8.4.4",
+      "homepage": "http://github.com/react-component/select"
+    },
+    {
+      "identifier": "d3plus-text@0.9.33",
+      "homepage": "https://d3plus.org"
+    },
+    {
+      "identifier": "precss@3.1.2",
+      "homepage": "https://github.com/jonathantneal/precss#readme"
+    },
+    {
+      "identifier": "jsonpath-plus@0.18.0",
+      "homepage": "https://github.com/s3u/JSONPath"
+    },
+    {
+      "identifier": "lodash-es@4.17.11",
+      "homepage": "https://lodash.com/custom-builds"
+    },
+    {
+      "identifier": "shortcake@1.2.8",
+      "homepage": "https://github.com/zeekay/shortcake"
+    },
+    {
+      "identifier": "component-registry@1.0.0-rc.7",
+      "homepage": "https://github.com/jhsware/component-registry"
+    },
+    {
+      "identifier": "ml-tree-similarity@0.1.0",
+      "homepage": "https://github.com/mljs/tree-similarity#readme"
+    },
+    {
+      "identifier": "react-input-number@3.1.0",
+      "homepage": "https://github.com/wangzuo/react-input-number"
+    },
+    {
+      "identifier": "postcss-color-hex-alpha@5.0.2",
+      "homepage": "https://github.com/postcss/postcss-color-hex-alpha#readme"
+    },
+    {
+      "identifier": "kronos-message@2.2.0",
+      "homepage": "https://github.com/Kronos-Integration/kronos-message#readme"
+    },
+    {
+      "identifier": "contentful-management@5.4.0",
+      "homepage": "https://www.contentful.com/developers/documentation/content-management-api/"
+    },
+    {
+      "identifier": "rc-dropdown@2.2.1",
+      "homepage": "http://github.com/react-component/dropdown"
+    },
+    {
+      "identifier": "rc-tree@1.14.8",
+      "homepage": "http://github.com/react-component/tree"
+    },
+    {
+      "identifier": "d3-shape@1.2.2",
+      "homepage": "https://d3js.org/d3-shape/"
+    },
+    {
+      "identifier": "react-router-relay@0.14.0",
+      "homepage": "https://github.com/relay-tools/react-router-relay#readme"
+    },
+    {
+      "identifier": "dompurify@1.0.8",
+      "homepage": "https://github.com/cure53/DOMPurify"
+    },
+    {
+      "identifier": "rc-progress@2.2.6",
+      "homepage": "http://github.com/react-component/progress"
+    },
+    {
+      "identifier": "rc-notification@3.3.0",
+      "homepage": "http://github.com/react-component/notification"
+    },
+    {
+      "identifier": "foundation-sites@6.5.1",
+      "homepage": "http://foundation.zurb.com/sites"
+    },
+    {
+      "identifier": "get-installed-path@4.0.8",
+      "homepage": "https://github.com/tunnckoCore/get-installed-path"
+    },
+    {
+      "identifier": "qrcode-reader@1.0.4",
+      "homepage": "https://github.com/edi9999/jsqrcode"
+    },
+    {
+      "identifier": "postcss-color-gray@5.0.0",
+      "homepage": "https://github.com/postcss/postcss-color-gray#readme"
+    },
+    {
+      "identifier": "postcss-pseudo-class-any-link@6.0.0",
+      "homepage": "https://github.com/jonathantneal/postcss-pseudo-class-any-link#readme"
+    },
+    {
+      "identifier": "standardized-audio-context@17.0.4",
+      "homepage": "https://github.com/chrisguttandin/standardized-audio-context"
+    },
+    {
+      "identifier": "satellite.js@2.0.3",
+      "homepage": "https://github.com/shashwatak/satellite-js"
+    },
+    {
+      "identifier": "postprocessing@5.2.2",
+      "homepage": "https://github.com/vanruesc/postprocessing"
+    },
+    {
+      "identifier": "wanakana@4.0.2",
+      "homepage": "http://www.wanakana.com"
+    },
+    {
+      "identifier": "d3-svg-legend@2.25.6",
+      "homepage": "http://d3-legend.susielu.com"
+    },
+    {
+      "identifier": "behaviortree@2.0.2",
+      "homepage": "https://github.com/Calamari/BehaviorTree.js"
+    },
+    {
+      "identifier": "rmc-picker@5.0.5",
+      "homepage": "https://github.com/react-component/m-picker"
+    },
+    {
+      "identifier": "knayi-myscript@2.6.1",
+      "homepage": "https://github.com/greenlikeorange/knayi-myscript"
+    },
+    {
+      "identifier": "iso-639-1@2.0.3",
+      "homepage": "https://github.com/meikidd/iso-639-1#readme"
+    },
+    {
+      "identifier": "smooth-scrollbar@8.3.1",
+      "homepage": "https://github.com/idiotWu/smooth-scrollbar#readme"
+    },
+    {
+      "identifier": "optimizely-oui@40.13.2",
+      "homepage": "https://github.com/optimizely/oui"
+    },
+    {
+      "identifier": "postcss-advanced-variables@2.3.3",
+      "homepage": "https://github.com/jonathantneal/postcss-advanced-variables#readme"
+    },
+    {
+      "identifier": "rc-dialog@7.2.1",
+      "homepage": "http://github.com/react-component/dialog"
+    },
+    {
+      "identifier": "sourcemap-codec@1.4.3",
+      "homepage": "https://github.com/Rich-Harris/sourcemap-codec"
+    },
+    {
+      "identifier": "rc-tabs@9.5.2",
+      "homepage": "http://github.com/react-component/tabs"
+    },
+    {
+      "identifier": "pope@2.0.2",
+      "homepage": "https://github.com/poppinss/pope#readme"
+    },
+    {
+      "identifier": "ionicons@4.4.7",
+      "homepage": "http://ionicons.com/"
+    },
+    {
+      "identifier": "rc-pagination@1.17.3",
+      "homepage": "http://github.com/react-component/pagination"
+    },
+    {
+      "identifier": "pkcs7@1.0.2",
+      "homepage": "https://github.com/brightcove/pkcs7"
+    },
+    {
+      "identifier": "style-inject@0.3.0",
+      "homepage": "https://github.com/egoist/style-inject#readme"
+    },
+    {
+      "identifier": "redux-persist@5.10.0",
+      "homepage": "https://github.com/rt2zz/redux-persist#readme"
+    },
+    {
+      "identifier": "rc-upload@2.6.0",
+      "homepage": "http://github.com/react-component/upload"
+    },
+    {
+      "identifier": "rc-slider@8.6.3",
+      "homepage": "http://github.com/react-component/slider/"
+    },
+    {
+      "identifier": "cake-mocha@0.1.0",
+      "homepage": "https://github.com/zeekay/cake-mocha#readme"
+    },
+    {
+      "identifier": "react-maskedinput@4.0.1",
+      "homepage": "https://github.com/insin/react-maskedinput"
+    },
+    {
+      "identifier": "react-tabs@2.3.0",
+      "homepage": "https://github.com/reactjs/react-tabs"
+    },
+    {
+      "identifier": "rc-calendar@9.7.11",
+      "homepage": "http://github.com/react-component/calendar"
+    },
+    {
+      "identifier": "react-hotkeys@1.1.4",
+      "homepage": "https://github.com/greena13/react-hotkeys"
+    },
+    {
+      "identifier": "viz.js@2.1.1",
+      "homepage": "https://github.com/mdaines/viz.js"
+    },
+    {
+      "identifier": "verbosity@0.10.0",
+      "homepage": "https://github.com/MarkGriffiths/verbosity#readme"
+    },
+    {
+      "identifier": "dexie@2.0.4",
+      "homepage": "http://dexie.org"
+    },
+    {
+      "identifier": "viewport-mercator-project@6.0.0",
+      "homepage": "https://github.com/uber-common/viewport-mercator-project#readme"
+    },
+    {
+      "identifier": "d3plus-shape@0.16.0",
+      "homepage": "https://d3plus.org"
+    },
+    {
+      "identifier": "kronos-service-health-check@2.11.0",
+      "homepage": "https://github.com/Kronos-Integration/kronos-service-health-check#readme"
+    },
+    {
+      "identifier": "xy-parser@2.2.2",
+      "homepage": "https://github.com/cheminfo-js/xy-parser#readme"
+    },
+    {
+      "identifier": "antwar-rss-plugin@0.29.3",
+      "homepage": "https://github.com/antwarjs/antwar"
+    },
+    {
+      "identifier": "autonumeric@4.5.1",
+      "homepage": "https://github.com/autoNumeric/autoNumeric/"
+    },
+    {
+      "identifier": "scouter@0.0.8",
+      "homepage": "https://github.com/estrattonbailey/scouter#readme"
+    },
+    {
+      "identifier": "bebop@1.15.1",
+      "homepage": "http://github.com/zeekay/bebop"
+    },
+    {
+      "identifier": "buscacursos-uc@4.0.1",
+      "homepage": "https://github.com/mrpatiwi/buscacursos-uc"
+    },
+    {
+      "identifier": "is-array-buffer@1.0.1",
+      "homepage": "https://github.com/fengyuanchen/is-array-buffer"
+    },
+    {
+      "identifier": "worker-timers@5.0.1",
+      "homepage": "https://github.com/chrisguttandin/worker-timers"
+    },
+    {
+      "identifier": "midi-file-slicer@5.0.1",
+      "homepage": "https://github.com/chrisguttandin/midi-file-slicer"
+    },
+    {
+      "identifier": "leaflet-shape-markers@1.0.6",
+      "homepage": "http://github.com/Esri/Leaflet.shapeMarkers"
+    },
+    {
+      "identifier": "asmcrypto.js@2.3.2",
+      "homepage": "https://github.com/asmcrypto/asmcrypto.js"
+    },
+    {
+      "identifier": "redux-form@7.4.2",
+      "homepage": "https://redux-form.com/"
+    },
+    {
+      "identifier": "framework7@3.5.2",
+      "homepage": "http://framework7.io/"
+    },
+    {
+      "identifier": "@cycle/http@15.0.0",
+      "homepage": "https://cycle.js.org"
+    },
+    {
+      "identifier": "victory-line@31.0.0",
+      "homepage": "https://formidable.com/open-source/victory"
+    },
+    {
+      "identifier": "victory-axis@31.0.0",
+      "homepage": "https://formidable.com/open-source/victory"
+    },
+    {
+      "identifier": "referential@0.5.23",
+      "homepage": "http://github.com/zeekay/referential"
+    },
+    {
+      "identifier": "odgn-bitfield@1.0.3",
+      "homepage": "https://github.com/odogono/bitfield#readme"
+    },
+    {
+      "identifier": "kronos-flow@2.5.40",
+      "homepage": "https://github.com/Kronos-Integration/kronos-flow#readme"
+    },
+    {
+      "identifier": "react-auto-form@2.0.0",
+      "homepage": "https://github.com/insin/react-auto-form"
+    },
+    {
+      "identifier": "react-cookie@3.0.4",
+      "homepage": "https://github.com/reactivestack/cookies/tree/master/packages/react-cookie/#readme"
+    },
+    {
+      "identifier": "instantsearch.js@2.10.4",
+      "homepage": "https://community.algolia.com/instantsearch.js/"
+    },
+    {
+      "identifier": "isomorphic-schema@1.0.0-beta.7",
+      "homepage": "https://github.com/jhsware/isomorphic-schema"
+    },
+    {
+      "identifier": "d3-selection-multi@1.0.1",
+      "homepage": "https://github.com/d3/d3-selection-multi"
+    },
+    {
+      "identifier": "joiner@2.1.2",
+      "homepage": "https://github.com/mhkeller/joiner"
+    },
+    {
+      "identifier": "fkit@1.4.0",
+      "homepage": "https://github.com/nullobject/fkit"
+    },
+    {
+      "identifier": "postcss-nesting@7.0.0",
+      "homepage": "https://github.com/jonathantneal/postcss-nesting#readme"
+    },
+    {
+      "identifier": "preboot@6.0.0-beta.6",
+      "homepage": "https://github.com/angular/preboot"
+    },
+    {
+      "identifier": "rc-input-number@4.3.4",
+      "homepage": "https://github.com/react-component/input-number"
+    },
+    {
+      "identifier": "rc-collapse@1.10.0",
+      "homepage": "http://github.com/react-component/collapse"
+    },
+    {
+      "identifier": "rc-table@6.4.0",
+      "homepage": "http://github.com/react-component/table"
+    },
+    {
+      "identifier": "rc-switch@1.8.0",
+      "homepage": "http://github.com/react-component/switch"
+    },
+    {
+      "identifier": "rc-steps@3.3.0",
+      "homepage": "http://github.com/react-component/steps"
+    },
+    {
+      "identifier": "trucolor@0.7.1",
+      "homepage": "https://github.com/MarkGriffiths/trucolor"
+    },
+    {
+      "identifier": "uti@5.1.3",
+      "homepage": "https://github.com/arlac77/uti#readme"
+    },
+    {
+      "identifier": "react-inlinesvg@0.8.2",
+      "homepage": "https://github.com/gilbarbara/react-inlinesvg#readme"
+    },
+    {
+      "identifier": "react-toolbox@2.0.0-beta.13",
+      "homepage": "http://www.react-toolbox.io"
+    },
+    {
+      "identifier": "@cycle/isolate@4.1.0",
+      "homepage": "https://cycle.js.org"
+    },
+    {
+      "identifier": "lore@0.13.0",
+      "homepage": "https://github.com/lore/lore#readme"
+    },
+    {
+      "identifier": "broccoli-typescript-compiler@4.0.1",
+      "homepage": "https://github.com/tildeio/broccoli-typescript-compiler"
+    },
+    {
+      "identifier": "immupdate@1.3.0",
+      "homepage": "https://github.com/AlexGalays/immupdate"
+    },
+    {
+      "identifier": "d3-cloud@1.2.5",
+      "homepage": "https://www.jasondavies.com/wordcloud/"
+    },
+    {
+      "identifier": "signature_pad@3.0.0-beta.3",
+      "homepage": "https://github.com/szimek/signature_pad"
+    },
+    {
+      "identifier": "cuckoo-js@1.0.6",
+      "homepage": "https://github.com/hanzo-io/cuckoo#readme"
+    },
+    {
+      "identifier": "cerberus@1.0.3",
+      "homepage": "https://github.com/Jomik/cerberus#readme"
+    },
+    {
+      "identifier": "getstream@3.23.0",
+      "homepage": "https://getstream.io/docs?language=js"
+    },
+    {
+      "identifier": "deep-for-each@2.0.3",
+      "homepage": "https://github.com/moxystudio/js-deep-for-each"
+    },
+    {
+      "identifier": "truwrap@0.8.1",
+      "homepage": "https://github.com/MarkGriffiths/truwrap"
+    },
+    {
+      "identifier": "d3-request@1.0.6",
+      "homepage": "https://d3js.org/d3-request/"
+    },
+    {
+      "identifier": "react-google-recaptcha@1.0.5",
+      "homepage": "https://github.com/dozoisch/react-google-recaptcha"
+    },
+    {
+      "identifier": "microcosm@12.14.0",
+      "homepage": "http://code.viget.com/microcosm"
+    },
+    {
+      "identifier": "vega-lite@3.0.0-rc8",
+      "homepage": "https://vega.github.io/vega-lite/"
+    },
+    {
+      "identifier": "operator@1.2.3",
+      "homepage": "https://github.com/estrattonbailey/operator#readme"
+    },
+    {
+      "identifier": "rc-queue-anim@1.6.7",
+      "homepage": "https://github.com/react-component/queue-anim"
+    },
+    {
+      "identifier": "redux-promise-middleware@5.1.1",
+      "homepage": "https://github.com/pburtchaell/redux-promise-middleware"
+    },
+    {
+      "identifier": "react-window@1.2.4",
+      "homepage": "http://react-window.now.sh/"
+    },
+    {
+      "identifier": "note-parser@2.0.1",
+      "homepage": "https://github.com/danigb/note-parser#readme"
+    },
+    {
+      "identifier": "ng-redux@4.1.0",
+      "homepage": "https://github.com/angular-redux/ng-redux#readme"
+    },
+    {
+      "identifier": "backbone.validation@0.14.1",
+      "homepage": "https://github.com/blikblum/backbone.validation"
+    },
+    {
+      "identifier": "react-component-resizable@2.0.1",
+      "homepage": "https://github.com/nrako/react-component-resizable"
+    },
+    {
+      "identifier": "translation.js@0.7.5",
+      "homepage": "https://github.com/Selection-Translator/translation.js#readme"
+    },
+    {
+      "identifier": "kronos-service-manager@3.5.10",
+      "homepage": "https://github.com/Kronos-Integration/kronos-service-manager#readme"
+    },
+    {
+      "identifier": "rc-time-picker@3.4.0",
+      "homepage": "http://github.com/react-component/time-picker"
+    },
+    {
+      "identifier": "eventdispatcher@2.6.0",
+      "homepage": "https://github.com/soenkekluth/EventDispatcher"
+    },
+    {
+      "identifier": "fast-png@3.1.0",
+      "homepage": "https://github.com/image-js/fast-png#readme"
+    },
+    {
+      "identifier": "rollup-plugin-babel@4.0.3",
+      "homepage": "https://github.com/rollup/rollup-plugin-babel"
+    },
+    {
+      "identifier": "tiff@3.0.1",
+      "homepage": "https://github.com/image-js/tiff#readme"
+    },
+    {
+      "identifier": "dicom-parser@1.8.1",
+      "homepage": "https://github.com/cornerstonejs/dicomParser"
+    },
+    {
+      "identifier": "react-split-pane@0.1.84",
+      "homepage": "https://github.com/tomkp/react-split-pane"
+    },
+    {
+      "identifier": "handsontable@6.2.0",
+      "homepage": "https://handsontable.com/"
+    },
+    {
+      "identifier": "postcss-short-spacing@4.0.0",
+      "homepage": "https://github.com/jonathantneal/postcss-short-spacing#readme"
+    },
+    {
+      "identifier": "postcss-short-size@4.0.0",
+      "homepage": "https://github.com/jonathantneal/postcss-short-size#readme"
+    },
+    {
+      "identifier": "postcss-short-position@4.0.1",
+      "homepage": "https://github.com/jonathantneal/postcss-short-position#readme"
+    },
+    {
+      "identifier": "postcss-short-font-size@5.0.0",
+      "homepage": "https://github.com/jonathantneal/postcss-short-font-size#readme"
+    },
+    {
+      "identifier": "postcss-short-color@4.0.0",
+      "homepage": "https://github.com/jonathantneal/postcss-short-color#readme"
+    },
+    {
+      "identifier": "postcss-short-border@4.0.0",
+      "homepage": "https://github.com/jonathantneal/postcss-short-border#readme"
+    },
+    {
+      "identifier": "postcss-font-weights@5.0.0",
+      "homepage": "https://github.com/jonathantneal/postcss-font-weights#readme"
+    },
+    {
+      "identifier": "component-playground@3.2.1",
+      "homepage": "https://github.com/FormidableLabs/component-playground#readme"
+    },
+    {
+      "identifier": "victory-scatter@31.0.0",
+      "homepage": "https://formidable.com/open-source/victory"
+    },
+    {
+      "identifier": "victory-pie@31.0.0",
+      "homepage": "https://formidable.com/open-source/victory"
+    },
+    {
+      "identifier": "victory-chart@31.0.0",
+      "homepage": "https://formidable.com/open-source/victory"
+    },
+    {
+      "identifier": "plug-login@2.1.0",
+      "homepage": "https://github.com/miniplug/plug-login"
+    },
+    {
+      "identifier": "currency.js@1.2.1",
+      "homepage": "http://scurker.github.io/currency.js"
+    },
+    {
+      "identifier": "victory-bar@31.0.1",
+      "homepage": "https://formidable.com/open-source/victory"
+    },
+    {
+      "identifier": "lore-actions@0.13.0",
+      "homepage": "https://github.com/lore/lore#readme"
+    },
+    {
+      "identifier": "lore-models@0.13.0",
+      "homepage": "http://github.com/lore/lore"
+    },
+    {
+      "identifier": "vue-i18n@8.3.2",
+      "homepage": "https://github.com/kazupon/vue-i18n#readme"
+    },
+    {
+      "identifier": "ml-xsadd@2.0.0",
+      "homepage": "https://github.com/mljs/xsadd#readme"
+    },
+    {
+      "identifier": "ml-regression@4.4.2",
+      "homepage": "https://github.com/mljs/regression"
+    },
+    {
+      "identifier": "ml-pls@1.0.0",
+      "homepage": "https://github.com/mljs/pls"
+    },
+    {
+      "identifier": "ml-naivebayes@3.0.0",
+      "homepage": "https://github.com/mljs/naive-bayes"
+    },
+    {
+      "identifier": "ml-knn@2.1.3",
+      "homepage": "https://github.com/mljs/knn#readme"
+    },
+    {
+      "identifier": "ml-kmeans@4.2.1",
+      "homepage": "https://github.com/mljs/kmeans"
+    },
+    {
+      "identifier": "react-youtube@7.8.0",
+      "homepage": "https://github.com/compedit/react-youtube"
+    },
+    {
+      "identifier": "d3-axis@1.0.12",
+      "homepage": "https://d3js.org/d3-axis/"
+    },
+    {
+      "identifier": "angular-bootstrap-datetimepicker@2.2.1",
+      "homepage": "https://dalelotts.github.io/angular-bootstrap-datetimepicker"
+    },
+    {
+      "identifier": "embed-js@5.0.3",
+      "homepage": "https://github.com/ritz078/embed.js#readme"
+    },
+    {
+      "identifier": "react-router-form@3.0.0",
+      "homepage": "https://github.com/insin/react-router-form"
+    },
+    {
+      "identifier": "dayz@1.2.0",
+      "homepage": "https://github.com/nathanstitt/dayz#readme"
+    },
+    {
+      "identifier": "common-tags@1.8.0",
+      "homepage": "https://github.com/declandewet/common-tags"
+    },
+    {
+      "identifier": "redux-saga@0.16.2",
+      "homepage": "https://redux-saga.js.org/"
+    },
+    {
+      "identifier": "detergent@4.0.4",
+      "homepage": "https://detergent.io"
+    },
+    {
+      "identifier": "device-detector@1.0.2",
+      "homepage": "https://www.npmjs.com/package/device-detector"
+    },
+    {
+      "identifier": "device.js@2.3.0",
+      "homepage": "https://github.com/soenkekluth/device.js"
+    },
+    {
+      "identifier": "dice-roll@1.0.0",
+      "homepage": "https://github.com/firstandthird/dice-roll#readme"
+    },
+    {
+      "identifier": "bfs-path@1.0.2",
+      "homepage": "https://github.com/jvilk/bfs-path#readme"
+    },
+    {
+      "identifier": "bfs-process@1.0.0",
+      "homepage": "https://github.com/jvilk/bfs-process#readme"
+    },
+    {
+      "identifier": "bigfloat@0.1.0",
+      "homepage": "https://github.com/charto/bigfloat#readme"
+    },
+    {
+      "identifier": "dislocator@2.0.0",
+      "homepage": "https://github.com/One-com/dislocator"
+    },
+    {
+      "identifier": "distpicker@2.0.4",
+      "homepage": "https://fengyuanchen.github.io/distpicker"
+    },
+    {
+      "identifier": "docks@0.6.1",
+      "homepage": "https://github.com/tunnckoCore/docks"
+    },
+    {
+      "identifier": "dom-observer@1.0.0",
+      "homepage": "https://github.com/jstoolkit/dom-observer"
+    },
+    {
+      "identifier": "dominject@2.0.0",
+      "homepage": "https://github.com/bevry/dominject"
+    },
+    {
+      "identifier": "dragon@0.3.0",
+      "homepage": "https://github.com/luckylooke/dragon"
+    },
+    {
+      "identifier": "applet@0.0.10",
+      "homepage": "https://github.com/appletjs/applet#readme"
+    },
+    {
+      "identifier": "drift-zoom@1.3.3",
+      "homepage": "https://github.com/imgix/drift"
+    },
+    {
+      "identifier": "dygraphs@2.1.0",
+      "homepage": "https://github.com/danvk/dygraphs"
+    },
+    {
+      "identifier": "eases-jsnext@1.0.10",
+      "homepage": "https://github.com/rollup/eases-jsnext"
+    },
+    {
+      "identifier": "blockchain-wallet-client@3.35.0",
+      "homepage": "https://github.com/blockchain/my-wallet-v3"
+    },
+    {
+      "identifier": "elsinore@5.2.2",
+      "homepage": "https://github.com/odogono/elsinore-js"
+    },
+    {
+      "identifier": "booth@0.11.0",
+      "homepage": "https://github.com/StreetStrider/booth"
+    },
+    {
+      "identifier": "bootloader@1.0.1",
+      "homepage": "https://github.com/AngularClass/angular2-bootloader#readme"
+    },
+    {
+      "identifier": "esparse@0.6.11",
+      "homepage": "https://github.com/zenparsing/esparse"
+    },
+    {
+      "identifier": "esri-leaflet-geocoder@2.2.13",
+      "homepage": "https://github.com/Esri/esri-leaflet-geocoder"
+    },
+    {
+      "identifier": "esri-leaflet-renderers@2.0.6",
+      "homepage": "http://esri.github.io/esri-leaflet"
+    },
+    {
+      "identifier": "event-target@1.2.3",
+      "homepage": "https://github.com/WebReflection/event-target"
+    },
+    {
+      "identifier": "eztvapi@2.0.1",
+      "homepage": "https://github.com/maxkueng/eztvapi"
+    },
+    {
+      "identifier": "fannypack@2.18.3",
+      "homepage": "https://github.com/bigbellies"
+    },
+    {
+      "identifier": "bridgedb@6.0.2",
+      "homepage": "https://bridgedb.github.io/bridgedbjs/docs/"
+    },
+    {
+      "identifier": "brief@1.1.5",
+      "homepage": "http://zeekay.github.io/brief"
+    },
+    {
+      "identifier": "broadcast@3.0.0",
+      "homepage": "https://github.com/WebReflection/broadcast"
+    },
+    {
+      "identifier": "feiertagejs@1.2.2",
+      "homepage": "https://github.com/sfakir/feiertagejs"
+    },
+    {
+      "identifier": "filmstrip2gif@2.0.5",
+      "homepage": "https://github.com/tec27/filmstrip2gif"
+    },
+    {
+      "identifier": "ahoy.js@0.3.3",
+      "homepage": "https://github.com/ankane/ahoy.js"
+    },
+    {
+      "identifier": "browser-url@2.0.1",
+      "homepage": "https://github.com/fenivana/browser-url#readme"
+    },
+    {
+      "identifier": "flakeid@0.3.1",
+      "homepage": "https://github.com/s-yadav/FlakeId#readme"
+    },
+    {
+      "identifier": "floatl@2.0.1",
+      "homepage": "https://github.com/richardvenneman/floatl"
+    },
+    {
+      "identifier": "fluent@0.9.1",
+      "homepage": "http://projectfluent.org"
+    },
+    {
+      "identifier": "form.js@0.2.0",
+      "homepage": "https://github.com/hanzo-io/form.js#readme"
+    },
+    {
+      "identifier": "angular-audio-context@19.0.3",
+      "homepage": "https://github.com/chrisguttandin/angular-audio-context"
+    },
+    {
+      "identifier": "framesync@4.0.1",
+      "homepage": "https://github.com/Popmotion/framesync#readme"
+    },
+    {
+      "identifier": "angular-bem@2.2.0",
+      "homepage": "https://github.com/tenphi/angular-bem#readme"
+    },
+    {
+      "identifier": "fullscream@1.0.12",
+      "homepage": "https://github.com/thewhodidthis/fullscream#readme"
+    },
+    {
+      "identifier": "bulb@1.1.1",
+      "homepage": "https://github.com/nullobject/bulb"
+    },
+    {
+      "identifier": "gatsby@2.0.50",
+      "homepage": "https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby#readme"
+    },
+    {
+      "identifier": "abyssa@8.1.0-dev.0",
+      "homepage": "https://github.com/AlexGalays/abyssa-js/"
+    },
+    {
+      "identifier": "angular-datatables@7.0.0",
+      "homepage": "https://github.com/l-lin/angular-datatables#readme"
+    },
+    {
+      "identifier": "bwip-js@1.7.1",
+      "homepage": "https://github.com/metafloor/bwip-js"
+    },
+    {
+      "identifier": "geniejs@0.5.1",
+      "homepage": "https://github.com/kentcdodds/genie"
+    },
+    {
+      "identifier": "geometry-interfaces@1.1.4",
+      "homepage": "https://github.com/trusktr/geometry-interfaces"
+    },
+    {
+      "identifier": "gestalt@0.83.0",
+      "homepage": "https://pinterest.github.io/gestalt"
+    },
+    {
+      "identifier": "get-property-descriptor@2.0.4",
+      "homepage": "https://github.com/rektide/get-property-descriptor"
+    },
+    {
+      "identifier": "cachefactory@3.0.0",
+      "homepage": "https://github.com/jmdobry/CacheFactory"
+    },
+    {
+      "identifier": "cake-publish@0.1.10",
+      "homepage": "https://github.com/zeekay/cake-publish#readme"
+    },
+    {
+      "identifier": "cake-version@0.1.15",
+      "homepage": "https://github.com/zeekay/cake-version#readme"
+    },
+    {
+      "identifier": "glitch-canvas@1.1.5",
+      "homepage": "https://github.com/snorpey/glitch-canvas#readme"
+    },
+    {
+      "identifier": "graph-scroll@1.0.2",
+      "homepage": "http://1wheel.github.io/graph-scroll/"
+    },
+    {
+      "identifier": "angular-http-etag@2.0.18",
+      "homepage": "https://github.com/shaungrady/angular-http-etag"
+    },
+    {
+      "identifier": "cash-dom@2.3.9",
+      "homepage": "https://github.com/kenwheeler/cash"
+    },
+    {
+      "identifier": "catalog@3.6.0",
+      "homepage": "https://www.catalog.style/"
+    },
+    {
+      "identifier": "actuate@1.8.8",
+      "homepage": "https://github.com/jgranick/actuate"
+    },
+    {
+      "identifier": "cep-promise@3.0.3",
+      "homepage": "https://github.com/filipedeschamps/cep-promise"
+    },
+    {
+      "identifier": "h.js@4.0.0",
+      "homepage": "https://h.js.org/"
+    },
+    {
+      "identifier": "hanzo.js@2.5.4",
+      "homepage": "http://github.com/hanzoai/hanzo.js"
+    },
+    {
+      "identifier": "hardcore@1.0.0",
+      "homepage": "https://github.com/bathos/hardcore-xml#readme"
+    },
+    {
+      "identifier": "hash-handler@2.0.1",
+      "homepage": "https://github.com/lgraubner/hash-handler"
+    },
+    {
+      "identifier": "chartkick@3.0.1",
+      "homepage": "https://github.com/ankane/chartkick.js"
+    },
+    {
+      "identifier": "check-arg-types@1.1.2",
+      "homepage": "https://github.com/staydecent/check-arg-types#readme"
+    },
+    {
+      "identifier": "horologe@2.3.2",
+      "homepage": "https://github.com/hollowdoor/horologe#readme"
+    },
+    {
+      "identifier": "hotkeys-js@3.3.8",
+      "homepage": "http://jaywcjlove.github.io/hotkeys"
+    },
+    {
+      "identifier": "chirashi@6.5.0",
+      "homepage": "https://chirashijs.org"
+    },
+    {
+      "identifier": "ibex@4.5.1",
+      "homepage": "https://github.com/alpjs/ibex#readme"
+    },
+    {
+      "identifier": "angular-spinners@5.0.5",
+      "homepage": "https://github.com/chevtek/angular-spinners#readme"
+    },
+    {
+      "identifier": "chord-magic@2.1.1",
+      "homepage": "https://github.com/nolanlawson/chord-magic"
+    },
+    {
+      "identifier": "chrome-call@4.0.1",
+      "homepage": "https://github.com/lmk123/chrome-call"
+    },
+    {
+      "identifier": "image-js@0.21.4",
+      "homepage": "https://github.com/image-js/core"
+    },
+    {
+      "identifier": "image-q@2.1.2",
+      "homepage": "https://github.com/ibezkrovnyi/image-quantization"
+    },
+    {
+      "identifier": "imageviewer@1.0.0",
+      "homepage": "https://fengyuanchen.github.io/viewer"
+    },
+    {
+      "identifier": "in-stalk@2.1.2",
+      "homepage": "https://github.com/tuxsudo/in-stalk"
+    },
+    {
+      "identifier": "inferno-component@6.2.1",
+      "homepage": "https://github.com/infernojs/inferno#readme"
+    },
+    {
+      "identifier": "inferno-server@6.2.1",
+      "homepage": "https://github.com/infernojs/inferno#readme"
+    },
+    {
+      "identifier": "ionic-native@2.9.0",
+      "homepage": "https://github.com/driftyco/ionic-native"
+    },
+    {
+      "identifier": "iphone-inline-video@2.2.2",
+      "homepage": "https://github.com/bfred-it/iphone-inline-video#readme"
+    },
+    {
+      "identifier": "clanviewer@0.1.11",
+      "homepage": "https://github.com/ProteinsWebTeam/clanviewer"
+    },
+    {
+      "identifier": "jamilih@0.43.0",
+      "homepage": "https://github.com/brettz9/jamilih"
+    },
+    {
+      "identifier": "jexia-sdk-js@3.5.0",
+      "homepage": "https://github.com/jexia/jexia-sdk-js#readme"
+    },
+    {
+      "identifier": "angular-window-events@1.1.6",
+      "homepage": "https://github.com/shaungrady/angular-window-events"
+    },
+    {
+      "identifier": "jquery.autobox@3.0.0",
+      "homepage": "https://github.com/duzun/jquery.autobox"
+    },
+    {
+      "identifier": "js-joda@1.9.2",
+      "homepage": "https://js-joda.github.io/js-joda"
+    },
+    {
+      "identifier": "angular2-grid@3.0.0",
+      "homepage": "https://github.com/BTMorton/angular2-grid"
+    },
+    {
+      "identifier": "jscc@1.0.0",
+      "homepage": "https://github.com/aMarCruz/jscc"
+    },
+    {
+      "identifier": "angular2-modal@3.0.3",
+      "homepage": "https://github.com/shlomiassaf/angular2-modal"
+    },
+    {
+      "identifier": "avatar-initials@4.1.0",
+      "homepage": "http://matthewcallis.github.io/avatar/"
+    },
+    {
+      "identifier": "kash@1.0.3",
+      "homepage": "https://github.com/matthewhudson/kash"
+    },
+    {
+      "identifier": "kivi@1.0.0-rc2",
+      "homepage": "https://github.com/localvoid/kivi"
+    },
+    {
+      "identifier": "ko-component-router@5.0.1",
+      "homepage": "https://github.com/Profiscience/ko-component-router"
+    },
+    {
+      "identifier": "kronos-service-admin@2.26.22",
+      "homepage": "https://github.com/Kronos-Integration/kronos-service-admin#readme"
+    },
+    {
+      "identifier": "kronos-service-consul@2.20.2",
+      "homepage": "https://github.com/Kronos-Integration/kronos-service-consul#readme"
+    },
+    {
+      "identifier": "kronos-step-passthrough@2.2.0",
+      "homepage": "https://github.com/Kronos-Integration/kronos-step-passthrough#readme"
+    },
+    {
+      "identifier": "kronos-test-interceptor@3.1.1",
+      "homepage": "https://github.com/Kronos-Integration/kronos-test-interceptor#readme"
+    },
+    {
+      "identifier": "kuroshiro@1.1.2",
+      "homepage": "https://github.com/hexenq/kuroshiro"
+    },
+    {
+      "identifier": "akasha@0.1.10",
+      "homepage": "https://github.com/davidtai/akasha#readme"
+    },
+    {
+      "identifier": "lain@2.1.2",
+      "homepage": "https://github.com/DarkMarmot/lain"
+    },
+    {
+      "identifier": "lexy@0.2.2",
+      "homepage": "https://github.com/lexyjs/lexy/tree/master#readme"
+    },
+    {
+      "identifier": "lines-and-columns@1.1.6",
+      "homepage": "https://github.com/eventualbuddha/lines-and-columns#readme"
+    },
+    {
+      "identifier": "locale-code@2.0.1",
+      "homepage": "https://github.com/meikidd/locale-code#readme"
+    },
+    {
+      "identifier": "locate-java-home@1.1.2",
+      "homepage": "https://github.com/jvilk/locate-java-home#readme"
+    },
+    {
+      "identifier": "lore-reducers@0.13.0",
+      "homepage": "https://github.com/lore/lore#readme"
+    },
+    {
+      "identifier": "luminous-lightbox@2.3.1",
+      "homepage": "https://github.com/imgix/luminous#readme"
+    },
+    {
+      "identifier": "maquette@3.3.2",
+      "homepage": "https://maquettejs.org/"
+    },
+    {
+      "identifier": "marionette.toolkit@5.0.0",
+      "homepage": "https://github.com/RoundingWellOS/marionette.toolkit"
+    },
+    {
+      "identifier": "markdown-to-jsx@6.8.3",
+      "homepage": "https://probablyup.github.io/markdown-to-jsx"
+    },
+    {
+      "identifier": "alauda@2.7.0",
+      "homepage": "https://github.com/alpjs/alauda#readme"
+    },
+    {
+      "identifier": "compago@4.0.0-beta.8",
+      "homepage": "https://github.com/zandaqo/compago#readme"
+    },
+    {
+      "identifier": "material-ui-express@0.16.7",
+      "homepage": "http://material-ui.com/"
+    },
+    {
+      "identifier": "compilerr@6.0.2",
+      "homepage": "https://github.com/chrisguttandin/compilerr"
+    },
+    {
+      "identifier": "meta.js@1.0.0-beta.2",
+      "homepage": "https://github.com/meta-network/meta.js#readme"
+    },
+    {
+      "identifier": "metadata-detector@6.0.1",
+      "homepage": "https://github.com/chrisguttandin/metadata-detector"
+    },
+    {
+      "identifier": "metismenu@3.0.3",
+      "homepage": "https://github.com/onokumus/metismenu#readme"
+    },
+    {
+      "identifier": "midi-json-parser@6.0.4",
+      "homepage": "https://github.com/chrisguttandin/midi-json-parser"
+    },
+    {
+      "identifier": "midi-player@4.0.4",
+      "homepage": "https://github.com/chrisguttandin/midi-player"
+    },
+    {
+      "identifier": "antwar@0.29.3",
+      "homepage": "https://github.com/antwarjs/antwar"
+    },
+    {
+      "identifier": "conductor@1.4.1",
+      "homepage": "https://github.com/WaldoJeffers/conductor#readme"
+    },
+    {
+      "identifier": "antwar-prevnext-plugin@0.13.0",
+      "homepage": "https://github.com/antwarjs/antwar"
+    },
+    {
+      "identifier": "mocha-parallel-tests@2.0.6-alpha.2",
+      "homepage": "https://github.com/mocha-parallel/mocha-parallel-tests"
+    },
+    {
+      "identifier": "mock-local-storage@1.1.7",
+      "homepage": "https://github.com/letsrock-today/mock-local-storage"
+    },
+    {
+      "identifier": "moltin@2.2.0",
+      "homepage": "https://github.com/moltin/js-sdk"
+    },
+    {
+      "identifier": "motive@1.0.0",
+      "homepage": "http://jshanley.github.io/motivejs/"
+    },
+    {
+      "identifier": "movie-list@4.0.0",
+      "homepage": "https://github.com/noamokman/movie-list"
+    },
+    {
+      "identifier": "multiple-methods@0.0.7",
+      "homepage": "https://github.com/jimmyhmiller/multiple-methods#readme"
+    },
+    {
+      "identifier": "myscript@4.2.0",
+      "homepage": "https://myscript.github.io/MyScriptJS/"
+    },
+    {
+      "identifier": "mysqldump@2.2.1",
+      "homepage": "https://github.com/assignar/mysqldump"
+    },
+    {
+      "identifier": "navbar@2.1.0",
+      "homepage": "https://qubyte.github.io/navbar/"
+    },
+    {
+      "identifier": "navigator.sendbeacon@0.0.14",
+      "homepage": "https://github.com/miguelmota/Navigator.sendBeacon"
+    },
+    {
+      "identifier": "connect.io@3.1.3",
+      "homepage": "https://github.com/Selection-Translator/connect.io"
+    },
+    {
+      "identifier": "nestedtypes@2.1.4",
+      "homepage": "https://github.com/Volicon/NestedTypes"
+    },
+    {
+      "identifier": "netflux@4.3.1",
+      "homepage": "https://coast-team.github.io/netflux"
+    },
+    {
+      "identifier": "console-group@0.3.3",
+      "homepage": "https://github.com/rich-harris/node-console-group"
+    },
+    {
+      "identifier": "ng2-datepicker@3.1.1",
+      "homepage": "https://github.com/bleenco/ng2-datepicker#readme"
+    },
+    {
+      "identifier": "ng2-dragula@2.1.1",
+      "homepage": "https://github.com/valor-software/ng2-dragula#readme"
+    },
+    {
+      "identifier": "ng2-highcharts@1.2.0",
+      "homepage": "https://github.com/Bigous/ng2-highcharts"
+    },
+    {
+      "identifier": "ng2-translate@5.0.0",
+      "homepage": "https://github.com/ocombe/ng2-translate"
+    },
+    {
+      "identifier": "node-package@1.3.0",
+      "homepage": "https://github.com/abraham/node-package"
+    },
+    {
+      "identifier": "noodle@1.6.0",
+      "homepage": "https://github.com/estrattonbailey/noodle#readme"
+    },
+    {
+      "identifier": "nuka-carousel@4.4.3",
+      "homepage": "https://github.com/FormidableLabs/nuka-carousel"
+    },
+    {
+      "identifier": "nusmoderator@2.1.1",
+      "homepage": "https://github.com/nusmodifications/nusmods/tree/master/packages/nusmoderator"
+    },
+    {
+      "identifier": "nydus-client@1.0.1",
+      "homepage": "https://github.com/tec27/nydus-client"
+    },
+    {
+      "identifier": "object-boolean-combinations@2.4.0",
+      "homepage": "https://bitbucket.org/codsen/object-boolean-combinations/"
+    },
+    {
+      "identifier": "object-wrapper@1.0.1",
+      "homepage": "https://github.com/jvilk/npm-module-wrapper#readme"
+    },
+    {
+      "identifier": "objectmodel@3.7.6",
+      "homepage": "http://objectmodel.js.org"
+    },
+    {
+      "identifier": "observable-socket@5.2.0",
+      "homepage": "https://github.com/killtheliterate/observable-socket"
+    },
+    {
+      "identifier": "bacon.atom@5.0.5",
+      "homepage": "https://github.com/calmm-js/bacon.atom#readme"
+    },
+    {
+      "identifier": "cornerstone-wado-image-loader@2.2.2",
+      "homepage": "https://github.com/cornerstonejs/cornerstoneWADOImageLoader"
+    },
+    {
+      "identifier": "optimal-select@4.0.1",
+      "homepage": "https://github.com/Autarc/optimal-select"
+    },
+    {
+      "identifier": "oscilloscope@1.1.0",
+      "homepage": "https://github.com/mathiasvr/audio-oscilloscope#readme"
+    },
+    {
+      "identifier": "badgee@2.0.4",
+      "homepage": "https://github.com/dharFr/badgee#readme"
+    },
+    {
+      "identifier": "outdent@0.7.0",
+      "homepage": "https://github.com/cspotcode/outdent#readme"
+    },
+    {
+      "identifier": "phoenix-elixir@1.2.1",
+      "homepage": "https://github.com/VladShcherbin/phoenix-elixir#readme"
+    },
+    {
+      "identifier": "picknick@4.1.2",
+      "homepage": "https://github.com/thewhodidthis/picknick#readme"
+    },
+    {
+      "identifier": "please-wait@0.0.5",
+      "homepage": "https://github.com/Pathgather/please-wait"
+    },
+    {
+      "identifier": "plug-socket@1.0.0",
+      "homepage": "https://github.com/goto-bus-stop/plug-socket"
+    },
+    {
+      "identifier": "polymer-redux@1.0.5",
+      "homepage": "https://github.com/tur-nr/polymer-redux#readme"
+    },
+    {
+      "identifier": "polythene-theme@1.3.2",
+      "homepage": "https://github.com/ArthurClemens/polythene"
+    },
+    {
+      "identifier": "postcss-normalize@7.0.1",
+      "homepage": "https://github.com/csstools/postcss-normalize#readme"
+    },
+    {
+      "identifier": "postcss-short@5.0.0",
+      "homepage": "https://github.com/jonathantneal/postcss-short#readme"
+    },
+    {
+      "identifier": "pratt-parser@7.0.9",
+      "homepage": "https://github.com/arlac77/pratt-parser#readme"
+    },
+    {
+      "identifier": "preact-compat@3.18.4",
+      "homepage": "https://github.com/developit/preact-compat"
+    },
+    {
+      "identifier": "preact-router@2.6.1",
+      "homepage": "https://github.com/developit/preact-router"
+    },
+    {
+      "identifier": "cropper@4.0.0",
+      "homepage": "https://fengyuanchen.github.io/cropper"
+    },
+    {
+      "identifier": "project-starter@2.0.0",
+      "homepage": "https://github.com/noamokman/project-starter#readme"
+    },
+    {
+      "identifier": "promise-mock@2.1.0",
+      "homepage": "https://github.com/taylorhakes/promise-mock"
+    },
+    {
+      "identifier": "qminder-api@2.2.8",
+      "homepage": "https://www.qminder.com/docs/api/"
+    },
+    {
+      "identifier": "quasar-framework@0.17.18",
+      "homepage": "http://quasar-framework.org"
+    },
+    {
+      "identifier": "query-result@1.0.5",
+      "homepage": "https://github.com/WebReflection/query-result"
+    },
+    {
+      "identifier": "quicktube@3.1.0",
+      "homepage": "https://springload.github.io/quicktube/"
+    },
+    {
+      "identifier": "radon-typeahead@0.5.2",
+      "homepage": "https://github.com/FormidableLabs/radon-typeahead"
+    },
+    {
+      "identifier": "rc-cascader@0.16.2",
+      "homepage": "https://github.com/react-component/cascader"
+    },
+    {
+      "identifier": "rc-form@2.2.6",
+      "homepage": "https://github.com/react-component/form"
+    },
+    {
+      "identifier": "rc-scroll-anim@2.5.6",
+      "homepage": "https://github.com/react-component/scroll-anim"
+    },
+    {
+      "identifier": "rc-socket.js@4.0.0-beta.4",
+      "homepage": "https://github.com/jaridmargolin/rc-socket.js"
+    },
+    {
+      "identifier": "rc-tree-select@2.3.2",
+      "homepage": "https://github.com/react-component/tree-select"
+    },
+    {
+      "identifier": "rc-tween-one@2.2.17",
+      "homepage": "https://github.com/react-component/tween-one"
+    },
+    {
+      "identifier": "react-admin@2.4.2",
+      "homepage": "https://github.com/marmelab/react-admin#readme"
+    },
+    {
+      "identifier": "react-audio-recorder@2.2.0",
+      "homepage": "https://github.com/danrouse/react-audio-recorder"
+    },
+    {
+      "identifier": "react-avatar@3.4.6",
+      "homepage": "https://www.sitebase.be/react-avatar/"
+    },
+    {
+      "identifier": "react-bootcards@0.2.0",
+      "homepage": "https://github.com/kobanyan/react-bootcards"
+    },
+    {
+      "identifier": "react-boxplot@1.1.1",
+      "homepage": "https://github.com/paulmelnikow/react-boxplot"
+    },
+    {
+      "identifier": "react-cl-audio-player@2.2.0",
+      "homepage": "http://cezarlz.github.io/react-cl-audio-player"
+    },
+    {
+      "identifier": "react-contextmenu@2.10.0",
+      "homepage": "https://github.com/vkbansal/react-contextmenu"
+    },
+    {
+      "identifier": "react-filtered-multiselect@0.5.1",
+      "homepage": "https://github.com/insin/react-filtered-multiselect"
+    },
+    {
+      "identifier": "react-geosuggest@2.9.0",
+      "homepage": "https://github.com/ubilabs/react-geosuggest"
+    },
+    {
+      "identifier": "react-gist@1.2.1",
+      "homepage": "https://github.com/tleunen/react-gist"
+    },
+    {
+      "identifier": "react-globalize@1.0.0",
+      "homepage": "https://github.com/jquery-support/react-globalize"
+    },
+    {
+      "identifier": "react-gm@7.9.4",
+      "homepage": "https://github.com/gmfe/react-gm#readme"
+    },
+    {
+      "identifier": "react-google-calendar-events-list@1.1.0",
+      "homepage": "https://github.com/VinSpee/react-gcal-events-list/blob/master/README.md"
+    },
+    {
+      "identifier": "react-google-charts@3.0.10",
+      "homepage": "https://rakannimer.github.io/react-google-charts/"
+    },
+    {
+      "identifier": "react-google-places-suggest@3.5.0",
+      "homepage": "https://github.com/xuopled/react-google-places-suggest#readme"
+    },
+    {
+      "identifier": "react-i18next@8.3.8",
+      "homepage": "https://github.com/i18next/react-i18next"
+    },
+    {
+      "identifier": "react-image@1.5.1",
+      "homepage": "https://github.com/mbrevda/react-image#readme"
+    },
+    {
+      "identifier": "react-imgix@8.3.1",
+      "homepage": "https://github.com/imgix/react-imgix#readme"
+    },
+    {
+      "identifier": "react-isomorphic-render@11.0.56",
+      "homepage": "https://github.com/catamphetamine/react-isomorphic-render#readme"
+    },
+    {
+      "identifier": "react-joyride@1.11.4",
+      "homepage": "https://gilbarbara.github.com/react-joyride/"
+    },
+    {
+      "identifier": "react-keydown@1.9.7",
+      "homepage": "https://github.com/glortho/react-keydown#readme"
+    },
+    {
+      "identifier": "react-material-design@0.4.3",
+      "homepage": "http://reactmaterial.com"
+    },
+    {
+      "identifier": "react-md@1.9.0",
+      "homepage": "https://github.com/mlaursen/react-md#readme"
+    },
+    {
+      "identifier": "react-mentions@2.4.1",
+      "homepage": "https://github.com/signavio/react-mentions"
+    },
+    {
+      "identifier": "react-photo-gallery@6.2.1",
+      "homepage": "https://github.com/neptunian/react-photo-gallery"
+    },
+    {
+      "identifier": "react-promise@2.0.3",
+      "homepage": "https://github.com/capaj/react-async#readme"
+    },
+    {
+      "identifier": "react-ranger@1.0.5",
+      "homepage": "https://react-ranger.js.org"
+    },
+    {
+      "identifier": "base64util@2.0.0-f",
+      "homepage": "https://duzun.me/playground/encode#base64Encode=Test%20String%20"
+    },
+    {
+      "identifier": "react-router5@6.5.3",
+      "homepage": "https://router5.js.org"
+    },
+    {
+      "identifier": "react-simple-tooltip@2.3.3",
+      "homepage": "https://github.com/xuopled/react-simple-tooltip#readme"
+    },
+    {
+      "identifier": "react-split@2.0.4",
+      "homepage": "https://split.js.org/"
+    },
+    {
+      "identifier": "react-state@2.2.2",
+      "homepage": ""
+    },
+    {
+      "identifier": "react-state-hoc@3.0.0",
+      "homepage": "https://github.com/troch/react-state-hoc#readme"
+    },
+    {
+      "identifier": "react-stockcharts@0.7.8",
+      "homepage": "http://rrag.github.io/react-stockcharts/"
+    },
+    {
+      "identifier": "react-storehouse@1.0.1",
+      "homepage": "https://github.com/learnreact/react-storehouse"
+    },
+    {
+      "identifier": "react-styling@1.6.4",
+      "homepage": "https://github.com/catamphetamine/react-styling#readme"
+    },
+    {
+      "identifier": "react-svg@7.1.0",
+      "homepage": "https://github.com/tanem/react-svg"
+    },
+    {
+      "identifier": "react-svg-line-chart@2.0.1",
+      "homepage": "https://github.com/xuopled/react-svg-line-chart#readme"
+    },
+    {
+      "identifier": "react-svg-piechart@2.1.1",
+      "homepage": "https://github.com/xuopled/react-svg-piechart#readme"
+    },
+    {
+      "identifier": "react-table@6.8.6",
+      "homepage": "https://github.com/react-tools/react-table#readme"
+    },
+    {
+      "identifier": "react-translate-maker@2.1.4",
+      "homepage": "https://github.com/CherryProjects/react-translate-maker"
+    },
+    {
+      "identifier": "react-vertical-timeline@0.2.0",
+      "homepage": "https://yeyus.github.io/react-vertical-timeline/"
+    },
+    {
+      "identifier": "react-virtualized@9.21.0",
+      "homepage": "https://github.com/bvaughn/react-virtualized"
+    },
+    {
+      "identifier": "react-waypoint@8.0.3",
+      "homepage": "https://github.com/brigade/react-waypoint"
+    },
+    {
+      "identifier": "reactabular@8.3.0",
+      "homepage": "http://reactabular.js.org/"
+    },
+    {
+      "identifier": "cssprefix@2.0.16",
+      "homepage": "https://github.com/anseki/cssprefix"
+    },
+    {
+      "identifier": "recharts@1.4.1",
+      "homepage": "https://github.com/recharts/recharts"
+    },
+    {
+      "identifier": "reconnecting-websocket@4.1.10",
+      "homepage": "https://github.com/pladaria/reconnecting-websocket#readme"
+    },
+    {
+      "identifier": "redux-form-validation@1.0.0-rc1",
+      "homepage": "https://github.com/CosticaPuntaru/redux-form-validation#readme"
+    },
+    {
+      "identifier": "redux-loop@4.4.1",
+      "homepage": "https://github.com/redux-loop/redux-loop"
+    },
+    {
+      "identifier": "redux-modal@2.0.4",
+      "homepage": "https://github.com/yesmeck/redux-modal#readme"
+    },
+    {
+      "identifier": "redux-namespace@1.0.3",
+      "homepage": "https://github.com/evanrs/redux-namespace#readme"
+    },
+    {
+      "identifier": "redux-pouchdb@0.1.4",
+      "homepage": "https://github.com/vicentedealencar/redux-pouchdb"
+    },
+    {
+      "identifier": "redux-resource@3.0.4",
+      "homepage": "https://redux-resource.js.org"
+    },
+    {
+      "identifier": "redux-router5@6.0.5",
+      "homepage": "https://router5.js.org"
+    },
+    {
+      "identifier": "redux-search@2.4.1",
+      "homepage": "https://github.com/bvaughn/redux-search#readme"
+    },
+    {
+      "identifier": "csx@9.0.0",
+      "homepage": "https://github.com/typestyle/csx#readme"
+    },
+    {
+      "identifier": "regextras@0.4.0",
+      "homepage": "https://github.com/brettz9/regextras"
+    },
+    {
+      "identifier": "rmc-cascader@5.0.2",
+      "homepage": "https://github.com/react-component/m-cascader"
+    },
+    {
+      "identifier": "rmc-date-picker@6.0.8",
+      "homepage": "https://github.com/react-component/m-date-picker"
+    },
+    {
+      "identifier": "rmodal@1.0.31",
+      "homepage": "https://rmodal.js.org/"
+    },
+    {
+      "identifier": "rollup-plugin-commonjs@9.2.0",
+      "homepage": "https://github.com/rollup/rollup-plugin-commonjs"
+    },
+    {
+      "identifier": "rollup-plugin-inject@2.2.0",
+      "homepage": "https://github.com/rollup/rollup-plugin-inject#readme"
+    },
+    {
+      "identifier": "rollup-plugin-memory@3.0.0",
+      "homepage": "https://github.com/TrySound/rollup-plugin-memory"
+    },
+    {
+      "identifier": "rollup-plugin-replace@2.1.0",
+      "homepage": "https://github.com/rollup/rollup-plugin-replace#readme"
+    },
+    {
+      "identifier": "rollup-plugin-typescript@1.0.0",
+      "homepage": "https://github.com/rollup/rollup-plugin-typescript"
+    },
+    {
+      "identifier": "router1@0.13.1",
+      "homepage": "https://github.com/zxbodya/router1#readme"
+    },
+    {
+      "identifier": "router1-react@0.9.0",
+      "homepage": "https://github.com/zxbodya/router1-react#readme"
+    },
+    {
+      "identifier": "rxfire@3.0.10",
+      "homepage": "https://firebase.google.com/"
+    },
+    {
+      "identifier": "schemation@0.2.2",
+      "homepage": "https://github.com/polytypic/schemation#readme"
+    },
+    {
+      "identifier": "screen-navigator@2.1.2",
+      "homepage": "https://github.com/manuelodelain/screen-navigator"
+    },
+    {
+      "identifier": "aphrodite@2.2.3",
+      "homepage": "https://github.com/Khan/aphrodite"
+    },
+    {
+      "identifier": "scrollreveal@4.0.5",
+      "homepage": "https://scrollrevealjs.org"
+    },
+    {
+      "identifier": "searchkit@2.3.1-alpha.4",
+      "homepage": "http://www.searchkit.co"
+    },
+    {
+      "identifier": "selector-observer@2.1.3",
+      "homepage": "https://github.com/josh/selector-observer#readme"
+    },
+    {
+      "identifier": "semantic-ui-react@0.83.0",
+      "homepage": "https://github.com/Semantic-Org/Semantic-UI-React#readme"
+    },
+    {
+      "identifier": "semtex@0.4.0",
+      "homepage": "https://github.com/garydouble/semtex#readme"
+    },
+    {
+      "identifier": "d3-exploder@2.0.0",
+      "homepage": "https://github.com/bsouthga/d3-exploder"
+    },
+    {
+      "identifier": "d3-geo@1.11.1",
+      "homepage": "https://d3js.org/d3-geo/"
+    },
+    {
+      "identifier": "d3-hexbin@0.2.2",
+      "homepage": "https://github.com/d3/d3-hexbin"
+    },
+    {
+      "identifier": "d3-hierarchy@1.1.8",
+      "homepage": "https://d3js.org/d3-hierarchy/"
+    },
+    {
+      "identifier": "d3-jetpack@2.0.19",
+      "homepage": "https://github.com/gka/d3-jetpack#readme"
+    },
+    {
+      "identifier": "d3-polygon@1.0.5",
+      "homepage": "https://d3js.org/d3-polygon/"
+    },
+    {
+      "identifier": "d3-quadtree@1.0.5",
+      "homepage": "https://d3js.org/d3-quadtree/"
+    },
+    {
+      "identifier": "d3-random@1.1.2",
+      "homepage": "https://d3js.org/d3-random/"
+    },
+    {
+      "identifier": "d3-sankey@0.7.1",
+      "homepage": "https://github.com/d3/d3-sankey"
+    },
+    {
+      "identifier": "d3-transition@1.1.3",
+      "homepage": "https://d3js.org/d3-transition/"
+    },
+    {
+      "identifier": "d3-voronoi@1.1.4",
+      "homepage": "https://d3js.org/d3-voronoi/"
+    },
+    {
+      "identifier": "shop.js@2.2.67",
+      "homepage": "http://github.com/hanzoai/shop.js"
+    },
+    {
+      "identifier": "shufflejs@5.2.0",
+      "homepage": "https://github.com/Vestride/Shuffle"
+    },
+    {
+      "identifier": "simple-get-json@4.0.0",
+      "homepage": "https://github.com/brettz9/getJSON"
+    },
+    {
+      "identifier": "simple-post-json@0.3.1",
+      "homepage": "https://github.com/brettz9/postJSON"
+    },
+    {
+      "identifier": "snabbdom-selector@4.1.0",
+      "homepage": "https://github.com/tylors/snabbdom-selector#readme"
+    },
+    {
+      "identifier": "snarkdown@1.2.2",
+      "homepage": "https://github.com/developit/snarkdown"
+    },
+    {
+      "identifier": "sorm@1.2.1",
+      "homepage": "https://github.com/arlac77/sorm#readme"
+    },
+    {
+      "identifier": "spaniel@2.5.2",
+      "homepage": "https://github.com/linkedin/spaniel"
+    },
+    {
+      "identifier": "spectra-data@3.4.5",
+      "homepage": "https://github.com/cheminfo-js/spectra/packages/spectra-data"
+    },
+    {
+      "identifier": "dat.gui@0.7.3",
+      "homepage": "https://github.com/dataarts/dat.gui#readme"
+    },
+    {
+      "identifier": "spiritjs@2.3.0",
+      "homepage": "https://spiritapp.io"
+    },
+    {
+      "identifier": "storejs@1.0.20",
+      "homepage": "https://github.com/jaywcjlove/store.js"
+    },
+    {
+      "identifier": "subunit@v0.5.4",
+      "homepage": "https://github.com/sghall/subunit"
+    },
+    {
+      "identifier": "swim-client-js@0.6.0",
+      "homepage": "https://github.com/swimit/swim-client-js"
+    },
+    {
+      "identifier": "tabard@0.2.1",
+      "homepage": "https://github.com/barneycarroll/tabard#readme"
+    },
+    {
+      "identifier": "beam-client-node@2.0.0",
+      "homepage": "https://github.com/mixer/beam-client-node"
+    },
+    {
+      "identifier": "template7@1.4.0",
+      "homepage": "http://www.idangero.us/template7/"
+    },
+    {
+      "identifier": "tg-modal@0.8.0",
+      "homepage": "https://github.com/thorgate/tg-modal#readme"
+    },
+    {
+      "identifier": "tg-resources@3.0.0-alpha.0",
+      "homepage": "https://github.com/thorgate/tg-resources/tree/master/packages/core#readme"
+    },
+    {
+      "identifier": "tko.utils@4.0.0-alpha5b",
+      "homepage": "https://github.com/knockout/tko.utils.readme"
+    },
+    {
+      "identifier": "tonal@2.1.2",
+      "homepage": "https://github.com/danigb/tonal#readme"
+    },
+    {
+      "identifier": "tractor-beam@0.1.2",
+      "homepage": "https://github.com/hanzo-io/tractor-beam"
+    },
+    {
+      "identifier": "traits.js@1.1.5",
+      "homepage": "https://github.com/traitsjs/traits.js#readme"
+    },
+    {
+      "identifier": "translate.js@1.2.4",
+      "homepage": "https://github.com/StephanHoyer/translate.js"
+    },
+    {
+      "identifier": "deck-of-cards@0.1.8",
+      "homepage": "https://github.com/pakastin/deck-of-cards#readme"
+    },
+    {
+      "identifier": "truncate-html@1.0.1",
+      "homepage": "https://github.com/evecalm/truncate-html#readme"
+    },
+    {
+      "identifier": "trustly-client@3.0.1",
+      "homepage": "https://github.com/danibram/trustly-client"
+    },
+    {
+      "identifier": "typeit@5.10.7",
+      "homepage": "https://typeitjs.com"
+    },
+    {
+      "identifier": "uikit-react@3.0.18",
+      "homepage": "https://vacarsu.github.io/uikit-react"
+    },
+    {
+      "identifier": "unzalgo@2.1.1",
+      "homepage": "https://github.com/kdex/unzalgo#readme"
+    },
+    {
+      "identifier": "uppy@0.28.0",
+      "homepage": "https://uppy.io"
+    },
+    {
+      "identifier": "url-js@0.2.3-u",
+      "homepage": "https://github.com/duzun/URL.js#readme"
+    },
+    {
+      "identifier": "url-router@7.0.0",
+      "homepage": "https://github.com/fenivana/url-router"
+    },
+    {
+      "identifier": "alphabetjs@0.1.4",
+      "homepage": "https://github.com/starkwang/alphabetJS"
+    },
+    {
+      "identifier": "utm@1.1.1",
+      "homepage": "https://github.com/timothygu/utm#readme"
+    },
+    {
+      "identifier": "valve@5.0.1",
+      "homepage": "https://github.com/escapace/valve"
+    },
+    {
+      "identifier": "victory@31.0.1",
+      "homepage": "https://formidable.com/open-source/victory"
+    },
+    {
+      "identifier": "victory-area@31.0.0",
+      "homepage": "https://formidable.com/open-source/victory"
+    },
+    {
+      "identifier": "victory-box-plot@31.0.0",
+      "homepage": "https://formidable.com/open-source/victory"
+    },
+    {
+      "identifier": "victory-legend@31.0.0",
+      "homepage": "https://formidable.com/open-source/victory"
+    },
+    {
+      "identifier": "victory-stack@31.0.0",
+      "homepage": "https://formidable.com/open-source/victory"
+    },
+    {
+      "identifier": "victory-tooltip@31.0.0",
+      "homepage": "https://formidable.com/open-source/victory"
+    },
+    {
+      "identifier": "victory-voronoi@31.0.0",
+      "homepage": "https://formidable.com/open-source/victory"
+    },
+    {
+      "identifier": "videomail-client@2.5.0",
+      "homepage": "https://videomail.io"
+    },
+    {
+      "identifier": "viewerjs@1.3.0",
+      "homepage": "https://fengyuanchen.github.io/viewerjs"
+    },
+    {
+      "identifier": "vireo@14.2.5",
+      "homepage": "https://github.com/NI/VireoSDK#readme"
+    },
+    {
+      "identifier": "vue-property-decorator@7.2.0",
+      "homepage": "https://github.com/kaorun343/vue-property-decorator#readme"
+    },
+    {
+      "identifier": "vue-rx@6.0.1",
+      "homepage": "https://github.com/vuejs/vue-rx#readme"
+    },
+    {
+      "identifier": "vuex@3.0.1",
+      "homepage": "https://github.com/vuejs/vuex#readme"
+    },
+    {
+      "identifier": "demeter@1.2.0",
+      "homepage": "https://github.com/hollowdoor/demeter#readme"
+    },
+    {
+      "identifier": "web-verse@2.1.1",
+      "homepage": "https://github.com/scienceai/web-verse"
+    },
+    {
+      "identifier": "webcharts@1.11.1",
+      "homepage": "https://github.com/RhoInc/Webcharts"
+    },
+    {
+      "identifier": "wikipathways-api-client@1.1.6",
+      "homepage": "https://github.com/wikipathways/wikipathways-api-client-js"
+    },
+    {
+      "identifier": "wildberry-princess@3.0.0",
+      "homepage": "https://github.com/MatthewCallis/wildberry-princess"
+    },
+    {
+      "identifier": "windsock@0.4.0",
+      "homepage": "https://github.com/windsockjs/windsock"
+    },
+    {
+      "identifier": "workfront-api@4.8.0",
+      "homepage": "https://github.com/Workfront/workfront-api"
+    }
+  ],
+  "nyc": [
+    {
+      "identifier": "rxjs@6.3.3",
+      "nyc": {
+        "include": [
+          "src/*.ts",
+          "src/**/*.ts"
+        ],
+        "exclude": [
+          "node_modules",
+          "dist",
+          "*.d.ts",
+          "src/**/MiscJSDoc.ts"
+        ],
+        "extension": [
+          ".ts"
+        ],
+        "reporter": [
+          "html"
+        ],
+        "all": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "jimp@0.5.6",
+      "nyc": {
+        "sourceMap": false,
+        "instrument": false,
+        "reporter": [
+          "text",
+          "text-summary",
+          "lcov",
+          "html"
+        ],
+        "exclude": [
+          "src/modules/*.js",
+          "test/*.js"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-step@5.7.0",
+      "nyc": {
+        "include": [
+          "build/*-test.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./build/coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "rrule@2.5.6",
+      "nyc": {
+        "extension": [
+          ".ts",
+          ".tsx"
+        ],
+        "exclude": [
+          "**/*.d.ts"
+        ],
+        "reporter": [
+          "html"
+        ],
+        "all": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "cerebral@5.0.3",
+      "nyc": {
+        "exclude": [
+          "node_modules",
+          "lib",
+          "__test__",
+          "**/*.test.js",
+          "**/testHelper.js"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "statetransition-mixin@4.0.3",
+      "nyc": {
+        "include": [
+          "build/*-test.js",
+          "src/**/*.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./build/coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service@4.17.0",
+      "nyc": {
+        "include": [
+          "build/*-test.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./build/coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "scope-reporter@3.1.25",
+      "nyc": {
+        "include": [
+          "dist/**/*.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-interceptor@2.6.0",
+      "nyc": {
+        "include": [
+          "build/*-test.js",
+          "src/**/*.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./build/coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "elenpi@0.5.1",
+      "nyc": {
+        "reporter": [
+          "lcov",
+          "text-summary"
+        ],
+        "require": [
+          "babel-register"
+        ],
+        "sourceMap": false,
+        "instrument": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-koa@2.0.0",
+      "nyc": {
+        "include": [
+          "build/*-test.js",
+          "src/**/*.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./build/coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-endpoint@2.15.0",
+      "nyc": {
+        "include": [
+          "build/*-test.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./build/coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "redolent@2.0.5",
+      "nyc": {
+        "check-coverage": true,
+        "statements": 100,
+        "functions": 100,
+        "branches": 100,
+        "lines": 100
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "array-duplicated@2.0.0",
+      "nyc": {
+        "extends": "nyc-config-common"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "list@2.0.16",
+      "nyc": {
+        "extension": [
+          ".ts"
+        ],
+        "require": [
+          "ts-node/register",
+          "source-map-support/register"
+        ],
+        "include": [
+          "src/**/*.ts"
+        ],
+        "exclude": [
+          "src/methods.ts"
+        ],
+        "reporter": [
+          "json",
+          "html",
+          "text",
+          "lcov"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "dush@3.0.5",
+      "nyc": {
+        "check-coverage": true,
+        "statements": 100,
+        "functions": 100,
+        "branches": 100,
+        "lines": 100
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service-koa@4.0.7",
+      "nyc": {
+        "include": [
+          "build/*-test.js",
+          "src/**/*.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./build/coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-message@2.2.0",
+      "nyc": {
+        "include": [
+          "dist/**/*.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service-health-check@2.11.0",
+      "nyc": {
+        "include": [
+          "build/*-test.js",
+          "src/**/*.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./build/coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-flow@2.5.40",
+      "nyc": {
+        "include": [
+          "build/*-test.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./build/coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "cerberus@1.0.3",
+      "nyc": {
+        "extension": [
+          ".ts"
+        ],
+        "require": [
+          "ts-node/register",
+          "source-map-support/register"
+        ],
+        "reporter": [
+          "json",
+          "html",
+          "text",
+          "lcov"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service-manager@3.5.10",
+      "nyc": {
+        "include": [
+          "dist/**/*.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "currency.js@1.2.1",
+      "nyc": {
+        "include": [
+          "dist/**/*.js"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "diffhtml@1.0.0-beta.10",
+      "nyc": {
+        "require": [
+          "babel-register"
+        ],
+        "sourceMap": false,
+        "instrument": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "2gl@0.6.0",
+      "nyc": {
+        "sourceMap": false,
+        "instrument": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "check-preconditions@1.0.0-rc.2",
+      "nyc": {
+        "lines": 100,
+        "statements": 100,
+        "functions": 100,
+        "branches": 100,
+        "cache": true,
+        "check-coverage": true,
+        "extension": [
+          ".js"
+        ],
+        "exclude": [
+          "**/*.d.ts",
+          "coverage",
+          "lib/tests/tst"
+        ],
+        "reporter": [
+          "lcov",
+          "html"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "js-joda@1.9.2",
+      "nyc": {
+        "sourceMap": false,
+        "instrument": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "avatar-initials@4.1.0",
+      "nyc": {
+        "cache": true,
+        "all": true,
+        "check-coverage": false,
+        "include": [
+          "build/avatar.js"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service-admin@2.26.22",
+      "nyc": {
+        "include": [
+          "dist/**/*.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service-consul@2.20.2",
+      "nyc": {
+        "include": [
+          "build/*-test.js",
+          "src/**/*.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./build/coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-step-passthrough@2.2.0",
+      "nyc": {
+        "include": [
+          "build/*-test.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./build/coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-test-interceptor@3.1.1",
+      "nyc": {
+        "include": [
+          "build/*-test.js",
+          "src/**/*.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./build/coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "maquette@3.3.2",
+      "nyc": {
+        "include": [
+          "src/**/*.ts",
+          "typings/**/*.ts"
+        ],
+        "extension": [
+          ".ts"
+        ],
+        "reporter": [
+          "lcov",
+          "html",
+          "text-summary"
+        ],
+        "cache": true,
+        "temp-directory": "./build/nyc/cache",
+        "all": true,
+        "check-coverage": true,
+        "report-dir": "./build/coverage",
+        "es-module": false,
+        "lines": 100,
+        "statements": 100,
+        "functions": 100,
+        "branches": 100,
+        "watermarks": {
+          "lines": [
+            75,
+            100
+          ],
+          "functions": [
+            75,
+            100
+          ],
+          "branches": [
+            75,
+            100
+          ],
+          "statements": [
+            75,
+            100
+          ]
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "mocker-data-generator@2.6.6",
+      "nyc": {
+        "exclude": [
+          "**/*.spec.js",
+          "**/array-includes.js"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "object-boolean-combinations@2.4.0",
+      "nyc": {
+        "instrument": false,
+        "require": [
+          "@babel/register"
+        ],
+        "sourceMap": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "pratt-parser@7.0.9",
+      "nyc": {
+        "include": [
+          "build/*-test.js",
+          "src/**/*.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./build/coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "robot-api@0.9.0",
+      "nyc": {
+        "require": [
+          "babel-register"
+        ],
+        "sourceMap": false,
+        "instrument": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "aphrodite@2.2.3",
+      "nyc": {
+        "exclude": [
+          "**/node_modules/**",
+          "coverage",
+          "tests"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "sorm@1.2.1",
+      "nyc": {
+        "include": [
+          "dist/**/*.js"
+        ],
+        "reporter": [
+          "lcov"
+        ],
+        "report-dir": "./coverage"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "tg-modal@0.8.0",
+      "nyc": {
+        "sourceMap": false,
+        "instrument": false
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "trustly-client@3.0.1",
+      "nyc": {
+        "exclude": [
+          "**/*.spec.js"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "tsdi@0.20.3",
+      "nyc": {
+        "exclude": [
+          "node_modules",
+          "coverage",
+          "dist/tests"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "valve@5.0.1",
+      "nyc": {
+        "tempDirectory": "./node_modules/.cache/nyc_output",
+        "include": [
+          "src/**/*.ts"
+        ],
+        "extension": [
+          ".ts",
+          ".tsx"
+        ],
+        "exclude": [
+          "src/**/*.spec.ts"
+        ],
+        "require": [
+          "ts-node/register"
+        ],
+        "reporter": [
+          "text"
+        ],
+        "sourceMap": true,
+        "instrument": true
+      },
+      "type": "object"
+    }
+  ],
+  "pre-commit": [
+    {
+      "identifier": "css-animation@1.5.0",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-animate@2.5.4",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-trigger@2.6.2",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-align@2.4.3",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "dom-align@1.8.0",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-tooltip@3.7.3",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-checkbox@2.1.5",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "async-validator@1.10.0",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "antd@3.10.8",
+      "pre-commit": [
+        "lint-staged"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-menu@7.4.19",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-select@8.4.4",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "tiny-cookie@2.2.0",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-dropdown@2.2.1",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-tree@1.14.8",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "dompurify@1.0.8",
+      "pre-commit": [
+        "lint",
+        "build",
+        "commit-amend-build"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-progress@2.2.6",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-notification@3.3.0",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rmc-picker@5.0.5",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-dialog@7.2.1",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-tabs@9.5.2",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-pagination@1.17.3",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-upload@2.6.0",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-slider@8.6.3",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-calendar@9.7.11",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-input-number@4.3.4",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-collapse@1.10.0",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-table@6.4.0",
+      "pre-commit": [
+        "lint-staged",
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-switch@1.8.0",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-steps@3.3.0",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "react-toolbox@2.0.0-beta.13",
+      "pre-commit": "lint:staged"
+    },
+    {
+      "identifier": "redux-promise-middleware@5.1.1",
+      "pre-commit": [
+        "precommit"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-time-picker@3.4.0",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "dygraphs@2.1.0",
+      "pre-commit": [
+        "tests-ok"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "avatar-initials@4.1.0",
+      "pre-commit": [
+        "lint",
+        "validate",
+        "test"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-cascader@0.16.2",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-form@2.2.6",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-scroll-anim@2.5.6",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-tree-select@2.3.2",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-tween-one@2.2.17",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "recharts@1.4.1",
+      "pre-commit": [],
+      "type": "object"
+    },
+    {
+      "identifier": "rmc-cascader@5.0.2",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rmc-date-picker@6.0.8",
+      "pre-commit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "wildberry-princess@3.0.0",
+      "pre-commit": [
+        "make",
+        "lint",
+        "validate",
+        "test"
+      ],
+      "type": "object"
+    }
+  ],
+  "xo": [
+    {
+      "identifier": "jimp@0.5.6",
+      "xo": false,
+      "type": "boolean"
+    },
+    {
+      "identifier": "kronos-step@5.7.0",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "redux-actions@2.6.4",
+      "xo": {
+        "prettier": true,
+        "space": true,
+        "extends": [
+          "unicorn-camelcase",
+          "jest-files"
+        ],
+        "ignores": [
+          "rollup.config.js"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "reduce-reducers@0.4.3",
+      "xo": {
+        "prettier": true,
+        "space": true,
+        "extends": [
+          "jest-files"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "expression-expander@6.1.3",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "statetransition-mixin@4.0.3",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service@4.17.0",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-interceptor@2.6.0",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-koa@2.0.0",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-endpoint@2.15.0",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "term-ng@0.8.1",
+      "xo": {
+        "semicolon": false,
+        "esnext": true,
+        "ignores": [
+          "index.js",
+          "index.mjs",
+          "bin/*.js",
+          "docs/**",
+          "src/docs/example.js"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "upcast@4.0.0",
+      "xo": {
+        "space": 4,
+        "rules": {
+          "space-before-function-paren": [
+            "error",
+            "never"
+          ],
+          "prefer-reflect": "off"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service-koa@4.0.7",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-message@2.2.0",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "dompurify@1.0.8",
+      "xo": {
+        "semicolon": true,
+        "space": 2,
+        "extends": [
+          "prettier"
+        ],
+        "plugins": [
+          "prettier"
+        ],
+        "rules": {
+          "prettier/prettier": [
+            "error",
+            {
+              "trailingComma": "es5",
+              "singleQuote": true
+            }
+          ],
+          "camelcase": [
+            "error",
+            {
+              "properties": "never"
+            }
+          ]
+        },
+        "globals": [
+          "window",
+          "VERSION"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "style-inject@0.3.0",
+      "xo": {
+        "extends": "rem/prettier",
+        "envs": [
+          "browser"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "verbosity@0.10.0",
+      "xo": {
+        "semicolon": false,
+        "esnext": true,
+        "ignore": [
+          "index.js",
+          "lib/**",
+          "docs/**",
+          "src/docs/example.js",
+          "test/coverage/**"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service-health-check@2.11.0",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-flow@2.5.40",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "trucolor@0.7.1",
+      "xo": {
+        "semicolon": false,
+        "ignores": [
+          "bin/**/*",
+          "lib/**/*",
+          "docs/**",
+          "test/coverage/**",
+          "index.js"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "truwrap@0.8.1",
+      "xo": {
+        "semicolon": false,
+        "esnext": true,
+        "ignores": [
+          "index.js",
+          "index.mjs",
+          "bin",
+          "docs",
+          "test/coverage/**"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "get-media-size@2.0.1",
+      "xo": {
+        "esnext": true,
+        "env": [
+          "browser"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "iphone-inline-video@2.2.2",
+      "xo": {
+        "ignores": [
+          "demo/**"
+        ],
+        "env": [
+          "browser"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service-admin@2.26.22",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service-consul@2.20.2",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-step-passthrough@2.2.0",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-test-interceptor@3.1.1",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "md@0.6.0",
+      "xo": {
+        "extends": "rem/prettier",
+        "rules": {
+          "complexity": 0,
+          "no-cond-assign": 0,
+          "no-unexpected-multiline": 0,
+          "func-call-spacing": 0,
+          "no-useless-escape": 0
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "polymer-redux@1.0.5",
+      "xo": {
+        "next": true,
+        "ignore": [
+          "dist/**",
+          "lib/**",
+          "test/**"
+        ],
+        "overrides": [
+          {
+            "files": "gulpfile.babel.js",
+            "rules": {
+              "indent": [
+                "error",
+                "tab",
+                {
+                  "MemberExpression": 1
+                }
+              ]
+            }
+          },
+          {
+            "files": "src/*.js",
+            "envs": [
+              "browser"
+            ]
+          },
+          {
+            "files": "test/**.spec.js",
+            "envs": [
+              "jest"
+            ],
+            "rules": {
+              "new-cap": "off",
+              "max-nested-callbacks": "off"
+            }
+          }
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "pratt-parser@7.0.9",
+      "xo": {
+        "space": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "robot-api@0.9.0",
+      "xo": {
+        "parser": "babel-eslint",
+        "space": true,
+        "envs": [
+          "mocha"
+        ],
+        "ignores": [
+          "dist/**",
+          "lib/graveyard/*"
+        ],
+        "rules": {
+          "capitalized-comments": "off",
+          "no-unused-expressions": [
+            2,
+            {
+              "allowShortCircuit": true
+            }
+          ],
+          "new-cap": [
+            "error",
+            {
+              "capIsNewExceptions": [
+                "ActionClient",
+                "Service",
+                "Topic"
+              ]
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "scroll-restoration-polyfill@0.6.1",
+      "xo": {
+        "esnext": true,
+        "env": [
+          "browser"
+        ]
+      },
+      "type": "object"
+    }
+  ],
+  "template": [
+    {
+      "identifier": "kronos-step@5.7.0",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "loglevel-mixin@2.0.5",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "expression-expander@6.1.3",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "statetransition-mixin@4.0.3",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service@4.17.0",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "scope-reporter@3.1.25",
+      "template": {
+        "repository": {
+          "url": "https://github.com/Kronos-Tools/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-interceptor@2.6.0",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-koa@2.0.0",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-endpoint@2.15.0",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service-koa@4.0.7",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-message@2.2.0",
+      "template": {
+        "repository": {
+          "url": "https://github.com/Kronos-Tools/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service-health-check@2.11.0",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-flow@2.5.40",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "uti@5.1.3",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service-manager@3.5.10",
+      "template": {
+        "repository": {
+          "url": "https://github.com/Kronos-Tools/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service-admin@2.26.22",
+      "template": {
+        "repository": {
+          "url": "https://github.com/Kronos-Tools/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-service-consul@2.20.2",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-step-passthrough@2.2.0",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "kronos-test-interceptor@3.1.1",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "pratt-parser@7.0.9",
+      "template": {
+        "repository": {
+          "url": "https://github.com/arlac77/npm-package-template.git"
+        }
+      },
+      "type": "object"
+    }
+  ],
+  "prettier": [
+    {
+      "identifier": "react-bootstrap@0.32.4",
+      "prettier": {
+        "singleQuote": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "deepcopy@1.0.0",
+      "prettier": {
+        "singleQuote": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "redux-actions@2.6.4",
+      "prettier": {
+        "singleQuote": true,
+        "bracketSpacing": true,
+        "trailingComma": "none"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "reduce-reducers@0.4.3",
+      "prettier": {
+        "singleQuote": true,
+        "bracketSpacing": true,
+        "trailingComma": "none"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "nightingale@8.0.8",
+      "prettier": {
+        "trailingComma": "all",
+        "singleQuote": true,
+        "printWidth": 100
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "popmotion@8.5.2",
+      "prettier": {
+        "parser": "typescript",
+        "singleQuote": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "object-properties@3.1.0",
+      "prettier": {
+        "trailingComma": "all",
+        "singleQuote": true,
+        "printWidth": 100
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "list@2.0.16",
+      "prettier": {},
+      "type": "object"
+    },
+    {
+      "identifier": "cerberus@1.0.3",
+      "prettier": {
+        "arrowParens": "always"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "microcosm@12.14.0",
+      "prettier": {
+        "semi": false,
+        "singleQuote": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "framesync@4.0.1",
+      "prettier": {
+        "parser": "typescript",
+        "singleQuote": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "ibex@4.5.1",
+      "prettier": {
+        "trailingComma": "all",
+        "singleQuote": true,
+        "printWidth": 100
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "redux-responsive@4.3.8",
+      "prettier": {
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true,
+        "printWidth": 100,
+        "trailingComma": "es5"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "router1@0.13.1",
+      "prettier": {
+        "singleQuote": true,
+        "trailingComma": "es5"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "router1-react@0.9.0",
+      "prettier": {
+        "singleQuote": true,
+        "trailingComma": "es5"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "rx-react-container@0.6.2",
+      "prettier": {
+        "singleQuote": true,
+        "trailingComma": "es5"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "slimdom@2.2.0",
+      "prettier": {
+        "printWidth": 100,
+        "singleQuote": true,
+        "tabWidth": 4,
+        "useTabs": true
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "beam-client-node@2.0.0",
+      "prettier": {
+        "trailingComma": "all",
+        "singleQuote": true,
+        "printWidth": 100,
+        "parser": "typescript"
+      },
+      "type": "object"
+    }
+  ],
+  "standard": [
+    {
+      "identifier": "most@1.7.3",
+      "standard": {
+        "parser": "babel-eslint",
+        "plugins": [
+          "flowtype"
+        ],
+        "ignore": [
+          "test/perf/"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "rrule@2.5.6",
+      "standard": {
+        "ignore": [
+          "demo"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "react-icon-base@2.1.2",
+      "standard": {
+        "globals": [
+          "beforeEach",
+          "describe",
+          "it"
+        ],
+        "parser": "babel-eslint"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "dush@3.0.5",
+      "standard": {
+        "ignore": [
+          "dist/**"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "fkit@1.4.0",
+      "standard": {
+        "env": "mocha"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "mathutil@2.2.1",
+      "standard": {
+        "parser": "babel-eslint"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "plug-login@2.1.0",
+      "standard": {
+        "ignore": [
+          "index.js",
+          "index.es.js"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "bulb@1.1.1",
+      "standard": {
+        "env": "mocha"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "cachefactory@3.0.0",
+      "standard": {
+        "parser": "babel-eslint",
+        "globals": [
+          "afterEach",
+          "assert",
+          "beforeEach",
+          "cacheFactory",
+          "CacheFactory",
+          "CACHE_DEFAULTS",
+          "describe",
+          "it",
+          "localStorage",
+          "sessionStorage",
+          "sinon",
+          "testId",
+          "window"
+        ],
+        "ignore": [
+          "build_examples",
+          "dist/",
+          "doc/"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "cep-promise@3.0.3",
+      "standard": {
+        "parser": "babel-eslint",
+        "globals": [
+          "describe",
+          "it",
+          "afterEach"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "check-arg-types@1.1.2",
+      "standard": {
+        "ignore": [
+          "dist"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "chord-magic@2.1.1",
+      "standard": {
+        "ignore": [
+          "dist"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "observable-socket@5.2.0",
+      "standard": {
+        "globals": [
+          "WebSocket",
+          "afterEach",
+          "beforeEach",
+          "describe",
+          "it",
+          "xit"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "react-gm@7.9.4",
+      "standard": {
+        "parser": "babel-eslint"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "react-idle-timer@4.1.0",
+      "standard": {
+        "parser": "babel-eslint",
+        "globals": [
+          "beforeEach",
+          "describe",
+          "it",
+          "expect"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "redux-search@2.4.1",
+      "standard": {
+        "parser": "babel-eslint",
+        "ignore": [
+          "build",
+          "dist",
+          "node_modules"
+        ],
+        "global": [
+          "self"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "tko.utils@4.0.0-alpha5b",
+      "standard": {
+        "globals": [
+          "assert",
+          "jasmine",
+          "beforeEach",
+          "before",
+          "after",
+          "afterEach",
+          "it",
+          "iit",
+          "xit",
+          "expect",
+          "describe",
+          "ddescribe"
+        ]
+      },
+      "type": "object"
+    }
+  ],
+  "private": [
+    {
+      "identifier": "optimizely-oui@40.13.2",
+      "private": false,
+      "type": "boolean"
+    },
+    {
+      "identifier": "bimserverapi@0.0.149",
+      "private": false,
+      "type": "boolean"
+    },
+    {
+      "identifier": "is-in-viewport@3.0.4",
+      "private": false,
+      "type": "boolean"
+    },
+    {
+      "identifier": "avatar-initials@4.1.0",
+      "private": false,
+      "type": "boolean"
+    },
+    {
+      "identifier": "ng-daterangepicker@1.1.0",
+      "private": false,
+      "type": "boolean"
+    },
+    {
+      "identifier": "ng2-dragula@2.1.1",
+      "private": false,
+      "type": "boolean"
+    },
+    {
+      "identifier": "react-form-controlled@0.20.11",
+      "private": false,
+      "type": "boolean"
+    },
+    {
+      "identifier": "rxfire@3.0.10",
+      "private": false,
+      "type": "boolean"
+    },
+    {
+      "identifier": "tg-resources@3.0.0-alpha.0",
+      "private": false,
+      "type": "boolean"
+    },
+    {
+      "identifier": "wildberry-princess@3.0.0",
+      "private": false,
+      "type": "boolean"
+    }
+  ],
+  "release": [
+    {
+      "identifier": "scope-reporter@3.1.25",
+      "release": {
+        "verifyRelease": "cracks"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "parse-function@5.2.11",
+      "release": {
+        "analyzeCommits": "simple-commit-message"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "get-installed-path@4.0.8",
+      "release": {
+        "analyzeCommits": "simple-commit-message"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "ng-table@3.0.1",
+      "release": {
+        "branch": "master",
+        "fallbackTags": {
+          "next": "latest"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "angular-bootstrap-datetimepicker@2.2.1",
+      "release": {
+        "pkgRoot": "dist"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "jexia-sdk-js@3.5.0",
+      "release": {
+        "branch": "master",
+        "verifyConditions": [
+          "condition-circle",
+          "@semantic-release/changelog",
+          {
+            "path": "@semantic-release/npm",
+            "pkgRoot": "dist"
+          },
+          "@semantic-release/git"
+        ],
+        "prepare": [
+          "@semantic-release/changelog",
+          {
+            "path": "@semantic-release/npm",
+            "pkgRoot": "dist"
+          },
+          "@semantic-release/git"
+        ],
+        "publish": [
+          "@semantic-release/github",
+          {
+            "path": "@semantic-release/npm",
+            "pkgRoot": "dist"
+          }
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "moltin@2.2.0",
+      "release": {
+        "branch": "master",
+        "verifyConditions": {
+          "path": "./node_modules/@krux/condition-jenkins"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "react-google-calendar-events-list@1.1.0",
+      "release": {
+        "verifyConditions": [
+          "@semantic-release/changelog",
+          "@semantic-release/npm",
+          {
+            "path": "@semantic-release/git",
+            "assets": [
+              "package.json",
+              "CHANGELOG.md"
+            ],
+            "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+          }
+        ],
+        "publish": [
+          "@semantic-release/npm",
+          {
+            "path": "@semantic-release/git",
+            "assets": [
+              "package.json",
+              "CHANGELOG.md"
+            ],
+            "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+          }
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "react-mentions@2.4.1",
+      "release": {
+        "verifyConditions": "condition-circle"
+      },
+      "type": "object"
+    }
+  ],
+  "vjsstandard": [
+    {
+      "identifier": "video.js@7.3.0",
+      "vjsstandard": {
+        "ignore": [
+          "**/Gruntfile.js",
+          "**/es5/**",
+          "**/build/**",
+          "!build/rollup.js",
+          "core.js",
+          "**/dist/**",
+          "**/docs/**",
+          "**/lang/**",
+          "**/sandbox/**",
+          "**/test/api/**",
+          "**/test/coverage/**",
+          "**/test/karma.conf.js"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "pkcs7@1.0.2",
+      "vjsstandard": {
+        "ignore": [
+          "dist",
+          "docs",
+          "test/dist"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "videojs-dock@2.1.4",
+      "vjsstandard": {
+        "ignore": [
+          "dist",
+          "docs",
+          "test/dist"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "videojs-errors@4.2.0",
+      "vjsstandard": {
+        "ignore": [
+          "dist",
+          "docs",
+          "test/dist"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "videojs-overlay@2.1.4",
+      "vjsstandard": {
+        "ignore": [
+          "dist",
+          "docs",
+          "test/dist"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "videojs-playlist@4.2.6",
+      "vjsstandard": {
+        "ignore": [
+          "dist",
+          "docs",
+          "test/dist"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "videojs-playlist-ui@3.5.2",
+      "vjsstandard": {
+        "ignore": [
+          "dist",
+          "docs",
+          "test/dist"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "videojs-seek-buttons@1.3.0",
+      "vjsstandard": {
+        "ignore": [
+          "dist",
+          "docs",
+          "test/dist",
+          "test/karma.conf.js"
+        ]
+      },
+      "type": "object"
+    }
+  ],
+  "tags": [
+    {
+      "identifier": "pouchdb@7.0.0",
+      "tags": [
+        "db",
+        "couchdb",
+        "pouchdb"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "react-portal@4.1.5",
+      "tags": [
+        "react"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "react-modal@3.6.1",
+      "tags": [
+        "react",
+        "modal",
+        "dialog"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "phoenix-elixir@1.2.1",
+      "tags": [
+        "phoenix",
+        "elixir"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "pss@2.5.0",
+      "tags": [
+        "css-in-js",
+        "styles",
+        "emotion",
+        "glamorous",
+        "react",
+        "prop-styles",
+        "styled-components",
+        "css"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "react-native-web@0.9.8",
+      "tags": [
+        "react"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "redux-loop@4.4.1",
+      "tags": [
+        "redux",
+        "middleware",
+        "effects",
+        "side effects",
+        "elm",
+        "loop"
+      ],
+      "type": "object"
+    }
+  ],
+  "verb": [
+    {
+      "identifier": "parse-function@5.2.11",
+      "verb": {
+        "run": true,
+        "toc": {
+          "render": true,
+          "method": "preWrite",
+          "maxdepth": 3
+        },
+        "layout": "empty",
+        "tasks": [
+          "readme"
+        ],
+        "related": {
+          "list": [
+            "babylon",
+            "acorn",
+            "espree",
+            "parse-semver",
+            "charlike-cli",
+            "hela"
+          ],
+          "highlight": "hela"
+        },
+        "lint": {
+          "reflinks": true
+        },
+        "reflinks": [
+          "acorn",
+          "babylon",
+          "charlike",
+          "charlike-cli",
+          "define-property",
+          "espree",
+          "execa",
+          "function-arguments",
+          "hela",
+          "new-release"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "redolent@2.0.5",
+      "verb": {
+        "run": true,
+        "toc": {
+          "render": true,
+          "method": "preWrite",
+          "maxdepth": 3
+        },
+        "layout": "empty",
+        "tasks": [
+          "readme"
+        ],
+        "related": {
+          "list": [
+            "always-done",
+            "minibase",
+            "try-catch-core",
+            "always-promise",
+            "native-promise",
+            "relike-value",
+            "letta",
+            "always-thunk",
+            "dush",
+            "arr-includes"
+          ],
+          "highlight": "always-done"
+        },
+        "lint": {
+          "reflinks": true
+        },
+        "reflinks": [
+          "always-done",
+          "async-done",
+          "base",
+          "bluebird",
+          "charlike",
+          "co",
+          "commitizen",
+          "dezalgo",
+          "is-async-function",
+          "once",
+          "pinkie",
+          "relike",
+          "standard-version",
+          "verb",
+          "verb-generate-readme"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "dush@3.0.5",
+      "verb": {
+        "run": true,
+        "toc": {
+          "render": true,
+          "method": "preWrite",
+          "maxdepth": 3
+        },
+        "layout": "empty",
+        "tasks": [
+          "readme"
+        ],
+        "related": {
+          "list": [
+            "always-done",
+            "minibase",
+            "try-catch-core",
+            "mitt",
+            "unfetch",
+            "mich-h",
+            "randomorg-js",
+            "smitty",
+            "dual-emitter"
+          ],
+          "highlight": "mitt"
+        },
+        "reflinks": [
+          "always-done",
+          "async-done",
+          "base",
+          "browserify",
+          "charlike",
+          "commitizen",
+          "dezalgo",
+          "dush-methods",
+          "dush-no-chaining",
+          "dush-router",
+          "dush-tap-report",
+          "hyperscript",
+          "mitt",
+          "once",
+          "rollup",
+          "standard-version",
+          "verb",
+          "verb-generate-readme",
+          "webpack",
+          "dush-better-use",
+          "dush-options",
+          "dush-promise"
+        ],
+        "lint": {
+          "reflinks": true
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "get-installed-path@4.0.8",
+      "verb": {
+        "run": true,
+        "toc": {
+          "render": true,
+          "method": "preWrite",
+          "maxdepth": 3
+        },
+        "layout": "empty",
+        "tasks": [
+          "readme"
+        ],
+        "related": {
+          "list": [
+            "always-done",
+            "minibase",
+            "try-catch-core",
+            "detect-installed",
+            "is-installed",
+            "global-modules",
+            "global-prefix",
+            "global-paths"
+          ],
+          "highlight": "detect-installed"
+        },
+        "lint": {
+          "reflinks": true
+        },
+        "reflinks": [
+          "always-done",
+          "async-done",
+          "base",
+          "charlike-cli",
+          "dezalgo",
+          "global-modules",
+          "hela",
+          "once",
+          "prs-welcome-img",
+          "prs-welcome-url"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "docks@0.6.1",
+      "verb": {
+        "run": true,
+        "toc": {
+          "render": true,
+          "method": "preWrite",
+          "maxdepth": 4
+        },
+        "layout": "empty",
+        "tasks": [
+          "readme"
+        ],
+        "related": {
+          "list": [
+            "asia",
+            "gitcommit",
+            "new-release",
+            "xaxa",
+            "charlike"
+          ]
+        },
+        "lint": {
+          "reflinks": true
+        },
+        "reflinks": [
+          "new-release",
+          "semantic-release"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "metismenu@3.0.3",
+      "verb": {
+        "toc": {
+          "collapsible": false,
+          "method": "preWrite"
+        },
+        "tasks": [
+          "readme"
+        ],
+        "plugins": [
+          "gulp-format-md"
+        ],
+        "helpers": [
+          "helper-changelog"
+        ],
+        "related": {
+          "list": [
+            "metismenujs",
+            "onoffcanvas"
+          ]
+        },
+        "reflinks": [
+          "metismenujs",
+          "chl",
+          "elektron",
+          "onoffcanvas",
+          "twbuttons"
+        ]
+      },
+      "type": "object"
+    }
+  ],
+  "reveal": [
+    {
+      "identifier": "jajax.js@1.3.2",
+      "reveal": true,
+      "type": "boolean"
+    },
+    {
+      "identifier": "jquery.autobox@3.0.0",
+      "reveal": true,
+      "type": "boolean"
+    },
+    {
+      "identifier": "onemit@2.0.2",
+      "reveal": true,
+      "type": "boolean"
+    },
+    {
+      "identifier": "base64util@2.0.0-f",
+      "reveal": true,
+      "type": "boolean"
+    },
+    {
+      "identifier": "url-js@0.2.3-u",
+      "reveal": true,
+      "type": "boolean"
+    },
+    {
+      "identifier": "verup@1.7.0",
+      "reveal": true,
+      "type": "boolean"
+    }
+  ],
+  "badges": [
+    {
+      "identifier": "term-ng@0.8.1",
+      "badges": {
+        "github": "MarkGriffiths",
+        "npm": "thebespokepixel",
+        "name": "term-ng",
+        "providers": {
+          "status": {
+            "text": "beta",
+            "color": "blue"
+          },
+          "aux1": {
+            "title": "github",
+            "text": "source",
+            "color": "4E73B6",
+            "link": "https://github.com/MarkGriffiths/term-ng"
+          }
+        },
+        "readme": {
+          "Status": [
+            [
+              "status",
+              "npm",
+              "travis",
+              "david"
+            ],
+            [
+              "code-climate",
+              "code-climate-coverage",
+              "snyk"
+            ]
+          ],
+          "Developer": [
+            "david-dev",
+            "rollup"
+          ],
+          "Help": [
+            "inch",
+            "gitter"
+          ]
+        },
+        "docs": [
+          [
+            "aux1",
+            "travis"
+          ],
+          [
+            "code-climate",
+            "code-climate-coverage"
+          ],
+          [
+            "david"
+          ]
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "verbosity@0.10.0",
+      "badges": {
+        "github": "MarkGriffiths",
+        "npm": "thebespokepixel",
+        "codeclimate": "c92b0de0806e1fa6f65a",
+        "name": "verbosity",
+        "providers": {
+          "status": {
+            "text": "beta",
+            "color": "blue"
+          },
+          "aux1": {
+            "title": "github",
+            "text": "source",
+            "color": "4E73B6",
+            "link": "https://github.com/MarkGriffiths/verbosity"
+          }
+        },
+        "test-1": [
+          "status"
+        ],
+        "readme": {
+          "Status": [
+            [
+              "status",
+              "npm",
+              "travis",
+              "david"
+            ],
+            [
+              "code-climate",
+              "code-climate-coverage",
+              "snyk"
+            ]
+          ],
+          "Developer": [
+            "david-dev",
+            "rollup"
+          ],
+          "Help": [
+            "inch",
+            "gitter"
+          ]
+        },
+        "docs": [
+          [
+            "aux1",
+            "travis"
+          ],
+          [
+            "code-climate"
+          ],
+          [
+            "code-climate-coverage"
+          ],
+          [
+            "david"
+          ]
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "trucolor@0.7.1",
+      "badges": {
+        "github": "MarkGriffiths",
+        "npm": "thebespokepixel",
+        "name": "trucolor",
+        "providers": {
+          "status": {
+            "text": "beta",
+            "color": "blue"
+          },
+          "aux1": {
+            "title": "github",
+            "text": "source",
+            "color": "4E73B6",
+            "link": "https://github.com/MarkGriffiths/trucolor"
+          }
+        },
+        "readme": {
+          "Status": [
+            [
+              "status",
+              "npm",
+              "travis",
+              "david"
+            ],
+            [
+              "code-climate",
+              "code-climate-coverage",
+              "snyk"
+            ]
+          ],
+          "Developer": [
+            "david-dev",
+            "rollup"
+          ],
+          "Help": [
+            "inch",
+            "gitter"
+          ]
+        },
+        "docs": [
+          [
+            "aux1",
+            "travis"
+          ],
+          [
+            "code-climate",
+            "code-climate-coverage"
+          ],
+          [
+            "david"
+          ]
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "truwrap@0.8.1",
+      "badges": {
+        "github": "MarkGriffiths",
+        "npm": "thebespokepixel",
+        "name": "truwrap",
+        "providers": {
+          "status": {
+            "text": "beta",
+            "color": "blue"
+          },
+          "aux1": {
+            "title": "github",
+            "text": "source",
+            "color": "4E73B6",
+            "link": "https://github.com/MarkGriffiths/truwrap"
+          }
+        },
+        "readme": {
+          "Status": [
+            [
+              "status",
+              "npm",
+              "travis",
+              "david"
+            ],
+            [
+              "code-climate",
+              "code-climate-coverage",
+              "snyk"
+            ]
+          ],
+          "Developer": [
+            "david-dev",
+            "rollup"
+          ],
+          "Help": [
+            "inch",
+            "gitter"
+          ]
+        },
+        "docs": [
+          [
+            "aux1",
+            "travis"
+          ],
+          [
+            "code-climate",
+            "code-climate-coverage"
+          ],
+          [
+            "david"
+          ]
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "dominject@2.0.0",
+      "badges": {
+        "list": [
+          "travisci",
+          "npmversion",
+          "npmdownloads",
+          "daviddm",
+          "daviddmdev",
+          "---",
+          "patreon",
+          "opencollective",
+          "gratipay",
+          "flattr",
+          "paypal",
+          "bitcoin",
+          "wishlist",
+          "---",
+          "slackin"
+        ],
+        "config": {
+          "patreonUsername": "bevry",
+          "opencollectiveUsername": "bevry",
+          "gratipayUsername": "bevry",
+          "flattrUsername": "balupton",
+          "paypalURL": "https://bevry.me/paypal",
+          "bitcoinURL": "https://bevry.me/bitcoin",
+          "wishlistURL": "https://bevry.me/wishlist",
+          "slackinURL": "https://slack.bevry.me"
+        }
+      },
+      "type": "object"
+    }
+  ],
+  "resolutions": [
+    {
+      "identifier": "eventbrite@1.0.3",
+      "resolutions": {
+        "babel-core": "^7.0.0-bridge.0"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "dompurify@1.0.8",
+      "resolutions": {
+        "natives": "1.1.3"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "gatsby@2.0.50",
+      "resolutions": {
+        "graphql": "^0.13.2"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "semantic-ui-react@0.83.0",
+      "resolutions": {
+        "babel-plugin-universal-import": "^2.0.2",
+        "react-universal-component": "^3.0.3"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "spectacle@5.2.2",
+      "resolutions": {
+        "babel-core": "7.0.0-bridge.0",
+        "source-map": "0.6.1"
+      },
+      "type": "object"
+    }
+  ],
+  "verup": [
+    {
+      "identifier": "jajax.js@1.3.2",
+      "verup": {
+        "files": [
+          "jajax.js",
+          "bower.json",
+          "README.md"
+        ],
+        "regs": [
+          "^((?:\\$|(\\s*\\*\\s*@)|(\\s*(?:var|,)?\\s+))version[\\s\\:='\"]+)([0-9]+(?:\\.[0-9]+){2,2})",
+          "^(\\s?\\*.*v)([0-9]+(?:\\.[0-9]+){2,2})"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "jquery.autobox@3.0.0",
+      "verup": {
+        "files": [
+          "bower.json",
+          "src/jquery.autobox.js"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "onemit@2.0.2",
+      "verup": {
+        "files": [
+          "onemit.js",
+          "bower.json"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "base64util@2.0.0-f",
+      "verup": {
+        "files": [
+          "package-lock.json",
+          "src/base64.js"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "url-js@0.2.3-u",
+      "verup": {
+        "files": [
+          "bower.json",
+          "url.js"
+        ]
+      },
+      "type": "object"
+    }
+  ],
+  "commitlint": [
+    {
+      "identifier": "object-properties@3.1.0",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "deep-for-each@2.0.3",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "ibex@4.5.1",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "netflux@4.3.1",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "type": "object"
+    }
+  ],
+  "publishr": [
+    {
+      "identifier": "radium@0.25.0",
+      "publishr": {
+        "dependencies": [
+          "^babel-",
+          "^builder$",
+          "^publishr$",
+          "^rimraf$",
+          "^webpack"
+        ],
+        "files": {
+          ".npmignore": ".npmignore.publishr"
+        },
+        "scripts": {
+          "postinstall": ""
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "component-playground@3.2.1",
+      "publishr": {
+        "dependencies": [
+          "^babel-(?!(standalone|polyfill))",
+          "^rimraf$",
+          "^webpack$"
+        ],
+        "scripts": {
+          "postinstall": ""
+        },
+        "files": {
+          ".npmignore": ".npmignore.publishr"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "radon-typeahead@0.5.2",
+      "publishr": {
+        "dependencies": [
+          "^babel",
+          "^builder"
+        ],
+        "files": {
+          ".npmignore": ".npmignore.publishr"
+        },
+        "scripts": {
+          "postinstall": ""
+        }
+      },
+      "type": "object"
+    }
+  ],
+  "ebam": [
+    {
+      "identifier": "more-events@2.0.0",
+      "ebam": {
+        "entry": "src/index.js",
+        "transforms": {
+          "dangerousForOf": false,
+          "dangerousTaggedTemplateString": false
+        },
+        "test": {
+          "dest": "test/code.js",
+          "src": "test/src.js"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "horologe@2.3.2",
+      "ebam": {
+        "input": "src/index.js",
+        "transforms": {
+          "dangerousForOf": false,
+          "dangerousTaggedTemplateString": false
+        },
+        "test": {
+          "dest": "test/code.js",
+          "src": "test/src.js"
+        },
+        "name": "horologe",
+        "external": [
+          "more-events"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "demeter@1.2.0",
+      "ebam": {
+        "entry": "src/index.js",
+        "test": {
+          "src": "test/src.js",
+          "dest": "test/code.js"
+        }
+      },
+      "type": "object"
+    }
+  ],
+  "semistandard": [
+    {
+      "identifier": "esri-leaflet@2.2.3",
+      "semistandard": {
+        "globals": [
+          "expect",
+          "L",
+          "XMLHttpRequest",
+          "sinon",
+          "xhr",
+          "proj4"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "blockchain-wallet-client@3.35.0",
+      "semistandard": {
+        "ignore": [],
+        "globals": [
+          "fetch",
+          "XMLHttpRequest",
+          "Audio",
+          "assert",
+          "describe",
+          "xdescribe",
+          "it",
+          "xit",
+          "beforeEach",
+          "afterEach",
+          "expect",
+          "except",
+          "spyOn",
+          "jasmine",
+          "JasminePromiseMatchers",
+          "pending",
+          "localStorage"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "esri-leaflet-geocoder@2.2.13",
+      "semistandard": {
+        "globals": [
+          "expect",
+          "L",
+          "XMLHttpRequest",
+          "sinon",
+          "xhr"
+        ]
+      },
+      "type": "object"
+    }
+  ],
+  "analyze": [
+    {
+      "identifier": "popmotion@8.5.2",
+      "analyze": true,
+      "type": "boolean"
+    },
+    {
+      "identifier": "bimserverapi@0.0.149",
+      "analyze": true,
+      "type": "boolean"
+    },
+    {
+      "identifier": "juxt@3.0.3",
+      "analyze": true,
+      "type": "boolean"
+    }
+  ],
+  "rollup": [
+    {
+      "identifier": "inferno@6.2.1",
+      "rollup": {
+        "bundledDependencies": [
+          "inferno-shared",
+          "inferno-vnode-flags"
+        ],
+        "moduleName": "Inferno"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "inferno-component@6.2.1",
+      "rollup": {
+        "moduleName": "Inferno"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "inferno-server@6.2.1",
+      "rollup": {
+        "bundledDependencies": [
+          "inferno-shared",
+          "inferno-vnode-flags"
+        ],
+        "moduleName": "Inferno.Server",
+        "moduleGlobals": {
+          "inferno": "Inferno"
+        }
+      },
+      "type": "object"
+    }
+  ],
+  "size-limit": [
+    {
+      "identifier": "react-dropzone@7.0.1",
+      "size-limit": [
+        {
+          "path": "dist/index.js",
+          "limit": "6 KB"
+        },
+        {
+          "path": "dist/es/index.js",
+          "limit": "6 KB"
+        }
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "analytics@0.0.10",
+      "size-limit": [
+        {
+          "path": "dist/analytics.cjs.js",
+          "limit": "7 KB"
+        }
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "markdown-to-jsx@6.8.3",
+      "size-limit": [
+        {
+          "path": "dist/cjs.js",
+          "limit": "5 kB"
+        }
+      ],
+      "type": "object"
+    }
+  ],
+  "precommit": [
+    {
+      "identifier": "rc-notification@3.3.0",
+      "precommit": [
+        "lint"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "subscribe-ui-event@2.0.4",
+      "precommit": [
+        "lint",
+        "test"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "rc-queue-anim@1.6.7",
+      "precommit": [
+        "lint"
+      ],
+      "type": "object"
+    }
+  ],
+  "watch": [
+    {
+      "identifier": "d3-svg-legend@2.25.6",
+      "watch": {
+        "grunt": [
+          "src/*.js ",
+          "docs/legends.js"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "qtek@0.6.1",
+      "watch": {
+        "glsl2js": {
+          "patterns": [
+            "src"
+          ],
+          "extensions": "glsl"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "bridgedb@6.0.2",
+      "watch": {
+        "dev": [
+          "index.d.ts",
+          "src/*.{ts,tsx}",
+          "test/*.{ts,tsx,js,jsx}"
+        ],
+        "test": [
+          "index.js",
+          "ui/*.{js,jsx}",
+          "test/*.{js,jsx}"
+        ]
+      },
+      "type": "object"
+    }
+  ],
+  "release-script": [
+    {
+      "identifier": "react-bootstrap@0.32.4",
+      "release-script": {
+        "bowerRepo": "git@github.com:react-bootstrap/react-bootstrap-bower.git",
+        "docsRepo": "git@github.com:react-bootstrap/react-bootstrap.github.io.git",
+        "docsRoot": "www/public/"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "eventdispatcher@2.6.0",
+      "release-script": {
+        "altPkgRootFolder": "lib",
+        "defaultDryRun": "true"
+      },
+      "type": "object"
+    }
+  ],
+  "precommit.silent": [
+    {
+      "identifier": "redolent@2.0.5",
+      "precommit.silent": true,
+      "type": "boolean"
+    },
+    {
+      "identifier": "dush@3.0.5",
+      "precommit.silent": true,
+      "type": "boolean"
+    }
+  ],
+  "url": [
+    {
+      "identifier": "searchjs@1.0.0",
+      "url": "http://github.com/deitch/searchjs"
+    },
+    {
+      "identifier": "asyncmachine@3.4.1",
+      "url": "https://github.com/TobiaszCudnik/asyncmachine"
+    }
+  ],
+  "standard-version": [
+    {
+      "identifier": "pouchdb-authentication@1.1.3",
+      "standard-version": {
+        "scripts": {
+          "postbump": "git checkout -- bower.json"
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "deep-for-each@2.0.3",
+      "standard-version": {
+        "scripts": {
+          "posttag": "git push --follow-tags origin master && npm publish"
+        }
+      },
+      "type": "object"
+    }
+  ],
+  "renovate": [
+    {
+      "identifier": "instantsearch.js@2.10.4",
+      "renovate": {
+        "extends": [
+          "config:js-lib",
+          "algolia"
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "docks@0.6.1",
+      "renovate": {
+        "extends": "tunnckocore"
+      },
+      "type": "object"
+    }
+  ],
+  "clinton": [
+    {
+      "identifier": "detergent@4.0.4",
+      "clinton": {
+        "rules": {
+          "xo": 0
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "object-boolean-combinations@2.4.0",
+      "clinton": {
+        "rules": {
+          "xo": 0
+        }
+      },
+      "type": "object"
+    }
+  ],
+  "lect": [
+    {
+      "identifier": "detergent@4.0.4",
+      "lect": {
+        "babelrc": {
+          "override": false,
+          "set": false
+        },
+        "badges": {
+          "contributors": true,
+          "cov": true,
+          "deps": true,
+          "deps2d": true,
+          "dev": true,
+          "downloads": true,
+          "license": true,
+          "node": true,
+          "npm": true,
+          "overall": true,
+          "runkit": true,
+          "travis": false,
+          "vulnerabilities": true
+        },
+        "badges_custom": {
+          "node": {
+            "alt": "Semaphore CI",
+            "img": "https://semaphoreci.com/api/v1/revelt/detergent/branches/master/shields_badge.svg?style=flat-square",
+            "insert_before": 2,
+            "url": "https://semaphoreci.com/revelt/detergent"
+          }
+        },
+        "contribution_types": [
+          "Blogposts",
+          "Bug reports",
+          "Code",
+          "Design",
+          "Documentation",
+          "Event Organizing",
+          "Examples",
+          "Financial",
+          "Funding Finding",
+          "Ideas, Planning, & Feedback",
+          "Infrastructure (Hosting, Build-Tools, etc)",
+          "Plugin/utility libraries",
+          "Answering Questions",
+          "Reviewed Pull Requests",
+          "Talks",
+          "Tests",
+          "Tools",
+          "Translation",
+          "Tutorials",
+          "Videos"
+        ],
+        "contributors": [
+          {
+            "contribution": [
+              "Code",
+              "Documentation",
+              "Tests"
+            ],
+            "username": "revelt"
+          },
+          {
+            "contribution": [
+              "Bug reports"
+            ],
+            "username": "maxlapides"
+          },
+          {
+            "contribution": [
+              "Bug reports"
+            ],
+            "username": "nacimgoura"
+          },
+          {
+            "contribution": [
+              "Bug reports"
+            ],
+            "username": "jacksteamdev"
+          }
+        ],
+        "eslintrc": {
+          "add": [],
+          "remove": []
+        },
+        "files": {
+          "delete": [],
+          "write_hard": [
+            {
+              "contents": "",
+              "name": ""
+            }
+          ],
+          "write_soft": [
+            {
+              "contents": "",
+              "name": ""
+            }
+          ]
+        },
+        "header": {
+          "dontQuoteDescription": false,
+          "rightFloatedBadge": []
+        },
+        "licence": {
+          "extras": []
+        },
+        "npmignore": {
+          "badFiles": [],
+          "badFolders": [],
+          "goodFiles": [],
+          "goodFolders": []
+        },
+        "various": {
+          "back_to_top": {
+            "enabled": true,
+            "label": ""
+          },
+          "devDependencies": [
+            "object-boolean-combinations",
+            "rollup-plugin-json",
+            "rollup-plugin-node-builtins"
+          ],
+          "travisVersionsOverride": [
+            "node"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "object-boolean-combinations@2.4.0",
+      "lect": {
+        "babelrc": {
+          "override": false,
+          "set": false
+        },
+        "badges": {
+          "contributors": true,
+          "cov": true,
+          "deps": true,
+          "deps2d": true,
+          "dev": true,
+          "downloads": true,
+          "license": true,
+          "node": true,
+          "npm": true,
+          "overall": true,
+          "runkit": true,
+          "travis": true,
+          "vulnerabilities": true
+        },
+        "contribution_types": [
+          "Blogposts",
+          "Bug reports",
+          "Code",
+          "Design",
+          "Documentation",
+          "Event Organizing",
+          "Examples",
+          "Financial",
+          "Funding Finding",
+          "Ideas, Planning, & Feedback",
+          "Infrastructure (Hosting, Build-Tools, etc)",
+          "Plugin/utility libraries",
+          "Answering Questions",
+          "Reviewed Pull Requests",
+          "Talks",
+          "Tests",
+          "Tools",
+          "Translation",
+          "Tutorials",
+          "Videos"
+        ],
+        "contributors": [
+          {
+            "contribution": [
+              "Code",
+              "Documentation",
+              "Tests"
+            ],
+            "username": "revelt"
+          }
+        ],
+        "eslintrc": {
+          "add": [],
+          "remove": []
+        },
+        "files": {
+          "delete": [],
+          "write_hard": [
+            {
+              "contents": "",
+              "name": ""
+            }
+          ],
+          "write_soft": [
+            {
+              "contents": "",
+              "name": ""
+            }
+          ]
+        },
+        "header": {
+          "dontQuoteDescription": false,
+          "rightFloatedBadge": []
+        },
+        "licence": {
+          "extras": [
+            ""
+          ]
+        },
+        "npmignore": {
+          "badFiles": [],
+          "badFolders": [],
+          "goodFiles": [],
+          "goodFolders": []
+        },
+        "various": {
+          "back_to_top": {
+            "enabled": true,
+            "label": ""
+          },
+          "devDependencies": [],
+          "travisVersionsOverride": []
+        }
+      },
+      "type": "object"
+    }
+  ],
+  "scripts-info": [
+    {
+      "identifier": "mocker-data-generator@2.6.6",
+      "scripts-info": {
+        "info": "Display information about the scripts",
+        "build": "(Trash and re)build the library",
+        "lint": "Lint all typescript source files",
+        "unit": "Run unit tests",
+        "test": "Lint and test the library",
+        "watch": "Watch source files, rebuild library on changes, rerun relevant tests",
+        "watch:build": "Watch source files, rebuild library on changes",
+        "watch:unit": "Watch the build, rerun relevant tests on changes",
+        "cov": "Run tests, generate the HTML coverage report, and open it in a browser",
+        "html-coverage": "Output HTML test coverage report",
+        "send-coverage": "Output lcov test coverage report and send it to codecov",
+        "docs": "Generate API documentation and open it in a browser",
+        "docs:json": "Generate API documentation in typedoc JSON format",
+        "release": "Bump package.json version, update CHANGELOG.md, tag a release"
+      },
+      "type": "object"
+    },
+    {
+      "identifier": "trustly-client@3.0.1",
+      "scripts-info": {
+        "info": "Display information about the scripts",
+        "build": "(Trash and re)build the library",
+        "lint": "Lint all typescript source files",
+        "unit": "Build the library and run unit tests",
+        "test": "Lint, build, and test the library",
+        "watch": "Watch source files, rebuild library on changes, rerun relevant tests",
+        "cov": "Run tests, generate the HTML coverage report, and open it in a browser",
+        "docs": "Generate HTML API documentation and open it in a browser",
+        "docs:publish": "Generate HTML API documentation and push it to GitHub Pages",
+        "docs:json": "Generate API documentation in typedoc JSON format",
+        "changelog": "Bump package.json version, update CHANGELOG.md, tag a release",
+        "reset": "Delete all untracked files and reset the repo to the last commit",
+        "release": "Clean, build, test, publish docs, and prepare release (a one-step publish process)"
+      },
+      "type": "object"
+    }
+  ],
+  "pre-push": [
+    {
+      "identifier": "react-vertical-timeline@0.2.0",
+      "pre-push": [
+        "test"
+      ],
+      "type": "object"
+    },
+    {
+      "identifier": "recharts@1.4.1",
+      "pre-push": [
+        "test",
+        "lint"
+      ],
+      "type": "object"
+    }
+  ],
+  "component": [
+    {
+      "identifier": "page@1.11.3",
+      "component": {
+        "scripts": {
+          "page": "index.js"
+        }
+      },
+      "type": "object"
+    }
+  ],
+  "ng-update": [
+    {
+      "identifier": "rxjs@6.3.3",
+      "ng-update": {
+        "migrations": "./migrations/collection.json"
+      },
+      "type": "object"
+    }
+  ],
+  "xrelease": [
+    {
+      "identifier": "expression-expander@6.1.3",
+      "xrelease": {
+        "verifyRelease": [
+          "cracks",
+          {
+            "path": "dont-crack",
+            "test-against": [
+              "https://github.com/arlac77/config-expander"
+            ]
+          }
+        ]
+      },
+      "type": "object"
+    }
+  ],
+  "eyeglass": [
+    {
+      "identifier": "foundation-sites@6.5.1",
+      "eyeglass": {
+        "name": "foundation",
+        "sassDir": "scss",
+        "needs": ">=0.8.0",
+        "exports": false
+      },
+      "type": "object"
+    }
+  ],
+  "typescript": [
+    {
+      "identifier": "derivable@2.0.0-beta.3",
+      "typescript": {
+        "definition": "dist/derivable.d.ts"
+      },
+      "type": "object"
+    }
+  ],
+  "tscomp": [
+    {
+      "identifier": "redux-decorated@1.0.2",
+      "tscomp": {
+        "mode": "lib"
+      },
+      "type": "object"
+    }
+  ],
+  "ccu": [
+    {
+      "identifier": "auth0-js@9.8.2",
+      "ccu": {
+        "name": "auth0",
+        "cdn": "https://cdn.auth0.com",
+        "mainBundleFile": "auth0.min.js",
+        "bucket": "assets.us.auth0.com",
+        "localPath": "dist",
+        "digest": {
+          "hashes": [
+            "sha384"
+          ],
+          "extensions": [
+            ".js"
+          ]
+        }
+      },
+      "type": "object"
+    }
+  ],
+  "collaborators": [
+    {
+      "identifier": "vega-lite@3.0.0-rc8",
+      "collaborators": [
+        "Kanit Wongsuphasawat <kanitw@gmail.com> (http://kanitw.yellowpigz.com)",
+        "Dominik Moritz <domoritz@cs.washington.edu> (https://www.domoritz.de)",
+        "Jeffrey Heer <jheer@uw.edu> (http://jheer.org)"
+      ],
+      "type": "object"
+    }
+  ],
+  "scriptkit": [
+    {
+      "identifier": "dice-roll@1.0.0",
+      "scriptkit": {
+        "files": {
+          "dist/dice-roll.js": "index.js",
+          "test/dice-roll.test.dist.js": "test/dice-roll.test.js"
+        },
+        "scripts": {
+          "babel": {
+            "exclude": [
+              "node_modules/tape-rollup/*"
+            ]
+          }
+        }
+      },
+      "type": "object"
+    }
+  ],
+  "organization": [
+    {
+      "identifier": "bimserverapi@0.0.149",
+      "organization": "OpenSource BIM"
+    }
+  ],
+  "sponsors": [
+    {
+      "identifier": "dominject@2.0.0",
+      "sponsors": [
+        "Wholesale Blank T-Shirts (www.wholesale-blank-tshirts.com.au)",
+        "TopBetta (https://www.topbetta.com.au)"
+      ],
+      "type": "object"
+    }
+  ],
+  "testling": [
+    {
+      "identifier": "eases-jsnext@1.0.10",
+      "testling": {
+        "files": "test.js",
+        "browsers": [
+          "ie/6..latest",
+          "chrome/22..latest",
+          "firefox/16..latest",
+          "safari/latest",
+          "opera/11.0..latest",
+          "iphone/6",
+          "ipad/6",
+          "android-browser/latest"
+        ]
+      },
+      "type": "object"
+    }
+  ],
+  "non-dependencies": [
+    {
+      "identifier": "elsinore@5.2.2",
+      "non-dependencies": {},
+      "type": "object"
+    }
+  ],
+  "yargs": [
+    {
+      "identifier": "gatsby@2.0.50",
+      "yargs": {
+        "boolean-negation": false
+      },
+      "type": "object"
+    }
+  ],
+  "sniper": [
+    {
+      "identifier": "clanviewer@0.1.11",
+      "sniper": {
+        "js": [
+          "https://cdn.jsdelivr.net/npm/clanviewer@latest/build/clanviewer.packed.js"
+        ],
+        "css": [
+          "/css/clanviewr.css"
+        ],
+        "snippets": [
+          "biojs"
+        ],
+        "first": "example"
+      },
+      "type": "object"
+    }
+  ],
+  "vetur": [
+    {
+      "identifier": "quasar-framework@0.17.18",
+      "vetur": {
+        "tags": "dist/helper-json/quasar-tags.json",
+        "attributes": "dist/helper-json/quasar-attributes.json"
+      },
+      "type": "object"
+    }
+  ],
+  "karma": [
+    {
+      "identifier": "tko.utils@4.0.0-alpha5b",
+      "karma": {
+        "frameworks": [
+          "jasmine"
+        ]
+      },
+      "type": "object"
+    }
+  ],
+  "extra": [
+    {
+      "identifier": "verup@1.7.0",
+      "extra": {
+        "verup": {
+          "files": [
+            "verup.js",
+            "package-lock.json",
+            "README.md"
+          ],
+          "regs": [
+            "^((?:\\$|(?:\\s*\\*\\s*@)|(?:\\s*(?:var|,)?\\s+))version[\\s\\:='\"]+)([0-9]+(?:\\.[0-9]+){2,2})",
+            "^(\\s*const\\s+VERSION[\\s='\"]+)([0-9]+(?:\\.[0-9]+){2,2})",
+            "^(\\s?\\*.*v)([0-9]+(?:\\.[0-9]+){2,2})"
+          ]
+        }
+      },
+      "type": "object"
+    }
+  ],
+  "videojs-plugin": [
+    {
+      "identifier": "videojs-overlay@2.1.4",
+      "videojs-plugin": {
+        "style": "dist/videojs-overlay.css",
+        "script": "dist/videojs-overlay.min.js"
+      },
+      "type": "object"
+    }
+  ],
+  "issues": [
+    {
+      "identifier": "videojs-seek-buttons@1.3.0",
+      "issues": "https://github.com/mister-ben/videojs-seek-buttons/issues"
+    }
+  ]
+}
