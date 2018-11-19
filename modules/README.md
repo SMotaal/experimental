@@ -34,6 +34,12 @@ Works in latest Chrome, Safari, and Firefox (maybe Edge, don't know).
 >
 > - If you don't want to hack the actual loader but simply play with modules, consider [this bin instead](https://jsbin.com/gist/efa3165c507f816ed90925599148ae07?result=console) which simply imports the loader from this repo.
 
+### Scrubber
+
+Today we see a lot of experimentations with hybrid deployments, where packages target various environments using anything but conventional declarative aspects in their `package.json` files.
+
+[Scrubber](https://smotaal.github.io/experimental/modules/scrub.html) examines real-world packages, or at least tries to, by modeling various dependency resolution trends.
+
 ## Node.js
 
 > **With `--experimental-modules`**
