@@ -1,4 +1,4 @@
-import {Matcher, Token, Kind, UnknownKind, TextKind} from '../../modules/markup.mjs';
+import {Token, Matcher, Kind, UnknownKind, TextKind} from '../../prototypes/markup/token.mjs';
 
 (source => {
   const SeparatorKind = Kind('separator');
