@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "@smotaal/vscode",
+  "author": "Saleh Abdel Motaal <saleh@grasppe.com>",
+  "devDependencies": {
+    "generator-code": "*",
+    "npm": "*",
+    "vsce": "*",
+    "cson-parser": "*",
+    "fast-plist": "*",
+    "yo": "*"
+  }
+}

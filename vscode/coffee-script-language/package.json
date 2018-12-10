@@ -1,0 +1,25 @@
+{
+    "name": "coffee-script-language",
+    "displayName": "coffee-script-language",
+    "description": "CoffeeScript language support in Atom for VSCode",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.29.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "coffeescript",
+            "aliases": ["CoffeeScript, coffeescript, coffee", "coffeescript"],
+            "extensions": [".coffee .cson"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "coffeescript",
+            "scopeName": "source.coffee",
+            "path": "./syntaxes/coffeescript.tmLanguage.json"
+        }]
+    }
+}
