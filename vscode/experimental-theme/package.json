@@ -1,0 +1,21 @@
+{
+    "name": "experimental-theme",
+    "displayName": "Experimental Theme",
+    "description": "SMotaal's Experimental VSCode Theme",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.29.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Experimental Light",
+                "uiTheme": "vs",
+                "path": "./themes/experimental-light.json"
+            }
+        ]
+    }
+}
