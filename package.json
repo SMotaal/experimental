@@ -2,19 +2,29 @@
   "private": true,
   "name": "@smotaal/experimental",
   "description": "TBD",
+  "version": "0.0.0",
   "author": "Saleh Abdel Motaal <saleh@grasppe.com>",
+  "mode": "esm",
   "scripts": {
-    "install": "exit 1",
     "start": "http-server --cors",
-    "markup": "pushd markup; ./index.mjs"
+    "markup": "pushd markup; ./index.mjs",
+    "vscode": "pushd vscode; yarn",
+    "quench": "pushd quench; ./index.mjs",
+    "chrome": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome",
+    "compile": "rollup -c"
   },
   "dependencies": {
     "hackable-loader": "SMotaal/hackable-loader"
   },
   "devDependencies": {
-    "@types/node": "*",
-    "primer": "*",
-    "typescript": "*",
-    "rollup": "*"
-  }
+    "@types/node": "latest",
+    "prettier": "latest",
+    "prettier-tslint": "latest",
+    "rollup": "latest",
+    "typescript": "latest"
+  },
+  "workspaces": [
+    "node",
+    "quench"
+  ]
 }
