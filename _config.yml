@@ -1,1 +1,6 @@
 theme: jekyll-theme-cayman
+exclude: [
+  vscode,
+  "[more]",
+  node_modules,
+]
