@@ -1,6 +1,19 @@
-theme: jekyll-theme-cayman
-exclude: [
-  vscode,
-  "[more]",
-  node_modules,
-]
+# * SEE: https://jekyllrb.com/docs/configuration/options/
+theme: 'jekyll-theme-cayman'
+
+include: [
+    # Framework
+    'components',
+    'packages',
+    'prototypes',
+    'tools',
+    'node',
+    # Projects
+    'fragma',
+    'markup',
+    'quench',
+    'caches',
+    'modules',
+  ]
+
+exclude: ['.vscode', '[more]', node_modules, 'trash']
