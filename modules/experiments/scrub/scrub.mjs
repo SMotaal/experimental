@@ -1,7 +1,7 @@
 import {Scrubber} from './lib/scrubber.mjs';
 import {log, group, groupCollapsed, groupEnd} from './lib/logging.mjs';
 import {dir, table, tables, peak, time, timeEnd} from './lib/logging.mjs';
-import packages from '../specs/packages.mjs';
+import packages from './packages.mjs';
 
 const defaults = {
   // limit: 50,
