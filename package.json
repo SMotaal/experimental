@@ -25,16 +25,13 @@
     "http-server": "latest"
   },
   "resolutions": {
-    "@esm/common": "../@esm/common",
-    "@smotaal/tokenizer": "./packages/@smotaal/tokenizer",
-    "@smotaal/markup": "./markup",
-    "stripless": "./packages/stripless",
-    "pseudom": "./packages/pseudom"
+    "@smotaal/tokenizer": "./markup/packages/@smotaal/tokenizer",
+    "pseudom": "./markup/packages/pseudom"
   },
   "workspaces": {
     "packages": [
-      "types",
       "markup",
+      "types",
       "node"
     ]
   }
