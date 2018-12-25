@@ -25,19 +25,17 @@
     "http-server": "latest"
   },
   "resolutions": {
-    "@esm/common": "../@esm/common"
+    "@esm/common": "../@esm/common",
+    "@smotaal/tokenizer": "./packages/@smotaal/tokenizer",
+    "@smotaal/markup": "./markup",
+    "stripless": "./packages/stripless",
+    "pseudom": "./packages/pseudom"
   },
   "workspaces": {
     "packages": [
-      "../@esm/common",
-      "types/packages/stripless",
-      "markup/packages/pseudom",
-      "markup/packages/@smotaal/tokenizer",
-      "loaders/node-exm-loader",
-      "transpiler/sucrase-transpiler",
-      "transpiler",
-      "node",
-      "quench"
+      "types",
+      "markup",
+      "node"
     ]
   }
 }
