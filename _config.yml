@@ -16,4 +16,4 @@ include: [
     'modules',
   ]
 
-exclude: ['.vscode', '[more]', node_modules, 'trash']
+exclude: ['.vscode', '[more]', 'trash']
