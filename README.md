@@ -8,16 +8,17 @@ Don't dare say it does not work — until it absolutely does not work.
 
 **If you like really unfinished stuff**:
 
-* [Modules](./modules)
-* [Fragma](./fragma)
+- [Modules (_experimental_)](./modules/experimental)
+- [Modules (_alpha_)](./modules/alpha)
+- [Fragma](./fragma)
 
 **If you don't like the above**<sup>(ⅰ)</sup>:
 
-* [@SMotaal/tokenizer](./markup/packages/tokenizer)
+* [@SMotaal/tokenizer](./packages/@smotaal/tokenizer)
 
   A refactored tokenizer from earlier markup experiments.
 
-* [pseu·dom](./markup/packages/pseudom)
+* [pseu·dom](./packages/pseudom)
 
   Abstractional document composition without the actual DOM.
 
