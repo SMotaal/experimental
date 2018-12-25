@@ -5,26 +5,39 @@
   "version": "0.0.0",
   "author": "Saleh Abdel Motaal <saleh@grasppe.com>",
   "mode": "esm",
+  "exports": {},
   "scripts": {
     "start": "http-server --cors",
-    "markup": "pushd markup; ./index.mjs",
+    "markup": "pushd marku  p; ./index.mjs",
     "vscode": "pushd vscode; yarn",
-    "quench": "pushd quench; ./index.mjs",
+    "quench": "node quench",
     "chrome": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome",
-    "compile": "rollup -c"
-  },
-  "dependencies": {
-    "hackable-loader": "SMotaal/hackable-loader"
+    "compile": "rollup -c",
+    "nexm": "node --experimental-modules --loader @esm/",
+    "nesm": "~/Projects/@smotaal/node/node-esm/out/Release/node"
   },
   "devDependencies": {
     "@types/node": "latest",
     "prettier": "latest",
     "prettier-tslint": "latest",
     "rollup": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "http-server": "latest"
   },
-  "workspaces": [
-    "node",
-    "quench"
-  ]
+  "resolutions": {
+    "@esm/common": "../@esm/common"
+  },
+  "workspaces": {
+    "packages": [
+      "../@esm/common",
+      "types/packages/stripless",
+      "markup/packages/pseudom",
+      "markup/packages/@smotaal/tokenizer",
+      "loaders/node-exm-loader",
+      "transpiler/sucrase-transpiler",
+      "transpiler",
+      "node",
+      "quench"
+    ]
+  }
 }

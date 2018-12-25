@@ -1,0 +1,7 @@
+{
+  "name": "stripless",
+  "version": "0.0.1",
+  "module": "types.js",
+  "exports": {},
+  "types": "types.d.ts"
+}
