@@ -1,0 +1,3 @@
+[submodule "markup"]
+	path = markup
+	url = https://github.com/SMotaal/markup.git
