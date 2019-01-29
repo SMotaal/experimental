@@ -1,0 +1,18 @@
+﻿{
+	"mocha": {
+		"id": "mocha",
+		"main": "mocha.js",
+		"stylesheet": "mocha.css",
+		"cdn": "unpkg"
+	},
+	"intern": {
+		"id": "intern",
+		"main": "browser/intern.js",
+		"cdn": "unpkg"
+	},
+	"chai": {
+		"id": "chai",
+		"main": "chai.js",
+		"cdn": "unpkg"
+	}
+}
