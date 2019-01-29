@@ -7,7 +7,7 @@
 	"mode": "esm",
 	"exports": {},
 	"scripts": {
-		"serve": "http-server --cors",
+		"serve": "http-server --cors -s",
 		"markup": "pushd markup; ./index.mjs",
 		"vscode": "pushd vscode; yarn",
 		"quench": "node quench",
