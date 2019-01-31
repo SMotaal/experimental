@@ -1,0 +1,11 @@
+{
+  "name": "@smotaal/readme",
+  "version": "0.0.0",
+  "author": "Saleh Abdel Motaal <saleh@grasppe.com>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "readme": "README.md",
+  "files": [],
+  "license": "MIT"
+}
