@@ -8,6 +8,7 @@ include: [
     'prototypes',
     'tools',
     'node',
+    'node_modules/@smotaal',
     # Projects
     'fragma',
     'markup',
