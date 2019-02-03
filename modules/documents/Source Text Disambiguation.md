@@ -18,9 +18,10 @@ This work focuses on the disambiguation of source text based on discriminating s
 
 - Effective parsing for source text disambiguation can:
 
-  1. Excluding all text enclosed with strings or regular expressions.
-  2. Remain indifferent to errors normally handled by the runtime.
-  3. Afford reasonable flexibility in non-discriminating syntax features.
+  1. Use a single parse of just the necessary segment of a given source text.
+  2. Excluding all text enclosed with strings or regular expressions.
+  3. Remain indifferent to errors normally handled by the runtime.
+  4. Afford reasonable flexibility in non-discriminating syntax features.
 
 - Efficient parsing for source text disambiguation can:
 
