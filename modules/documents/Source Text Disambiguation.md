@@ -12,7 +12,7 @@ While implementors obviously opt for design decisions that limit these occurrenc
 
 ## Scope
 
-This work focuses on the disambiguation of source text based on discriminating syntax features for source texts lacking the necessary out-of-band details, using performant parsing approaches for locating the first valid occurrence of a discriminating syntax, including but not limited to special `pragma` inserted by the authors for making the determination.
+This work focuses on the disambiguation of source text based on discriminating syntax features for source texts lacking the necessary out-of-band details, using performant parsing approaches for locating the first valid occurrence of a positively discriminating feature, including but not limited to special `pragma` inserted by the authors for making the determination.
 
 ## Considerations
 
@@ -29,7 +29,7 @@ This work focuses on the disambiguation of source text based on discriminating s
   2. Avoid the creation of unnecessary objects or states.
   3. Avoid unnecessary parsing inside enclosures when possible.
   4. Avoid unnecessary costs associated with semantic and scope analysis.
-  5. Disclose approprate warnings to users opting to rely on such procedures.
+  5. Disclose appropriate warnings to users opting to rely on such procedures.
 
 - Effective syntax discrimination for ECMAScript modules includes:
 
