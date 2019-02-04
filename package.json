@@ -24,13 +24,8 @@
 		"typescript": "latest",
 		"http-server": "latest"
 	},
-	"resolutions": {
-		"@smotaal/tokenizer": "./markup/packages/@smotaal/tokenizer",
-		"pseudom": "./markup/packages/pseudom"
-	},
 	"workspaces": {
 		"packages": [
-			"markup",
 			"types",
 			"node"
 		]
