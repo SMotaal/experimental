@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html checkerboard>
+	<head>
+		<title>Source Text Disambiguation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<link rel="preload" href="/pholio/styles/common.css" as="style" />
+		<link rel="stylesheet" href="/pholio/styles/styles.css" />
+	</head>
+	<body>
+		<main>
+			<markout-content>
+				<template>
+					# Source Text Disambiguation
+				</template>
+			</markout-content>
+		</main>
+		<script type="module">
+			import '/pholio/elements/markout-content.js';
+			import {loadSourceTextFrom} from '/components/code-editor/helpers.js';
+			(async () => {
+				const section = document.querySelector('markout-content');
+
+				const sourceText = await loadSourceTextFrom('../documents/Source Text Disambiguation.md');
+
+				const Paragraphs = /(?=(\n[> \t]*)\b)((?:\1(?!(?:\d+|[a-z]|[ivx]+)\. )[^#>|\-~\s\n][^\n]*?(?:\n[> \t]*(?=\n))+)+)/g;
+				// const Lines = /(?=(\n[> \t]*)(?:[-*] |[1-9]+\d*\. ))((?:\1(?:[-*] |[1-9]+\d*\. |   ?)+[^\n]+(?:\n[> \t]*)*(?=\1))+)/g;
+				const Lists = /(?=(\n[> \t]*)(?:[-*] |[1-9]+\d*\. |[a-z]\. |[ivx]+\. ))((?:\1(?:[-*] |[1-9]+\d*\. |[a-z]\. |[ivx]+\. |   ?)+[^\n]+(?:\n[> \t]*)*(?=\1))+)/g;
+				const Item = /^([> \t]*)([-*] |[1-9]+\d*\. |[a-z]\. |[ivx]+\. )([^\n]+(?:\n\1(?:   ?|\t ?)(?![ \t]|[-*] |\d+\. |[a-z]\. |[ivx]+\. ).*)*)$/gm;
+
+				class List extends Array {
+					toString(inset = this.inset || '', type = this.type || 'ul', style = this.style) {
+						const rows = [`${inset}<${type}${(style && ` style="list-style: ${style};"`) || ''}>`];
+						for (const item of this) {
+							if (item && typeof item === 'object' && item instanceof List) {
+								const last = rows.length - 1;
+								const row = rows[last];
+								if (last > 0) {
+									rows[rows.length - 1] = `${row.slice(0, -5)}\n${item.toString(`${inset}\t\t`)}\n${inset}\t</li>`;
+								} else {
+									rows.push(`${inset}\t<li>\n${item.toString(`${inset}\t\t`)}\n${inset}\t</li>`);
+								}
+							} else {
+								rows.push(`${inset}\t<li>${`${item}`.trim()}</li>`);
+							}
+						}
+						rows.push(`${inset}</${type}>`);
+						return rows.join('\n');
+					}
+				}
+
+				let markoutText = sourceText
+					.replace(Lists, (m, feed, body) => {
+						let match, indent;
+						indent = feed.slice(1);
+						const top = new List();
+						let list = top;
+						Item.lastIndex = 0;
+						while ((match = Item.exec(m))) {
+							let [, inset, marker, line] = match;
+							if (!line.trim()) continue;
+							let depth = inset.length;
+							if (depth > list.depth) {
+								const parent = list;
+								list = new List();
+								list.inset = inset;
+								list.depth = depth;
+
+								list.type = ((marker === '* ' || marker === '- ') && 'ul') || 'ol';
+								(list.parent = parent).push(list);
+							} else if (depth < list.depth) {
+								while ((list = list.parent) && inset.length < list.inset);
+							} else if (!(inset in list)) {
+								list.inset = inset;
+								list.depth = depth;
+								list.type = marker === '* ' || marker === '- ' ? 'ul' : 'ol';
+							}
+
+							if (!list) break;
+
+							!marker ||
+								'style' in list ||
+								(list.style =
+									(list.type === 'ul' && ((marker[0] === '*' && 'disc') || 'square')) ||
+									(marker[0] === '0' && 'decimal-leading-zero') ||
+									(marker[0] > 0 && 'decimal') ||
+									`${marker === marker.toLowerCase() ? 'lower' : 'upper'}-${
+										/^[ivx]+\. $/i.test(marker) ? 'roman' : 'latin'
+									}`);
+
+							line = line.replace(/[ \t]*\n[> \t]*/g, ' ');
+							list.push(line);
+						}
+
+						return top.toString(indent);
+					})
+					.replace(Paragraphs, (m, feed, body) => {
+						const paragraphs = body
+							.trim()
+							.split(/[ \t]*\n(?:[> \t]*\n)*?[> \t]*/g)
+							.filter(Boolean);
+
+						// console.log(`paragraphs %o\n${'\t%o\n'.repeat(paragraphs.length)}`, {feed, body}, ...paragraphs);
+						return `${feed}<p>${paragraphs.join(`</p>${feed}<p>${feed}`)}</p>`;
+					});
+
+				section.sourceText = markoutText;
+			})();
+		</script>
+		<script type="module">
+			import * as tokenizer from '/markup/dist/tokenizer/tokenizer.mjs';
+			import * as browser from '/markup/dist/tokenizer/tokenizer.browser.mjs';
+			import * as extended from '/markup/dist/tokenizer/tokenizer.extended.mjs';
+
+			console.log({tokenizer, browser, extended});
+		</script>
+	</body>
+</html>
