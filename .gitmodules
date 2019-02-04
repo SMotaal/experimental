@@ -9,3 +9,4 @@
 [submodule "pholio"]
 	path = pholio
 	url = https://github.com/SMotaal/pholio.git
+	branch = master
