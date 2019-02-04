@@ -30,7 +30,35 @@ By simply enabling github pages on the new repo, it was possible to actually vis
 
 ### 2. Cleaning up the experimental repo
 
-This is not done yet.
+```
+# Clone
+cd ~/Projects/@smotaal
+git clone https://github.com/SMotaal/experimental.git experimental-2
+code experimental-2
+
+# Clean
+git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch pholio -r' --prune-empty --tag-name-filter cat -- --all
+
+# Push
+git push origin master --force
+```
+
+### 3. Add submodule
+
+```
+# Clone
+cd ~/Projects/@smotaal
+git clone https://github.com/SMotaal/experimental.git experimental-3
+code experimental-3
+
+# Submodule
+git submodule add https://github.com/SMotaal/pholio.git
+git submodule update
+git commit
+
+#Push
+git push origin master
+```
 
 **References**
 
