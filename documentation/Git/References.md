@@ -8,4 +8,4 @@ While the client, by design, only operates on files when saving or restoring aga
 
 Below are some ways to leverage these features to extract assets from folders for various purposes.
 
-- [Create a new git repository from a folder in an other repository](https://stackoverflow.com/questions/17413493/create-a-submodule-repository-from-a-folder-and-keep-its-git-commit-history/18129693#18129693)
+- [Create a new git repository from a folder in an other repository](https://stackoverflow.com/a/18129693)
