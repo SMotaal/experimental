@@ -12,6 +12,7 @@ The document tracks on going efforts for determining the set of requirements nee
      c. Performance
      d. Cross-compatibility
      e. Utility (ie restrictions)
+   - Comprehensive runtime support preflight checks.
 2. Determining platform limitations.
 3. Making recommendations to respective bodies.
 
