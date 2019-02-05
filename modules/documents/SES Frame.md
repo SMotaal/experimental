@@ -19,7 +19,13 @@ This work focuses on the first step.
 
 ## Conceptual Implementation
 
-The basic idea is analyze and secure all resources going into the iframe to determine CSP policies and block everything else. Allowed requests will be analyzed and sanitized by a service worker. Other requests will fail.
+The basic concept of this implementation is to analyze and rewrite all resources going into the iframe to determine CSP policies and block everything else. Allowed requests will be analyzed and sanitized by a service worker. Other requests will fail.
+
+**Considerations**
+
+1. Setting CSP policies may not be honoured after load.
+2. Service worker sanitization should avoid unsafe messaging with hosts.
+3. In-host rewrites must avoid exposing privileged entities into ses scopes.
 
 ### Elements
 
