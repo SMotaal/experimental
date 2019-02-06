@@ -1,4 +1,8 @@
-﻿# Source Text Disambiguation
+﻿<small float-right>
+<a href="https://github.com/SMotaal/experimental/blob/master/modules/documents/Source%20Text%20Disambiguation.md" target="_blank">GitHub</a>
+</small>
+
+# Source Text Disambiguation
 
 The ECMAScript specifications define two types of source code that can be externally loaded and executed at runtime, Global (script) code and Module code. As of this moment, the vast majority of the modules loaded today fall in the former category, include to a very large degree modules loaded in runtimes that support for ECMAScript modules.
 
