@@ -1,4 +1,8 @@
-﻿# `ses-frame`
+﻿<small float-right>
+<a href="//github.com/SMotaal/experimental/blob/master/modules/documents/SES%Frame.md" target="_blank">GitHub</a>
+</small>
+
+# `ses-frame`
 
 The document tracks on going efforts for determining the set of requirements needed for an equivalent SES implemention in browsers.
 
