@@ -1,5 +1,5 @@
 ﻿<small float-right>
-<a href="//github.com/SMotaal/experimental/blob/master/modules/documents/SES%Frame.md" target="_blank">GitHub</a>
+<a href="https://github.com/SMotaal/experimental/blob/master/modules/documents/SES%20Frame.md" target="_blank">GitHub</a>
 </small>
 
 # `ses-frame`
