@@ -6,14 +6,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 		<link rel="preload" href="/pholio/styles/common.css" as="style" />
 		<link rel="stylesheet" href="/pholio/styles/styles.css" />
+		<style>
+			html {
+				--shade: #aacceef6;
+			}
+			body > main > markout-content {
+				opacity: 1;
+				background-color: #fffffff6;
+				box-shadow: 0 1px 5px -2px #000;
+			}
+		</style>
 	</head>
 	<body>
 		<main>
-			<markout-content>
-				<template>
-					# Source Text Disambiguation
-				</template>
-			</markout-content>
+			<markout-content></markout-content>
 		</main>
 		<script type="module">
 			import '/pholio/elements/markout-content.js';
