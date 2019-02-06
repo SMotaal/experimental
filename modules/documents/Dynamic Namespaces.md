@@ -52,7 +52,7 @@ NamespaceScope: {
     a = 1;
 
     // export const B = IMPORTED_C;
-    const B = exports.C.set(IMPORTED_C);
+    const B = exports.B.set(IMPORTED_C);
   }
 
 }
