@@ -21,23 +21,13 @@
 		<main>
 			<markout-content></markout-content>
 		</main>
+		<script type="module" src="/pholio/elements/markout-content.js"></script>
 		<script type="module">
-			import '/pholio/elements/markout-content.js';
 			import {loadSourceTextFrom} from '/components/code-editor/helpers.js';
-			(async () => {
-				const section = document.querySelector('markout-content');
-
-				const sourceText = await loadSourceTextFrom('./documents/Source Text Disambiguation.md');
-
-				section.sourceText = sourceText;
-			})();
-		</script>
-		<script type="module">
-			import * as tokenizer from '/markup/dist/tokenizer/tokenizer.mjs';
-			import * as browser from '/markup/dist/tokenizer/tokenizer.browser.mjs';
-			import * as extended from '/markup/dist/tokenizer/tokenizer.extended.mjs';
-
-			console.log({tokenizer, browser, extended});
+			(async () =>
+				(document.querySelector('markout-content').sourceText = await loadSourceTextFrom(
+					'./documents/Source Text Disambiguation.md',
+				)))();
 		</script>
 	</body>
 </html>
