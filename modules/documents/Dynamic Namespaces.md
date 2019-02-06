@@ -10,6 +10,63 @@ It seems reasonable for the ECMAScript TC39 committee to futher consider the nee
 
 ## Rationale
 
+Bindings are the fundamental mechism of namespaces as they relate to the current ECMAScript specs.
+
+In the simplist form, the basic idea of namespaces can be expressed using a block closure, and a theoretical `exports` function used to bind a getter to encapsulated entities defined (using `let` and `const` for simplicity) within the scope of a namespace.
+
+<figcaption><kbd>Theoretical</kbd></figcaption>
+
+```js
+NamespaceScope: {
+  let entity;
+
+  // Setup
+  await namespace.exports({ entity: () => entity });
+  await namespace.imports(/* … */);
+
+  // Evaluation
+  with (await namespace.createContext()) {
+    /* Statements */
+    entity = new SomeImportedEntity();
+  }
+
+}
+
+```
+
+In the current specifications for Module namespaces, the above idea is inverted, which is not easily expressed with a simple example but follows along these lines:
+
+<figcaption><kbd>Theoretical</kbd></figcaption>
+
+```js
+NamespaceScope: {
+
+  // Setup
+  await namespace.exports(['a', 'B']);
+  await namespace.imports(/* … */);
+
+  // Evaluation
+  with(await namespace.createContext()) {
+    // export let a = 1
+    a = 1;
+
+    // export const B = IMPORTED_C;
+    const B = exports.C.set(IMPORTED_C);
+  }
+
+}
+```
+
+The second form aligns with the current specification of Module namespace objects and intentionally affords implementors certain latitude for optimizations that do not violate the *push* behaviours of the bindings.
+
+This work assumes that there are valid arguments for both forms depending on the purpose.
+
+We can distinguish between these two forms of *one-way* bindings, referring to the first as `import bindings` with *pull* behaviours and the second as `export bindings` with *push* behaviours.
+
+If we strip away all other aspects of the current ECMAScript Modules specifications, we can argue that the current binding semantics operating on the notion of static bindings are not sufficiently suited for any form of dynamically evaluated namespaces.
+
+It is possible to devise well thoughtout use case where implementors would solve such interoperability problems without affecting the current behavious of SourceTextModuleRecord through the use of well-defined Dynamic Namespaces handled internally by proprietary loaders.
+
 ### Motivating Examples
 
 ```js
@@ -28,11 +85,6 @@ import serve, {Static} from 'my-server';
 // Add WASM... etc
 ```
 
-### Prior Arts
-
-- WASM…
-- Dynamic Modules…
-
 ### Considerations
 
 - Allowing implementors to provide 100% support for maximum interoperability between the namespaces of ECMAScript modules (SourceTextModule) and respective namespace representations that are not within the same prevue are vital for:
@@ -48,3 +100,8 @@ import serve, {Static} from 'my-server';
   1. Devising a novel approach for creating object-bound closures without the pitfalls of the deprecated `with` syntax as a more suitable alternative for such use cases.
 
   2. Providing proxy-like facilities that are compatible with the special behaviours of namespace targets to make it possible to limit or alter the entities of namespaces exposed to certain consumers.
+
+## Prior Arts
+
+- WASM…
+- Dynamic Modules…
