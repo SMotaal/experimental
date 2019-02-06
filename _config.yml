@@ -16,6 +16,7 @@ include: [
     'quench',
     'caches',
     'modules',
+    'modules/*.html'
   ]
 
 exclude: ['.vscode', '[more]', 'trash']
