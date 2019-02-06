@@ -1,4 +1,8 @@
-﻿# Dynamic Namespaces
+﻿<small float-right>
+<a href="//github.com/SMotaal/experimental/blob/master/modules/documents/Dynamic%20Namespaces.md" target="_blank">GitHub</a>
+</small>
+
+# Dynamic Namespaces
 
 The ECMAScript Module specifications, as of this moment, fall short of providing a predictable approach for implementors to work with namespaces which are not compliant to those returned by a SourceTextModule. Instead, they offer certain allowances that make it possible for implementors to optionally diverge to accommodate behaviours of namespaces.
 
@@ -11,15 +15,15 @@ It seems reasonable for the ECMAScript TC39 committee to futher consider the nee
 ```js
 // Theoretically for browsers
 import * as navigator from 'navigator';
-import { serviceWorker } from 'navigator';
+import {serviceWorker} from 'navigator';
 
 // Node.js Builtins
 import * as fs from 'fs';
-import fs, { readFile } from 'fs';
+import fs, {readFile} from 'fs';
 
 // Node.js CommonJS Dependency
 import * as server from 'my-server';
-import serve, { Static } from 'my-server';
+import serve, {Static} from 'my-server';
 
 // Add WASM... etc
 ```
