@@ -18,14 +18,15 @@ In the simplist form, the basic idea of namespaces can be expressed using a bloc
 
 ```js
 NamespaceScope: {
-  let entity;
 
   // Setup
-  await namespace.exports({ entity: () => entity });
   await namespace.imports(/* … */);
 
   // Evaluation
   with (await namespace.createContext()) {
+    let entity;
+    exports({ entity: () => entity });
+
     /* Statements */
     entity = new SomeImportedEntity();
   }
