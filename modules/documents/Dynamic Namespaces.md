@@ -1,5 +1,5 @@
 ﻿<small float-right>
-<a href="//github.com/SMotaal/experimental/blob/master/modules/documents/Dynamic%20Namespaces.md" target="_blank">GitHub</a>
+<a href="https://github.com/SMotaal/experimental/blob/master/modules/documents/Dynamic%20Namespaces.md" target="_blank">GitHub</a>
 </small>
 
 # Dynamic Namespaces
