@@ -8,13 +8,153 @@ The ECMAScript Module specifications, as of this moment, fall short of providing
 
 It seems reasonable for the ECMAScript TC39 committee to futher consider the need for the conformance criteria of such constructs that would enable them to meet the wider range of behaviours that would not violate the technical requirements needed to ensure that such namespaces are interoperable with the ECMAScript modules.
 
-## Rationale
+---
 
-Bindings are the fundamental mechism of namespaces as they relate to the current ECMAScript specs.
+## Introduction
 
-In the simplist form, the basic idea of namespaces can be expressed using a block closure, and a theoretical `exports` function used to bind a getter to encapsulated entities defined (using `let` and `const` for simplicity) within the scope of a namespace.
+Feedback from TC39 regarding proposals aiming to close gaps between historically prominent JavaScript module formats (such as CommonJS) which were designed in the absence of ECMAScript's static linking semantics introduced in ES2015, highlights the committee's eagerness to work with implementors to resolve barriers for interoperability.
 
-<figcaption><kbd>Theoretical</kbd></figcaption>
+An assumed notion by everyone involved in those efforts leans towards tenable solutions which would not affect the current specifications relating to the static linking for ECMAScript modules and make it possible to completely preserve the semantics of `import` and `export` declarations while affording equivalent utility of the same when linking against non-standard modules at the implementor's discression.
+
+Clearly, the most critical aspects to be considered where interoperability is involved is the ability to provide compatible interfaces of the exported bindings with the intrinsics needed to declare, initialize and update those bindings, not limited to the current source text evaluation scenario.
+
+Such a notion that aligns well with the concept of namespaces cannot be narrowly viewed as the thing that solves immediate problems if doing so will potentially limit the ability of leveraging this broader concept in order to solve the less-visible problems that unfold down the road.
+
+Consequently, this effort starts with the most abstract notion of a namespace dealing with dynamic bindings, looking closely on going efforts that can leverage such a construct to improve or simplify complexities related to bindings.
+
+### Rationale
+
+Due to the vastly different challenges and behaviours of the non-standard module systems and implementations, it seems unreasonable to device a counterpart to "Static Modules" capable of meeting the requirements of all existing and future implementations.
+
+With this premise, it seems reasonable to consider this counterpart to be a gray area that needs to retain flexibility across conforming implementations of ECMAScript runtimes.
+
+Dynamic Namespaces could be proposed as the constructs that would enable implementors to retain conformances that completely preserve the semantics of `import` and `export` declarations of SourceText modules interoperating with namespaces of any proprietary module format.
+
+### Motivating Examples
+
+
+<figure>
+
+#### Builtin Modules
+<div><div>
+
+<figcaption><kbd>Browser</kbd></figcaption>
+
+```js
+import * as navigator from 'navigator';
+import {serviceWorker} from 'navigator';
+```
+
+</div>
+<div>
+
+<figcaption><kbd>Node.js</kbd></figcaption>
+
+```js
+import * as fs from 'fs';
+import fs, {readFile} from 'fs';
+```
+
+</div></div>
+</figure>
+
+<figure>
+
+#### External Modules
+<div><div>
+
+<figcaption><kbd>Legacy Modules</kbd></figcaption>
+
+```js
+import * as server from 'my-server';
+import serve, {Static} from 'my-server';
+```
+
+</div>
+<div>
+
+<figcaption><kbd>Abridged Modules</kbd></figcaption>
+
+```js
+/* … */
+
+```
+
+</div></div>
+</figure>
+
+<figure>
+
+#### Dynamic Modules
+<div><div>
+
+<figcaption><kbd>Attenuated Modules</kbd></figcaption>
+
+```js
+/* … */
+```
+
+</div>
+<div>
+
+<figcaption><kbd>Encrypted Modules</kbd></figcaption>
+
+```js
+/* … */
+```
+
+</div></div>
+</figure>
+
+<figure>
+
+#### Namespaces
+<div><div>
+
+<figcaption><kbd>First-class Namespaces</kbd></figcaption>
+
+```js
+export namespace foo {
+  export const x = 1;
+}
+```
+
+</div>
+<div>
+
+<figcaption><kbd>Reflective Namespaces</kbd></figcaption>
+
+```js
+
+/* … */
+
+```
+
+</div></div>
+
+</figure>
+
+---
+
+## Background
+
+### Synopses
+
+- Bindings are the fundamental mechism of namespaces as they relate to the current ECMAScript specs, and limited only to *one-way* binding.
+
+- Currently, there are at least two distinct forms *one-way* bindings which relate to the current scope. We will refer to them as *import bindings* and *export bindings* to signify their contrasting *pull* versus *push* behaviours.
+
+- This work assumes that there are valid arguments for the two outlined forms one-way bindings as they relate to different problem spaces.
+
+- If we strip away all other aspects of the current ECMAScript Modules specifications, we can argue that the current binding semantics operating on the notion of static bindings are not sufficiently suited for many forms of dynamically evaluated namespaces.
+
+### Concepts
+
+<figure>
+
+**Import Bindings**
+
+In the simplist form, the basic idea of namespaces can be expressed using a block closure, and a theoretical `exports` function used to bind a getter to encapsulated entities:
 
 ```js
 NamespaceScope: {
@@ -34,9 +174,14 @@ NamespaceScope: {
 }
 ```
 
-In the current specifications for Module namespaces, the above idea is inverted, which is not easily expressed with a simple example but follows along these lines:
+This form makes it possible to retain the full declaration syntax (ir `let` and `const`… etc.) within the scope of a namespace.
 
-<figcaption><kbd>Theoretical</kbd></figcaption>
+</figure>
+<figure>
+
+**Export Bindings**
+
+In the current specifications for Module namespaces, the above idea is inverted, which is not easily expressed with a simple example but follows along these lines:
 
 ```js
 NamespaceScope: {
@@ -57,33 +202,14 @@ NamespaceScope: {
 }
 ```
 
-The second form aligns with the current specification of Module namespace objects and intentionally affords implementors certain latitude for optimizations that do not violate the *push* behaviours of the bindings.
+This form aligns with the current specification of Module namespace objects and intentionally affords implementors certain latitude for optimizations that do not violate the *push* behaviours of the bindings.
 
-This work assumes that there are valid arguments for both forms depending on the purpose.
+</figure>
 
-We can distinguish between these two forms of *one-way* bindings, referring to the first as `import bindings` with *pull* behaviours and the second as `export bindings` with *push* behaviours.
 
-If we strip away all other aspects of the current ECMAScript Modules specifications, we can argue that the current binding semantics operating on the notion of static bindings are not sufficiently suited for any form of dynamically evaluated namespaces.
+---
 
-It is possible to devise well thoughtout use case where implementors would solve such interoperability problems without affecting the current behavious of SourceTextModuleRecord through the use of well-defined Dynamic Namespaces handled internally by proprietary loaders.
-
-### Motivating Examples
-
-```js
-// Theoretically for browsers
-import * as navigator from 'navigator';
-import {serviceWorker} from 'navigator';
-
-// Node.js Builtins
-import * as fs from 'fs';
-import fs, {readFile} from 'fs';
-
-// Node.js CommonJS Dependency
-import * as server from 'my-server';
-import serve, {Static} from 'my-server';
-
-// Add WASM... etc
-```
+## Proposal
 
 ### Considerations
 
@@ -101,7 +227,12 @@ import serve, {Static} from 'my-server';
 
   2. Providing proxy-like facilities that are compatible with the special behaviours of namespace targets to make it possible to limit or alter the entities of namespaces exposed to certain consumers.
 
-## Prior Arts
+
+---
+
+## References
+
+### Prior Arts
 
 - WASM…
 - Dynamic Modules…
