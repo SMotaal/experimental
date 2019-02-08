@@ -32,7 +32,6 @@ NamespaceScope: {
   }
 
 }
-
 ```
 
 In the current specifications for Module namespaces, the above idea is inverted, which is not easily expressed with a simple example but follows along these lines:
