@@ -4,8 +4,7 @@
 		<title>SMotaal's Logs</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-		<!-- <link rel="preload" href="/pholio/styles/common.css" as="style" /> -->
-		<link rel="stylesheet" href="/pholio/styles/styles.css" />
+		<link rel="stylesheet" href="../pholio/styles/styles.css" />
 		<style>
 			html {
 				--shade: #aaeeccf6;
@@ -16,6 +15,12 @@
 				box-shadow: 0 1px 5px -2px #000;
 			}
 		</style>
+		<link rel="preload" as="style" href="../pholio/styles/typography.css" />
+		<link rel="preload" as="style" href="../pholio/styles/layouts/grids.css" />
+		<link rel="preload" as="style" href="../pholio/styles/common.css" />
+		<link rel="preload" as="style" href="../pholio/styles/markdown.css" />
+		<link rel="preload" as="style" href="../pholio/styles/markup.css" />
+		<script type="module" src="../pholio/dist/pholio.mjs"></script>
 	</head>
 	<body>
 		<main>
@@ -25,24 +30,5 @@
 			<markout-content src="./weekly/2019-01-04.md"></markout-content>
 			<markout-content src="./weekly/2018-12-28.md"></markout-content>
 		</main>
-		<script type="module" src="/pholio/elements/markout-content.js"></script>
-		<script type="module">
-			import {loadSourceTextFrom} from '/components/code-editor/helpers.js';
-
-			const main = document.querySelector('main');
-			main &&
-				(async () => {
-					const markdownSections = main.querySelectorAll('markout-content[src]') || '';
-
-					for (const markdownSection of markdownSections) {
-						const src = markdownSection.getAttribute('src');
-						const load = src && loadSourceTextFrom(src).then(sourceText => sourceText && (markdownSection.sourceText = sourceText));
-						// load && promises.push(load);
-						// console.log(markdownSection, load);
-					}
-
-					// document.querySelector('markout-content').sourceText = await loadSourceTextFrom('./documents/SES Frame.md')
-				})();
-		</script>
 	</body>
 </html>
