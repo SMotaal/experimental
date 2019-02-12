@@ -12,7 +12,7 @@
 		"vscode": "pushd vscode; yarn",
 		"quench": "node quench",
 		"chrome": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome",
-		"pull": "git submodule foreach git pull origin master",
+		"pull": "git pull --recurse-submodules  && git submodule update --recursive --remote",
 		"compile": "rollup -c",
 		"nexm": "node --experimental-modules --loader @esm/",
 		"nesm": "~/Projects/@smotaal/node/node-esm/out/Release/node"
