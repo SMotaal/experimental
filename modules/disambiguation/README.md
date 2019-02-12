@@ -100,3 +100,45 @@ An alternative to parsing could be attempt to execute code as ECMAScript module 
 - `Unshadowed references to __dirname and __filename` could still be referring to globals from within ESM, so this can’t be used either
 
 </blockquote>
+
+
+## Parsing
+
+<blockquote><b>Note</b>: The following examples require a special renderer which can highlight `cjs` and/or `esm` keywords.</blockquote>
+
+<figcaption><kbd>Ambiguous <code>INVALID</code></kbd> <i>JS Parsing Mode</i></figcaption>
+
+```js
+import fs from 'fs';
+exports = require('fs');
+(async () => exports = await import('fs'));
+export default import.meta.url;
+```
+
+<figcaption><kbd>Ambiguous <code>INVALID</code></kbd> <i>CJS Parsing Mode</i></figcaption>
+
+```cjs
+import fs from 'fs';
+exports = require('fs');
+(async () => exports = await import('fs'));
+export default import.meta.url;
+```
+
+<figcaption><kbd>Ambiguous <code>INVALID</code></kbd> <i>ESM Parsing Mode</i></figcaption>
+
+```esm
+import fs from 'fs';
+exports = require('fs');
+(async () => exports = await import('fs'));
+export default import.meta.url;
+```
+
+
+<figcaption><kbd>Ambiguous <code>INVALID</code></kbd> <i>Disambiguation Parsing Mode</i></figcaption>
+
+```esx
+import fs from 'fs';
+exports = require('fs');
+(async () => exports = await import('fs'));
+export default import.meta.url;
+```
