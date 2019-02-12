@@ -4,6 +4,8 @@
 
 # Source Text Disambiguation
 
+<!--
+
 The ECMAScript specifications define two types of source code that can be externally loaded and executed at runtime, Global (script) code and Module code. As of this moment, the vast majority of the modules loaded today fall in the former category, include to a very large degree modules loaded in runtimes that support for ECMAScript modules.
 
 In most cases, runtimes depend on out-of-band conditions to determine the mode used for external code. However, sometimes there is not sufficient out-of-band details from which the mode can be inferred.
@@ -13,6 +15,13 @@ For example, in browsers, when statically or dynamically importing particular sp
 Other platforms that deal with external code face similar complexities for interoperability between ECMAScript modules and other JavaScript modules formats that must be evaluated as Global code, (wrapped) Function code, or Eval code.
 
 While implementors obviously opt for design decisions that limit these occurrences, it is essential to also appreciate that 100% out-of-band source text disambiguation often comes with trade-offs and those may be of more significant draw-backs to the enduser experience compared to the previously mentioned case for browsers.
+
+
+## Scope
+
+This work focuses on the disambiguation of source text based on discriminating syntax features for source texts lacking the necessary out-of-band details, using performant parsing approaches for locating the first valid occurrence of a positively discriminating feature, including but not limited to special `pragma` inserted by the authors for making the determination.
+
+-->
 
 ## Motivation
 
@@ -26,10 +35,6 @@ An alternative to parsing could be attempt to execute code as ECMAScript module 
 - Partial evaluation before failure with any of the following:
   i. Deferred side-effects using timers, events, promises... etc.
   ii. Dereferenced process or worker threads.
-
-## Scope
-
-This work focuses on the disambiguation of source text based on discriminating syntax features for source texts lacking the necessary out-of-band details, using performant parsing approaches for locating the first valid occurrence of a positively discriminating feature, including but not limited to special `pragma` inserted by the authors for making the determination.
 
 ## Considerations
 
@@ -79,3 +84,19 @@ This work focuses on the disambiguation of source text based on discriminating s
      - Unshadowed references to `__dirname` and `__filename` (if no `exports`)
 
   5. By explicit fallback if there are no discrimination features.
+
+
+<blockquote>
+<cite>@ljharb</cite>
+
+- `Script` is the actual parse goal name, nothing’s called “Global” that i know of
+- re “In most cases”, currently it’s in all cases - even if that out-of-band mode is “use unambiguous parsing to infer”
+- `browser opt for defaulting to Module code` - browsers use `type="module"` first, and then every `import` within it
+- UMD modules are by definition not possible to be ESM, so i’m not sure why that’s relevant
+- `Effective syntax discrimination for ECMAScript modules includes:` usage of `with` means it’s Script
+- `Assignments to members of exports or module.exports.` and `Direct assigment to module.exports.` this occurs in lots of ESM code published on ESM, fwiw, so i don’t think that can be used to disambiguate
+- `Calls to require() or require.resolve().` is the same ^
+- `Lack of import statements.` does not guarantee it’s a Script.
+- `Unshadowed references to __dirname and __filename` could still be referring to globals from within ESM, so this can’t be used either
+
+</blockquote>
