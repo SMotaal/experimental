@@ -4,6 +4,8 @@ theme: 'jekyll-theme-cayman'
 include: [
     # Framework
     'components',
+    'markup',
+    'pholio',
     'packages',
     'prototypes',
     'tools',
@@ -11,9 +13,6 @@ include: [
     'node_modules/@smotaal',
     # Projects
     'fragma',
-    'pholio',
-    'markup',
-    'quench',
     'caches',
     'modules',
     'modules/*.html'
