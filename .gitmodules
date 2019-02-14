@@ -1,9 +1,0 @@
-[submodule "markup"]
-	path = markup
-	url = https://github.com/SMotaal/markup.git
-[submodule "components"]
-	path = components
-	url = https://github.com/SMotaal/components.git
-[submodule "pholio"]
-	path = pholio
-	url = https://github.com/SMotaal/pholio.git
