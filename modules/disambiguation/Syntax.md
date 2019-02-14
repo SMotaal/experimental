@@ -155,17 +155,15 @@ module.exports = exports = [0, 1, 2, 3];
 module.exports = exports = new Array(4);
 [exports[0], exports[1], exports[2], exports[3]] = [0, 1, 2, 3];
 
-({A: export.A}) = require('specifier');
+({A: export.A} = require('specifier'));
 ```
 
 <figcaption><i>IIFE</i></figcaption>
 
 ```js
-
 Parenthesized: (function(){})();
 
 Parametrized: void function() {}();
-
 ```
 
 <figcaption><i>AMD</i></figcaption>
@@ -183,6 +181,7 @@ define(['dep1', 'dep2'], function (dep1, dep2) {
 <figcaption><i>UMD</i></figcaption>
 
 ```js
+// Source: https://www.jvandemo.com/a-10-minute-primer-to-javascript-modules-module-formats-module-loaders-and-module-bundlers/
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
