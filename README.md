@@ -2,27 +2,7 @@
 
 Don't dare say it does not work — until it absolutely does not work.
 
-**If you like unfinished stuff**:
+**Note**: The experimental branch is deprecated and will be removed soon.
 
-* [Markup](./markup)
-
-**If you like really unfinished stuff**:
-
-- [Modules (_experimental_)](./modules/experimental)
-- [Modules (_alpha_)](./modules/alpha)
-- [Fragma](./fragma)
-
-**If you don't like the above**<sup>(ⅰ)</sup>:
-
-* [@SMotaal/tokenizer](./packages/@smotaal/tokenizer)
-
-  A refactored tokenizer from earlier markup experiments.
-
-* [pseu·dom](./packages/pseudom)
-
-  Abstractional document composition without the actual DOM.
-
-(ⅰ) You may be looking for packages, which are not really my thing and that can sometimes be exactly what you need if you are looking for good hackable matter.
-
-
-<sub>[Logs](./logs/)</sub>
+- <a href="/markup">Markup</a>
+- <a href="/pholio">Pholio</a>
