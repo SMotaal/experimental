@@ -1,10 +1,12 @@
 {
 	"private": true,
 	"name": "@smotaal/experimental",
-	"description": "TBD",
-	"version": "0.0.0",
+	"description": "smotaal.io/experimental",
+	"version": "0.0.0-alpha.2",
 	"author": "Saleh Abdel Motaal <saleh@grasppe.com>",
-	"mode": "esm",
+	"repository": "https://github.com/SMotaal/experimental.git",
+	"license": "MIT",
+	"type": "module",
 	"exports": {},
 	"scripts": {
 		"serve": "http-server --cors -s",
@@ -18,17 +20,11 @@
 		"nesm": "~/Projects/@smotaal/node/node-esm/out/Release/node"
 	},
 	"devDependencies": {
-		"@types/node": "latest",
-		"prettier": "latest",
-		"prettier-tslint": "latest",
-		"rollup": "latest",
-		"typescript": "latest",
-		"http-server": "latest"
-	},
-	"workspaces": {
-		"packages": [
-			"types",
-			"node"
-		]
+		"@types/node": "*",
+		"http-server": "*",
+		"prettier": "*",
+		"rollup": "*",
+		"typescript": "*",
+		"@smotaal/esm": "SMotaal/esm"
 	}
 }
