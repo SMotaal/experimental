@@ -37,25 +37,26 @@
 			body > main > style {
 				display: none;
 			}
-
 		</style>
 	</head>
 	<body>
 		<main>
-			<script defer>
-				(async currentScript => {
-					const source = await (await fetch('./globals.js')).text();
-					const preview = document.createElement('pre');
-					preview.textContent = source;
-					(1, eval)(source);
-					currentScript.before(preview);
-					currentScript.style.display = 'none';
-				})(document.currentScript);
-			</script>
 			<section>
 				<script src="/console/experiments/dom-console/dom-console.js"></script>
 			</section>
 			<!-- <script src="./globals.js"></script> -->
 		</main>
+		<script>
+			(async currentScript => {
+				const source = await (await fetch('./globals.js')).text();
+				const preview = document.createElement('pre');
+				preview.textContent = source;
+				document.querySelector('main').prepend(preview);
+				await new Promise(requestAnimationFrame);
+				(1, eval)(source);
+				// currentScript.before(preview);
+				currentScript.style.display = 'none';
+			})(document.currentScript);
+		</script>
 	</body>
 </html>
