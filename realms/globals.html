@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html checkerboard>
+	<head>
+		<title>SMotaal's Globals Experiment</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover"
+		/>
+		<link rel="stylesheet" href="/pholio/styles/fonts/iosevka/iosevka.css" />
+		<link rel="stylesheet" href="/pholio/styles/styles.css" />
+		<link rel="stylesheet" href="/console/experiments/dom-console/dom-console.css" />
+		<style>
+			html {
+				--shade: #eeee;
+			}
+
+			html,
+			body,
+			body > main {
+				display: grid;
+				box-sizing: border-box;
+				margin: 0;
+				width: unset;
+			}
+
+			body > main > * {
+				opacity: 1;
+				background-color: #ffffff;
+				box-shadow: 0 1px 20px -10px #000;
+				box-sizing: initial;
+				overflow-x: scroll;
+				padding: 1ch;
+			}
+
+			body > main > script,
+			body > main > style {
+				display: none;
+			}
+
+		</style>
+	</head>
+	<body>
+		<main>
+			<script defer>
+				(async currentScript => {
+					const source = await (await fetch('./globals.js')).text();
+					const preview = document.createElement('pre');
+					preview.textContent = source;
+					(1, eval)(source);
+					currentScript.before(preview);
+					currentScript.style.display = 'none';
+				})(document.currentScript);
+			</script>
+			<section>
+				<script src="/console/experiments/dom-console/dom-console.js"></script>
+			</section>
+			<!-- <script src="./globals.js"></script> -->
+		</main>
+	</body>
+</html>
