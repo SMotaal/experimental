@@ -9,10 +9,72 @@
 			html {
 				--shade: #aaeeccf6;
 			}
-			body > main > markout-content {
+
+			body > main > hr,
+			body > main > details > hr {
+				margin: 0.5rem 0;
+				border-color: transparent;
+			}
+
+			body > main {
+				grid-auto-rows: max-content;
+				grid-gap: 0.5rem;
+			}
+
+			body > main > markout-content,
+			body > main > details,
+			body > main > details > markout-content {
 				opacity: 1;
-				background-color: #fffffff6;
 				box-shadow: 0 1px 5px -2px #000;
+			}
+
+			body > main > details {
+				opacity: 1;
+				display: inherit;
+				grid-auto-flow: inherit;
+				grid-auto-rows: inherit;
+				grid-gap: inherit;
+				padding: 0 1rem;
+			}
+
+			body > main > details > summary {
+				padding: 1rem;
+				margin: 0 -1rem;
+			}
+
+			body > main > details[open] {
+				padding-bottom: 1rem;
+			}
+
+			body > main > details[open] > summary {
+				margin-bottom: 1rem;
+			}
+
+			body > main > details > summary:focus {
+				outline-style: none;
+			}
+
+			body > main > details > summary > h1:first-child,
+			body > main > details > summary > h2:first-child,
+			body > main > details > summary > h3:first-child,
+			body > main > details > summary > h4:first-child,
+			body > main > details > summary > h5:first-child,
+			body > main > details > summary > h6:first-child {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 0.25rem 0.5rem;
+				margin: 0;
+			}
+
+			body > main > details > markout-content {
+				font-size: 90%;
+				display: grid;
+			}
+
+			body > main > markout-content,
+			body > main > details > summary,
+			body > main > details > markout-content {
+				background-color: #fffffff6;
 			}
 		</style>
 		<link rel="preload" as="style" href="../../pholio/styles/typography.css" />
@@ -25,14 +87,32 @@
 	</head>
 	<body>
 		<main>
-			<markout-content src="./weekly/2019-02-29.md"></markout-content>
-			<markout-content src="./weekly/2019-02-22.md"></markout-content>
-			<markout-content src="./weekly/2019-02-15.md"></markout-content>
-			<markout-content src="./weekly/2019-02-08.md"></markout-content>
-			<markout-content src="./weekly/2019-02-01.md"></markout-content>
-			<markout-content src="./weekly/2019-01-11.md"></markout-content>
-			<markout-content src="./weekly/2019-01-04.md"></markout-content>
-			<markout-content src="./weekly/2018-12-28.md"></markout-content>
+			<details open>
+				<summary><h1>2019-03</h1></summary>
+				<markout-content src="./weekly/2019-03-08.md"></markout-content>
+				<hr />
+				<markout-content src="./weekly/2019-03-01.md"></markout-content>
+			</details>
+			<details>
+				<summary><h1>2019-02</h1></summary>
+				<markout-content src="./weekly/2019-02-22.md"></markout-content>
+				<hr />
+				<markout-content src="./weekly/2019-02-15.md"></markout-content>
+				<hr />
+				<markout-content src="./weekly/2019-02-08.md"></markout-content>
+				<hr />
+				<markout-content src="./weekly/2019-02-01.md"></markout-content>
+			</details>
+			<details>
+				<summary><h1>2019-01</h1></summary>
+				<markout-content src="./weekly/2019-01-11.md"></markout-content>
+				<hr />
+				<markout-content src="./weekly/2019-01-04.md"></markout-content>
+			</details>
+			<details>
+				<summary><h1>2018-12</h1></summary>
+				<markout-content src="./weekly/2018-12-28.md"></markout-content>
+			</details>
 		</main>
 	</body>
 </html>
