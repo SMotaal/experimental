@@ -1,16 +1,36 @@
-﻿console.clear();
+﻿///* SEE: https://jsbin.com/gist/3ed1cc5321a55786e8bec21858f116b7
+
+console.clear();
 setTimeout(async () => {
 	const {assign, getOwnPropertyDescriptors, defineProperties, entries, getPrototypeOf} = Object;
 	const hasOwnProperty = Function.call.bind({}.hasOwnProperty);
+	// const dynamicImport = (1, eval)('specifier => import(specifier)');
 
 	let root;
 
 	if (typeof document === 'object') {
 		const iframe = document.createElement('iframe');
+
+		iframe.style.display = 'none';
+
+		await (document.readyState === 'complete' ||
+			new Promise(
+				resolve =>
+					void document.addEventListener(
+						'readystatechange',
+						(resolve.listener = event =>
+							void document.readyState === 'complete' &&
+							resolve(void document.removeEventListener('readystatechange', resolve.listener))),
+					),
+			));
+
 		document.body.appendChild(iframe);
-		const {contentWindow, contentDocument} = iframe;
-		root = initializeRootContext(contentWindow);
-		iframe.remove();
+
+		iframe: {
+			const {contentWindow: window} = iframe;
+			root = initializeRootContext(window);
+			// iframe.remove();
+		}
 		await new Promise(requestAnimationFrame);
 	} else {
 		root = initializeRootContext(globalThis);
@@ -30,19 +50,10 @@ setTimeout(async () => {
 	Object.keys(errors).length && console.warn(errors);
 	console.groupEnd();
 
-	for (const scope of new Set([
-		'primordials',
-		'namespaces',
-		'methods',
-		'properties',
-		'builtins',
-		'globals',
-		...Object.keys(root.scopes),
-	])) {
-		if (!(scope in root.scopes)) continue;
+	for (const scope in root.scopes) {
 		console.group(scope);
 		try {
-			console.log(Object.keys(root.scopes[scope]));
+			console.log(root.scopes[scope]);
 		} catch (exception) {
 			console.error(exception);
 		}

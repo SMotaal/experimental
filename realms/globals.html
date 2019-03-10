@@ -9,7 +9,7 @@
 		/>
 		<link rel="stylesheet" href="/pholio/styles/fonts/iosevka/iosevka.css" />
 		<link rel="stylesheet" href="/pholio/styles/styles.css" />
-		<link rel="stylesheet" href="/console/experiments/dom-console/dom-console.css" />
+		<!-- <link rel="stylesheet" href="/console/experiments/dom-console/dom-console.css" /> -->
 		<style>
 			html {
 				--shade: #eeee;
@@ -46,8 +46,8 @@
 			</section>
 			<!-- <script src="./globals.js"></script> -->
 		</main>
-		<script>
-			(async currentScript => {
+		<script type="module">
+			(async () => {
 				const source = await (await fetch('./globals.js')).text();
 				const preview = document.createElement('pre');
 				preview.textContent = source;
@@ -55,8 +55,8 @@
 				await new Promise(requestAnimationFrame);
 				(1, eval)(source);
 				// currentScript.before(preview);
-				currentScript.style.display = 'none';
-			})(document.currentScript);
+				// currentScript.style.display = 'none';
+			})();
 		</script>
 	</body>
 </html>
