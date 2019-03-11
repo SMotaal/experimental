@@ -50,7 +50,7 @@
 			(async () => {
 				const source = await (await fetch('./globals.js')).text();
 				const preview = document.createElement('pre');
-				preview.textContent = source;
+				preview.textContent = source.replace(/\t/g, '  ');
 				document.querySelector('main').prepend(preview);
 				await new Promise(requestAnimationFrame);
 				(1, eval)(source);
