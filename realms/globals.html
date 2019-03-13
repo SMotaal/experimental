@@ -15,22 +15,29 @@
 				--shade: #eeee;
 			}
 
-			html,
-			body,
 			body > main {
 				display: grid;
-				box-sizing: border-box;
+				padding: 0;
 				margin: 0;
-				width: unset;
+				width: auto;
+				min-height: inherit;
+			}
+
+			body > main {
+				/* box-sizing: border-box; */
+				/* width: auto; */
+				/* max-width: 100vw; */
+				/* width: 45em; */
 			}
 
 			body > main > * {
 				opacity: 1;
 				background-color: #ffffff;
-				box-shadow: 0 1px 20px -10px #000;
-				box-sizing: initial;
+				/* box-shadow: 0 1px 20px -10px #000; */
+				/* box-sizing: initial; */
+				padding: 1rem;
+				min-width: 45em;
 				overflow-x: scroll;
-				padding: 1ch;
 			}
 
 			body > main > script,
