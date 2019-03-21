@@ -1,10 +1,16 @@
 ﻿# Dynamic Bindings <span float-right>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/documents/Dynamic%20Bindings.md)</span>
 
+<section>
+
 ECMAScript modules introduced first-class binding semantics where it became possible for the first time to syntactically declare specific variables in scope to present as the one-way bound proxy of another from a different scope. Like other aspects of ECMAScript modules, the language as it stands today gapes to wide in offering first-class mechanisms that would leverage these additional capabilities outside the scope of ESM.
 
 This closed-up design often demands implementation-level adjustments in order to provide any necessary interoperability layers between ESM and preexisting module systems that have historical significance.
 
+</section><section>
+
 ## Motivating Examples
+
+<section>
 
 ### Binding Definition
 
@@ -19,6 +25,8 @@ const bindings = {
   x2: x       // conventional reference assignment from a local variable
 };
 ```
+
+</section><section>
 
 ### Binding Declaration
 
@@ -35,6 +43,8 @@ let {
   x2,         // conventional destructuring declaration and assignment
 } = bindings;
 ```
+
+</section><section>
 
 ## Related Work
 
@@ -95,3 +105,7 @@ The outlook for these proposals is unclear but will likely involve:
    **Note**: Dynamic modules are an indepedent effort that preceeded the current work and are currently a "Stage 1" proposal by Bradly Farias in collaboration with Guy Bedford [Dynamic Modules](https://github.com/nodejs/dynamic-modules).
 
 </td></tr></table>
+
+<section>
+
+</section>
