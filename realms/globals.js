@@ -33,7 +33,7 @@ setTimeout(async () => {
 		}
 		await new Promise(requestAnimationFrame);
 	} else {
-		root = initializeRootContext(globalThis);
+		root = initializeRootContext((typeof globalThis === 'object' && globalThis) || (1, eval)('this'));
 	}
 
 	console.group('bindings');

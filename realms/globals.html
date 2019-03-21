@@ -18,25 +18,30 @@
 				display: grid;
 				padding: 0;
 				margin: 0;
-				width: auto;
+				min-width: calc(100vw - 2rem);
 				min-height: inherit;
-			}
-
-			body > main {
-				/* box-sizing: border-box; */
-				/* width: auto; */
-				/* max-width: 100vw; */
-				/* width: 45em; */
+				grid-auto-rows: max-content;
 			}
 
 			body > main > * {
 				opacity: 1;
 				background-color: #ffffff;
-				/* box-shadow: 0 1px 20px -10px #000; */
-				/* box-sizing: initial; */
 				padding: 1rem;
 				min-width: 45em;
 				overflow-x: scroll;
+			}
+
+			body > main > pre.preview:first-child {
+				height: 45vh;
+				overflow: scroll;
+				/* overscroll-behavior: contain; */
+			}
+
+			body > main > output.console:empty::before {
+				color: #999;
+				text-align: center;
+				content: 'No console output to show yet!';
+				display: grid;
 			}
 
 			body > main > script,
@@ -50,7 +55,7 @@
 	</head>
 	<body>
 		<main>
-			<output class="console"> </output>
+			<output class="console"></output>
 		</main>
 		<script type="module">
 			(async () => {
@@ -58,6 +63,7 @@
 				const source = await (await fetch('./globals.js')).text();
 				const preview = document.createElement('pre');
 				preview.textContent = source.replace(/\t/g, '  ');
+				preview.className = 'preview';
 				document.querySelector('main').prepend(preview);
 				await new Promise(requestAnimationFrame);
 				(1, eval)(source);
