@@ -4,6 +4,40 @@ ECMAScript modules introduced first-class binding semantics where it became poss
 
 This closed-up design often demands implementation-level adjustments in order to provide any necessary interoperability layers between ESM and preexisting module systems that have historical significance.
 
+## Motivating Examples
+
+### Binding Definition
+
+```js
+let x;
+const C = 1;
+const bindings = {
+  [x],        // unaliased one-way binding to a local variable
+  [x as y],   // aliased one-way binding to a local variable
+  [C],        // unaliased one-way binding to a local variable (constant)
+
+  x2: x       // conventional reference assignment from a local variable
+};
+```
+
+### Binding Declaration
+
+```js
+declare const bindings: {readonly [name: identifier]: any};
+
+let {
+  [y as x],   // one-way binding to a variable in a respective scope
+  [C],        // one-way binding to a variable in a respective scope (constant)
+
+  y,          // local variable initialized by a reference assignment
+  ['y']: y2,  // local variable initialized by a reference assignment
+
+  x2,         // conventional destructuring declaration and assignment
+} = bindings;
+```
+
+## Related Work
+
 This proposal is a first of series of proposals that will gradually aim at creating first-class parity in ways that honour the none-breaking principles of ECMAScript.
 
 The outlook for these proposals is unclear but will likely involve:
@@ -61,35 +95,3 @@ The outlook for these proposals is unclear but will likely involve:
    **Note**: Dynamic modules are an indepedent effort that preceeded the current work and are currently a "Stage 1" proposal by Bradly Farias in collaboration with Guy Bedford [Dynamic Modules](https://github.com/nodejs/dynamic-modules).
 
 </td></tr></table>
-
-## Motivating Examples
-
-### Binding Definition
-
-```js
-let x;
-const C = 1;
-const bindings = {
-  [x],        // unaliased one-way binding to a local variable
-  [x as y],   // aliased one-way binding to a local variable
-  [C],        // unaliased one-way binding to a local variable (constant)
-
-  x2: x       // conventional reference assignment from a local variable
-};
-```
-
-### Binding Declaration
-
-```js
-declare const bindings: {readonly [name: identifier]: any};
-
-let {
-  [y as x],   // one-way binding to a variable in a respective scope
-  [C],        // one-way binding to a variable in a respective scope (constant)
-
-  y,          // local variable initialized by a reference assignment
-  ['y']: y2,  // local variable initialized by a reference assignment
-
-  x2,         // conventional destructuring declaration and assignment
-} = bindings;
-```
