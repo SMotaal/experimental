@@ -1,4 +1,4 @@
-﻿# Dynamic Bindings <span float-right>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/documents/Dynamic%20Bindings.md)</span>
+﻿# Dynamic Bindings <span float-right><small>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/documents/Dynamic%20Bindings.md)</small></span>
 
 <section>
 
