@@ -112,6 +112,12 @@ TBD.
 
 ### _Dynamic Namespaces_ <kbd>Complimentary</kbd>
 
+<blockquote>
+
+**Note**: [Dynamic Namespaces](./Dynamic%20Namespaces) is merely at the stage of exploring various problem spaces that overlap with the idea of Namespace objects.
+
+</blockquote>
+
 Well-structured first-class entities meeting the interfacing requirements of an ECMAScript Module namespace making it well-suited for linking against while retaining validity of its consumers for both syntax and semantics, making it possible to achieve interoperability and conformance, as a discretionary recommendation of future ECMAScript at the very least.
 
 <details><summary><h4>_Namespace Reflection_ <kbd>Supplimentary</kbd></h4></summary>
@@ -134,7 +140,11 @@ TBD.
 
 ### _Dynamic Modules_ <kbd>Complimentary</kbd>
 
-<blockquote>**Note**: [Dynamic Modules](https://github.com/nodejs/dynamic-modules) are an indepedent effort that preceeded the current work and is currently a "Stage 1" proposal by Bradly Farias in collaboration with Guy Bedford.</blockquote>
+<blockquote>
+
+**Note**: [Dynamic Modules](https://github.com/nodejs/dynamic-modules) are an indepedent effort that preceeded the current work and is currently a "Stage 1" proposal by Bradly Farias in collaboration with Guy Bedford.
+
+</blockquote>
 
 Implementation-specific additions proposed on behalf of Node.js aim towards safely introducing non-ECMAScript Modules which were historically not designed for static linking into an otherwise conforming ECMAScript module graph.
 
