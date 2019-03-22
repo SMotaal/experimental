@@ -134,7 +134,7 @@ TBD.
 
 ### _Dynamic Modules_ <kbd>Complimentary</kbd>
 
-<blockquote>**Note**: Dynamic modules are an indepedent effort that preceeded the current work and is currently a "Stage 1" proposal by Bradly Farias in collaboration with Guy Bedford [Dynamic Modules](https://github.com/nodejs/dynamic-modules).</blockquote>
+<blockquote>**Note**: [Dynamic Modules](https://github.com/nodejs/dynamic-modules) are an indepedent effort that preceeded the current work and is currently a "Stage 1" proposal by Bradly Farias in collaboration with Guy Bedford.</blockquote>
 
 Implementation-specific additions proposed on behalf of Node.js aim towards safely introducing non-ECMAScript Modules which were historically not designed for static linking into an otherwise conforming ECMAScript module graph.
 
