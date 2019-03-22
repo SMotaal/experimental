@@ -6,7 +6,7 @@ ECMAScript modules introduced first-class binding semantics where it became poss
 
 This closed-up design often demands implementation-level adjustments in order to provide any necessary interoperability layers between ESM and preexisting module systems that have historical significance.
 
-<blockquote>**Important Note**: While this proposal presents the complete syntaxes for first-class support of bindings, the more fundamental aspect of this work is to work towards it without any stipulations on what a reasonable level of first-class support would look actually be aside from ensuring that support where necessary for interoperability in a well-controlled manner becomes possible.</blockquote>
+<blockquote>**Important Note**: While this proposal presents the complete syntaxes for first-class support of bindings, the more fundamental aspect of this work is to work towards it without stipulations on what a reasonable level of first-class support needs to be for interoperability in a well-controlled manner.</blockquote>
 
 </section>
 
