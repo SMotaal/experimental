@@ -8,20 +8,18 @@ _Throttle_ shows the untapped potential of the DOM.
 
 <pre>alpha/throttle.html#<samp>n</samp></pre>
 
-| <samp>n</samp>    |   mobile   |  desktop   |
-| ----------------- | :--------: | :--------: |
-| [×100][~100]      |    most    |            |
-| [×1,000][~1000]   |    many    |    most    |
-| [×2,000][~2000]   |   latest   |    many    |
-| [×5,000][~5000]   |  high-end  |   latest   |
-| [×10,000][~10000] | (overkill) |  high-end  |
-| [×20,000][~20000] |            | (overkill) |
+<table>
+<thead>
+<tr><th><samp>n</samp></th><th>mobile</th><th>desktop</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="./alpha/throttle.html#100">×100</a></td><td>most</td><td></tr>
+<tr><td><a href="./alpha/throttle.html#1000">×1,000</a></td><td>many</td><td>most</tr>
+<tr><td><a href="./alpha/throttle.html#2000">×2,000</a></td><td>latest</td><td>many</tr>
+<tr><td><a href="./alpha/throttle.html#5000">×5,000</a></td><td>high-end</td><td>latest</tr>
+<tr><td><a href="./alpha/throttle.html#10000">×10,000</a></td><td>(overkill)</td><td>high-end</tr>
+<tr><td><a href="./alpha/throttle.html#20000">×20,000</a></td><td></td><td>(overkill)</tr>
+</tbody>
+</table>
 
-[More details](./alpha/README.md)
-
-[~100]: ./alpha/throttle.html#100
-[~1000]: ./alpha/throttle.html#1000
-[~2000]: ./alpha/throttle.html#2000
-[~5000]: ./alpha/throttle.html#5000
-[~10000]: ./alpha/throttle.html#10000
-[~20000]: ./alpha/throttle.html#20000
+[More details](./alpha/README)

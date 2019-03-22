@@ -2,10 +2,10 @@
 
 **Related Work**
 
-- [Parsing (Disambiguation)](./parsing)
-- [Dynamic Namespaces](./namespaces)
-- [`<ses-frame>`](./ses-frame)
+- [Parsing (Disambiguation)](./parsing.html)
+- [Dynamic Namespaces](./namespaces.html)
+- [`<ses-frame>`](./ses-frame.html)
 
 **Previous Work**
 
-- [Namespaces](./alpha/)
+- [Namespaces](./alpha/README)
