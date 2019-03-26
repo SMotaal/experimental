@@ -37,6 +37,22 @@ import('module.js').then(({[counter], [count]}) => {
 });
 ```
 
+### Composite Namespacing
+
+```js
+/// engine.js
+export * as grammars from '‹none-of-your-business›';
+export * as parser from '‹none-of-your-business›';
+
+/// consumer.js
+import {grammars, parser} from 'engine.js';
+
+let { [javascript] } = grammars;
+let { [parse], [register] } = parser;
+
+register(javascript).parse('/* ECMAScript code */');
+```
+
 </section>
 </section>
 
