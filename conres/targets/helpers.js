@@ -1,1 +1,1 @@
-﻿export {loadSourceTextFrom} from '/components/lib/fetch.js';
+﻿export {loadSourceTextFrom} from '../../../components/lib/fetch.js';
