@@ -59,6 +59,8 @@ Coordinates of Fiducial marks Y direction
    Pixels for scan of 1200 dpi (px)	0	434	868	1302	1736	2170	2604	3038	3472	3906	4340
 ```
 
+<script type="module" src="./parser.spec.js"></script>
+
 ### Basic Design
 
 <figcaption><b>Baseline Parser</b></figcaption>

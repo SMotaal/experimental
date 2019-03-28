@@ -14,7 +14,7 @@ const dumpTokens = tokens => {
 };
 
 (async () => {
-	const sourceText = await loadSourceTextFrom('./examples/conres-35-z.log');
+	const sourceText = await loadSourceTextFrom('./examples/conres-35X-c.log');
 
 	await new Promise(resolve => setTimeout(resolve, 2000));
 
