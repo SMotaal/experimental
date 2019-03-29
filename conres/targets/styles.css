@@ -1,4 +1,7 @@
 ﻿/* pre.markup.code[markup-syntax="css"], pre.markup.code[markup-syntax="css"] * { */
+pre.markup.code[markup-syntax] {
+  tab-size: 1em;
+}
 pre.markup.code[markup-syntax=log] {
   tab-size: 12em !important;
   /* font-size: 75%; */
