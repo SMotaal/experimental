@@ -24,11 +24,14 @@ export class Tokenizer {
 			// TODO: Decide on how to handle unmatched deadlock
 			if (!match || !match[0]) return;
 
-			const [text, ...matches] = match;
+			const [matched, ...matches] = match;
 			const typeIndex = matches.findIndex(Boolean);
 			const type = types[typeIndex];
+			const text = typeIndex >= 0 ? matches[typeIndex] : matched;
+			const index = typeIndex >= 0 ? match.index + matched.indexOf(text) : match.index;
+			const length = text.length;
 
-			yield {type, text: typeIndex > 0 ? matches[typeIndex] : text, index: match.index, length: text.length};
+			yield {type, text, index, length};
 		}
 	}
 
