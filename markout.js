@@ -31,9 +31,8 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 				history.replaceState({hashes}, title, `${root}${location.search}#${location.pathname}`);
 
 			const resolve = href => {
-				const [, head, tail, entry = 'README', extension = '.md'] = /^(.*)(\/(?:([^\/.][^\/]*?)(?:(\.\w+)|))?)$/.exec(
-					href,
-				);
+				const [, head, tail, entry = 'README', extension = '.md'] =
+					/^(.*)(\/(?:([^\/.][^\/]*?)(?:(\.\w+)|))?)$/.exec(href) || '';
 				return tail ? `${head}\/${entry}${extension}` : href;
 			};
 
