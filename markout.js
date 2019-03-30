@@ -25,7 +25,8 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 
 		// const {HASH_ONLY = (localStorage['HASH_ONLY'] = true)} = localStorage;
 		console.log({...location});
-		const HASH_ONLY = !!location.hash || /^[^?]+#/.test(location.href);
+		const HASH_ONLY = true;
+		// const HASH_ONLY = !!location.hash || /^[^?]+#/.test(location.href);
 		//  !!location.hash; // || location.pathname !== scope;
 
 		// Only promote to preview shell if src is not present
