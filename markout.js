@@ -17,8 +17,10 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 		// const base = new URL('/markout/', import.meta.url);
 		const markoutBase = new URL('../markout/', import.meta.url);
 		const root = new URL('./', import.meta.url);
-		// const scope = root.pathname;
-		// const scoped = location.href.startsWith(root.href);
+		const EntryParts = /^(.*)(\/(?:([^\/.][^\/]*?)(?:(\.\w+)|))?)$/;
+		const EntryTail = /\/(?:[^./]+(?:\.(?:.*\.|)(?:md|markdown)|)|)$/i;
+
+		const {HASH_ONLY = (localStorage['HASH_ONLY'] = true)} = localStorage;
 
 		// Only promote to preview shell if src is not present
 		if (!section.hasAttribute('src')) {
@@ -28,12 +30,12 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 
 			location.hash.length > 1 ||
 				!location.href.startsWith(root.href) ||
+				!EntryTail.test(location.pathname.slice(root.pathname.length - 1)) ||
 				history.replaceState({hashes}, document.title, `${root}${location.search}#${location.pathname}`);
 
-			const resolve = href => {
-				const [, head, tail, entry = 'README', extension = '.md'] =
-					/^(.*)(\/(?:([^\/.][^\/]*?)(?:(\.\w+)|))?)$/.exec(href) || '';
-				return tail ? `${head}\/${entry}${extension}` : href;
+			const resolve = specifier => {
+				const [, head, tail, entry = 'README', extension = '.md'] = EntryParts.exec(specifier) || '';
+				return tail ? `${head}\/${entry}${extension}` : specifier;
 			};
 
 			const load = async (source, title = document.title) => {
@@ -67,8 +69,13 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 
 				if (source === location && hash && hash.length > 1) {
 					if (href !== (href = resolve(href))) {
-						referrer = `${location}`.replace(hash, (hash = `#${href}`));
-						src = `${new URL(href, referrer)}`;
+						if (/^true$/i.test(HASH_ONLY)) {
+							referrer = `${location}`.replace(hash, (hash = `#${href}`));
+							src = `${new URL(href, referrer)}`;
+						} else {
+							src = referrer = `${new URL(href, root)}`;
+							// src = `${new URL(href, root)}`;
+						}
 						history.replaceState({hashes}, title, referrer);
 					}
 					// const [
@@ -134,7 +141,7 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 // 		((title = 'Markout'), `${base}./markout/README.md`);
 
 // 	title ||
-// 		((title = `${href.replace(/(.*?)((?:[^/]+?[/]?){1,2})(?:\..*|)$/, '$2')}`.trim()) &&
+// 		((title = `${href.replace(/(.*?)((?:[^/]+?\/?){1,2})(?:\..*|)$/, '$2')}`.trim()) &&
 // 			(document.title = `${title} — Markout`));
 
 // 	section.setAttribute('src', src);
