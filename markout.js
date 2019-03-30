@@ -80,7 +80,7 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 							referrer = `${location}`.replace(hash, (hash = `#${href}`));
 							src = `${new URL(href, referrer)}`;
 						} else {
-							src = referrer = `${new URL(href, root)}`;
+							src = referrer = `${new URL(href.replace(/\.(md|markdown)$/i, ''), root)}`;
 							// src = `${new URL(href, root)}`;
 						}
 						history.replaceState({hashes}, title, referrer);
