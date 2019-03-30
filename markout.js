@@ -17,10 +17,16 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 		// const base = new URL('/markout/', import.meta.url);
 		const markoutBase = new URL('../markout/', import.meta.url);
 		const root = new URL('../', import.meta.url);
+		const scope = new URL('./', import.meta.url).pathname;
 		const EntryParts = /^(.*)(\/(?:([^\/.][^\/]*?)(?:(\.\w+)|))?)$/;
+		// const EntryParts = /^(.*)(\/(?:([^\/.][^\/]*?)(?:(\.\w+)|)$|(?=\/$)|$))/;
 		const EntryTail = /\/(?:[^./]+(?:\.(?:.*\.|)(?:md|markdown)|)|)$/i;
+		// const EntryTail = /\/(?:[^./]+(?:\.(?:.*\.|)(?:md|markdown)|)$|(?=\/$)|$)/i;
 
-		const {HASH_ONLY = (localStorage['HASH_ONLY'] = true)} = localStorage;
+		// const {HASH_ONLY = (localStorage['HASH_ONLY'] = true)} = localStorage;
+		console.log({...location});
+		const HASH_ONLY = !!location.hash || /^[^?]+#/.test(location.href);
+		//  !!location.hash; // || location.pathname !== scope;
 
 		// Only promote to preview shell if src is not present
 		if (!section.hasAttribute('src')) {
@@ -31,7 +37,7 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 			location.hash.length > 1 ||
 				!location.href.startsWith(root.href) ||
 				!EntryTail.test(location.pathname.slice(root.pathname.length - 1)) ||
-				history.replaceState({hashes}, document.title, `${root}${location.search}#${location.pathname}`);
+				history.replaceState({hashes}, document.title, `${scope}${location.search}#${location.pathname}`);
 
 			const resolve = specifier => {
 				const [, head, tail, entry = 'README', extension = '.md'] = EntryParts.exec(specifier) || '';
@@ -69,7 +75,8 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 
 				if (source === location && hash && hash.length > 1) {
 					if (href !== (href = resolve(href))) {
-						if (/^true$/i.test(HASH_ONLY)) {
+						// if (/^true$/i.test(HASH_ONLY)) {
+						if (HASH_ONLY) {
 							referrer = `${location}`.replace(hash, (hash = `#${href}`));
 							src = `${new URL(href, referrer)}`;
 						} else {
