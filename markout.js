@@ -28,7 +28,7 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 
 			location.hash.length > 1 ||
 				!location.href.startsWith(root.href) ||
-				history.replaceState({hashes}, title, `${root}${location.search}#${location.pathname}`);
+				history.replaceState({hashes}, document.title, `${root}${location.search}#${location.pathname}`);
 
 			const resolve = href => {
 				const [, head, tail, entry = 'README', extension = '.md'] =
