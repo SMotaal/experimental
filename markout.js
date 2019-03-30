@@ -15,13 +15,27 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 	bootstrap: {
 		section.isConnected || document.body.appendChild(section);
 		// const base = new URL('/markout/', import.meta.url);
-		const base = new URL('../markout/', import.meta.url);
+		const markoutBase = new URL('../markout/', import.meta.url);
+		const root = new URL('./', import.meta.url);
+		// const scope = root.pathname;
+		// const scoped = location.href.startsWith(root.href);
 
 		// Only promote to preview shell if src is not present
 		if (!section.hasAttribute('src')) {
 			// State
-			const README = `${base}README.md`;
+			const README = `${markoutBase}README.md`;
 			const hashes = (history.state && history.state.hashes) || {};
+
+			location.hash.length > 1 ||
+				!location.href.startsWith(root.href) ||
+				history.replaceState({hashes}, title, `${root}${location.search}#${location.pathname}`);
+
+			const resolve = href => {
+				const [, head, tail, entry = 'README', extension = '.md'] = /^(.*)(\/(?:([^\/.][^\/]*?)(?:(\.\w+)|))?)$/.exec(
+					href,
+				);
+				return tail ? `${head}\/${entry}${extension}` : href;
+			};
 
 			const load = async (source, title = document.title) => {
 				// Pickup current fragment when source is hashchanged event
@@ -53,20 +67,25 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 					)}`);
 
 				if (source === location && hash && hash.length > 1) {
-					const [
-						,
-						head,
-						tail,
-						entry = 'README',
-						extension = '.md',
-					] = /^#(.*)(\/(?:([^\/.][^\/]*?)(?:(\.\w+)|))?)$/.exec(hash);
-
-					if (tail) {
-						href = `${head}\/${entry}${extension}`;
+					if (href !== (href = resolve(href))) {
 						referrer = `${location}`.replace(hash, (hash = `#${href}`));
 						src = `${new URL(href, referrer)}`;
 						history.replaceState({hashes}, title, referrer);
 					}
+					// const [
+					// 	,
+					// 	head,
+					// 	tail,
+					// 	entry = 'README',
+					// 	extension = '.md',
+					// ] = /^#(.*)(\/(?:([^\/.][^\/]*?)(?:(\.\w+)|))?)$/.exec(hash);
+
+					// if (tail) {
+					// 	href = `${head}\/${entry}${extension}`;
+					// 	referrer = `${location}`.replace(hash, (hash = `#${href}`));
+					// 	src = `${new URL(href, referrer)}`;
+					// 	history.replaceState({hashes}, title, referrer);
+					// }
 				}
 
 				hash || (hash = '#');
@@ -91,14 +110,14 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 			url.search && (url.search = `?${[...new Set(url.search.slice(1).split('&'))].sort().join('&')}`);
 			// const DEV =  /^\?dev\b|\&dev\b/i.test(location.search);
 			const DEV = /[?&]dev\b/.test(url.search);
-			const LIB = `${base}${DEV ? 'lib/browser.js' : 'dist/browser.m.js'}${url.search}`;
-			dynamicImport(new URL(LIB, base));
+			const LIB = `${markoutBase}${DEV ? 'lib/browser.js' : 'dist/browser.m.js'}${url.search}`;
+			dynamicImport(new URL(LIB, markoutBase));
 		}
 	}
 }
 // const DEV = /[?&]dev\b/.test(import.meta.url) || /^\?dev\b|\&dev\b/i.test(location.search);
 
-// const {origin, pathname} = location;
+// const {origin, pathname} = location; = location.href.slice(root.length,
 // const MarkoutPreviewBase = /\/?markout\/preview\.js\b.*$/i;
 // const MarkoutBase = /\/?markout(?:\/.*)?$/i;
 // const RootBase = /\/?$/;
@@ -106,7 +125,7 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 // const base = MarkoutPreviewBase.test(import.meta.url)
 // 	? import.meta.url.replace(MarkoutPreviewBase, '/')
 // 	: origin
-// 	? origin.replace(RootBase, MarkoutBase.test(pathname) ? pathname.replace(MarkoutBase, '/') : '/')
+// 	? origin.replace(RootBase, MarkoutBase.test(pathname) ? pathname.replace = location.href.slice(root.length, (MarkoutBase, '/') : '/')
 // 	: `${new URL('./', location)}`;
 
 // if (!section.hasAttribute('src')) {
