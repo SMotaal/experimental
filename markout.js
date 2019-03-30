@@ -16,7 +16,7 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 		section.isConnected || document.body.appendChild(section);
 		// const base = new URL('/markout/', import.meta.url);
 		const markoutBase = new URL('../markout/', import.meta.url);
-		const root = new URL('./', import.meta.url);
+		const root = new URL('../', import.meta.url);
 		const EntryParts = /^(.*)(\/(?:([^\/.][^\/]*?)(?:(\.\w+)|))?)$/;
 		const EntryTail = /\/(?:[^./]+(?:\.(?:.*\.|)(?:md|markdown)|)|)$/i;
 
