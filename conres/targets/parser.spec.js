@@ -7,7 +7,7 @@ const options = {
 };
 
 setTimeout(async () => {
-	const sourceText = await loadSourceTextFrom('./examples/conres-35X-c.log');
+	const sourceText = await loadSourceTextFrom(`${new URL('./examples/conres-35X-c.log', import.meta.url)}`);
 
 	benchmarks: if (options.benchmark) {
 		tokenization: if (options.tokenization) {
