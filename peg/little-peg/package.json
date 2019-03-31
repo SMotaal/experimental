@@ -1,8 +1,0 @@
-{
-	"name": "little-peg",
-	"version": "0.0.0-alpha.0",
-	"author": "Saleh Abdel Motaal <saleh@grasppe.com>",
-	"license": "MIT",
-	"type": "module",
-	"exports": {}
-}
