@@ -4,10 +4,14 @@ import {parse, tokenize, LineBreaks, Tabs} from './parser.js';
 const options = {
 	// benchmark: true,
 	tokenization: true,
+	// example: 'RIT_c CirRe35X/c CirRe35X.LOG',
+	example: 'conres-35x-c.log',
 };
 
 setTimeout(async () => {
-	const sourceText = await loadSourceTextFrom(`${new URL('./examples/conres-35X-c.log', import.meta.url)}`);
+	// const example = 'RIT_c CirRe35X/c CirRe35X.LOG';
+	const {example = 'conres-35x-c.log'} = options;
+	const sourceText = await loadSourceTextFrom(`${new URL(`./examples/${example}`, import.meta.url)}`);
 
 	benchmarks: if (options.benchmark) {
 		tokenization: if (options.tokenization) {
