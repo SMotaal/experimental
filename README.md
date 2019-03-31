@@ -21,11 +21,11 @@
 
 - ECMAScript
 
-  - [Modules](./modules/)
-  - [Realms](./realms/)
+  - [Modules](./modules/README)
+  - [Realms](./realms/README)
 
 - Contrast-Resolution (ConRes)
-  - [Targets](./conres/targets/)
+  - [Targets](./conres/targets/README)
 
 <!--
 # SMotaal/Experimental
