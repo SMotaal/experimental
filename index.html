@@ -6,14 +6,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 		<link rel="stylesheet" href="/pholio/styles/fonts/iosevka/iosevka.css" />
 		<link rel="stylesheet" href="/pholio/styles/styles.css" />
-		<link rel="alternate" href="./README.md" type="text/markdown" />
+		<!-- <link rel="alternate" href="./README.md" type="text/markdown" /> -->
 		<style>
 			html {
 				--shade: #ff7f50f6;
 			}
 		</style>
 		<!-- <script type="module" src="/browser/markout-preview.js"></script> -->
-		<script type="module" src="/experimental/hashout.js"></script>
+		<script type="module">
+			import {setup} from '/experimental/hashout.js';
+			// setup({redirects: {'./components': '../components/'}}, `${new URL('/experimental/', location)}`);
+			setup({redirects: {'./components/': '../components/'}});
+		</script>
+		<!-- <script type="module" src="/experimental/hashout.js"></script> -->
 	</head>
 
 	<body>
