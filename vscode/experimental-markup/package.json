@@ -1,0 +1,25 @@
+{
+    "name": "experimental-markup",
+    "displayName": "experimental-markup",
+    "description": "SMotaal's Experimental VSCode Markup",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.29.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "markup",
+            "aliases": ["Markup", "markup"],
+            "extensions": [""],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "markup",
+            "scopeName": "",
+            "path": "./syntaxes/markup.tmLanguage.json"
+        }]
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "workbench.colorCustomizations": {
+    "editor.foreground": "#000000",
+    "editor.background": "#ffffff",
+    "editorRuler.foreground": "#EEE",
+    "editorGutter.background": "#F9F9F9",
+    "editorWidget.background": "#F9F9F9",
+    "contrastBorder": "#DDD",
+    "scrollbar.shadow": "#EEE",
+    "widget.shadow": "#EEE",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.noFolderForeground": "#ffffff",
+    "statusBar.noFolderBackground": "#1faece",
+    "statusBar.debuggingBackground": "#e7963b",
+    "statusBar.debuggingForeground": "#ffffff",
+    "statusBar.background": "#3498db"
+  }
+}
