@@ -14,20 +14,15 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 
 	bootstrap: {
 		section.isConnected || document.body.appendChild(section);
-		// const base = new URL('/markout/', import.meta.url);
 		const markoutBase = new URL('../markout/', import.meta.url);
 		const root = new URL('../', import.meta.url);
 		const scope = new URL('./', import.meta.url).pathname;
 		const EntryParts = /^(.*)(\/(?:([^\/.][^\/]*?)(?:(\.\w+)|))?)$/;
-		// const EntryParts = /^(.*)(\/(?:([^\/.][^\/]*?)(?:(\.\w+)|)$|(?=\/$)|$))/;
 		const EntryTail = /\/(?:[^./]+(?:\.(?:.*\.|)(?:md|markdown)|)|)$/i;
-		// const EntryTail = /\/(?:[^./]+(?:\.(?:.*\.|)(?:md|markdown)|)$|(?=\/$)|$)/i;
 
-		// const {HASH_ONLY = (localStorage['HASH_ONLY'] = true)} = localStorage;
 		console.log({...location});
 		const HASH_ONLY = true;
 		// const HASH_ONLY = !!location.hash || /^[^?]+#/.test(location.href);
-		//  !!location.hash; // || location.pathname !== scope;
 
 		// Only promote to preview shell if src is not present
 		if (!section.hasAttribute('src')) {
@@ -76,30 +71,14 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 
 				if (source === location && hash && hash.length > 1) {
 					if (href !== (href = resolve(href))) {
-						// if (/^true$/i.test(HASH_ONLY)) {
 						if (HASH_ONLY) {
 							referrer = `${location}`.replace(hash, (hash = `#${href}`));
 							src = `${new URL(href, referrer)}`;
 						} else {
 							src = referrer = `${new URL(href.replace(/\.(md|markdown)$/i, ''), root)}`;
-							// src = `${new URL(href, root)}`;
 						}
 						history.replaceState({hashes}, title, referrer);
 					}
-					// const [
-					// 	,
-					// 	head,
-					// 	tail,
-					// 	entry = 'README',
-					// 	extension = '.md',
-					// ] = /^#(.*)(\/(?:([^\/.][^\/]*?)(?:(\.\w+)|))?)$/.exec(hash);
-
-					// if (tail) {
-					// 	href = `${head}\/${entry}${extension}`;
-					// 	referrer = `${location}`.replace(hash, (hash = `#${href}`));
-					// 	src = `${new URL(href, referrer)}`;
-					// 	history.replaceState({hashes}, title, referrer);
-					// }
 				}
 
 				hash || (hash = '#');
@@ -122,44 +101,9 @@ if (typeof document === 'object' && document && typeof location === 'object' && 
 			const url = new URL(import.meta.url);
 			location.search.length > 1 && (url.search += `${url.search ? '&' : '?'}${location.search.slice(1)}`);
 			url.search && (url.search = `?${[...new Set(url.search.slice(1).split('&'))].sort().join('&')}`);
-			// const DEV =  /^\?dev\b|\&dev\b/i.test(location.search);
 			const DEV = /[?&]dev\b/.test(url.search);
 			const LIB = `${markoutBase}${DEV ? 'lib/browser.js' : 'dist/browser.m.js'}${url.search}`;
 			dynamicImport(new URL(LIB, markoutBase));
 		}
 	}
 }
-// const DEV = /[?&]dev\b/.test(import.meta.url) || /^\?dev\b|\&dev\b/i.test(location.search);
-
-// const {origin, pathname} = location; = location.href.slice(root.length,
-// const MarkoutPreviewBase = /\/?markout\/preview\.js\b.*$/i;
-// const MarkoutBase = /\/?markout(?:\/.*)?$/i;
-// const RootBase = /\/?$/;
-
-// const base = MarkoutPreviewBase.test(import.meta.url)
-// 	? import.meta.url.replace(MarkoutPreviewBase, '/')
-// 	: origin
-// 	? origin.replace(RootBase, MarkoutBase.test(pathname) ? pathname.replace = location.href.slice(root.length, (MarkoutBase, '/') : '/')
-// 	: `${new URL('./', location)}`;
-
-// if (!section.hasAttribute('src')) {
-// 	const src =
-// 		(link && ({href, title} = link) && href) ||
-// 		((hash = location.hash) && (hash = hash.trim().slice(1)) && (href = `${new URL(hash, origin)}`)) ||
-// 		((title = 'Markout'), `${base}./markout/README.md`);
-
-// 	title ||
-// 		((title = `${href.replace(/(.*?)((?:[^/]+?\/?){1,2})(?:\..*|)$/, '$2')}`.trim()) &&
-// 			(document.title = `${title} — Markout`));
-
-// 	section.setAttribute('src', src);
-// }
-
-// const LIB = `./${DEV ? 'lib/browser.js' : 'dist/browser.m.js'}`;
-
-// async ({oldURL, newURL}) => {
-// 	if (oldURL !== newURL) {
-// 		await new Promise(requestAnimationFrame);
-// 		load(location);
-// 	}
-// },
