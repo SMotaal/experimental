@@ -132,7 +132,7 @@ TBD.
 
 <blockquote>
 
-**Note**: [Dynamic Namespaces](./Dynamic%20Namespaces) is merely at the stage of exploring various problem spaces that overlap with the idea of Namespace objects.
+**Note**: [Dynamic Namespaces](../namespaces/) is merely at the stage of exploring various problem spaces that overlap with the idea of Namespace objects.
 
 </blockquote>
 
