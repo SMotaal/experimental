@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "preserveSymlinks": true,
+    "preserveConstEnums": true,
+    "allowUnusedLabels": true,
+    "suppressExcessPropertyErrors": true,
+    "suppressImplicitAnyIndexErrors": true,
+    // "jsx": "react",
+    "lib": ["dom", "dom.iterable", "esnext", "scripthost", "webworker"],
+    "moduleResolution": "node",
+    "baseUrl": "..",
+    "paths": {
+      "*": [
+        "*",
+        "*.ts",
+        "*.d.ts",
+        "*.m.js",
+        "*.mjs",
+        "*.js",
+        "*/index.ts",
+        "*/index.d.ts",
+        "*/index.m.js",
+        "*/index.mjs",
+        "*/index.js"
+      ]
+    },
+    "noEmit": true,
+    "skipDefaultLibCheck": true,
+    "stripInternal": false,
+    "outDir": "./build"
+  },
+  "exclude": ["node_modules", "**/node_modules", "trash", "**/trash", "build"],
+  "include": ["index.d.ts"]
+}

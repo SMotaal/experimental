@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html checkerboard>
+	<head>
+		<title>SMotaal's Packages Experiment</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<style>
+			html {
+				/* min-width: 100vw; */
+				min-height: 100vh;
+				margin: 0;
+				padding: 0;
+				display: grid;
+				place-content: center;
+			}
+
+			body {
+				display: grid;
+				min-height: inherit;
+				/* min-width: inherit; */
+				place-content: center;
+				margin: 0;
+				padding: 0;
+				scrollbar-width: thin;
+			}
+
+			:focus-visible {
+				outline-width: 3px;
+				outline-color: Highlight;
+				outline-style: solid;
+				outline-style: auto;
+				outline-offset: 1px;
+			}
+
+			body > main {
+				display: contents;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<center><h1>@smotaal/packages</h1></center>
+			<section>
+				<h2>Service Worker</h2>
+				<iframe name="service-worker"></iframe>
+				<script type="module">
+					import {logResults} from './common/specs/helpers.js';
+
+					(async () => {
+						const iframe = document.querySelector('iframe[name=service-worker]');
+
+						// const {getPrototypeOf, getOwnPropertyNames} = Object;
+
+						const results = {
+							...((await (await import('./common/specs/canary.js')).default()) || undefined),
+							...((iframe &&
+								(await (await import('./browser/specs/iframe.js')).default({
+									iframe,
+									HTMLElement,
+									HTMLIFrameElement,
+								}))) ||
+								undefined),
+							...((await (await import('./common/specs/classes.js')).default()) || undefined),
+						};
+
+						logResults(results);
+
+						// await (await import('./common/specs/classes.js')).default();
+						// const stats = {};
+
+						// /** Actual prototype of iframe */
+						// const iframePrototype = getPrototypeOf(iframe);
+
+						// stats.iframePrototypeIsValid = iframePrototype === HTMLIFrameElement.prototype;
+
+						// /** HTMLIFrame element properties */
+						// stats.iframeInheritedNames = getOwnPropertyNames(iframePrototype);
+
+						// // Allowed to alter security of iframe only before load
+						// iframe.allowed = '';
+
+						// console.log(stats);
+					})();
+				</script>
+			</section>
+		</main>
+		<!-- <script type="module" src="./test.js"></script> -->
+		<!--
+		<script type="module">
+			export default import.meta;
+			(async () => {
+				console.log(await import(import.meta.url));
+			})();
+    </script>
+    -->
+	</body>
+</html>
