@@ -1,27 +1,6 @@
-﻿<small float-right>
-<a href="https://github.com/SMotaal/experimental/blob/master/modules/disambiguation/README.md" target="_blank">GitHub</a>
-</small>
+﻿# Modules › Parsing › Disambiguation <span float-right><small>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/Disambiguation.md)</small></span>
 
-# Source Text Disambiguation
-
-<!--
-
-The ECMAScript specifications define two types of source code that can be externally loaded and executed at runtime, Global (script) code and Module code. As of this moment, the vast majority of the modules loaded today fall in the former category, include to a very large degree modules loaded in runtimes that support for ECMAScript modules.
-
-In most cases, runtimes depend on out-of-band conditions to determine the mode used for external code. However, sometimes there is not sufficient out-of-band details from which the mode can be inferred.
-
-For example, in browsers, when statically or dynamically importing particular specifiers without directly binding to entities that it may expose. In such cases, browser opt for defaulting to Module code based on solely on the trigger (ie `import`) of loading the resource as there is no out-of-band means to signal that a particular `text/javascript` resource is of either types.
-
-Other platforms that deal with external code face similar complexities for interoperability between ECMAScript modules and other JavaScript modules formats that must be evaluated as Global code, (wrapped) Function code, or Eval code.
-
-While implementors obviously opt for design decisions that limit these occurrences, it is essential to also appreciate that 100% out-of-band source text disambiguation often comes with trade-offs and those may be of more significant draw-backs to the enduser experience compared to the previously mentioned case for browsers.
-
-
-## Scope
-
-This work focuses on the disambiguation of source text based on discriminating syntax features for source texts lacking the necessary out-of-band details, using performant parsing approaches for locating the first valid occurrence of a positively discriminating feature, including but not limited to special `pragma` inserted by the authors for making the determination.
-
--->
+<blockquote>**Important Note**: This is an incomplete draft</blockquote>
 
 ## Motivation
 
@@ -85,7 +64,6 @@ An alternative to parsing could be attempt to execute code as ECMAScript module 
 
   5. By explicit fallback if there are no discrimination features.
 
-
 <blockquote>
 <cite>@ljharb</cite>
 
@@ -101,7 +79,6 @@ An alternative to parsing could be attempt to execute code as ECMAScript module 
 
 </blockquote>
 
-
 ## Parsing
 
 <blockquote><b>Note</b>: The following examples require a special renderer which can highlight `cjs` and/or `esm` keywords.</blockquote>
@@ -111,7 +88,7 @@ An alternative to parsing could be attempt to execute code as ECMAScript module 
 ```js
 import fs from 'fs';
 exports = require('fs');
-(async () => exports = await import('fs'));
+async () => (exports = await import('fs'));
 export default import.meta.url;
 ```
 
@@ -133,7 +110,6 @@ exports = require('fs');
 export default import.meta.url;
 ```
 
-
 <figcaption><kbd>Ambiguous <code>INVALID</code></kbd> <i>Disambiguation Parsing Mode</i></figcaption>
 
 ```esx
@@ -142,3 +118,23 @@ exports = require('fs');
 (async () => exports = await import('fs'));
 export default import.meta.url;
 ```
+
+
+<!--
+
+The ECMAScript specifications define two types of source code that can be externally loaded and executed at runtime, Global (script) code and Module code. As of this moment, the vast majority of the modules loaded today fall in the former category, include to a very large degree modules loaded in runtimes that support for ECMAScript modules.
+
+In most cases, runtimes depend on out-of-band conditions to determine the mode used for external code. However, sometimes there is not sufficient out-of-band details from which the mode can be inferred.
+
+For example, in browsers, when statically or dynamically importing particular specifiers without directly binding to entities that it may expose. In such cases, browser opt for defaulting to Module code based on solely on the trigger (ie `import`) of loading the resource as there is no out-of-band means to signal that a particular `text/javascript` resource is of either types.
+
+Other platforms that deal with external code face similar complexities for interoperability between ECMAScript modules and other JavaScript modules formats that must be evaluated as Global code, (wrapped) Function code, or Eval code.
+
+While implementors obviously opt for design decisions that limit these occurrences, it is essential to also appreciate that 100% out-of-band source text disambiguation often comes with trade-offs and those may be of more significant draw-backs to the enduser experience compared to the previously mentioned case for browsers.
+
+
+## Scope
+
+This work focuses on the disambiguation of source text based on discriminating syntax features for source texts lacking the necessary out-of-band details, using performant parsing approaches for locating the first valid occurrence of a positively discriminating feature, including but not limited to special `pragma` inserted by the authors for making the determination.
+
+-->
