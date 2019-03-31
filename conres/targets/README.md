@@ -1,4 +1,4 @@
-﻿# ConRes: Target Definitions
+﻿# ConRes › Target Definitions
 
 ## Parser: Let's build a `RegEx` parser!
 

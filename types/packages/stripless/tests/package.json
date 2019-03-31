@@ -1,7 +1,0 @@
-{
-  "private": true,
-  "name": "stripless-typescript-test",
-  "dependencies": {
-    "stripless": "../"
-  }
-}

@@ -1,11 +1,10 @@
 # Modules (_experimental_)
 
-**Related Work**
+**Experimental Work**
 
-- [Parsing (Disambiguation)](./parsing.html)
-- [Dynamic Namespaces](./namespaces.html)
-- [`<ses-frame>`](./ses-frame.html)
-
-**Previous Work**
-
-- [Namespaces](./alpha/README)
+- [Modules Shim `alpha`](./alpha/)
+- [Namespaces `draft`](./namespaces/)
+- [Bindings `draft`](./bindings/)
+- [Parsing `draft`](./parsing/)
+- [Jessie-Frame `draft`](/meta/@ses/Jessie-Frame)
+- [SES-Frame `draft`](/meta/@ses/SES-Frame)

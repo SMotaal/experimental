@@ -1,21 +1,17 @@
-﻿<small float-right>
-<a href="https://github.com/SMotaal/experimental/blob/master/modules/disambiguation/Patterns.md" target="_blank">GitHub</a>
-</small>
+﻿# Modules › Parsing › Patterns <span float-right><small>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/disambiguation/Patterns.md)</small></span>
 
-# Modules: Disambiguation
+<blockquote>**Important Note**: This is an incomplete draft</blockquote>
 
-## Patterns
+## Dual Mode Interop in Node.js
 
-### Dual Mode Interop in Node.js
-
-#### Exporting to ESM
+### Exporting to ESM
 
 <figure>
 
 <figcaption><kbd>ESM <code>Valid</code></kbd> <b>Experimental Module</b>(ie <code>default</code>-only)</figcaption>
 
 ```js
-export { default } from './legacy.js';
+export {default} from './legacy.js';
 ```
 
 ---
@@ -24,7 +20,7 @@ export { default } from './legacy.js';
 
 ```js
 export * as fs from 'fs';
-export { a, b, c } from './legacy.js';
+export {a, b, c} from './legacy.js';
 ```
 
 ---
@@ -32,13 +28,13 @@ export { a, b, c } from './legacy.js';
 <figcaption><figcaption><kbd>ESM <code>Proposed</code></kbd> <b>Dynamic Modules</b></figcaption>
 
 ```js
-export { readFile } from 'fs';
-export { a, b, c, default } from './legacy.js';
+export {readFile} from 'fs';
+export {a, b, c, default} from './legacy.js';
 ```
 
 </figure>
 
-#### Exporting to CJS
+### Exporting to CJS
 
 <figure>
 
@@ -46,13 +42,13 @@ export { a, b, c, default } from './legacy.js';
 
 ```js
 (exported => {
-  Object.setPrototypeOf(exports, {
-    then: { value: ƒ => exported.then(ƒ) },
-    catch: { value: ƒ => exported.catch(ƒ) },
-    finally: { value: ƒ => exported.finally(ƒ) },
-  }).then(imports => {
-    Object.defineProperties(exports, Object.getOwnPropertyDescriptors(imports));
-  });
+	Object.setPrototypeOf(exports, {
+		then: {value: ƒ => exported.then(ƒ)},
+		catch: {value: ƒ => exported.catch(ƒ)},
+		finally: {value: ƒ => exported.finally(ƒ)},
+	}).then(imports => {
+		Object.defineProperties(exports, Object.getOwnPropertyDescriptors(imports));
+	});
 })(import('./esm.js'));
 ```
 

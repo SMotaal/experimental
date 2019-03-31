@@ -1,8 +1,6 @@
-﻿<small float-right>
-<a href="https://github.com/SMotaal/experimental/blob/master/modules/disambiguation/Syntax.md" target="_blank">GitHub</a>
-</small>
+﻿# Modules › Parsing › Syntax <span float-right><small>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/disambiguation/Syntax.md)</small></span>
 
-# Modules: Disambiguation
+<blockquote>**Important Note**: This is an incomplete draft</blockquote>
 
 ## Syntax
 
@@ -161,9 +159,9 @@ module.exports = exports = new Array(4);
 <figcaption><i>IIFE</i></figcaption>
 
 ```js
-Parenthesized: (function(){})();
+Parenthesized: (function() {})();
 
-Parametrized: void function() {}();
+Parametrized: void (function() {})();
 ```
 
 <figcaption><i>AMD</i></figcaption>
@@ -172,9 +170,9 @@ Parametrized: void function() {}();
 // Source: https://www.jvandemo.com/a-10-minute-primer-to-javascript-modules-module-formats-module-loaders-and-module-bundlers/
 
 //Calling define with a dependency array and a factory function
-define(['dep1', 'dep2'], function (dep1, dep2) {
-    //Define the module value by returning a value.
-    return function () {};
+define(['dep1', 'dep2'], function(dep1, dep2) {
+	//Define the module value by returning a value.
+	return function() {};
 });
 ```
 
@@ -182,27 +180,27 @@ define(['dep1', 'dep2'], function (dep1, dep2) {
 
 ```js
 // Source: https://www.jvandemo.com/a-10-minute-primer-to-javascript-modules-module-formats-module-loaders-and-module-bundlers/
-(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-      define(['b'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // Node. Does not work with strict CommonJS, but
-    // only CommonJS-like environments that support module.exports,
-    // like Node.
-    module.exports = factory(require('b'));
-  } else {
-    // Browser globals (root is window)
-    root.returnExports = factory(root.b);
-  }
-}(this, function (b) {
-  //use b in some fashion.
+(function(root, factory) {
+	if (typeof define === 'function' && define.amd) {
+		// AMD. Register as an anonymous module.
+		define(['b'], factory);
+	} else if (typeof module === 'object' && module.exports) {
+		// Node. Does not work with strict CommonJS, but
+		// only CommonJS-like environments that support module.exports,
+		// like Node.
+		module.exports = factory(require('b'));
+	} else {
+		// Browser globals (root is window)
+		root.returnExports = factory(root.b);
+	}
+})(this, function(b) {
+	//use b in some fashion.
 
-  // Just return a value to define the module export.
-  // This example returns an object, but the module
-  // can return a function as the exported value.
-  return {};
-}));
+	// Just return a value to define the module export.
+	// This example returns an object, but the module
+	// can return a function as the exported value.
+	return {};
+});
 ```
 
 ### Future Specs
@@ -229,32 +227,43 @@ arr[:3:2];
 
 ```js
 let x = do {
-  if (foo()) { f() }
-  else if (bar()) { g() }
-  else { h() }
+	if (foo()) {
+		f();
+	} else if (bar()) {
+		g();
+	} else {
+		h();
+	}
 };
 ```
 
 <figcaption><i><code>throw</code> Expressions</i></figcaption>
 
 ```js
-function save(filename = throw new TypeError("Argument required")) {
-}
+function save(filename = throw new TypeError('Argument required')) {}
 
 lint(ast, {
-  with: () => throw new Error("avoid using 'with' statements.")
+	with: () => throw new Error("avoid using 'with' statements."),
 });
 
 function getEncoder(encoding) {
-  const encoder = encoding === "utf8" ? new UTF8Encoder()
-                : encoding === "utf16le" ? new UTF16Encoder(false)
-                : encoding === "utf16be" ? new UTF16Encoder(true)
-                : throw new Error("Unsupported encoding");
+	const encoder =
+		encoding === 'utf8'
+			? new UTF8Encoder()
+			: encoding === 'utf16le'
+			? new UTF16Encoder(false)
+			: encoding === 'utf16be'
+			? new UTF16Encoder(true)
+			: throw new Error('Unsupported encoding');
 }
 
 class Product {
-  get id() { return this._id; }
-  set id(value) { this._id = value || throw new Error("Invalid value"); }
+	get id() {
+		return this._id;
+	}
+	set id(value) {
+		this._id = value || throw new Error('Invalid value');
+	}
 }
 ```
 
@@ -263,24 +272,26 @@ class Product {
 ```js
 @defineElement('num-counter')
 class Counter extends HTMLElement {
-  @observed #x = 0;
+	@observed #x = 0;
 
-  @bound
-  #clicked() {
-    this.#x++;
-  }
+	@bound
+	#clicked() {
+		this.#x++;
+	}
 
-  constructor() {
-    super();
-    this.onclick = this.#clicked;
-  }
+	constructor() {
+		super();
+		this.onclick = this.#clicked;
+	}
 
-  connectedCallback() { this.render(); }
+	connectedCallback() {
+		this.render();
+	}
 
-  @bound
-  render() {
-    this.textContent = this.#x.toString();
-  }
+	@bound
+	render() {
+		this.textContent = this.#x.toString();
+	}
 }
 ```
 
@@ -295,13 +306,13 @@ import fs from 'fs';
 <figcaption><i>Numeric Separators</i></figcaption>
 
 ```js
-1_000_000_000           // Ah, so a billion
-101_475_938.38          // And this is hundreds of millions
+1_000_000_000; // Ah, so a billion
+101_475_938.38; // And this is hundreds of millions
 
-let fee = 123_00;       // $123 (12300 cents, apparently)
-let fee = 12_300;       // $12,300 (woah, that fee!)
-let amount = 12345_00;  // 12,345 (1234500 cents, apparently)
-let amount = 123_4500;  // 123.45 (4-fixed financial)
+let fee = 123_00; // $123 (12300 cents, apparently)
+let fee = 12_300; // $12,300 (woah, that fee!)
+let amount = 12345_00; // 12,345 (1234500 cents, apparently)
+let amount = 123_4500; // 123.45 (4-fixed financial)
 let amount = 1_234_500; // 1,234,500
 ```
 
