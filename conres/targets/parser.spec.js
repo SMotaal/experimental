@@ -4,8 +4,8 @@ import {parse, tokenize, LineBreaks, Tabs} from './parser.js';
 const options = {
 	// benchmark: true,
 	tokenization: true,
-	// example: 'RIT_c CirRe35X/c CirRe35X.LOG',
-	example: 'conres-35x-c.log',
+	example: 'RIT_c CirRe35X/c CirRe35X.LOG',
+	// example: 'conres-35x-c.log',
 };
 
 setTimeout(async () => {
