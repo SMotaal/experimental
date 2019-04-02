@@ -1,4 +1,4 @@
-﻿# Modules › Parsing › Syntax <span float-right><small>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/disambiguation/Syntax.md)</small></span>
+﻿# Modules › Parsing › Syntax <span float-right><small>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/Syntax.md)</small></span>
 
 <blockquote>**Important Note**: This is an incomplete draft</blockquote>
 

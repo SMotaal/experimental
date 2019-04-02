@@ -1,4 +1,4 @@
-﻿# Modules › Parsing › Patterns <span float-right><small>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/disambiguation/Patterns.md)</small></span>
+﻿# Modules › Parsing › Patterns <span float-right><small>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/Patterns.md)</small></span>
 
 <blockquote>**Important Note**: This is an incomplete draft</blockquote>
 
