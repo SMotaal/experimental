@@ -29,14 +29,22 @@ export default ({logger = console} = {}) => {
 			.replace(/\\.|\[(\^?)(\[|\]|[^\[\]\\/]*?)\]/g, (m, b, c) => (b || c ? `${b ? '×' : c[0]}` : m))
 			.replace(/\?/g, '$');
 
-		let spec;
+		if (base) {
+			let a, b;
 
-		(matcher.test((spec = base.replace(/(^|\/)\*\*($|\/)/g, '/').replace(/\*/g, '×'))) ? pass : fail).push(spec),
-			(matcher.test((spec = spec.replace('/b/', '/'))) ? fail : pass).push(spec);
-		(matcher.test((spec = base.replace(/(^|\/)\*\*($|\/)/g, '$1××/××$2').replace(/\*/g, '×'))) ? pass : fail).push(
-			spec,
-		),
-			(matcher.test((spec = spec.replace('/b/', '/'))) ? fail : pass).push(spec);
+			(matcher.test((a = base.replace(/(^|\/)\*\*($|\/)/g, '/').replace(/\*/g, '×'))) ? pass : fail).push(
+				`matches ${a}`,
+			),
+				(matcher.test((b = a.replace('/b/', '/'))) ? fail : pass).push(`ignores ${b}`),
+				(matcher.test((a = a.startsWith('/') ? a.slice(1) : `/${a}`)) ? fail : pass).push(`ignores ${a}`),
+				(matcher.test((b = a.replace('/b/', '/'))) ? fail : pass).push(`ignores ${b}`);
+			(matcher.test((a = base.replace(/(^|\/)\*\*($|\/)/g, '$1××/××$2').replace(/\*/g, '×'))) ? pass : fail).push(
+				`matches ${a}`,
+			),
+				(matcher.test((b = a.replace('/b/', '/'))) ? fail : pass).push(`ignores ${b}`),
+				(matcher.test((a = a.startsWith('/') ? a.slice(1) : `/${a}`)) ? fail : pass).push(`ignores ${a}`),
+				(matcher.test((b = a.replace('/b/', '/'))) ? fail : pass).push(`ignores ${b}`);
+		}
 
 		rows.push((results[source] = {source, glob, specs: {pass, fail}}));
 	}
