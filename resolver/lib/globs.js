@@ -1,34 +1,51 @@
-﻿export const PathExpression = (source, flags = source.flags) =>
+﻿const matchAll = Function.call.bind(
+	String.prototype.matchAll ||
+		{
+			/**
+			 * @this {string}
+			 * @param {RegExp | string} pattern
+			 */
+			*matchAll() {
+				const next = ((arguments[0] && arguments[0].exec) || RegExp.prototype.exec).bind(
+					Object.assign(RegExp(arguments[0]), {lastIndex: null}),
+					String(this),
+				);
+				for (
+					let match, lastIndex = -1;
+					lastIndex < ((match = next()) ? (lastIndex = match.index) : lastIndex);
+					yield match
+				);
+			},
+		}.matchAll,
+);
+export const PathExpression = (source, flags = source.flags) =>
 	new RegExp(
 		(((source || '') && source.source) || source).replace(
-			/\[\^\/\](?=[*+?])/g,
+			/\[\^\\?\/\](?=[*+?])/g,
 			PathExpression.SegmentParts.source.slice(0, -1),
 		),
 		flags,
 	);
 
-PathExpression.SegmentParts = /(?:\[(?:\[|\]|(?:\\.|[^\\])*?)]\|\\.|\\$|[^\\/]+)+/g;
-PathExpression.DoubleAstrisksParts = PathExpression(/(^|\/)[^/]*\*\*[^/]*(?:\/\.\.|\/\.)*(?=\/|$)/g);
-PathExpression.DotSlashParts = PathExpression(/(^|\/)\.(?:\/|$)/g);
-PathExpression.DoubleDotSlashParts = PathExpression(/(^|\/?)(?:(?=[^/])[^/]+\/|)\.\.(?:\/|$)/g);
-PathExpression.PathSegments = PathExpression(/^(?=\/+)|(?=[^/])[^/]+/g);
-
-const matchAll = (string, pattern) => {
-	pattern = new RegExp((pattern && pattern.source) || pattern, pattern && 'flags' in pattern ? pattern.flags : 'g');
-	if (!/[gy]/.test(pattern.flags)) return (pattern.exec(string) || '')[0];
-	let match;
-	const results = [];
-	while ((match = pattern.exec(string))) results.push(match[0]);
-	return results;
-};
+PathExpression.SegmentParts = /(?:\[(?:\[|\]|(?:\\.|[^\\\[\]]+)*)?\]|\\.|\\$|[^/\\]+)+/g;
+PathExpression.DotSlashParts = PathExpression(/(\/|^)\.(?:\/|$)/g);
+// PathExpression.DoubleDotSlashParts = PathExpression(/(\/?|^)(?:(?=[^\/])[^\/]+\/|)\.\.(?:\/|$)/g);
+PathExpression.DoubleDotSlashParts = PathExpression(/([/]|^[/]?)(?:[^\/]+\/)?\.\.(?:[/]|[/]?$)/g);
+// PathExpression.DoubleDotSlashParts = PathExpression(/^\/?\.\.\/?$|^\.\.\/|\/\.\.$|(?:\/?[^\/]+\/)?\.\./g);
+// PathExpression.PathSegments = PathExpression(/^(?=\/+)|(?=[^\/])[^\/]+/g);
+PathExpression.PathSegments = PathExpression(/(?=[^\/])[^\/]+/g);
 
 PathExpression.split = path => [
-	...((path || '') &&
-		`${path}`
-			.replace(PathExpression.DoubleAstrisksParts, '$1**')
-			.replace(PathExpression.DotSlashParts, '$1')
-			.replace(PathExpression.DoubleDotSlashParts, '$1')
-			.matchAll(PathExpression.PathSegments)),
+	...((path = `${path || ''}`).startsWith('/') && (path = path.slice(1)) ? [''] : ''),
+	...(path &&
+		matchAll(
+			`${path}`
+				// .replace(PathExpression.DoubleAstrisksParts, '$1**')
+				.replace(new RegExp(PathExpression.DotSlashParts), '$1')
+				.replace(new RegExp(PathExpression.DoubleDotSlashParts), '/'),
+			PathExpression.PathSegments,
+		)),
+	// ...(path.endsWith('/') ? [''] : ''),
 ];
 
 PathExpression.normalize = path => PathExpression.split(path).join('/');
@@ -36,19 +53,31 @@ PathExpression.normalize = path => PathExpression.split(path).join('/');
 PathExpression.fromGlob = glob => {
 	const normlized = PathExpression.split(glob).join('/');
 	return new RegExp(
-		`^${
-			normlized
-				// .replace(/(^|[^\\])\[(\!|)(\[|\]|[^\[\]\\/]+?)\]/g, (m, a, b, c) =>
-				.replace(/\\.|\[(\^?)(\[|\]|[^\[\]\\/]*?)\]|(\?)/g, (m, b, c, d) =>
-					d ? `[^/]` : b || c ? `(?=[^\\\\/])[${b ? '^' : ''}${c === '[' || c === ']' ? `\\${c}` : c}]` : m,
-				)
-				// .replace(/(^|\/)\*\*($|\/)/g, `$1(?:${PathExpression.SegmentParts.source}/)*?`)
-				// .replace(/(^|\/)\*\*($|\/)/g, '$1(?:.*$2|)')
-				// .replace(/(^|\/)\*\*($|\/)/g, '(?:^|\\/).*(?:$|\\/)')
-				.replace(/(^|\/)\*\*($|\/)/g, (m, a, b) => (a ? `/(?:.*(?:$|/))?` : b ? `(?:(?:^|/).*)?/` : m))
-				.replace(/\*/g, '.*')
-			// .replace(/(^|[^\*])\*($|[^\*])/g, `$1${PathExpression.SegmentParts.source}$2`)
-			// .replace(/(^|\/)\*\*($|\/)/g, `$1.*$2`)
-		}`,
+		`^${normlized
+			.replace(/\\.|\[(\^?)(\[|\]|[^\[\]/\\]*?)\]|(\?)/g, (m, b, c, d) =>
+				d
+					? String.raw`[^\/]`
+					: b || c
+					? String.raw`(?=[^/\\])[${b ? '^' : ''}${c === '[' || c === ']' ? String.raw`\\${c}` : c}]`
+					: m,
+			)
+			.replace(/\\.|(\/|^)(\*\*)(\/|$)|(\*)/g, (m, a, b, c, d) =>
+				d
+					? String.raw`${PathExpression.SegmentParts.source.slice(0, -1)}*`
+					: a
+					? String.raw`/(?:.*(?:$|/))?`
+					: c
+					? `(?:(?:^|/).*)?/`
+					: b
+					? '.*'
+					: m,
+			)}`,
 	);
 };
+
+// PathExpression.SegmentParts = /(?:\[(?:\[|\]|(?:\\.|[^\\])*?)]\|\\.|\\$|[^\\/]+)+/g;
+// PathExpression.DoubleAstrisksParts = PathExpression(/(^|\/)[^\/]*\*\*[^\/]*(?:\/\.\.|\/\.)*(?=\/|$)/g);
+
+// .replace(/(^|\/)\*\*($|\/)/g, (m, a, b) => (a ? `/(?:.*(?:$|/))?` : b ? `(?:(?:^|/).*)?/` : m))
+// .replace(/\*/g, '.*')
+// ? String.raw`(?:(?:^|/)${PathExpression.SegmentParts.source.slice(0, -1)}*)?/`
