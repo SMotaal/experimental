@@ -28,9 +28,10 @@ typeof document !== 'object' ||
 
 		bootstrap: {
 			section.isConnected || document.body.appendChild(section);
-			const markoutBase = new URL('../markout/', import.meta.url);
-			const root = new URL('../', import.meta.url);
-			const scope = new URL('./', import.meta.url).pathname;
+			const markoutBase = new URL('/markout/', import.meta.url);
+			const root = new URL('/', import.meta.url);
+			const scope = new URL('/experimental/', import.meta.url).pathname;
+
 			const state = (history.state && history.state) || {};
 
 			// Only promote to preview shell if src is not present
