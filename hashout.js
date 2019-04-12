@@ -16,6 +16,8 @@ typeof document !== 'object' ||
 	typeof location !== 'object' ||
 	typeof location.hash !== 'string' ||
 	requestAnimationFrame(async () => {
+		const DEBUG = /[?&]debug\b/.test(location.search);
+
 		// Pickup declarative link "from head" if present
 		const link = document.head.querySelector(
 			'link[rel="alternate" i][type^="text/markout" i][type^="text/markdown" i][type^="text/md" i][href], link[rel="alternate" i][href$=".md" i][href$=".markdown" i], link[rel="alternate" i][href]',
@@ -104,14 +106,15 @@ typeof document !== 'object' ||
 					} finally {
 						// const changed = redirected !== specifier;
 						redirects[specifier] === redirected || (redirects[specifier] = redirected);
-						log(
-							`redirect(${Array(arguments.length)
-								.fill('%O')
-								.join(',')}) => %O %o`,
-							...arguments,
-							redirected,
-							{target, matched, matching, matches, scope, pathname},
-						);
+						DEBUG &&
+							log(
+								`redirect(${Array(arguments.length)
+									.fill('%O')
+									.join(',')}) => %O %o`,
+								...arguments,
+								redirected,
+								{target, matched, matching, matches, scope, pathname},
+							);
 					}
 				}
 
@@ -189,13 +192,14 @@ typeof document !== 'object' ||
 						}
 					}
 
-					log(
-						`load(${Array(arguments.length)
-							.fill('%O')
-							.join(',')}) => %o`,
-						...arguments,
-						{loaded, previous, ...hashed},
-					);
+					DEBUG &&
+						log(
+							`load(${Array(arguments.length)
+								.fill('%O')
+								.join(',')}) => %o`,
+							...arguments,
+							{loaded, previous, ...hashed},
+						);
 				}
 
 				section.baseURL || (section.baseURL = location.href.replace(/[?#].*$|$/, ''));
@@ -310,7 +314,7 @@ export function setup(configuration, referrer = import.meta.url) {
 	}
 
 	if (traces.length) {
-		group(`setup(${'%O'.repeat(arguments.length)})`, ...arguments);
+		groupCollapsed(`setup(${'%o, '.repeat(arguments.length).slice(0, -2)})`, ...arguments);
 		for (const trace of traces) trace();
 		groupEnd();
 	}
