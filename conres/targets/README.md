@@ -1,11 +1,13 @@
 ﻿# ConRes › Target Definitions
 
+<script type="module" src="./parser.spec.js"></script>
+<!-- <script type="module" src="./segmenter.spec.js"></script> -->
+
 ## Parser: Let's build a `RegEx` parser!
 
 `RegEx` is JavaScript's way of allowing us to quickly search for string patterns using many of the popular Regular Expression facilities.
 
 If you are not familiar with Regular Expressions, they are basically a concept that exists in almost every programming language to declaratively define conditional patterns for string matching. The declarative nature of regular expressions paired with the "somewhat" common notation they share across many languages are their most notable selling point.
-
 
 <figcaption><b>TDF Example</b></figcaption>
 
@@ -88,18 +90,16 @@ Step Wedge Coordinates from 	Positions	   Zero TV Nominal Step 		   Zero TV Line
 	 6	 -21.4	 222.6	 -11.5	 222.6	 -21.4	 44.6	 -11.5	 44.6
 ```
 
-<script type="module" src="./parser.spec.js"></script>
-
 ### Basic Design
 
 <figcaption><b>Baseline Parser</b></figcaption>
 
 ```js
 function parse(source, state = {}, mode) {
-  const mode = {
-			matcher: /([ \t]+)|([\s\n]+)|(.+?(?=\s|\n|$))/g,
-			types: ['space', 'feed', 'sequence'],
-  };
+	const mode = {
+		matcher: /([ \t]+)|([\s\n]+)|(.+?(?=\s|\n|$))/g,
+		types: ['space', 'feed', 'sequence'],
+	};
 	const tokens = tokenizer(source, state, mode);
 	return tokens;
 }
@@ -111,20 +111,20 @@ function parse(source, state = {}, mode) {
 
 ```js
 function* tokenize(source, state = {}, mode) {
-  let matchIndex = state.matchIndex;
-  const {matcher, types} = mode;
+	let matchIndex = state.matchIndex;
+	const {matcher, types} = mode;
 
-  while (!(matchIndex > state.matchIndex) && !(matchIndex > state.finalIndex)) {
-    matchIndex = matcher.lastIndex = state.matchIndex;
-    const match = matcher.exec(source);
-    state.matchIndex = matcher.lastIndex;
+	while (!(matchIndex > state.matchIndex) && !(matchIndex > state.finalIndex)) {
+		matchIndex = matcher.lastIndex = state.matchIndex;
+		const match = matcher.exec(source);
+		state.matchIndex = matcher.lastIndex;
 
-    if (!match || !match[0]) return;
-    const [text, ...matches] = match;
-    const type = types[matches.findIndex(Boolean)];
+		if (!match || !match[0]) return;
+		const [text, ...matches] = match;
+		const type = types[matches.findIndex(Boolean)];
 
-    yield {type, text, index: match.index, length: text.length};
-  }
+		yield {type, text, index: match.index, length: text.length};
+	}
 }
 ```
 
