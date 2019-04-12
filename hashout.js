@@ -1,4 +1,4 @@
-﻿import {dynamicImport} from '../pholio/lib/import.js';
+﻿import {dynamicImport} from '/pholio/lib/import.js';
 
 const options = {
 	hashed: true,
@@ -210,8 +210,8 @@ typeof document !== 'object' ||
 					url.search && (url.search = `?${[...new Set(url.search.slice(1).split('&'))].sort().join('&')}`);
 					const DEV = /[?&]dev\b/.test(url.search);
 					const LIB = `${markoutBase}${DEV ? 'lib/browser.js' : 'dist/browser.m.js'}${url.search}`;
-					// await dynamicImport(new URL(LIB, markoutBase));
-					import(new URL(LIB, markoutBase));
+					await dynamicImport(new URL(LIB, markoutBase));
+					// import(new URL(LIB, markoutBase));
 				}
 
 				// load();
