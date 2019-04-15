@@ -1,4 +1,4 @@
-﻿import {dynamicImport} from '/pholio/lib/import.js';
+﻿import dynamicImport from '/browser/dynamicImport.js';
 
 const options = {
 	hashed: true,
