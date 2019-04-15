@@ -1,7 +1,7 @@
 ﻿# ConRes › Target Definitions
 
-<script type="module" src="./parser.spec.js"></script>
-<script type="module" src="./segmenter.spec.js"></script>
+<!-- <script type="module" src="./parser.spec.js"></script> -->
+<script type="module" src="./tabular.segmenter.spec.js"></script>
 
 ## Parser: Let's build a `RegEx` parser!
 

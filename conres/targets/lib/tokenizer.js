@@ -55,10 +55,3 @@ export class Tokenizer {
 		return state;
 	}
 }
-
-// {
-//   const type = typeof source;
-//   state.source = type === 'string' ? source
-//     : type === 'object' ? source = `${source}`
-//       : source = undefined;
-// }
