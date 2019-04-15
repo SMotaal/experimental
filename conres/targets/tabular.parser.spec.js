@@ -1,20 +1,15 @@
-﻿import {loadSourceTextFrom} from './helpers.js';
-import {parse, tokenize, LineBreaks, Tabs} from './parser.js';
-
-const options = {
-	// benchmark: true,
-	tokenization: true,
-	example: 'RIT_c CirRe35X/c CirRe35X.LOG',
-	// example: 'conres-35x-c.log',
-};
+﻿import {options} from './tabular.spec.js';
+import {loadSourceTextFrom} from './helpers.js';
+import {LineBreaks, Tabs} from './lib/normalizer.js';
+import {parse, tokenize} from './tabular.parser.js';
 
 setTimeout(async () => {
 	// const example = 'RIT_c CirRe35X/c CirRe35X.LOG';
 	const {example = 'conres-35x-c.log'} = options;
 	const sourceText = await loadSourceTextFrom(`${new URL(`./examples/${example}`, import.meta.url)}`);
 
-	benchmarks: if (options.benchmark) {
-		tokenization: if (options.tokenization) {
+	tokenization: if (options.tokenization) {
+		benchmark: if (options.benchmarks && options.benchmarks.tokenization) {
 			await new Promise(resolve => setTimeout(resolve, 1000));
 			group('Tokenization');
 			time('cool');
@@ -28,9 +23,7 @@ setTimeout(async () => {
 			timeEnd('hot');
 			groupEnd();
 		}
-	}
 
-	tokenizer: if (options.tokenization) {
 		const tokenizer = tokenize(sourceText);
 		const {state} = tokenizer;
 		const tokens = all(tokenizer);
