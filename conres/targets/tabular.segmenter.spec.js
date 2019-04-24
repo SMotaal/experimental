@@ -3,16 +3,24 @@ import {loadSourceTextFrom, matchAll, LineBreaks, Tabs, dynamicImport} from './h
 import {parse, tokenize} from './tabular.parser.js';
 import {tabular} from './tabular.grammar.js';
 
-const $tabular = (globalThis.$tabular = async specifier => {
+const $tabular = (globalThis.$tabular = async (...args) => {
 	const {load, normalize} = $tabular;
-	const sourceText = await load(specifier);
+	const {copy} = {...args[args.length - 1]};
+
+	const sourceText = await load(
+		(args[0] && typeof args[0] === 'string') ||
+			(typeof args[0] === 'object' && args[0] instanceof URL && args[0]) ||
+			undefined,
+	);
 
 	if (!sourceText) return;
 
 	const normalizedText = normalize(sourceText);
 
 	const debugSegmenter =
-		options.segmentation && (await dynamicImport('/modules/segmenter/segmenter.debug.js')).debugSegmenter;
+		options.segmentation &&
+		($tabular.debugSegmenter ||
+			($tabular.debugSegmenter = await dynamicImport('/modules/segmenter/segmenter.debug.js')).debugSegmenter);
 
 	const debugSegmenterOptions = {grouping: false};
 	const DUMP_SEGMENTS = false;
@@ -92,10 +100,10 @@ const $tabular = (globalThis.$tabular = async specifier => {
 		if (debugSegmenter) {
 			loggers.push(
 				DUMP_SEGMENTS
-					? async () => {
-							await debugSegmenter(tabular.segmenter, text, debugSegmenterOptions);
+					? () => {
+							debugSegmenter(tabular.segmenter, text, debugSegmenterOptions);
 					  }
-					: async () => {
+					: () => {
 							const rendered = debugSegmenter(tabular.segmenter, text, {method: 'render'});
 							html += `<div>\n\t${rendered.join('\n\t')}\n</div>`;
 					  },
@@ -105,18 +113,18 @@ const $tabular = (globalThis.$tabular = async specifier => {
 	};
 
 	for (const {0: text, type, ...match} of matchAll(normalizedText, tabular.segmenter)) {
-		const tokens = [...tokenize(text)];
+		// const tokens = [...tokenize(text)];
 
-		const segment = {text, type, match, tokens};
+		const segment = {text, type, match}; // , tokens
 
 		if (type === 'feed') {
 			if (debugSegmenter) {
 				loggers.push(
 					DUMP_SEGMENTS
-						? async () => {
-								await debugSegmenter(tabular.segmenter, text, debugSegmenterOptions);
+						? () => {
+								debugSegmenter(tabular.segmenter, text, debugSegmenterOptions);
 						  }
-						: async () => {
+						: () => {
 								const rendered = debugSegmenter(tabular.segmenter, text, {method: 'render'});
 								html += `<div>\n\t${rendered.join('\n\t')}\n</div>`;
 						  },
@@ -141,19 +149,24 @@ const $tabular = (globalThis.$tabular = async specifier => {
 
 	log(parsed);
 
-	if (loggers.length) {
-		for await (const logger of loggers) {
-			logger();
-		}
-	}
+	for (const logger of loggers) logger();
 	if (html) {
-		const figure = document.createElement('figure');
-		figure.setAttribute('hidden', true);
-		figure.innerHTML = `<style>\n\t${RENDERED_STYLE.replace(/^/gm, '\t')}\n</style>\n<output>${html}</output>`.replace(
-			/ *line-height: 1.75em;((?= *['"])| |) */g,
-			'',
-		);
-		document.body.appendChild(figure);
+		const innerHTML = `<style>\n\t${RENDERED_STYLE}\n</style>\n<output>${html}</output>`;
+
+		// .replace(
+		// 	/ *line-height: 1.75em;((?= *['"])| |) */g,
+		// 	'',
+		// );
+		if (typeof copy === 'function') {
+			console.log('copying');
+			copy(innerHTML);
+			console.log('copied');
+		} else {
+			const figure = document.createElement('figure');
+			figure.setAttribute('hidden', true);
+			figure.innerHTML = innerHTML;
+			document.body.appendChild(figure);
+		}
 	}
 });
 
@@ -293,3 +306,5 @@ const RENDERED_STYLE = (css => css`
 		box-sizing: border-box;
 	}
 `)(String.raw);
+
+// .replace(/^/gm, '\t');
