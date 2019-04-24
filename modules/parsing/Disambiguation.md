@@ -1,4 +1,4 @@
-﻿# Modules › Parsing › Disambiguation <small>` DRAFT `</small> [<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/Disambiguation.md)
+﻿# Modules › Parsing › Disambiguation <code> DRAFT </code> [<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/Disambiguation.md)
 
 ## Motivation
 

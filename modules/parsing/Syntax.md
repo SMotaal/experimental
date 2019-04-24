@@ -1,4 +1,4 @@
-﻿# Modules › Parsing › Syntax <small>` DRAFT `</small> [<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/Syntax.md)
+﻿# Modules › Parsing › Syntax <code> DRAFT </code> [<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/Syntax.md)
 
 ## Syntax
 

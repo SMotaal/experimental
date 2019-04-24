@@ -1,4 +1,4 @@
-﻿# Modules › Bindings <small>` DRAFT `</small>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/bindings/)
+﻿# Modules › Bindings <code> DRAFT </code>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/bindings/)
 
 <section>
 
