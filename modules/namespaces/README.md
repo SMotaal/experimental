@@ -1,4 +1,4 @@
-﻿# Modules › Namespaces <code> DRAFT </code> [<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/namespaces/)
+﻿# Modules › Namespaces <code tag>Draft</code> [<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/namespaces/)
 
 The ECMAScript Module specifications, as of this moment, fall short of providing a predictable approach for implementors to work with namespaces which are not compliant to those returned by a SourceTextModule. Instead, they offer certain allowances that make it possible for implementors to optionally diverge to accommodate behaviours of namespaces.
 

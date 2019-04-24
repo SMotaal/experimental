@@ -2,6 +2,6 @@
 
 **Experimental Work**
 
-- [Disambiguation <code> DRAFT </code>](./Disambiguation)
-- [Syntax <code> DRAFT </code>](./Syntax)
-- [Patterns <code> DRAFT </code>](./Patterns)
+- [Disambiguation <code tag>Draft</code>](./Disambiguation)
+- [Syntax <code tag>Draft</code>](./Syntax)
+- [Patterns <code tag>Draft</code>](./Patterns)
