@@ -1,6 +1,4 @@
-﻿# Modules › Parsing › Patterns <span float-right><small>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/Patterns.md)</small></span>
-
-<blockquote>**Important Note**: This is an incomplete draft</blockquote>
+﻿# Modules › Parsing › Patterns <small>` DRAFT `</small> [<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/Patterns.md)
 
 ## Dual Mode Interop in Node.js
 

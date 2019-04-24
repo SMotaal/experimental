@@ -1,6 +1,4 @@
-﻿# Modules › Parsing › Disambiguation <span float-right><small>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/Disambiguation.md)</small></span>
-
-<blockquote>**Important Note**: This is an incomplete draft</blockquote>
+﻿# Modules › Parsing › Disambiguation <small>` DRAFT `</small> [<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/Disambiguation.md)
 
 ## Motivation
 
@@ -118,7 +116,6 @@ exports = require('fs');
 (async () => exports = await import('fs'));
 export default import.meta.url;
 ```
-
 
 <!--
 
