@@ -1,14 +1,20 @@
-﻿# Modules › Bindings <span float-right><small>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/bindings/)</small></span>
-
-<blockquote>**Important Note**: This is an incomplete draft</blockquote>
+﻿# Modules › Bindings <small>` DRAFT `</small>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/bindings/)
 
 <section>
 
-ECMAScript modules introduced first-class binding semantics where it became possible for the first time to syntactically declare specific variables in scope to present as the one-way bound proxy of another from a different scope. Like other aspects of ECMAScript modules, the language as it stands today gapes too wide in offering first-class mechanisms that would leverage these additional capabilities outside the scope of ESM.
+ECMAScript modules introduced first-class (live/dynamic) binding semantics where it became possible for the first time to syntactically declare specific variables in scope to present as the one-way bound proxy of another from a different scope. Like other aspects of ECMAScript modules, the language as it stands today gapes too wide in offering first-class mechanisms that would leverage these additional capabilities outside the scope of ESM.
 
 This closed-up design often demands implementation-level adjustments in order to provide any necessary interoperability layers between ESM and preexisting module systems that have historical significance.
 
-<blockquote>**Important Note**: While this proposal presents the complete syntaxes for first-class support of bindings, the more fundamental aspect of this work is to work towards it without stipulations on what a reasonable level of first-class support needs to be for interoperability in a well-controlled manner.</blockquote>
+<blockquote>
+
+**Important Note**:
+
+While this proposal presents the complete syntaxes for first-class support of bindings, the more fundamental aspect of this work is to work towards it without stipulations on what a reasonable level of first-class support needs to be for interoperability in a well-controlled manner.
+
+The critical contribution offered by this work will most likely lie solely in the need to separate out the specifications for affecting live bindings to and from cross-scoped variables. As of _ES_~~¹⁰~~, this behaviour is strictly that which is most faithfully approximated by all conforming implementations of SourceTextModule.
+
+</blockquote>
 
 </section>
 

@@ -2,9 +2,7 @@
 
 # smotaal.io/experimental
 
-<h2>
-
-<!-- **[<kbd>Components</kbd>](/components/README)** -->
+<h1>
 
 **[<kbd>Markup</kbd>](/markup/README)**
 **[<kbd>Markout</kbd>](/markout/README)**
@@ -13,7 +11,7 @@
 **[<kbd>Quench</kbd>](/quench/)**
 **[<kbd>`Experimental`</kbd>](../ 'Play it safe!')**
 
-</h2>
+</h1>
 
 </div>
 
