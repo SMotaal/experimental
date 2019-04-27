@@ -2,9 +2,9 @@
 import {loadSourceTextFrom, matchAll, LineBreaks, dynamicImport, createBlobURL, createDataURL} from './helpers.js';
 import {tabular} from './tabular.grammar.js';
 
-const $tabular = (globalThis.$tabular = async (...args) => {
-	const {load, normalize} = $tabular;
-	const {copy} = {...args[args.length - 1]};
+export const FDF = (globalThis.FDF = async (...args) => {
+	const {load, normalize} = FDF;
+	const {copy, container} = {...args[args.length - 1]};
 
 	const sourceText = await load(
 		(args[0] && typeof args[0] === 'string') ||
@@ -18,8 +18,7 @@ const $tabular = (globalThis.$tabular = async (...args) => {
 
 	const debugMatcher =
 		options.segmentation &&
-		($tabular.debugMatcher ||
-			($tabular.debugMatcher = (await dynamicImport('/modules/matcher/matcher.debug.js')).debugMatcher));
+		(FDF.debugMatcher || (FDF.debugMatcher = (await dynamicImport('/modules/matcher/matcher.debug.js')).debugMatcher));
 
 	const debugOptions = {
 		method: 'render',
@@ -123,11 +122,17 @@ const $tabular = (globalThis.$tabular = async (...args) => {
 
 	if (html) {
 		const innerHTML = `<style>\n\t${RENDERED_STYLE}\n</style>\n<output>${html}</output>`;
-		if (typeof copy === 'function') {
+		if (copy) {
+			if (typeof copy !== 'function')
+				throw TypeError(`FDF expects the "copy" parameter to be a function not ${typeof copy}.`);
 			copy(innerHTML);
 			console.log('copied');
+		} else if (container) {
+			if (container.nodeType !== document.ELEMENT_NODE)
+				throw TypeError(`FDF expects the "container" parameter to be a valid element`);
+			container.innerHTML = innerHTML;
 		} else {
-			const {template = ($tabular.template = document.createElement('template'))} = $tabular;
+			const {template = (FDF.template = document.createElement('template'))} = FDF;
 			template.innerHTML = `<!DOCTYPE html>\n<html>\n<head>\n\t<meta charset="utf-16" />\n</head>\n<body>\n${innerHTML}\n</body>\n</html>\n`;
 			// if (typeof safari === 'object') return console.log(template);
 			const body = template.innerHTML;
@@ -138,11 +143,11 @@ const $tabular = (globalThis.$tabular = async (...args) => {
 	}
 });
 
-$tabular.parse = async specifier => {};
+FDF.parse = async specifier => {};
 
-$tabular.normalize = text => text.replace(/((?=^ *)|(?= *$)|[^\r\n\t\s] (?= *[^\r\n\t\s])|) */gm, '$1');
+FDF.normalize = text => text.replace(/((?=^ *)|(?= *$)|[^\r\n\t\s] (?= *[^\r\n\t\s])|) */gm, '$1');
 
-$tabular.load = async specifier => {
+FDF.load = async specifier => {
 	const url = specifier ? new URL(specifier, location) : `${new URL(`./examples/${options.example}`, import.meta.url)}`;
 	const sourceText = await loadSourceTextFrom(url);
 	if (sourceText) return sourceText;

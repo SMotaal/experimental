@@ -15,9 +15,10 @@ export const tabular = (() => {
 	const matcher = Matcher.define(
 		entity =>
 			sequence`^(?:
-				${entity('row')}(?:(.*\t.*))|
-				${entity('slug')}(?:(.*\w.*))|
-				${entity('feed')}(?:(.*))
+				${entity('row')}(?: *(.*\t.*) *)|
+				${entity('slug')}(?: *\[ +(.*\w.*) +\] *)|
+				${entity('slug')}(?: *(.*\w.*) *)|
+				${entity('feed')}(?: *())
 			)$(?:\r\n|\n)?`,
 		'gmi',
 	);
@@ -30,7 +31,7 @@ export const tabular = (() => {
 					(?:
 						(?=[^\s\t\n\r]+.*? *(?:[\t\n\r]|$))
 						(?:
-							(?:\((${entity('comment')}[^\t\n\r\)]+)\))|
+							(?:\[ +(${entity('comment')}[^\t\n\r\)]+) +\])|
 							(?:
 								(${(entity('numeric'), sequences.NUMERIC)})|
 								(${(entity('sequence'), sequences.SEQUENCE)})
