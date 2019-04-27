@@ -10,13 +10,12 @@
 
 </blockquote>
 
-### Syntax Grammar
+### Motivating Example
 
-The formal syntax is tentatively documented in the public [Fluent Data Format](/meta/public/Fluent-Data-Format.md) document.
-
-<details><summary><b>TDF Example</b></summary>
+<details><summary><b>Target Definition</b></summary>
 
 <!--prettier-ignore-start-->
+<small>
 
 ```log
 Target Name	Contrast-Resolution Test Target
@@ -99,9 +98,22 @@ Step Wedge Coordinates from UL corner of Target to center of Zero or Solid patch
 	 6	 -21.5	 222.6	 -11.5	 222.6	 -21.5	 44.6	 -11.5	 44.6
 ```
 
+</small>
+
 <!--prettier-ignore-end-->
 
 </details>
+
+<details><summary><b>Generated Tokens</b></summary>
+
+<output>
+<script src="./tokens.spec.js"></script>
+</output>
+</details>
+
+### Syntax Grammar
+
+The formal syntax is tentatively documented in the public [Fluent Data Format](/meta/public/Fluent-Data-Format.md) document.
 
 ### Matcher Definitions
 
