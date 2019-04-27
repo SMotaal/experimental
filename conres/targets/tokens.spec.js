@@ -2,13 +2,14 @@
 	if (!currentScript || !currentScript.parentElement.matches('output'))
 		throw Error(`Markout: Failed to run "tokens.spec.js" script`);
 
-	await new Promise(resolve => setTimeout(resolve, 500));
+	await new Promise(resolve => setTimeout(resolve, 1000));
 
 	// const {FDF} = await import(new URL('./tabular.matcher.spec.js', (currentScript && currentScript.src) || location));
 
 	/** @type {{parentElement: HTMLOutputElement}} */
 	const {parentElement} = currentScript;
 
+	parentElement.innerHTML = '';
 	const parent = parentElement.appendChild(document.createElement('div'));
 	const shadowRoot = parent.attachShadow({mode: 'open'});
 	const container = shadowRoot.appendChild(document.createElement('div'));

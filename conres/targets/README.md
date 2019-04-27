@@ -14,8 +14,9 @@
 
 <details><summary><b>Target Definition</b></summary>
 
-<!--prettier-ignore-start-->
+<div style="overflow-y: scroll; max-height: 75vh;">
 <small>
+<!--prettier-ignore-start-->
 
 ```log
 Target Name	Contrast-Resolution Test Target
@@ -98,16 +99,17 @@ Step Wedge Coordinates from UL corner of Target to center of Zero or Solid patch
 	 6	 -21.5	 222.6	 -11.5	 222.6	 -21.5	 44.6	 -11.5	 44.6
 ```
 
-</small>
-
 <!--prettier-ignore-end-->
+</small>
+</div>
 
 </details>
 
-<details><summary><b>Generated Tokens</b></summary>
+<details open><summary><b>Generated Tokens</b></summary>
 
-<output>
-<script src="./tokens.spec.js"></script>
+<output style="overflow-y: scroll; max-height: 75vh;">
+<script defer src="./tokens.spec.js"></script>
+
 </output>
 </details>
 
