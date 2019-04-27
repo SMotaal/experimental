@@ -106,11 +106,12 @@ Step Wedge Coordinates from UL corner of Target to center of Zero or Solid patch
 </details>
 
 <details open><summary><b>Generated Tokens</b></summary>
-
-<output style="overflow-y: scroll; max-height: 75vh;">
+<figure style="overflow-y: scroll; max-height: 75vh;">
+<output>
 <script defer src="./tokens.spec.js"></script>
 
 </output>
+</figure>
 </details>
 
 ### Syntax Grammar
