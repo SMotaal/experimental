@@ -15,34 +15,32 @@ export const tabular = (() => {
 	const matcher = Matcher.define(
 		entity =>
 			sequence`^(?:
-				${entity('row')}(?: *(.*\t.*) *)|
-				${entity('slug')}(?: *\[ +(.*\w.*) +\] *)|
-				${entity('slug')}(?: *(.*\w.*) *)|
-				${entity('feed')}(?: *())
+				(?:${entity((text, index, match) => {
+					match.capture.row = Matcher.matchAll(text, matcher.row); // [...Matcher.matchAll(text, matcher.row)];
+					match.identity = 'row';
+				})} *(.*\t.*) *)|
+				(?:${entity('slug')} *\[ +(.*\w.*) +\] *)|
+				(?:${entity('slug')} *(.*\w.*) *)|
+				(?:${entity('feed')} *())
 			)$(?:\r\n|\n)?`,
-		'gmi',
+		'gmiu',
 	);
 
+	// (?=[^\t\(]*(${(entity('unit'), sequences.UNIT)})|)
 	matcher.row = Matcher.define(
 		entity =>
-			sequence`
-				(?:
-					(?: *)
-					(?:
-						(?=[^\s\t\n\r]+.*? *(?:[\t\n\r]|$))
-						(?:
-							(?:\[ +(${entity('comment')}[^\t\n\r\)]+) +\])|
-							(?:
-								(${(entity('numeric'), sequences.NUMERIC)})|
-								(${(entity('sequence'), sequences.SEQUENCE)})
-							)
-							(?:(${(entity('unit'), sequences.UNIT)})|)
-						)|
-						(${entity('empty')}(?= *\t))
-					)
-					(?: *)
-				)(${entity(DELIMITER)}[\t\n\r]|$)
-				`,
+			sequence`(?:(?: *)(?:
+				(?=[^\s\t\n\r]+.*? *(?:[\t\n\r]|$))(?:
+					(?:\[ +(${entity('comment')}[^\t\n\r\)]+) +\])|(?:
+						(${entity((text, index, match) => {
+							match.capture.numeric = parseFloat(text);
+							match.identity = 'numeric';
+						})}${sequences.NUMERIC})|
+						(${(entity('sequence'), sequences.SEQUENCE)})
+					)(?:(${(entity('unit'), sequences.UNIT)})|)
+				)|
+				(${entity('empty')}(?= *\t))
+			)(?: *))(${entity(DELIMITER)}[\t\n\r]|$)`,
 		'giu',
 	);
 

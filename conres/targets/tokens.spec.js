@@ -1,47 +1,45 @@
 ﻿(async currentScript => {
-	if (!currentScript || !currentScript.parentElement.matches('output'))
-		throw Error(`Markout: Failed to run "tokens.spec.js" script`);
+	let container, parent, root;
+	try {
+		(currentScript && currentScript.parentElement.matches('output')) ||
+			(await Promise.reject(Error(`Markout: Failed to run "tokens.spec.js" script`)));
 
-	await new Promise(resolve => setTimeout(resolve, 1000));
+		(container = (root = currentScript.parentElement
+			.appendChild((parent = document.createElement('div')))
+			.attachShadow({mode: 'open'})).appendChild(document.createElement('div'))).innerHTML =
+			'<center style="color: #999">Loading…</center>';
 
-	// const {FDF} = await import(new URL('./tabular.matcher.spec.js', (currentScript && currentScript.src) || location));
+		for (
+			let n = 5, idle;
+			!globalThis.FDF &&
+			(n-- ||
+				// !await import(new URL('./tabular.matcher.spec.js', (currentScript && currentScript.src) || location))
+				(await Promise.reject(Error(`Fail: FDF is undefined`))));
+			await new Promise(idle || (idle = resolve => setTimeout(resolve, 200)))
+		);
+		container.innerHTML = '<center style="color: #999">Generating…</center>';
+		await new Promise(requestAnimationFrame);
 
-	/** @type {{parentElement: HTMLOutputElement}} */
-	const {parentElement} = currentScript;
+		FDF({container});
 
-	parentElement.innerHTML = '';
-	const parent = parentElement.appendChild(document.createElement('div'));
-	const shadowRoot = parent.attachShadow({mode: 'open'});
-	const container = shadowRoot.appendChild(document.createElement('div'));
-
-	FDF({container});
-
-	console.log({parent, shadowRoot, container});
-
-	// const {default: spec} = await import(new URL(
-	// 	'./lib/globs.spec.js',
-	// 	(currentScript && currentScript.src) || location,
-	// ));
-	// const logger = {...console};
-	// try {
-	// 	const {parentElement} = currentScript;
-	// 	if (parentElement) {
-	// 		logger.dir = (value, options) => {
-	// 			parentElement
-	// 				.appendChild(document.createElement('pre'))
-	// 				.appendChild(document.createElement('code'))
-	// 				.appendChild(new Text(value));
-	// 		};
-	// 		logger.table = object => {
-	// 			logger.dir(JSON.stringify(object, null, 2).replace(/\\\\/g, '\\'));
-	// 		};
-	// 		logger.log = logger.table;
-	// 	}
-	// } finally {
-	// 	try {
-	// 		spec({logger});
-	// 	} catch (exception) {
-	// 		logger.dir(exception);
-	// 	}
-	// }
-})(document['--currentScript--'] || document.currentScript).catch(console.warn);
+		Object.assign(root.appendChild(document.createElement('style')), {
+			textContent: (css => css`
+				:host(:not(:active)) > div {
+					pointer-events: none;
+				}
+				:host {
+					user-select: none;
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					cursor: default;
+				}
+			`)(String.raw),
+		});
+	} catch (exception) {
+		container && (container.innerHTML = `<center style="color: red">${exception}</center>`);
+		throw (exception.stack, exception);
+	}
+})(
+	/** @type {HTMLScriptElement {parentElement: HTMLOutputElement}} */
+	document['--currentScript--'] || document.currentScript,
+);
