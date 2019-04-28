@@ -4,7 +4,7 @@ import {tabular} from './tabular.grammar.js';
 
 export const FDF = (globalThis.FDF = async (...args) => {
 	const {load, normalize} = FDF;
-	const {copy, container} = {...args[args.length - 1]};
+	const {copy, container, method = 'render'} = {...args[args.length - 1]};
 
 	const sourceText = await load(
 		(args[0] && typeof args[0] === 'string') ||
@@ -21,7 +21,7 @@ export const FDF = (globalThis.FDF = async (...args) => {
 		(FDF.debugMatcher || (FDF.debugMatcher = (await dynamicImport('/modules/matcher/matcher.debug.js')).debugMatcher));
 
 	const debugOptions = {
-		method: 'render',
+		method: (method && method in console && method) || 'render',
 		colors: Object.assign([...debugMatcher.colors], {
 			row: '#CCCC00',
 			feed: '#FF0066',
@@ -38,16 +38,17 @@ export const FDF = (globalThis.FDF = async (...args) => {
 
 	const loggers = [];
 
-	groupCollapsed(`Source ‹${typeof sourceText}›`);
-	log(
-		'%c%s',
-		'white-space: pre; tab-size: 20em; display: block; font-size: smaller;',
-		LineBreaks.replace(normalizedText),
-	);
-	groupEnd();
-	groupCollapsed(`Grammar ‹Tabular›`);
-	log(tabular);
-	groupEnd();
+	rendering ||
+		(groupCollapsed(`Source ‹${typeof sourceText}›`),
+		log(
+			'%c%s',
+			'white-space: pre; tab-size: 20em; display: block; font-size: smaller;',
+			LineBreaks.replace(normalizedText),
+		),
+		groupEnd(),
+		groupCollapsed(`Grammar ‹Tabular›`),
+		log(tabular),
+		groupEnd());
 
 	let html = '';
 
@@ -61,7 +62,7 @@ export const FDF = (globalThis.FDF = async (...args) => {
 		feed: feed => {
 			loggers.push(() => {
 				const rendered = debugMatcher.matches([feed], debugOptions);
-				rendered.length && (html += `<div>\n\t${rendered.join('\n\t')}\n</div>`);
+				rendering && rendered.length && (html += `<div>\n\t${rendered.join('\n\t')}\n</div>`);
 			});
 			rows && rows.length && ((rows.feed = feed[0]), (rows.index = sections.push(rows) - 1));
 			rows = undefined;
@@ -75,36 +76,24 @@ export const FDF = (globalThis.FDF = async (...args) => {
 			(rows || (rows = [])).slug = slug[0];
 			return slug;
 		},
-		row: tabular.matcher.row
-			? row => {
-					const matches = [...matchAll(row[0], tabular.matcher.row)];
-					loggers.push(() => {
-						const rendered = debugMatcher.matches([row], debugOptions);
-						const cells = debugMatcher.matches(matches, debugOptions);
-						rendering &&
-							(cells.length && rendered.push(`\n\t<output>${cells.join('\n\t\t')}\n\t</output>`),
-							rendered.length && (html += `<div>\n\t${rendered.join('\n\t')}\n</div>`));
-					});
-					return matches;
-			  }
-			: row => {
-					const cells = row[0].split('\t');
-					loggers.push(() => {
-						const rendered = debugMatcher.matches([row], debugOptions);
-						rendering && rendered.length && (html += `<div>\n\t${rendered.join('\n\t')}\n</div>`);
-					});
-					return cells;
-			  },
-		// unknown: unknown => {
-		// 	loggers.push(() => {
-		// 		const rendered = debugMatcher.matches([unknown], debugOptions);
-		// 		rendering && rendered.length && (html += `<div>\n\t${rendered.join('\n\t')}\n</div>`);
-		// 	});
-		// 	return unknown;
-		// },
+		row: row => {
+			const {
+				capture: {row: captured},
+			} = row;
+			const matches = captured && (('length' in captured && captures) || (row.capture.row = [...captured]));
+			loggers.push(() => {
+				const rendered = debugMatcher.matches([row], debugOptions);
+				const cells = debugMatcher.matches(matches, debugOptions);
+				rendering &&
+					(cells.length && rendered.push(`\n\t<output>${cells.join('\n\t\t')}\n\t</output>`),
+					rendered.length &&
+						(html += `<div style="display: flex; flex-flow: column;">\n\t${rendered.join('\n\t')}\n</div>`));
+			});
+			return matches;
+		},
 	});
 
-	for (const match of [...matchAll(normalizedText, tabular.matcher)]) {
+	for (const match of matchAll(normalizedText, tabular.matcher)) {
 		const segmenter = match && segmenters[match.identity];
 		segments.push(segmenter ? segmenter(match) : match);
 	}
@@ -131,14 +120,14 @@ export const FDF = (globalThis.FDF = async (...args) => {
 			if (container.nodeType !== document.ELEMENT_NODE)
 				throw TypeError(`FDF expects the "container" parameter to be a valid element`);
 			container.innerHTML = innerHTML;
-		} else {
+		} else if (method === 'render') {
 			const {template = (FDF.template = document.createElement('template'))} = FDF;
-			template.innerHTML = `<!DOCTYPE html>\n<html>\n<head>\n\t<meta charset="utf-16" />\n</head>\n<body>\n${innerHTML}\n</body>\n</html>\n`;
+			template.innerHTML = `<!DOCTYPE html>\n<html class="rendered">\n<head>\n\t<meta charset="utf-16" />\n</head>\n<body>\n${innerHTML}\n</body>\n</html>\n`;
 			// if (typeof safari === 'object') return console.log(template);
 			const body = template.innerHTML;
 			const url = [createBlobURL, createDataURL][0](body, {type: 'text/html'});
 			open(url, '_blank');
-			/^blob:/.test(url) && setTimeout(() => URL.revokeObjectURL(url), 1000);
+			// /^blob:/.test(url) && setTimeout(() => URL.revokeObjectURL(url), 1000);
 		}
 	}
 });
@@ -159,7 +148,7 @@ const {log, warn, group, groupCollapsed, groupEnd, table, time, timeEnd} = conso
 const RENDERED_STYLE = (css => css`
 	@import 'https://www.smotaal.io/pholio/styles/fonts/iosevka/iosevka.css';
 
-	html {
+	html.rendered {
 		max-width: 100vw;
 		min-height: 100vh;
 		-webkit-text-size-adjust: 100%;
@@ -167,10 +156,9 @@ const RENDERED_STYLE = (css => css`
 		padding: 0;
 	}
 
-	body {
+	html.rendered body {
 		min-height: inherit;
 		max-width: inherit;
-		/* display: grid; */
 		margin: 0;
 		padding: 0;
 	}
@@ -195,7 +183,7 @@ const RENDERED_STYLE = (css => css`
 	}
 
 	output pre {
-		position: relative;
+		/* position: relative; */
 		line-break: loose;
 		white-space: pre-wrap;
 		display: grid;
@@ -205,6 +193,7 @@ const RENDERED_STYLE = (css => css`
 		align-items: baseline;
 		margin: 0;
 		scroll-snap-align: start;
+		/* z-index: 1; */
 	}
 
 	output output {
@@ -247,28 +236,30 @@ const RENDERED_STYLE = (css => css`
 	}
 
 	@media only screen {
-		body {
-			overflow-x: hidden;
-			overflow-y: scroll;
-			overflow-anchor: auto;
-			columns: 45em;
-			/* font-size: calc(0.75rem + 0.5vmin + 0.25vmax); */
+		output pre > span:hover *,
+		output pre > span:hover + * {
+			pointer-events: none;
 		}
-
-		output,
-		output pre {
-			contain: layout;
-		}
-
-		output pre span:hover::after {
+		output pre > span:hover::after {
 			content: var(--details);
-			float: right;
-			/* position: absolute; */
+			position: absolute;
+			display: block;
+			right: 0;
+			left: 0;
+			white-space: pre;
+			padding: 0.5ex;
+			background: #fff;
+			text-shadow: 0 0 0 var(--color, #999);
+			color: #9999;
+			border: 1px solid var(--color, #999);
+			/* overflow-x: hidden; */
+			/* text-overflow: ellipsis; */
+			z-index: 1;
 		}
 	}
 
 	@media print {
-		body {
+		html.rendered body {
 			font-size: 10pt;
 		}
 	}
@@ -277,6 +268,6 @@ const RENDERED_STYLE = (css => css`
 	span {
 		page-break-before: auto;
 		page-break-inside: avoid;
-		box-sizing: border-box;
+		/* box-sizing: border-box; */
 	}
 `)(String.raw);

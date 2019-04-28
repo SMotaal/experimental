@@ -14,8 +14,6 @@
 
 <details><summary><b>Target Definition</b></summary>
 
-<div style="overflow-y: scroll; max-height: 75vh;">
-<small>
 <!--prettier-ignore-start-->
 
 ```log
@@ -100,17 +98,12 @@ Step Wedge Coordinates from UL corner of Target to center of Zero or Solid patch
 ```
 
 <!--prettier-ignore-end-->
-</small>
-</div>
 
 </details>
 
 <details open><summary><b>Generated Tokens</b></summary>
-<figure style="overflow-y: scroll; max-height: 75vh;">
-<output>
-<script defer src="./tokens.spec.js"></script>
-
-</output>
+<figure style="overflow-y: scroll; max-height: 75vh; margin: 0;   -webkit-overflow-scrolling: touch;">
+<output><script defer src="./tokens.spec.js"></script></output>
 </figure>
 </details>
 
