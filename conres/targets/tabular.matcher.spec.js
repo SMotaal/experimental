@@ -4,7 +4,7 @@ import {tabular} from './tabular.grammar.js';
 
 export const FDF = (globalThis.FDF = async (...args) => {
 	const {load, normalize} = FDF;
-	const {copy, container, method = 'render'} = {...args[args.length - 1]};
+	const {copy, container, method = 'render', timing = method !== 'render'} = {...args[args.length - 1]};
 
 	const sourceText = await load(
 		(args[0] && typeof args[0] === 'string') ||
@@ -93,10 +93,12 @@ export const FDF = (globalThis.FDF = async (...args) => {
 		},
 	});
 
+	timing && console.time('parsing');
 	for (const match of matchAll(normalizedText, tabular.matcher)) {
 		const segmenter = match && segmenters[match.identity];
 		segments.push(segmenter ? segmenter(match) : match);
 	}
+	timing && console.timeEnd('parsing');
 
 	for (const section of sections) {
 		if (!section) continue;
