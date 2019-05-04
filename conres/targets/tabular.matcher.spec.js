@@ -50,30 +50,22 @@ export const FDF = (globalThis.FDF = async (...args) => {
 		log(tabular),
 		groupEnd());
 
-	let html = '';
-
-	const parsed = {};
-	const segments = (parsed.segments = []);
-	const sections = (parsed.tables = []);
-
-	let rows;
-
 	const segmenters = Object.freeze({
 		feed: feed => {
 			loggers.push(() => {
 				const rendered = debugMatcher.matches([feed], debugOptions);
-				rendering && rendered.length && (html += `<div>\n\t${rendered.join('\n\t')}\n</div>`);
+				return (rendering && rendered.length && `<div>\n\t${rendered.join('\n\t')}\n</div>`) || '';
 			});
-			rows && rows.length && ((rows.feed = feed[0]), (rows.index = sections.push(rows) - 1));
-			rows = undefined;
+			// rows && rows.length && ((rows.feed = feed[0]), (rows.index = sections.push(rows) - 1));
+			// rows = undefined;
 			return feed;
 		},
 		slug: slug => {
 			loggers.push(() => {
 				const rendered = debugMatcher.matches([slug], debugOptions);
-				rendering && rendered.length && (html += `<div>\n\t${rendered.join('\n\t')}\n</div>`);
+				return (rendering && rendered.length && `<div>\n\t${rendered.join('\n\t')}\n</div>`) || '';
 			});
-			(rows || (rows = [])).slug = slug[0];
+			// (rows || (rows = [])).slug = slug[0];
 			return slug;
 		},
 		row: row => {
@@ -84,32 +76,29 @@ export const FDF = (globalThis.FDF = async (...args) => {
 			loggers.push(() => {
 				const rendered = debugMatcher.matches([row], debugOptions);
 				const cells = debugMatcher.matches(matches, debugOptions);
-				rendering &&
-					(cells.length && rendered.push(`\n\t<output>${cells.join('\n\t\t')}\n\t</output>`),
-					rendered.length &&
-						(html += `<div style="display: flex; flex-flow: column;">\n\t${rendered.join('\n\t')}\n</div>`));
+				return (
+					(rendering &&
+						(cells.length && rendered.push(`\n\t<output>${cells.join('\n\t\t')}\n\t</output>`),
+						rendered.length &&
+							`<div style="display: flex; flex-flow: column;">\n\t${rendered.join('\n\t')}\n</div>`)) ||
+					''
+				);
 			});
 			return matches;
 		},
 	});
 
 	timing && console.time('parsing');
-	for (const match of matchAll(normalizedText, tabular.matcher)) {
-		const segmenter = match && segmenters[match.identity];
-		segments.push(segmenter ? segmenter(match) : match);
-	}
+	const segments = FDF.parse({normalizedText, segmenters});
 	timing && console.timeEnd('parsing');
 
-	for (const section of sections) {
-		if (!section) continue;
-		group('%s (%d:%d)', section.slug || section[0][0], section.length, section[0].length);
-		table([...section]);
-		groupEnd();
-	}
+	// log(segments);
 
-	log(parsed);
+	if (!loggers.length) return;
 
-	for (const logger of loggers) logger();
+	timing && console.time('logging');
+	const html = FDF.dump(loggers);
+	timing && console.timeEnd('logging');
 
 	if (html) {
 		const innerHTML = `<style>\n\t${RENDERED_STYLE}\n</style>\n<output>${html}</output>`;
@@ -117,7 +106,6 @@ export const FDF = (globalThis.FDF = async (...args) => {
 			if (typeof copy !== 'function')
 				throw TypeError(`FDF expects the "copy" parameter to be a function not ${typeof copy}.`);
 			copy(innerHTML);
-			console.log('copied');
 		} else if (container) {
 			if (container.nodeType !== document.ELEMENT_NODE)
 				throw TypeError(`FDF expects the "container" parameter to be a valid element`);
@@ -134,7 +122,18 @@ export const FDF = (globalThis.FDF = async (...args) => {
 	}
 });
 
-FDF.parse = async specifier => {};
+FDF.parse = ({normalizedText, segmenters = {}, segments = []}) => {
+	[...matchAll(normalizedText, tabular.matcher)].forEach(
+		match => match && segments.push(match.identity in segmenters ? segmenters[match.identity](match) : match),
+	);
+	return segments;
+};
+
+FDF.dump = loggers => {
+	const output = [];
+	for (const logger of loggers) output.push(logger());
+	return output.filter(Boolean).join('');
+};
 
 FDF.normalize = text => text.replace(/((?=^ *)|(?= *$)|[^\r\n\t\s] (?= *[^\r\n\t\s])|) */gm, '$1');
 
@@ -173,6 +172,7 @@ const RENDERED_STYLE = (css => css`
 
 	output {
 		display: inline-grid;
+		/* display: grid; */
 		grid-auto-flow: row;
 		grid-auto-rows: minmax(min-content, max-content);
 		grid-gap: 0.5em;
@@ -188,9 +188,9 @@ const RENDERED_STYLE = (css => css`
 		/* position: relative; */
 		line-break: loose;
 		white-space: pre-wrap;
-		display: grid;
-		grid-auto-flow: column;
-		grid-auto-columns: minmax(min-content, max-content);
+		/* display: grid; */
+		/* grid-auto-flow: column; */
+		/* grid-auto-columns: minmax(min-content, max-content); */
 		place-content: start;
 		align-items: baseline;
 		margin: 0;
@@ -204,24 +204,30 @@ const RENDERED_STYLE = (css => css`
 	}
 
 	output pre > span {
-		display: inline-block;
+		/* display: inline-block; */
 	}
 
 	output pre tt.tab {
 		text-decoration-line: line-through;
-		text-decoration-width: 2px;
-		text-decoration-thickness: 2px;
+		text-decoration-width: 1px;
+		text-decoration-thickness: 1px;
 		padding: 0 0.25em;
 		display: inline-block;
 		tab-size: 1.5;
-		border-left: 2px solid currentColor;
-		border-right: 2px solid currentColor;
-		transform: scaleY(0.75) scaleX(0.9);
+		border: 0 solid transparent;
+		border-left: 1px solid currentColor;
+		border-right: 1px solid currentColor;
+		/* font-size: 90%; */
+		line-height: 100%;
+		/* margin: 0.25em 0; */
+		/* overflow: hidden; */
+		/* transform: scaleY(0.75) scaleX(0.9); */
 		opacity: 0.75;
+		/* z-index: -1; */
 	}
 
 	output output > pre::before {
-		content: counter(index) ':';
+		content: counter(index) ' ';
 		color: #9996;
 		overflow-x: visible;
 		text-align: right;
@@ -238,9 +244,9 @@ const RENDERED_STYLE = (css => css`
 	}
 
 	@media only screen {
-		output pre > span:hover *,
-		output pre > span:hover + * {
-			pointer-events: none;
+		/* output pre > span:hover + *, */
+		output pre > span:hover * {
+			/* pointer-events: none; */
 		}
 		output pre > span:hover::after {
 			content: var(--details);
@@ -254,8 +260,9 @@ const RENDERED_STYLE = (css => css`
 			text-shadow: 0 0 0 var(--color, #999);
 			color: #9999;
 			border: 1px solid var(--color, #999);
-			/* overflow-x: hidden; */
-			/* text-overflow: ellipsis; */
+			/* overflow: hidden; */
+			/* font-size: calc(0.75vw + 0.75vh); */
+			/* line-height: 125%; */
 			z-index: 1;
 		}
 	}
