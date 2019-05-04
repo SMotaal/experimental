@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Markout</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<link rel="stylesheet" href="/pholio/styles/fonts/iosevka/iosevka.css" />
+		<link rel="stylesheet" href="/pholio/styles/styles.css" />
+		<link rel="alternate" href="./README.md" type="text/markdown" />
+		<style>
+			html {
+				--shade: #6699aaf6;
+			}
+			/*
+      html:not([checkerboard]) {
+        background: var(--shade, #EEE);
+      }
+
+			body > main > * {
+				opacity: 1;
+				background-color: #fffffff0;
+        box-shadow: 0 1px 20px -10px #000;
+			}
+
+      script,
+      style,
+      template,
+      :not(:defined),
+      [hidden] {
+        display: none;
+      }
+      */
+		</style>
+		<script type="module" src="/browser/markout-preview.js"></script>
+	</head>
+
+	<body>
+		<main>
+			<markout-content></markout-content>
+		</main>
+	</body>
+</html>

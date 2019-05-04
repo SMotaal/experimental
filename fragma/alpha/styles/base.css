@@ -1,0 +1,69 @@
+:root {
+  background: radial-gradient(lightgreen, orange);
+  background-size: 150%;
+  box-shadow: 0 0 5px #FFF9;
+  box-sizing: border-box;
+  --outer-margin: 1rem;
+  --inner-margin: 1rem;
+}
+
+html {
+  margin: 0;
+
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: content-box;
+}
+
+body {
+  --using-custom-properties: 'Chris Lorenzo (@chiefcll) fix for chrome recalculate styles bug';
+
+  margin: 0;
+
+  background: border-box radial-gradient(#EFFD, #EFFD);
+  max-width: 100%;
+  min-height: calc(100vh - 2 * var(--outer-margin, 0));
+  padding: var(--inner-margin, 1rem);
+  margin: var(--outer-margin, 0);
+  box-shadow: 0 0 2.5pt 0.5pt #FFF3,
+  0 0 10pt -5pt #0006,
+  0 0 1.25pt -0.375pt #0009;
+}
+
+red {
+  color: red;
+}
+
+green {
+  color: green;
+  font-weight: bold;
+}
+
+.fill {
+  background-color: var(--fill, red);
+}
+
+component-a {
+  /* contain: layout; */
+}
+
+::message {
+  background-color: green;
+}
+
+:not(:defined) {
+  /* contain: layout size; */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0.2
+  }
+  100% {
+    opacity: 1.0
+  }
+}
+
+:defined {
+  animation: fade-in 1s;
+}

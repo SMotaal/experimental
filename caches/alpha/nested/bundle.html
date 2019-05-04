@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Bundle Test</title>
+  <link rel=prefetch href="/static/bundle-a.html" bundle>
+  <script src="/prototypes/prototypes.js"></script>
+  <script src="/caches.js"></script>
+</head>
+
+<body>
+  <script type=module>
+    import { CacheEntriesElement } from '/components/cache-entries-element.mjs';
+
+    /**
+     * Bundles is a browser-side proof of concept which populates caches then
+     * loads the entry into a partial-sandboxed (or not) iframe. Different
+     * implementation criteria will be needed between development and
+     * production environments, and the notion of using HTMLTemplates is simple
+     * one idea for declarative content.
+     */
+
+    const defaultCache = self.caches.open('default');
+
+    const safari = `${navigator.vendor || ''}`.startsWith('Apple');
+    const firefox = `${navigator.userAgent || ''}`.includes('Firefox');
+
+    const { freeze, defineProperty, defineProperties, getOwnPropertyDescriptors, getPrototypeOf } = Object;
+
+    const template = document.createElement('template');
+
+    const prefetch = async href => {
+      const response = await fetch(href);
+      const textContent = (await response.text()).replace(/\{\{timestamp\}\}/g, (new Date).toLocaleTimeString());
+      const type = 'text/html';
+      template.innerHTML = textContent;
+      const bundle = template.content.children[0].cloneNode(true);
+      return bundle;
+    }
+
+    const preload = async (src) => {
+      try {
+        const response = await fetch(src);
+        const body = await response.text();
+        return { src, response, body };
+      } catch (error) {
+        return { src, error };
+      }
+    }
+
+    const open = async ({
+      src, srcdoc,
+      container = document.body, frame = document.createElement('iframe'),
+    }) => {
+      frame.src = src;
+      // if (!firefox) setTimeout(() => { frame.src = src }, 100);
+      // else frame.src = src;
+      if (!frame.isConnected) {
+        // frame.frameBorder = true;
+        frame.style.width = '100%';
+        // frame.sandbox = "allow-same-origin allow-scripts";
+      }
+
+      frame.isConnected || container.appendChild(frame);
+      return frame;
+    }
+
+    self.prefetched = (async () => {
+      const selector = 'link[rel*=prefetch][bundle]';
+      // const selector = 'link[rel*=preload][as*=fetch][bundle]';
+      const links = document.querySelectorAll(selector);
+      for (const link of links)
+        document.body.prepend(await prefetch(link.href));
+      // console.trace('prefetched');
+    })();
+
+    self.precached = (async () => {
+        // const { CacheEntriesElement } = await import('/components/cache-entries-element.mjs');
+        await self.prefetched;
+        await CacheEntriesElement;
+        // await navigator.serviceWorker.ready;
+
+        const cacheEntries = CacheEntriesElement.in(document);
+        let index;
+
+        for (const cacheEntry of cacheEntries) {
+          const entries = await CacheEntriesElement.put(cacheEntry, defaultCache);
+          const entry = !index && entries.get('index.html');
+          if (entry) {
+            index = { src: entry.src };
+            // const { src, body: srcdoc, error } = await preload(entry.src);
+            // // index = { src: entry.src, srcdoc };
+            // if (!error) index = { src, srcdoc };
+            // else console.warn(error);
+          }
+          console.log(`[Client %O %s] %o`, cacheEntry, 'cached', entries);
+        }
+
+        if (index) {
+          // safari && await new Promise(resolve => setTimeout(resolve, 1000));
+          open(index);
+        }
+
+        console.trace('precached');
+      })();
+  </script>
+
+  <!-- <script type=module src>
+    `${navigator.vendor || ''}`.startsWith('Apple') || (async () => {
+      await navigator.serviceWorker.ready;
+      await self.precached;
+      const default_1 = await import('./caches/bundle.html/export-default-1.mjs');
+      const default_url = await import('./caches/bundle.html/export-default-1.mjs');
+      console.log('<bundle.html> — import %o', {
+        'export-default-1.mjs': default_1,
+        'export-default-1.mjs': default_url,
+      });
+    })()
+
+  </script> -->
+
+
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+
+  <h1>Client-driven Service-Worker</h1>
+
+  <p>This demonstrates the potential for development and production payload modularization using Service Workers and client-side
+    Caches.
+  </p>
+
+  <p>At the moment Chrome and Firefox seem to have implemented the necessary aspects of the underlaying specifications, but
+    there are signals that Safari's implementation will also be on par.</p>
+
+  <p>This demo is the product of the amazing prior and very detailed work done by the folks Mozilla's
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API" target="_blank">MDN</a> and
+    <a href="https://serviceworke.rs/" target="_blank">serviceworke.rs</a>. In contrast, the goal of this work is to replace scaffolding and minimize cognitive dissonance of
+    the work it takes to get up and running.</p>
+</body>
+
+</html>
+
+<!--
+  EXPLORING:
+
+  https://www.talater.com/adderall/
+
+-->
