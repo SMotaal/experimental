@@ -1,6 +1,6 @@
 <div align=center>
 
-# smotaal.io/experimental
+# smotaal.io
 
 <h1>
 
@@ -9,29 +9,24 @@
 **[<kbd>Meta</kbd>](/meta/README)**
 **[<kbd>Pholio</kbd>](/pholio/)**
 **[<kbd>Quench</kbd>](/quench/)**
-**[<kbd>`Experimental`</kbd>](../ 'Play it safe!')**
+**[<kbd><u>Experimental</u></kbd>](../ 'Play it safe!')**
 
 </h1>
 
-</div>
+<aside align=left>
 
-**Experimental Work**
+## ECMAScript Experiments
 
-- ECMAScript
+- [Modules](./modules/README)
+- [Sandbox](./sandbox/README)
 
-  - [Modules](./modules/README)
-  - [Realms](./realms/README)
 
-- Contrast-Resolution (ConRes)
-  - [Targets](./conres/targets/README)
+</aside>
 
-<!--
-# SMotaal/Experimental
+<aside align=left>
 
-Don't dare say it does not work — until it absolutely does not work.
+## Contrast-Resolution Experiments
 
-**Note**: The experimental branch is deprecated and will be removed soon.
+- [Targets](./conres/targets/README)
 
-- <a href="/markup/README">Markup</a>
-- <a href="/pholio/">Pholio</a>
--->
+</aside>
