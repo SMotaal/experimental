@@ -1,4 +1,4 @@
-﻿# Modules › Parsing [<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/)
+﻿# Modules › Parsing <nav float-right>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/parsing/)
 
 **Experimental Work**
 

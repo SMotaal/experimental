@@ -1,6 +1,7 @@
-﻿# Modules › Bindings <code tag>Draft</code>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/bindings/)
+﻿# Modules › Bindings <nav float-right>[<kbd>GitHub</kbd>](https://github.com/SMotaal/experimental/blob/master/modules/bindings/)
 
 <section>
+
 
 ECMAScript modules introduced first-class (live/dynamic) binding semantics where it became possible for the first time to syntactically declare specific variables in scope to present as the one-way bound proxy of another from a different scope. Like other aspects of ECMAScript modules, the language as it stands today gapes too wide in offering first-class mechanisms that would leverage these additional capabilities outside the scope of ESM.
 
