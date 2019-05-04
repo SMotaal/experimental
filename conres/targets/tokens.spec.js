@@ -20,7 +20,7 @@
 		container.innerHTML = '<center style="color: #999">Generating…</center>';
 		await new Promise(requestAnimationFrame);
 
-		FDF({container});
+		FDF({container, timing: true});
 
 		Object.assign(root.appendChild(document.createElement('style')), {
 			textContent: (css => css`
@@ -32,6 +32,8 @@
 					-webkit-user-select: none;
 					-moz-user-select: none;
 					cursor: default;
+					/* font-size: calc(0.75vw + 0.75vh); */
+					/* line-height: 125%; */
 				}
 			`)(String.raw),
 		});
