@@ -3,7 +3,7 @@
 export {LineBreaks, Tabs} from './lib/normalizer.js';
 export {default as dynamicImport} from '/browser/dynamicImport.js';
 export {Segmenter} from '/modules/segmenter/segmenter.js';
-export {Matcher, INSET, OUTSET, LOOKAHEAD, UNKNOWN, matchAll} from '/modules/matcher/matcher.js';
+export {Matcher, matchAll} from '/modules/matcher/matcher.js';
 export {debugMatcher} from '/modules/matcher/matcher.debug.js';
 
 export const createDataURL = (body, {type, encode = btoa, encoding, ...attributes} = {}) =>
