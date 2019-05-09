@@ -1,7 +1,7 @@
 ﻿import {Matcher} from './helpers.js';
 
 export const tabular = (() => {
-	const {sequence, define, INSET, LOOKAHEAD, UNKNOWN, OUTSET, DELIMITER} = Matcher;
+	const {sequence, define, DELIMITER} = Matcher;
 	const sequences = {
 		NUMERIC: sequence`
 			(?:(?:[-+]|\b)(?:\d*\.\d+|\d+(?:\.(?:\d*)|)|\d+)%?(?=\W|$))|
