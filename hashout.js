@@ -214,7 +214,7 @@ typeof document !== 'object' ||
 					location.search.length > 1 && (url.search += `${url.search ? '&' : '?'}${location.search.slice(1)}`);
 					url.search && (url.search = `?${[...new Set(url.search.slice(1).split('&'))].sort().join('&')}`);
 					const DEV = /[?&]dev\b/.test(url.search);
-					const LIB = `${markoutBase}${DEV ? 'lib/browser.js' : 'dist/browser.m.js'}${url.search}`;
+					const LIB = `${markoutBase}${DEV ? 'lib/browser.js' : 'dist/browser.js'}${url.search}`;
 					await dynamicImport(new URL(LIB, markoutBase));
 					// import(new URL(LIB, markoutBase));
 				}
