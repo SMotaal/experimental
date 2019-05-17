@@ -147,7 +147,7 @@ FDF.load = async specifier => {
 const {log, warn, group, groupCollapsed, groupEnd, table, time, timeEnd} = console;
 
 const RENDERED_STYLE = (css => css`
-	@import 'https://www.smotaal.io/pholio/styles/fonts/iosevka/iosevka.css';
+	@import 'https://www.smotaal.io/fonts/iosevka.css';
 
 	html.rendered {
 		max-width: 100vw;
@@ -179,6 +179,9 @@ const RENDERED_STYLE = (css => css`
 		align-content: center;
 		align-items: baseline;
 		margin: 1em 0;
+		-webkit-tab-size: 4;
+		-moz-tab-size: 4;
+		tab-size: 4;
 		tab-size: 4;
 		font-family: 'Iosevka Web', monospace;
 		line-height: 133%;
