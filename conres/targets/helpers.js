@@ -1,7 +1,7 @@
 ﻿export {loadSourceTextFrom} from '/components/lib/fetch.js';
 // export {sequence, matchAll} from '/markout/lib/helpers.js';
 export {LineBreaks, Tabs} from './lib/normalizer.js';
-export {default as dynamicImport} from '/browser/dynamicImport.js';
+export {default as dynamicImport} from '/browser/dynamic-import.js';
 export {Segmenter} from '/modules/segmenter/segmenter.js';
 export {Matcher, matchAll} from '/modules/matcher/matcher.js';
 export {debugMatcher} from '/modules/matcher/matcher.debug.js';

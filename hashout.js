@@ -1,4 +1,4 @@
-﻿import dynamicImport from '/browser/dynamicImport.js';
+﻿import dynamicImport from '/browser/dynamic-import.js';
 
 const options = {
 	hashed: true,
