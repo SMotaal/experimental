@@ -13,7 +13,7 @@
 			let n = 5, idle;
 			!globalThis.FDF &&
 			(n-- ||
-				// !await import(new URL('./tabular.matcher.spec.js', (currentScript && currentScript.src) || location))
+				// !await import(new URL('./targets.spec.js', (currentScript && currentScript.src) || location))
 				(await Promise.reject(Error(`Fail: FDF is undefined`))));
 			await new Promise(idle || (idle = resolve => setTimeout(resolve, 200)))
 		);
