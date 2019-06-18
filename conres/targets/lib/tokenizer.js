@@ -12,7 +12,10 @@ export class Tokenizer {
 		this.prime(state, source);
 
 		/** @type {{matcher: RegExp, types: string[]}} */
-		const {matcher, types} = mode;
+		const {
+			matcher,
+			matcher: {types},
+		} = mode;
 
 		let matchIndex = state.matchIndex;
 

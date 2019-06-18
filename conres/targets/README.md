@@ -1,6 +1,6 @@
 ﻿# ConRes › Target Definitions
 
-<script type="module" src="./tabular.matcher.spec.js"></script>
+<script type="module" src="./targets.spec.js"></script>
 
 ## RegExp Matcher Prototype <code tag>Experimental</code>
 
@@ -102,7 +102,7 @@ Step Wedge Coordinates from UL corner of Target to center of Zero or Solid patch
 </details>
 
 <details open><summary><b>Generated Tokens</b></summary>
-<figure style="overflow-y: scroll; max-height: 75vh; margin: 0;   -webkit-overflow-scrolling: touch;">
+<figure overflow-y:=scroll max-height:= 75vh position:=relative>
 <output><script defer src="./tokens.spec.js"></script></output>
 </figure>
 </details>

@@ -1,8 +1,12 @@
 ﻿/* pre.markup.code[markup-syntax="css"], pre.markup.code[markup-syntax="css"] * { */
 pre.markup.code[markup-syntax] {
-  tab-size: 1em;
+	-webkit-tab-size: 2;
+	-moz-tab-size: 2;
+	tab-size: 2;
 }
-pre.markup.code[markup-syntax=log] {
-  tab-size: 12em !important;
-  /* font-size: 75%; */
+pre.markup.code[markup-syntax='log'] {
+	-webkit-tab-size: 12 !important;
+	-moz-tab-size: 12 !important;
+	tab-size: 12 !important;
+	/* font-size: 75%; */
 }
