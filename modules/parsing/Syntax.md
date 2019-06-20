@@ -356,5 +356,4 @@ newScore //=> 57
 class Comment extends Model |> Editable |> Sharable {}
 ```
 
-<!-- <style src="/markup/markup-hover.css"></style> -->
-<style src="/markout/markup.css"></style>
+<style src="/markout/styles/markup.debug.css"></style>
