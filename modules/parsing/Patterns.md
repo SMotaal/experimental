@@ -76,5 +76,4 @@ exports('./esm.js');
 
 </figure>
 
-<!-- <style src="/markup/markup-hover.css"></style> -->
-<style src="/markout/markup.css"></style>
+<style src="/markout/styles/markup.debug.css"></style>
