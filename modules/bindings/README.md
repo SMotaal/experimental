@@ -2,20 +2,15 @@
 
 <section>
 
-
 ECMAScript modules introduced first-class (live/dynamic) binding semantics where it became possible for the first time to syntactically declare specific variables in scope to present as the one-way bound proxy of another from a different scope. Like other aspects of ECMAScript modules, the language as it stands today gapes too wide in offering first-class mechanisms that would leverage these additional capabilities outside the scope of ESM.
 
 This closed-up design often demands implementation-level adjustments in order to provide any necessary interoperability layers between ESM and preexisting module systems that have historical significance.
 
-<blockquote>
-
-**Important Note**:
-
-While this proposal presents the complete syntaxes for first-class support of bindings, the more fundamental aspect of this work is to work towards it without stipulations on what a reasonable level of first-class support needs to be for interoperability in a well-controlled manner.
-
-The critical contribution offered by this work will most likely lie solely in the need to separate out the specifications for affecting live bindings to and from cross-scoped variables. As of _ES_~~¹⁰~~, this behaviour is strictly that which is most faithfully approximated by all conforming implementations of SourceTextModule.
-
-</blockquote>
+> **Important Note**:
+>
+> While this proposal presents the complete syntaxes for first-class support of bindings, the more fundamental aspect of this work is to work towards it without stipulations on what a reasonable level of first-class support needs to be for interoperability in a well-controlled manner.
+>
+> The critical contribution offered by this work will most likely lie solely in the need to separate out the specifications for affecting live bindings to and from cross-scoped variables. As of _ES_~~¹⁰~~, this behaviour is strictly that which is most faithfully approximated by all conforming implementations of SourceTextModule.
 
 </section>
 
@@ -137,11 +132,7 @@ TBD.
 
 ### _Dynamic Namespaces_ <kbd>Complimentary</kbd>
 
-<blockquote>
-
-**Note**: [Dynamic Namespaces](../namespaces/) is merely at the stage of exploring various problem spaces that overlap with the idea of Namespace objects.
-
-</blockquote>
+> **Note**: [Dynamic Namespaces](../namespaces/) is merely at the stage of exploring various problem spaces that overlap with the idea of Namespace objects.
 
 Well-structured first-class entities meeting the interfacing requirements of an ECMAScript Module namespace making it well-suited for linking against while retaining validity of its consumers for both syntax and semantics, making it possible to achieve interoperability and conformance, as a discretionary recommendation of future ECMAScript at the very least.
 
@@ -165,11 +156,7 @@ TBD.
 
 ### _Dynamic Modules_ <kbd>Complimentary</kbd>
 
-<blockquote>
-
-**Note**: [Dynamic Modules](https://github.com/nodejs/dynamic-modules) are an indepedent effort that preceeded the current work and is currently a "Stage 1" proposal by Bradly Farias in collaboration with Guy Bedford.
-
-</blockquote>
+> **Note**: [Dynamic Modules](https://github.com/nodejs/dynamic-modules) are an indepedent effort that preceeded the current work and is currently a "Stage 1" proposal by Bradly Farias in collaboration with Guy Bedford.
 
 Implementation-specific additions proposed on behalf of Node.js aim towards safely introducing non-ECMAScript Modules which were historically not designed for static linking into an otherwise conforming ECMAScript module graph.
 

@@ -62,24 +62,21 @@ An alternative to parsing could be attempt to execute code as ECMAScript module 
 
   5. By explicit fallback if there are no discrimination features.
 
-<blockquote>
-<cite>@ljharb</cite>
-
-- `Script` is the actual parse goal name, nothing’s called “Global” that i know of
-- re “In most cases”, currently it’s in all cases - even if that out-of-band mode is “use unambiguous parsing to infer”
-- `browser opt for defaulting to Module code` - browsers use `type="module"` first, and then every `import` within it
-- UMD modules are by definition not possible to be ESM, so i’m not sure why that’s relevant
-- `Effective syntax discrimination for ECMAScript modules includes:` usage of `with` means it’s Script
-- `Assignments to members of exports or module.exports.` and `Direct assigment to module.exports.` this occurs in lots of ESM code published on ESM, fwiw, so i don’t think that can be used to disambiguate
-- `Calls to require() or require.resolve().` is the same ^
-- `Lack of import statements.` does not guarantee it’s a Script.
-- `Unshadowed references to __dirname and __filename` could still be referring to globals from within ESM, so this can’t be used either
-
-</blockquote>
+> <cite>@ljharb</cite>
+>
+> - `Script` is the actual parse goal name, nothing’s called “Global” that i know of
+> - re “In most cases”, currently it’s in all cases - even if that out-of-band mode is “use unambiguous parsing to infer”
+> - `browser opt for defaulting to Module code` - browsers use `type="module"` first, and then every `import` within it
+> - UMD modules are by definition not possible to be ESM, so i’m not sure why that’s relevant
+> - `Effective syntax discrimination for ECMAScript modules includes:` usage of `with` means it’s Script
+> - `Assignments to members of exports or module.exports.` and `Direct assigment to module.exports.` this occurs in lots of ESM code published on ESM, fwiw, so i don’t think that can be used to disambiguate
+> - `Calls to require() or require.resolve().` is the same ^
+> - `Lack of import statements.` does not guarantee it’s a Script.
+> - `Unshadowed references to __dirname and __filename` could still be referring to globals from within ESM, so this can’t be used either
 
 ## Parsing
 
-<blockquote><b>Note</b>: The following examples require a special renderer which can highlight `cjs` and/or `esm` keywords.</blockquote>
+> **Note**: The following examples require a special renderer which can highlight `cjs` and/or `esm` keywords.
 
 <figcaption><kbd>Ambiguous <code>INVALID</code></kbd> <i>JS Parsing Mode</i></figcaption>
 

@@ -7,8 +7,8 @@ import {processRow} from './lib/tdf/helpers.js';
 import {createDebuggingInterface} from './lib/tdf/debugging.js';
 
 const options = {
-	example: 'RIT_e CirRe35/e CirRe35F.log',
-	examples: ['RIT_d CirRe35F/d CirRe35X.LOG', 'RIT_c CirRe35X/c CirRe35X.LOG'],
+	example: 'conres-35x-g.log',
+	examples: ['RIT_d CirRe35F/d CirRe35X.LOG', 'RIT_c CirRe35X/c CirRe35X.LOG', 'RIT_e CirRe35/e CirRe35F.log'],
 	segmentation: true,
 	tokenization: true,
 	benchmarks: {},

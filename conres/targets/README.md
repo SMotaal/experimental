@@ -4,11 +4,7 @@
 
 ## RegExp Matcher Prototype <code tag>Experimental</code>
 
-<blockquote>
-
-**FYI**: This work builds on top of the earlier [RegExp Tokenizer Prototype](/meta/@conres/targets/RegExp-Tokenizer-Prototype.md) efforts.
-
-</blockquote>
+> **FYI**: This work builds on top of the earlier [RegExp Tokenizer Prototype](/meta/@conres/targets/RegExp-Tokenizer-Prototype.md) efforts.
 
 ### Motivating Example
 
