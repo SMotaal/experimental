@@ -2,11 +2,11 @@
 import {Matches} from '/modules/matcher/helpers.js';
 
 export const matcher = (() => {
-	const Feed = () => Matcher.define(entity => Matcher.sequence`(${entity('feed')})`, 'giu');
-	const Slug = () => Matcher.define(entity => Matcher.sequence`(\S.*?${entity('slug')})`, 'giu');
+	const Feed = () => Matcher.define(entity => Matcher.sequence/* regexp */ `(${entity('feed')})`, 'giu');
+	const Slug = () => Matcher.define(entity => Matcher.sequence/* regexp */ `(\S.*?${entity('slug')})`, 'giu');
 	const Row = ({cells = Cell()} = {}) =>
 		Matcher.define(
-			entity => Matcher.sequence`(
+			entity => Matcher.sequence/* regexp */ `(
         .*\t.*
         ${entity((text, entity, match) => {
 					// match.capture.row = Matcher.matchAll(text, cells);
@@ -21,12 +21,12 @@ export const matcher = (() => {
 		Matcher.define(
 			entity =>
 				// cells — where ‹…\t›
-				Matcher.sequence`
+				Matcher.sequence/* regexp */ `
           (?: *)
-          ${void Matcher.sequence`(?=[^\s\t\n\r]+.*? *(?:[\t\n\r]|$))`}
+          ${void Matcher.sequence/* regexp */ `(?=[^\s\t\n\r]+.*? *(?:[\t\n\r]|$))`}
           (?:${Matcher.join(
 						// comment — is ‹[ … ]›
-						entity(Comment({body: Matcher.sequence`[^\t\n\r\)]+`})),
+						entity(Comment({body: Matcher.sequence/* regexp */ `[^\t\n\r\)]+`})),
 
 						// value — or is where ‹…› and maybe ‹ (…)›
 						entity(Value()),
@@ -39,13 +39,13 @@ export const matcher = (() => {
         `,
 			'giu',
 		);
-	const Empty = () => Matcher.define(entity => Matcher.sequence`(${entity('empty')})(?= *\t)`, 'giu');
+	const Empty = () => Matcher.define(entity => Matcher.sequence/* regexp */`(${entity('empty')})(?= *\t)`, 'giu');
 	const Value = () =>
 		Matcher.define(
 			entity =>
-				Matcher.sequence`(?:${Matcher.join(
+				Matcher.sequence/* regexp */ `(?:${Matcher.join(
 					// numeric — is ‹…\d…›
-					Matcher.sequence`(
+					Matcher.sequence/* regexp */ `(
             (?:(?:[-+]|\b)(?:\d*\.\d+|\d+(?:\.(?:\d*)|)|\d+)%?(?=\W|$))
             |\d+E-?\d+
             |\d+\.\d+E-?\d+
@@ -56,20 +56,20 @@ export const matcher = (() => {
 						})}
           )`,
 					// sequence — or is ‹\S…›
-					Matcher.sequence`(\S.*?${entity('sequence')})`,
+					Matcher.sequence/* regexp */ `(\S.*?${entity('sequence')})`,
 				)})(?: *${
 					// unit — which might have ‹(…)›
-					Matcher.sequence`\((\b\D\S+(?:\b[.%]?|\b)${entity('unit')})\)`
+					Matcher.sequence/* regexp */ `\((\b\D\S+(?:\b[.%]?|\b)${entity('unit')})\)`
 				}|)`,
 			'giu',
 		);
 	const Comment = ({body = `.*?`} = {}) =>
-		Matcher.define(entity => Matcher.sequence`\[ +(${body}${entity('comment')}) +\]`, 'giu');
+		Matcher.define(entity => Matcher.sequence/* regexp */ `\[ +(${body}${entity('comment')}) +\]`, 'giu');
 	const Definition = () =>
 		Matcher.define(
 			entity =>
 				// lines — where ‹^ … $›
-				Matcher.sequence`^ *(?:${Matcher.join(
+				Matcher.sequence/* regexp */ `^ *(?:${Matcher.join(
 					// comment — is ‹[ … ]›
 					entity(Comment()),
 					// row — or is ‹…\t…›
