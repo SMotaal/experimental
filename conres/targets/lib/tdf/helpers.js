@@ -129,6 +129,3 @@ export const processRow = (context, match) => {
 	processCells(context, row, cells);
 	return row;
 };
-
-// /** @type {import('/modules/matcher/matcher').Matcher} Matcher */
-// /** @type {import('/modules/matcher/matcher').Matcher.MatchResult} MatchResult */
