@@ -1,6 +1,4 @@
 ﻿//@ts-check
-
-// import {debugMatcher} from '/modules/matcher/matcher.debug.js';
 import {LineBreaks} from '../normalizer.js';
 
 /// Defaults
@@ -268,5 +266,5 @@ const style = String.raw/*css*/ `
 
 const {log, warn, group, groupCollapsed, groupEnd, table, time, timeEnd} = console;
 
-/** @typedef {import('/modules/matcher/matcher.types').Matcher.MatchResult} MatchResult */
-/** @typedef {import('/modules/matcher/matcher.types').Matcher.DebugOptions} DebugOptions */
+/** @typedef {import('markup/packages/matcher/types.d').Matcher.Match} MatchResult */
+/** @typedef {import('markup/packages/matcher/types.d').Matcher.DebugOptions} DebugOptions */

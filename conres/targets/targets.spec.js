@@ -2,9 +2,11 @@
 import {loadSourceTextFrom} from '/components/lib/fetch.js';
 import {createBlobURL, createDataURL} from './lib/helpers.js';
 import {matcher} from './lib/tdf/matcher.js';
-import {matchAll} from '/modules/matcher/matcher.js';
+import {matchAll} from '/markup/packages/matcher/matcher.js';
 import {processRow} from './lib/tdf/helpers.js';
 import {createDebuggingInterface} from './lib/tdf/debugging.js';
+
+// import * as matcher_debug from '/markup/packages/matcher/matcher.js';
 
 const options = {
 	example: 'conres-35x-g.log',
@@ -27,10 +29,11 @@ export const FDF = (globalThis.FDF = async (...args) => {
 
 	const normalizedText = sourceText;
 
-	/** @type {import('/modules/matcher/matcher.debug.js')['debugMatcher']} */
+	/** @type {import('markup/packages/matcher/lib/debug.js')['debugMatcher']} */
 	const debugMatcher =
 		options.segmentation &&
-		(FDF.debugMatcher || (FDF.debugMatcher = (await dynamicImport('/modules/matcher/matcher.debug.js')).debugMatcher));
+		(FDF.debugMatcher ||
+			(FDF.debugMatcher = (await dynamicImport('/markup/packages/matcher/lib/debug.js')).debugMatcher));
 
 	/** @type {ReturnType<createDebuggingInterface>} */
 	const debugging = FDF.debugging || (FDF.debugging = createDebuggingInterface(debugMatcher));

@@ -1,5 +1,5 @@
-﻿import {Matcher} from '/modules/matcher/matcher.js';
-import {Matches} from '/modules/matcher/helpers.js';
+﻿import {Segmenter as Matcher} from '/markup/packages/matcher/lib/segmenter.js';
+import {Matches} from '/markup/packages/matcher/helpers.js';
 
 export const matcher = (() => {
 	const Feed = () => Matcher.define(entity => Matcher.sequence/* regexp */ `(${entity('feed')})`, 'giu');
@@ -39,7 +39,7 @@ export const matcher = (() => {
         `,
 			'giu',
 		);
-	const Empty = () => Matcher.define(entity => Matcher.sequence/* regexp */`(${entity('empty')})(?= *\t)`, 'giu');
+	const Empty = () => Matcher.define(entity => Matcher.sequence/* regexp */ `(${entity('empty')})(?= *\t)`, 'giu');
 	const Value = () =>
 		Matcher.define(
 			entity =>
