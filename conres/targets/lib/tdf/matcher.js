@@ -1,12 +1,12 @@
-﻿import {Segmenter as Matcher} from '/markup/packages/matcher/lib/segmenter.js';
+﻿import {SegmentMatcher} from '/markup/packages/matcher/lib/segment-matcher.js';
 import {Matches} from '/markup/packages/matcher/helpers.js';
 
 export const matcher = (() => {
-	const Feed = () => Matcher.define(entity => Matcher.sequence/* regexp */ `(${entity('feed')})`, 'giu');
-	const Slug = () => Matcher.define(entity => Matcher.sequence/* regexp */ `(\S.*?${entity('slug')})`, 'giu');
+	const Feed = () => SegmentMatcher.define(entity => SegmentMatcher.sequence/* regexp */ `(${entity('feed')})`, 'giu');
+	const Slug = () => SegmentMatcher.define(entity => SegmentMatcher.sequence/* regexp */ `(\S.*?${entity('slug')})`, 'giu');
 	const Row = ({cells = Cell()} = {}) =>
-		Matcher.define(
-			entity => Matcher.sequence/* regexp */ `(
+		SegmentMatcher.define(
+			entity => SegmentMatcher.sequence/* regexp */ `(
         .*\t.*
         ${entity((text, entity, match) => {
 					// match.capture.row = Matcher.matchAll(text, cells);
@@ -18,15 +18,15 @@ export const matcher = (() => {
 			'giu',
 		);
 	const Cell = () =>
-		Matcher.define(
+		SegmentMatcher.define(
 			entity =>
 				// cells — where ‹…\t›
-				Matcher.sequence/* regexp */ `
+				SegmentMatcher.sequence/* regexp */ `
           (?: *)
-          ${void Matcher.sequence/* regexp */ `(?=[^\s\t\n\r]+.*? *(?:[\t\n\r]|$))`}
-          (?:${Matcher.join(
+          ${void SegmentMatcher.sequence/* regexp */ `(?=[^\s\t\n\r]+.*? *(?:[\t\n\r]|$))`}
+          (?:${SegmentMatcher.join(
 						// comment — is ‹[ … ]›
-						entity(Comment({body: Matcher.sequence/* regexp */ `[^\t\n\r\)]+`})),
+						entity(Comment({body: SegmentMatcher.sequence/* regexp */ `[^\t\n\r\)]+`})),
 
 						// value — or is where ‹…› and maybe ‹ (…)›
 						entity(Value()),
@@ -35,17 +35,17 @@ export const matcher = (() => {
 						entity(Empty()),
 					)})
           (?: *)
-          (${entity(Matcher.DELIMITER)}[\t\n\r]|$)
+          (${entity(SegmentMatcher.DELIMITER)}[\t\n\r]|$)
         `,
 			'giu',
 		);
-	const Empty = () => Matcher.define(entity => Matcher.sequence/* regexp */ `(${entity('empty')})(?= *\t)`, 'giu');
+	const Empty = () => SegmentMatcher.define(entity => SegmentMatcher.sequence/* regexp */ `(${entity('empty')})(?= *\t)`, 'giu');
 	const Value = () =>
-		Matcher.define(
+		SegmentMatcher.define(
 			entity =>
-				Matcher.sequence/* regexp */ `(?:${Matcher.join(
+				SegmentMatcher.sequence/* regexp */ `(?:${SegmentMatcher.join(
 					// numeric — is ‹…\d…›
-					Matcher.sequence/* regexp */ `(
+					SegmentMatcher.sequence/* regexp */ `(
             (?:(?:[-+]|\b)(?:\d*\.\d+|\d+(?:\.(?:\d*)|)|\d+)%?(?=\W|$))
             |\d+E-?\d+
             |\d+\.\d+E-?\d+
@@ -56,20 +56,20 @@ export const matcher = (() => {
 						})}
           )`,
 					// sequence — or is ‹\S…›
-					Matcher.sequence/* regexp */ `(\S.*?${entity('sequence')})`,
+					SegmentMatcher.sequence/* regexp */ `(\S.*?${entity('sequence')})`,
 				)})(?: *${
 					// unit — which might have ‹(…)›
-					Matcher.sequence/* regexp */ `\((\b\D\S+(?:\b[.%]?|\b)${entity('unit')})\)`
+					SegmentMatcher.sequence/* regexp */ `\((\b\D\S+(?:\b[.%]?|\b)${entity('unit')})\)`
 				}|)`,
 			'giu',
 		);
 	const Comment = ({body = `.*?`} = {}) =>
-		Matcher.define(entity => Matcher.sequence/* regexp */ `\[ +(${body}${entity('comment')}) +\]`, 'giu');
+		SegmentMatcher.define(entity => SegmentMatcher.sequence/* regexp */ `\[ +(${body}${entity('comment')}) +\]`, 'giu');
 	const Definition = () =>
-		Matcher.define(
+		SegmentMatcher.define(
 			entity =>
 				// lines — where ‹^ … $›
-				Matcher.sequence/* regexp */ `^ *(?:${Matcher.join(
+				SegmentMatcher.sequence/* regexp */ `^ *(?:${SegmentMatcher.join(
 					// comment — is ‹[ … ]›
 					entity(Comment()),
 					// row — or is ‹…\t…›
