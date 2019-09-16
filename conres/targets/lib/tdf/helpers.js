@@ -53,7 +53,7 @@ const processCells = (context, row, matches) => {
 		cellUnit =
 			properties.unit ||
 			(properties.unit =
-				rowUnit || (!columnUnits || columnUnits[columnIndex] === undefined ? tableUnit : columnUnits[columnIndex]));
+				!columnUnits || columnUnits[columnIndex] === undefined ? rowUnit || tableUnit : columnUnits[columnIndex]);
 
 		properties.columnIndex = columnIndex++;
 
