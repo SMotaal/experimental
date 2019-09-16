@@ -59,7 +59,8 @@ export const matcher = (() => {
 					SegmentMatcher.sequence/* regexp */ `(\S.*?${entity('sequence')})`,
 				)})(?: *${
 					// unit — which might have ‹(…)›
-					SegmentMatcher.sequence/* regexp */ `\((\b\D\S+(?:\b[.%]?|\b)${entity('unit')})\)`
+					// SegmentMatcher.sequence/* regexp */ `\((\b\D\S+(?:\b[.%]?|\b)|%${entity('unit')})\)(?:\s[A-Za-z])*`
+					SegmentMatcher.sequence/* regexp */ `\((\b\D\S+(?:\b[.%]?|\b)|%${entity('unit')})\)`
 				}|)`,
 			'giu',
 		);
