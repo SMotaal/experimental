@@ -2,14 +2,15 @@
 
 # smotaal.io
 
-<h1>
+<h1 hidden display:=block>
 
 **[<kbd>Markup</kbd>](/markup/README)**
 **[<kbd>Markout</kbd>](/markout/README)**
 **[<kbd>Meta</kbd>](/meta/README)**
 **[<kbd>Pholio</kbd>](/pholio/)**
-**[<kbd>Quench</kbd>](/quench/)**
 **[<kbd><u>Experimental</u></kbd>](../ 'Play it safe!')**
+
+<!-- **[<kbd>Quench</kbd>](/quench/)** -->
 
 </h1>
 
@@ -19,7 +20,6 @@
 
 - [Modules](./modules/README)
 - [Sandbox](./sandbox/README)
-
 
 </aside>
 
