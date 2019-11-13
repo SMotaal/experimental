@@ -1,2 +1,14 @@
-**/trash
+.*
+specs/
+docs/
+meta/
+**/*.psd
+**/*.tgz
+**/*.visx
+**/trash/
+**/.DS_Store
+.*/**
+**/tsconfig.json
+**/tsbuildinfo.json
+**/*.tsbuildinfo
 node_modules
