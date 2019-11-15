@@ -1,31 +1,28 @@
 {
-	"private": true,
-	"name": "@smotaal/experimental",
-	"description": "smotaal.io/experimental",
-	"version": "0.0.0-alpha.2",
-	"author": "Saleh Abdel Motaal <saleh@grasppe.com>",
-	"repository": "https://github.com/SMotaal/experimental.git",
-	"license": "MIT",
-	"type": "module",
-	"exports": {},
-	"scripts": {
-		"serve": "http-server --cors -s",
-		"markup": "pushd markup; ./index.mjs",
-		"vscode": "pushd vscode; yarn",
-		"quench": "node quench",
-		"chrome": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome",
-		"pull": "git pull --recurse-submodules  && git submodule update --recursive --remote",
-		"compile": "rollup -c",
-		"nexm": "node --experimental-modules --loader @esm/",
-		"nesm": "~/Projects/@smotaal/node/node-esm/out/Release/node"
-	},
+  "private": true,
+  "name": "@smotaal/experimental",
+  "description": "smotaal.io/experimental",
+  "version": "0.0.0-alpha.2",
+  "author": "Saleh Abdel Motaal <saleh@grasppe.com>",
+  "repository": "https://github.com/SMotaal/experimental.git",
+  "license": "MIT",
+  "type": "module",
+  "exports": {},
+  "scripts": {
+    "serve": "http-server --cors -s",
+    "markup": "pushd markup; ./index.mjs",
+    "vscode": "pushd vscode; yarn",
+    "quench": "node quench",
+    "chrome": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome",
+    "pull": "git pull --recurse-submodules  && git submodule update --recursive --remote",
+    "compile": "rollup -c"
+  },
   "devDependencies": {
-		"@smotaal.io/prettier.config": "*",
-		"@types/node": "*",
-		"http-server": "*",
-		"prettier": "*",
-		"rollup": "*",
-		"typescript": "*",
-		"@smotaal/esm": "SMotaal/esm"
-	}
+    "@smotaal.io/tools": "*",
+    "@types/node": "*",
+    "http-server": "*",
+    "prettier": "*",
+    "rollup": "*",
+    "typescript": "*"
+  }
 }
