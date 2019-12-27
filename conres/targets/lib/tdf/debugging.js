@@ -4,109 +4,110 @@ import {LineBreaks} from '../normalizer.js';
 /// Defaults
 
 export const colors = {
-	row: '#CCCC00',
-	feed: '#FF0066',
-	slug: '#00CCCC',
-	empty: '#FF6600',
-	numeric: '#00FF66',
-	sequence: '#00CCFF',
-	unit: '#6600FF',
-	comment: '#CC00CC',
+  row: '#CCCC00',
+  feed: '#FF0066',
+  slug: '#00CCCC',
+  empty: '#FF6600',
+  numeric: '#00FF66',
+  sequence: '#00CCFF',
+  unit: '#6600FF',
+  comment: '#CC00CC',
 };
 
 /// Renderers
 export const createDebuggingInterface = debugMatcher => {
-	// TODO: remove after refactor
-	const debugging = {
-		render: {
-			loggers: (loggers, debugOptions = debugging.options) => {
-				const output = [];
-				for (const logger of loggers) output.push(logger(debugOptions));
-				return output.filter(Boolean).join('');
-			},
-			/** @param {DebugOptions} debugOptions */
-			match: (match, debugOptions, ...submatches) => {
-				const rendered = debugMatcher.matches([match], debugOptions);
-				return (
-					(rendered.length &&
-						((rendered['submatches'] =
-							submatches && submatches.length && debugging.render.submatches(submatches, debugOptions)) &&
-							rendered.push(rendered['submatches'])),
-					/* html */ `<div>\n\t${rendered.join('\n\t')}\n</div>`) || ''
-					// /* html */ `<div style="display: flex; flex-flow: column;">\n\t${rendered.join('\n\t')}\n</div>`) || ''
-				);
-			},
-			submatches: (submatches, debugOptions) => {
-				const rendered = submatches.length && debugMatcher.matches(submatches, debugOptions);
-				return (rendered && rendered.length && /* html */ `\n\t<output>${rendered.join('\n\t\t')}\n\t</output>`) || '';
-			},
-		},
-		renderers: {
-			/** @param {MatchResult} feed */
-			feed: feed =>
-				/** @param {DebugOptions} debugOptions */
-				(debugOptions = debugging.options) => debugging.render.match(feed, debugOptions),
-			/** @param {MatchResult} slug */
-			slug: slug =>
-				/** @param {DebugOptions} debugOptions */
-				(debugOptions = debugging.options) => debugging.render.match(slug, debugOptions),
-			/** @param {MatchResult} row */
-			row: row =>
-				/** @param {DebugOptions} debugOptions */
-				(debugOptions = debugging.options) => debugging.render.match(row, debugOptions, ...row.capture['cells']),
-		},
-		log: {
-			matcher: matcher => {
-				groupCollapsed(`Matcher`), log(matcher), groupEnd();
-			},
-			sourceText: sourceText => {
-				groupCollapsed(`Source ‹${typeof sourceText}›`),
-					log(
-						'%c%s',
-						'white-space: pre; tab-size: 20em; display: block; font-size: smaller;',
-						LineBreaks.replace(sourceText),
-					),
-					groupEnd();
-			},
-			context: context => {
-				log(context);
-				debugging.log.records(context.records);
-				debugging.log.tables(context.tables);
-			},
-			records: records => {
-				if (records && records.length) table(records, ['0', '1', '2']);
-			},
-			tables: tables => {
-				if (tables && tables.forEach) tables.forEach(debugging.log.table);
-			},
-			table: table => {
-				if (table && table.rows) debugging.log.rows(table.rows);
-			},
-			rows: rows => {
-				if (rows && rows.length) {
-					table(rows);
-					// table(rows, [...rows[rows.length - 1]].map((v, i) => `${i}`));
-				}
-			},
-		},
-		output: {
-			/** @param {string} html */
-			htmlFragment: html => /* html */ `<style>\n\t${style}\n</style>\n<output>${html}</output>`,
-			/** @param {string} html */
-			htmlDocument: html =>
-				/* html */ `<!DOCTYPE html> \n<html>\n<head>\n\t<meta charset="utf-16" />\n</head>\n<body>\n\t<script type="text/javascript">document.documentElement.className="rendered"</script>\n${debugging.output.htmlFragment(
-					html,
-				)}\n</body>\n</html>\n`,
-		},
-		/** @type {DebugOptions} */
-		//@ts-ignore
-		options: {
-			method: 'render',
-			colors: Object.assign([...debugMatcher.colors], colors),
-		},
-	};
+  // TODO: remove after refactor
+  const debugging = {
+    render: {
+      loggers: (loggers, debugOptions = debugging.options) => {
+        const output = [];
+        for (const logger of loggers) output.push(logger(debugOptions));
+        return output.filter(Boolean).join('');
+      },
+      /** @param {DebugOptions} debugOptions */
+      match: (match, debugOptions, ...submatches) => {
+        const options = {...debugOptions, matcher: match.matcher};
+        const rendered = debugMatcher.matches([match], options);
+        return (
+          (rendered.length &&
+            (rendered['submatches'] =
+              submatches && submatches.length && debugging.render.submatches(submatches, options)) &&
+              rendered.push(rendered['submatches']),
+          /* html */ `<div>\n\t${rendered.join('\n\t')}\n</div>`) || ''
+          // /* html */ `<div style="display: flex; flex-flow: column;">\n\t${rendered.join('\n\t')}\n</div>`) || ''
+        );
+      },
+      submatches: (submatches, debugOptions) => {
+        const rendered = submatches.length && debugMatcher.matches(submatches, debugOptions);
+        return (rendered && rendered.length && /* html */ `\n\t<output>${rendered.join('\n\t\t')}\n\t</output>`) || '';
+      },
+    },
+    renderers: {
+      /** @param {MatchResult} feed */
+      feed: feed =>
+        /** @param {DebugOptions} debugOptions */
+        (debugOptions = debugging.options) => debugging.render.match(feed, debugOptions),
+      /** @param {MatchResult} slug */
+      slug: slug =>
+        /** @param {DebugOptions} debugOptions */
+        (debugOptions = debugging.options) => debugging.render.match(slug, debugOptions),
+      /** @param {MatchResult} row */
+      row: row =>
+        /** @param {DebugOptions} debugOptions */
+        (debugOptions = debugging.options) => debugging.render.match(row, debugOptions, ...row.capture['cells']),
+    },
+    log: {
+      matcher: matcher => {
+        groupCollapsed(`Matcher`), log(matcher), groupEnd();
+      },
+      sourceText: sourceText => {
+        groupCollapsed(`Source ‹${typeof sourceText}›`),
+          log(
+            '%c%s',
+            'white-space: pre; tab-size: 20em; display: block; font-size: smaller;',
+            LineBreaks.replace(sourceText),
+          ),
+          groupEnd();
+      },
+      context: context => {
+        log(context);
+        debugging.log.records(context.records);
+        debugging.log.tables(context.tables);
+      },
+      records: records => {
+        if (records && records.length) table(records, ['0', '1', '2']);
+      },
+      tables: tables => {
+        if (tables && tables.forEach) tables.forEach(debugging.log.table);
+      },
+      table: table => {
+        if (table && table.rows) debugging.log.rows(table.rows);
+      },
+      rows: rows => {
+        if (rows && rows.length) {
+          table(rows);
+          // table(rows, [...rows[rows.length - 1]].map((v, i) => `${i}`));
+        }
+      },
+    },
+    output: {
+      /** @param {string} html */
+      htmlFragment: html => /* html */ `<style>\n\t${style}\n</style>\n<output>${html}</output>`,
+      /** @param {string} html */
+      htmlDocument: html =>
+        /* html */ `<!DOCTYPE html> \n<html>\n<head>\n\t<meta charset="utf-16" />\n</head>\n<body>\n\t<script type="text/javascript">document.documentElement.className="rendered"</script>\n${debugging.output.htmlFragment(
+          html,
+        )}\n</body>\n</html>\n`,
+    },
+    /** @type {DebugOptions} */
+    //@ts-ignore
+    options: {
+      method: 'render',
+      colors: Object.assign([...debugMatcher.colors], colors),
+    },
+  };
 
-	return debugging;
+  return debugging;
 };
 
 /// HTML
