@@ -5,23 +5,26 @@
 	<title>smotaal.io (experimental)</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta http-equiv="Content-Security-Policy"
+				content="default-src 'self' 'unsafe-inline'  https://* http://*.smotaal.io; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com/@smotaal.io/ https://*.smotaal.io; connect-src *;" />
 	<script>(typeof self !== 'object' || !self || self.globalThis === self || (self.globalThis = self))</script>
 	<link rel="stylesheet" href="/fonts/iosevka.css" />
-	<link rel="stylesheet" href="/pholio/styles/styles.css" />
-	<!-- <link rel="alternate" href="./README.md" type="text/markdown" /> -->
+	<link rel="stylesheet" href="/markout/styles/styles.css" />
+	<link id="style:styles/markout.css" rel=preload as=style href="/markout/styles/markout.css" />
 	<style>
 		html {
 			--shade: #ff7f50f6;
 		}
 	</style>
-	<!-- <script type="module" src="/browser/markout-preview.js"></script> -->
+	<!-- <script type="module" src="/markout/browser/preview.js"></script> -->
 	<!-- <link id="style:styles/markout.css" rel=preload as=style href="/markout/styles/markout.css" /> -->
-	<script type="module">
+	<!-- <script type="module">
 		import { setup } from '/experimental/hashout.js';
 		// setup({redirects: {'./components': '../components/'}}, `${new URL('/experimental/', location)}`);
 		setup({ redirects: { './components/': '../components/' } });
-	</script>
+	</script> -->
 	<!-- <script type="module" src="/experimental/hashout.js"></script> -->
+	<script type=module src="/markout/browser/preview.js"></script>
 </head>
 
 <body>
