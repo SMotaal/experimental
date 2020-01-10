@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "@smotaal/wasm",
+  "description": "smotaal.io/experimental/wasm",
+  "version": "0.0.0-alpha.1",
+  "author": "Saleh Abdel Motaal <saleh@smotaal.io>",
+  "homepage": "https://smotaal.io/#/experimental/wasm/",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {},
+  "scripts": {
+    "serve": "http-server --cors -s",
+    "start": "./index.mjs"
+  },
+  "devDependencies": {
+    "@smotaal.io/tools": "*",
+    "@types/node": "*",
+    "http-server": "*",
+    "prettier": "*",
+    "rollup": "*",
+    "typescript": "*",
+    "emsdk-npm": "*"
+  }
+}
