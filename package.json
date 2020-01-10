@@ -19,7 +19,6 @@
     "http-server": "*",
     "prettier": "*",
     "rollup": "*",
-    "typescript": "*",
-    "emsdk-npm": "*"
+    "typescript": "*"
   }
 }
