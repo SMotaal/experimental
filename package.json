@@ -3,7 +3,7 @@
   "name": "@smotaal/experimental",
   "description": "smotaal.io/experimental",
   "version": "0.0.0-alpha.2",
-  "author": "Saleh Abdel Motaal <saleh@grasppe.com>",
+  "author": "Saleh Abdel Motaal <saleh@smotaal.io>",
   "repository": "https://github.com/SMotaal/experimental.git",
   "license": "MIT",
   "type": "module",
@@ -24,5 +24,11 @@
     "prettier": "*",
     "rollup": "*",
     "typescript": "*"
+  },
+  "workspaces": {
+    "packages": [
+      "wasm"
+    ],
+    "nohoist": []
   }
 }
