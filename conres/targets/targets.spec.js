@@ -9,16 +9,17 @@ import {createDebuggingInterface} from './lib/tdf/debugging.js';
 // import * as matcher_debug from '/markup/packages/matcher/matcher.js';
 
 const options = {
-	example: 'conres-19c-f9.log',
+	example: 'conres-35-zz.log',
 	examples: [
 		'RIT_d CirRe35F/d CirRe35X.LOG',
 		'RIT_c CirRe35X/c CirRe35X.LOG',
 		'RIT_e CirRe35/e CirRe35F.log',
-		'conres-35x-g.log',
+		'conres-35-zz.log',
 		'conres-19c-f5.log',
 		'conres-19c-f6.log',
 		'conres-19c-f7.log',
 		'conres-19c-f8.log',
+		'conres-19c-f9.log',
 	],
 	segmentation: true,
 	tokenization: true,

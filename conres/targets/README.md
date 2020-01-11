@@ -13,84 +13,86 @@
 <!--prettier-ignore-start-->
 
 ```log
+
+ [ Target Definition File for ConRes35 Target ]
+
 Target Name	Contrast-Resolution Test Target
 Target Version	v3.5
-Target Description 	9 TV levels  10 Contrast steps  10 Resolution steps   Patch Size 8.0 mm
+Target Description	3 TV levels  12 Contrast steps  15 Resolution steps   Patch Size 9.02 mm
+Reference File Name	Zz ConRes35_F.eps
 
-Corners Paper to Target (mm)	X even pages	Y even pages	X odd pages	Y odd pages
-   UL corner 	62.9	-27.9	49.5	-14.5
-   UR corner 	-44.4	-27.9	-57.7	-14.5
-   LL corner 	62.9	31.9	49.5	45.2
-   LR corner 	-44.4	31.9	-57.7	45.2
-
-Target Origin 	UL
+Corners Paper to Corners Target (mm)	X even pages	Y even pages	X odd pages	Y odd pages
+   UL corner 	42.9	-45.8	29.4	-32.3
+   UR corner 	-24.2	-45.8	-37.7	-32.3
+   LL corner 	42.9	49.8	29.4	63.3
+   LR corner 	-24.2	49.8	-37.7	63.3
 
 	X	Y
-Target Size frame (in)	4.277	8.649
-Target Size frame (mm)	108.64	219.67
-Block Size tight frame (mm)	93.05	93.05
+Paper Size (in)	8.26	11.0
+Paper Size (mm)	209.9	279.4
+Target Size frame (mm)	142.807	183.714	 [ Dimensions to center of thickness of frame ]
+Block Size frame (mm)	125.264	156.252	 [ Dimensions to center of thickness of frame ]
+Thickness of Target and Block Frames (mm)	0.24
 
-Number of Pages	6
-Number of Blocks per page	2
-Number of TV Blocks	9
-Addressability Indicator Block	YES
-Screen Pattern Indicator Block	YES
-FullCsteps 	YES
-Patch Size (mm)	8.001
-Margin between patches (mm)	1.185
-Addressability (spi)	600
-Color	K
+Number of Pages	4
+Number of TV Blocks	3
+Number of Blocks per page	1
+Addressability Indicator Block (PgNo)	NO
+Screen Pattern Indicator Block (PgNo)	4
+Contrast Steps Increments 	NO	 [ YES = Absolute, NO = Relative Contrast step increments ]
+Patch Size (mm)	9.017
+Margin between patches (mm)	1.312
+Possible Color Spaces	SepK	SepC	SepM	SepY	RGB	sRGB	Gray	Lab
+Selected Color	SepK
 SpotCorrection	NO
 Output Device	Acrobat Distiller 10.1.16
-Licensed User	Not Validated  987654321
+Addressability (spi)	600	 [ Set by Distiller, Indicated dimensions should be within � 0.02 mm (one spot) ]
+Evenness Tint on Block 	0.0	 [ Tint value on background of block ]
+Evenness Tint on Page 	0.7	 [ Tint value on background of Page ]
+Licensed User Name	Saleh Abdel Motaal
+Licensed User Code	573FS090120
 
-	X	Y
-Paper Size (in)	8.5	11.0	[ Letter ]
-Paper Size (mm)	216	279
+Number of Resolution Steps	15	 [ Resolution steps are the same for all Tone Value Blocks ]
+   Resolution Step Number	#1	#2	#3	#4	#5	#6	#7	#8	#9	#10	#11	#12	#13	#14	#15
+   Resolution Step Value (lp/mm)	0.625	0.7367	0.8684	1.0237	1.2067	1.4224	1.6767	1.9764	2.3297	2.7462	3.2372	3.8159	4.498	5.3021	6.25
 
-Number of Resolution Steps	10	[ Resolution steps are the same for all Tone Value Blocks ]
-   RStep Count	1	2	3	4	5	6	7	8	9	10
-   Resolution (lp/mm)	0.625	0.808	1.042	1.348	1.736	2.242	2.907	3.759	4.854	6.25
-
-Number of Contrast Steps	10
+Number of Contrast Steps	12
 Tone Value Blocks	Metrics			   UL Target to UL Fiducial		 UL Target to UL Block Frame		Contrast
-	Tone (TV%)	Block No.	Page No.	Xoffset (mm)	Yoffset (mm)	Xoffset (mm)	Yoffset (mm)	A	B	C	D	E	F	G	H	I	J
-	10	1	1	11.59	20.39	10.99	19.79	20.0%	14.34%	10.28%	7.37%	5.28%	3.79%	2.71%	1.95%	1.39%	1.0%
-	20	2	1	11.59	122.63	10.99	122.03	40.0%	26.55%	17.62%	11.7%	7.76%	5.15%	3.42%	2.27%	1.51%	1.0%
-	30	3	2	11.59	20.39	10.99	19.79	60.0%	38.07%	24.15%	15.33%	9.72%	6.17%	3.91%	2.48%	1.58%	1.0%
-	40	4	2	11.59	122.63	10.99	122.03	80.0%	49.16%	30.21%	18.57%	11.41%	7.01%	4.31%	2.65%	1.63%	1.0%
-	50	5	3	11.59	20.39	10.99	19.79	100.0%	59.95%	35.94%	21.54%	12.92%	7.74%	4.64%	2.78%	1.67%	1.0%
-	60	6	3	11.59	122.63	10.99	122.03	80.0%	49.16%	30.21%	18.57%	11.41%	7.01%	4.31%	2.65%	1.63%	1.0%
-	70	7	4	11.59	20.39	10.99	19.79	60.0%	38.07%	24.15%	15.33%	9.72%	6.17%	3.91%	2.48%	1.58%	1.0%
-	80	8	4	11.59	122.63	10.99	122.03	40.0%	26.55%	17.62%	11.7%	7.76%	5.15%	3.42%	2.27%	1.51%	1.0%
-	90	9	5	11.59	20.39	10.99	19.79	20.0%	14.34%	10.28%	7.37%	5.28%	3.79%	2.71%	1.95%	1.39%	1.0%
+	Tone (TV%)	Block No.	Page No.	Xoffset (mm)	Yoffset (mm)	Xoffset (mm)	Yoffset (mm)	A	B	C	D	E	F	G	H	I	J	K	L
+	25	1	1	13.05	22.98	12.38	22.3	-	-	43.29%	28.48%	18.74%	12.33%	8.11%	5.34%	3.51%	2.31%	1.52%	1.0%
+	50	2	2	13.05	22.98	12.38	22.3	100.0%	65.79%	43.29%	28.48%	18.74%	12.33%	8.11%	5.34%	3.51%	2.31%	1.52%	1.0%
+	75	3	3	13.05	22.98	12.38	22.3	-	-	43.29%	28.48%	18.74%	12.33%	8.11%	5.34%	3.51%	2.31%	1.52%	1.0%
 
 
-Spacing of Fiducial grid (mm)	9.186
+Spacing of Fiducial grid (mm)	10.329
 
 Fiducial marks from UL corner mark
-   X direction (mm)	0.0	9.186	18.373	27.559	36.745	45.932	55.118	64.304	73.491	82.677	91.863
-   Y direction (mm)	0.0	9.186	18.373	27.559	36.745	45.932	55.118	64.304	73.491	82.677	91.863
+   X direction (mm)	0.0	10.329	20.659	30.988	41.317	51.647	61.976	72.305	82.635	92.964	103.293	113.623	123.952
+   Y direction (mm)	0.0	10.329	20.659	30.988	41.317	51.647	61.976	72.305	82.635	92.964	103.293	113.623	123.952	134.281	144.611	154.94
 
 
-Number of Steps on StepWedge	21
-Width of steps excluding sep. bar (mm)	8.0
+	Width	Length
+Step Wedge Size frame (mm)	26.773	195.8	 [ Dimensions to center of thickness of frame ]
+
+Number of Steps on Step Wedge	21
+Width of Steps excluding sep. bar (mm)	8.0
 Width of separation bar (mm)	0.9
-Height of steps (mm)	10.0
+Thickness of Wedge Frame (mm)	0.24
+Height of Steps (mm)	10.0
+Width of band for Labels (mm)	3.387
 Distance Zero to Solid patch (mm)	178.0
-NominalTVflag 	1	[ When set to zero then Linearization is off, only nominal values are used. ]
-NominalTVArray (TV%) 	0	5	10	15	20	25	30	35	40	45	50	55	60	65	70	75	80	85	90	95	100
-LinearizedTvArray (TV%) 	0.0	8.5	16.3	24.5	30.6	35.3	39.0	42.3	45.5	48.9	52.3	55.7	59.1	62.5	66.0	69.8	75.0	81.3	87.5	94.5	100.0
 
-Step Wedge Coordinates from UL corner of Target to center of Zero or Solid patch (mm)
-	Positions	   Zero TV Nominal Step 		   Zero TV Linearized Step		    Solid TV Nominal Step 		    Solid TV Linearized Step
-	PageNo 	X Nom 	Y Nom 	X Lin 	Y Lin	X Nom 	Y Nom 	X Lin 	Y Lin
-	 1	 -28.1	 231.2	 -28.1	 241.2	 149.9	 231.2	 149.9	 241.2
-	 2	 -21.5	 222.6	 -11.5	 222.6	 -21.5	 44.6	 -11.5	 44.6
-	 3	 141.0	 241.2	 141.0	 231.2	 -37.0	 241.2	 -37.0	 231.2
-	 4	 -11.5	 53.5	 -21.5	 53.5	 -11.5	 231.5	 -21.5	 231.5
-	 5	 -28.1	 231.2	 -28.1	 241.2	 149.9	 231.2	 149.9	 241.2
-	 6	 -21.5	 222.6	 -11.5	 222.6	 -21.5	 44.6	 -11.5	 44.6
+Nominal TV Flag 	0	 [ When set to zero then Linearization is off and only nominal values are used. ]
+Number of measurements on Wedge	1	 [ If there are zero measurements, the file defaults to Nom. TVs even when the Nom. TV Flag is 1. ]
+Nominal TV Array (TV%) 	0	5	10	15	20	25	30	35	40	45	50	55	60	65	70	75	80	85	90	95	100
+
+Step Wedge Coordinates from UL corner of Target to center of Zero or Solid patches (mm)
+		Wedge	    Zero TV Nominal Step 		   Zero TV Linearized Step		     Solid TV Nominal Step 		    Solid TV Linearized Step
+	(PageNo)	Rotation (degrees)	X	Y	X	Y	X	Y	X	Y
+	 1	 0	 -11.6	 -195.4	 -11.6	 -205.4	 166.4	 -195.4	 166.4	 -205.4
+	 2	 90	 21.7	 -205.8	 11.7	 -205.8	 21.7	 -27.8	 11.7	 -27.8
+	 3	 -180	 158.6	 -205.4	 158.6	 -195.4	 -19.4	 -205.4	 -19.4	 -195.4
+	 4	 -90	 11.7	 -35.5	 21.7	 -35.5	 11.7	 -213.5	 21.7	 -213.5
 ```
 
 <!--prettier-ignore-end-->
