@@ -1,21 +1,18 @@
 {
   "private": true,
-  "name": "@smotaal/experimental",
-  "description": "smotaal.io/experimental",
-  "version": "0.0.0-alpha.2",
+  "name": "@smotaal.io/wasm",
+  "description": "smotaal.io/experimental/wasm",
+  "version": "0.0.0-alpha.1",
   "author": "Saleh Abdel Motaal <saleh@smotaal.io>",
-  "repository": "https://github.com/SMotaal/experimental.git",
+  "homepage": "https://smotaal.io/#/experimental/wasm/",
   "license": "MIT",
   "type": "module",
+  "main": "index.mjs",
   "exports": {},
   "scripts": {
     "serve": "http-server --cors -s",
-    "markup": "pushd markup; ./index.mjs",
-    "vscode": "pushd vscode; yarn",
-    "quench": "node quench",
-    "chrome": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome",
-    "pull": "git pull --recurse-submodules  && git submodule update --recursive --remote",
-    "compile": "rollup -c"
+    "start": "./index.mjs",
+    "subtree:pull": "./tasks/git/subtree/pull.js"
   },
   "devDependencies": {
     "@smotaal.io/tools": "*",
@@ -24,11 +21,5 @@
     "prettier": "*",
     "rollup": "*",
     "typescript": "*"
-  },
-  "workspaces": {
-    "packages": [
-      "wasm"
-    ],
-    "nohoist": []
   }
 }
