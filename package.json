@@ -11,7 +11,8 @@
   "exports": {},
   "scripts": {
     "serve": "http-server --cors -s",
-    "start": "./index.mjs"
+    "start": "./index.mjs",
+    "subtree:pull": "./tasks/git/subtree/pull.js"
   },
   "devDependencies": {
     "@smotaal.io/tools": "*",
