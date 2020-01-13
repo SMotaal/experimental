@@ -1,0 +1,21 @@
+{
+  "extends": "@smotaal.io/tools/typescript/jsconfig.base.json",
+  "compilerOptions": {
+    "module": "esnext"
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    "trash",
+    "**/trash/*",
+    "[[]trash[]]",
+    "**/[[]trash[]]/*",
+    "[[]more[]]",
+    "**/[[]more[]]/*",
+    "[trash]",
+    "**/[trash]/*",
+    "[more]",
+    "**/[more]/*",
+    "@*"
+  ]
+}
