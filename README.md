@@ -1,32 +1,17 @@
-<div align=center>
+# experimental-wasm
 
-# smotaal.io
+Experimental WebAssembly things!
 
-<h1 hidden display:=block>
+## Getting Started
 
-**[<kbd>Markup</kbd>](/markup/README)**
-**[<kbd>Markout</kbd>](/markout/README)**
-**[<kbd>Meta</kbd>](/meta/README)**
-**[<kbd>Pholio</kbd>](/pholio/)**
-**[<kbd><u>Experimental</u></kbd>](../ 'Play it safe!')**
+### Pull Subtrees
 
-<!-- **[<kbd>Quench</kbd>](/quench/)** -->
+> See [`subtree:pull`][]
 
-</h1>
+```js
+yarn subtree:pull bytecodealliance/wasmtime gh-pages;
+yarn subtree:pull emscripten-core/emsdk;
+yarn subtree:pull freestrings/rust-wasm-regex;
+```
 
-<aside align=left>
-
-## ECMAScript Experiments
-
-- [Modules](./modules/README)
-- [Sandbox](./sandbox/README)
-
-</aside>
-
-<aside align=left>
-
-## Contrast-Resolution Experiments
-
-- [Targets](./conres/targets/README)
-
-</aside>
+[`subtree:pull`]: ./tasks/git/subtree/README.md#pull
