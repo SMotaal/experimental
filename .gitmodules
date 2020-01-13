@@ -1,4 +1,0 @@
-[submodule "wasm"]
-	path = wasm
-	url = https://github.com/ConRes/experimental-wasm.git
-	branch = master
