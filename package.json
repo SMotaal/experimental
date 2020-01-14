@@ -15,7 +15,9 @@
     "quench": "node quench",
     "chrome": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome",
     "pull": "git pull --recurse-submodules  && git submodule update --recursive --remote",
-    "compile": "rollup -c"
+    "compile": "rollup -c",
+    "wasm:add": "git subtree add --squash --prefix=wasm/ experimental-wasm master",
+    "wasm:pull": "git subtree pull --squash --prefix=wasm/ experimental-wasm master"
   },
   "devDependencies": {
     "@smotaal.io/tools": "*",
