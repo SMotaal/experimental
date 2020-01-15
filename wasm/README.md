@@ -45,3 +45,5 @@ git push origin master --force
 - https://hub.github.com/hub.1.html
 - https://webassembly.org/getting-started/developers-guide/
 - https://github.com/dubzzz/fast-check
+- https://medium.com/statuscode/setting-up-the-ultimate-webassembly-c-workflow-6484efa3e162
+- https://docs.assemblyscript.org/
