@@ -44,3 +44,4 @@ git push origin master --force
 - https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
 - https://hub.github.com/hub.1.html
 - https://webassembly.org/getting-started/developers-guide/
+- https://github.com/dubzzz/fast-check
