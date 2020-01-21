@@ -9,6 +9,7 @@
   "type": "module",
   "exports": {},
   "scripts": {
+    "prepare": "node -e 'require(`@smotaal.io/tools/scripts/update-packages-log.cjs`)'",
     "serve": "http-server --cors -s",
     "markup": "pushd markup; ./index.mjs",
     "vscode": "pushd vscode; yarn",
@@ -20,17 +21,22 @@
     "wasm:pull": "git subtree pull --squash --prefix=wasm/ experimental-wasm master"
   },
   "devDependencies": {
-    "@smotaal.io/tools": "*",
+    "@smotaal.io/tools": "file:../packages/tools",
     "@types/node": "*",
     "http-server": "*",
     "prettier": "*",
     "rollup": "*",
     "typescript": "*"
   },
+  "resolutions": {
+    "@smotaal.io/tools": "*"
+  },
   "workspaces": {
     "packages": [
-      "wasm"
-    ],
-    "nohoist": []
+      "wasm",
+      "ghostscript",
+      "container",
+      "*/experiments/*"
+    ]
   }
 }
