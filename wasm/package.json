@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@smotaal.io/wasm",
+  "name": "@smotaal.io/experimental-wasm",
   "description": "smotaal.io/experimental/wasm",
   "version": "0.0.0-alpha.1",
   "author": "Saleh Abdel Motaal <saleh@smotaal.io>",
@@ -21,5 +21,8 @@
     "prettier": "*",
     "rollup": "*",
     "typescript": "*"
+  },
+  "workspaces": {
+    "nohoist": []
   }
 }
