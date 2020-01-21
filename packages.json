@@ -2,20 +2,9 @@
   "name": "@smotaal/experimental",
   "version": "0.0.0-alpha.2",
   "problems": [
-    "extraneous: @smotaal.io/experimental-wasm@0.0.0-alpha.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal.io/experimental-wasm",
-    "invalid: @smotaal.io/tools@0.0.4 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal.io/tools",
-    "extraneous: @smotaal/experimental-container@0.0.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal/experimental-container",
-    "extraneous: @smotaal/experimental-ghostscript@0.0.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal/experimental-ghostscript",
-    "extraneous: @smotaal/ghostscript-docker-experiment@0.0.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal/ghostscript-docker-experiment"
+    "invalid: @smotaal.io/tools@0.0.4 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal.io/tools"
   ],
   "dependencies": {
-    "@smotaal.io/experimental-wasm": {
-      "version": "0.0.0-alpha.1",
-      "extraneous": true,
-      "problems": [
-        "extraneous: @smotaal.io/experimental-wasm@0.0.0-alpha.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal.io/experimental-wasm"
-      ]
-    },
     "@smotaal.io/tools": {
       "version": "0.0.4",
       "invalid": true,
@@ -33,27 +22,6 @@
           "version": "3.7.5"
         }
       }
-    },
-    "@smotaal/experimental-container": {
-      "version": "0.0.1",
-      "extraneous": true,
-      "problems": [
-        "extraneous: @smotaal/experimental-container@0.0.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal/experimental-container"
-      ]
-    },
-    "@smotaal/experimental-ghostscript": {
-      "version": "0.0.1",
-      "extraneous": true,
-      "problems": [
-        "extraneous: @smotaal/experimental-ghostscript@0.0.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal/experimental-ghostscript"
-      ]
-    },
-    "@smotaal/ghostscript-docker-experiment": {
-      "version": "0.0.1",
-      "extraneous": true,
-      "problems": [
-        "extraneous: @smotaal/ghostscript-docker-experiment@0.0.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal/ghostscript-docker-experiment"
-      ]
     },
     "@types/node": {
       "version": "13.1.8"
