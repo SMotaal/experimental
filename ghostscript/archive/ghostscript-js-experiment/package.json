@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "@smotaal/ghostscript-js-experiment",
+  "version": "0.0.1",
+  "type": "module",
+  "devDependencies": {},
+  "dependencies": {
+    "ghostscript-js": "*"
+  }
+}

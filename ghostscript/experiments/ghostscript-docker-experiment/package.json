@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "@smotaal/ghostscript-docker-experiment",
+  "version": "0.0.1",
+  "type": "module",
+  "devDependencies": {},
+  "dependencies": {
+    "docker-exec-websocket-server": "*"
+  },
+  "workspaces": {
+    "nohoist": [
+      "docker-exec-websocket-server"
+    ]
+  }
+}
