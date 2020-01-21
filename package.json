@@ -37,6 +37,9 @@
       "ghostscript",
       "container",
       "*/experiments/*"
+    ],
+    "nohoist": [
+      "**"
     ]
   }
 }
