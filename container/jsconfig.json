@@ -1,0 +1,4 @@
+{
+  "extends": "@smotaal.io/tools/typescript/jsconfig.base.json",
+  "exclude": ["node_modules", "**/node_modules/*", "trash", "**/trash/*"]
+}

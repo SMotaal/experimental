@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "@smotaal/experimental-container",
+  "version": "0.0.1",
+  "type": "module",
+  "devDependencies": {
+    "@smotaal.io/tools": "*",
+    "@types/node": "*",
+    "http-server": "*",
+    "prettier": "*",
+    "rollup": "*",
+    "typescript": "*"
+  },
+  "workspaces": {
+    "packages": [
+      "experiments/*"
+    ]
+  }
+}
