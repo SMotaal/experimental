@@ -1,0 +1,186 @@
+{
+  "name": "@smotaal/experimental",
+  "version": "0.0.0-alpha.2",
+  "problems": [
+    "extraneous: @smotaal.io/experimental-wasm@0.0.0-alpha.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal.io/experimental-wasm",
+    "invalid: @smotaal.io/tools@0.0.4 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal.io/tools",
+    "extraneous: @smotaal/experimental-container@0.0.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal/experimental-container",
+    "extraneous: @smotaal/experimental-ghostscript@0.0.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal/experimental-ghostscript",
+    "extraneous: @smotaal/ghostscript-docker-experiment@0.0.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal/ghostscript-docker-experiment"
+  ],
+  "dependencies": {
+    "@smotaal.io/experimental-wasm": {
+      "version": "0.0.0-alpha.1",
+      "extraneous": true,
+      "problems": [
+        "extraneous: @smotaal.io/experimental-wasm@0.0.0-alpha.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal.io/experimental-wasm"
+      ]
+    },
+    "@smotaal.io/tools": {
+      "version": "0.0.4",
+      "invalid": true,
+      "problems": [
+        "invalid: @smotaal.io/tools@0.0.4 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal.io/tools"
+      ],
+      "dependencies": {
+        "prettier": {
+          "version": "1.19.1"
+        },
+        "rollup": {
+          "version": "1.29.1"
+        },
+        "typescript": {
+          "version": "3.7.5"
+        }
+      }
+    },
+    "@smotaal/experimental-container": {
+      "version": "0.0.1",
+      "extraneous": true,
+      "problems": [
+        "extraneous: @smotaal/experimental-container@0.0.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal/experimental-container"
+      ]
+    },
+    "@smotaal/experimental-ghostscript": {
+      "version": "0.0.1",
+      "extraneous": true,
+      "problems": [
+        "extraneous: @smotaal/experimental-ghostscript@0.0.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal/experimental-ghostscript"
+      ]
+    },
+    "@smotaal/ghostscript-docker-experiment": {
+      "version": "0.0.1",
+      "extraneous": true,
+      "problems": [
+        "extraneous: @smotaal/ghostscript-docker-experiment@0.0.1 /Users/daflair/Projects/smotaal.io/experimental/node_modules/@smotaal/ghostscript-docker-experiment"
+      ]
+    },
+    "@types/node": {
+      "version": "13.1.8"
+    },
+    "http-server": {
+      "version": "0.12.1",
+      "dependencies": {
+        "basic-auth": {
+          "version": "1.1.0"
+        },
+        "colors": {
+          "version": "1.4.0"
+        },
+        "corser": {
+          "version": "2.0.1"
+        },
+        "ecstatic": {
+          "version": "3.3.2",
+          "dependencies": {
+            "he": {
+              "version": "1.2.0"
+            },
+            "mime": {
+              "version": "1.6.0"
+            },
+            "minimist": {
+              "version": "1.2.0"
+            },
+            "url-join": {
+              "version": "2.0.5"
+            }
+          }
+        },
+        "http-proxy": {
+          "version": "1.18.0",
+          "dependencies": {
+            "eventemitter3": {
+              "version": "4.0.0"
+            },
+            "follow-redirects": {
+              "version": "1.9.0",
+              "dependencies": {
+                "debug": {
+                  "version": "3.2.6"
+                }
+              }
+            },
+            "requires-port": {
+              "version": "1.0.0"
+            }
+          }
+        },
+        "opener": {
+          "version": "1.5.1"
+        },
+        "optimist": {
+          "version": "0.6.1",
+          "dependencies": {
+            "minimist": {
+              "version": "0.0.10"
+            },
+            "wordwrap": {
+              "version": "0.0.3"
+            }
+          }
+        },
+        "portfinder": {
+          "version": "1.0.25",
+          "dependencies": {
+            "async": {
+              "version": "2.6.3",
+              "dependencies": {
+                "lodash": {
+                  "version": "4.17.15"
+                }
+              }
+            },
+            "debug": {
+              "version": "3.2.6",
+              "dependencies": {
+                "ms": {
+                  "version": "2.1.2"
+                }
+              }
+            },
+            "mkdirp": {
+              "version": "0.5.1",
+              "dependencies": {
+                "minimist": {
+                  "version": "0.0.8"
+                }
+              }
+            }
+          }
+        },
+        "secure-compare": {
+          "version": "3.0.1"
+        },
+        "union": {
+          "version": "0.5.0",
+          "dependencies": {
+            "qs": {
+              "version": "6.9.1"
+            }
+          }
+        }
+      }
+    },
+    "prettier": {
+      "version": "1.19.1"
+    },
+    "rollup": {
+      "version": "1.29.1",
+      "dependencies": {
+        "@types/estree": {
+          "version": "0.0.42"
+        },
+        "@types/node": {
+          "version": "13.1.8"
+        },
+        "acorn": {
+          "version": "7.1.0"
+        }
+      }
+    },
+    "typescript": {
+      "version": "3.7.5"
+    }
+  }
+}
