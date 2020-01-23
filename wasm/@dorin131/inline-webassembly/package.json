@@ -1,0 +1,22 @@
+{
+  "name": "inline-webassembly",
+  "version": "1.0.6",
+  "description": "Inline WebAssembly (text format) into JS",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "repository": "github:dorin131/inline-webassembly",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Dorin Fodor",
+  "license": "MIT",
+  "dependencies": {
+    "wabt": "^1.0.12"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "jest": "^24.9.0"
+  }
+}
