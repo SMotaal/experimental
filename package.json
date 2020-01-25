@@ -21,15 +21,12 @@
     "wasm:pull": "git subtree pull --squash --prefix=wasm/ experimental-wasm master"
   },
   "devDependencies": {
-    "@smotaal.io/tools": "file:../packages/tools",
+    "@smotaal.io/tools": "*",
     "@types/node": "*",
     "http-server": "*",
     "prettier": "*",
     "rollup": "*",
     "typescript": "*"
-  },
-  "resolutions": {
-    "@smotaal.io/tools": "*"
   },
   "workspaces": {
     "packages": [
@@ -38,8 +35,6 @@
       "container",
       "*/experiments/*"
     ],
-    "nohoist": [
-      "**"
-    ]
+    "nohoist": []
   }
 }
