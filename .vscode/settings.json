@@ -15,4 +15,11 @@
 	},
 	"search.useIgnoreFiles": true,
 	"files.exclude": {},
+	"markdown.styles": [
+		"https://markout.dev/markout/styles/vscode.css"
+	],
+	"path-intellisense.extensionOnImport": true,
+	"path-intellisense.mappings": {
+    "/": "${workspaceRoot}/../"
+  }
 }
