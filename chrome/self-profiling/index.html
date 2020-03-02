@@ -1,0 +1,74 @@
+<html>
+
+<head>
+  <meta http-equiv="origin-trial" origin="smotaal.io"
+        content="AmYyU0c1GOG/DGV/RzXAkijXG/gXUKuAFImsqZ9WqjiOX/Z7ayq4HhdWuES6pl/iaDKZu3F3TYDwCEwGrH3mnA8AAABteyJvcmlnaW4iOiJodHRwczovL3Ntb3RhYWwuaW86NDQzIiwiZmVhdHVyZSI6IkV4cGVyaW1lbnRhbEpTUHJvZmlsZXIiLCJleHBpcnkiOjE1ODM1MDMyNjYsImlzU3ViZG9tYWluIjp0cnVlfQ==">
+  <meta http-equiv="origin-trial" origin="http://localhost:80"
+        content="AiGWI9B5owsCE9O1vfYB7KDmywJJSV5LCOKKOBkqOTojuuu1e3zHqOxtVX8p1ubOzodFzZikIDXcKV2gnJ9zMQsAAABXeyJvcmlnaW4iOiJodHRwOi8vbG9jYWxob3N0OjgwIiwiZmVhdHVyZSI6IkV4cGVyaW1lbnRhbEpTUHJvZmlsZXIiLCJleHBpcnkiOjE1ODM4ODQ3OTl9">
+
+
+  <!-- <link rel=alternate href="./README.md" type="text/markdown" /> -->
+
+  <link rel=stylesheet href="/markout/styles/styles.css" />
+  <link rel=preload as=style id="style:styles/markout.css" href="/markout/styles/markout.css" />
+</head>
+
+<body>
+  <main>
+    <markout-content src="./README.md"></markout-content>
+  </main>
+  <script type=module>
+    async function execute(executor, options) {
+      const profile = {};
+      profile.executor = executor;
+      const profiler = await performance.profile({ sampleInterval: 10, ... options });
+      try {
+        await (profile.returned = executor());
+      } catch (exception) {
+        profile.error = exception;
+      }
+      profile.trace = await profiler.stop();
+      return profile;
+    }
+
+    async function chain(... executors) {
+      const profiles = [];
+      for await (const executor of executors) {
+        profiles.push((profiles.last = await (execute(executor))));
+        if (profiles.last && profiles.last.error) {
+        console.error(profiles.last.error);
+        break;
+        }
+      }
+      return profiles;
+    }
+
+    (async () => {
+      await new Promise(requestAnimationFrame);
+      const element = document.querySelector('markout-content');
+
+      console.log(
+        ... await chain(
+          async () => import('/markout/browser/preview.js'),
+          async () => {
+            // await new Promise(requestAnimationFrame);
+            await customElements.whenDefined('markout-content');
+            while(!element.rendered)
+              await new Promise(requestAnimationFrame);
+          },
+          async () => {
+            console.log({...element}, element.rendered);
+            await element.rendered;
+            // element.remove;
+            return element;
+          },
+        )
+      );
+
+
+    })()
+  </script>
+</body>
+
+
+</html>
