@@ -7,7 +7,8 @@ ServiceWorker: {
 	const frames = {};
 	const containers = {
 		['test']: `${new URL('/sandbox/tests/hello-world/', location)}`,
-		['smotaal.io']: 'https://www.smotaal.io',
+		['smotaal.io']: 'https://www.smotaal.io/',
+		['markout.dev']: 'https://www.markout.dev/',
 	};
 	const router = Object.freeze(
 		Object.assign(request => (request.url.startsWith(root) ? router.scoped(request) : router.unscoped(request)), {
@@ -78,7 +79,7 @@ ServiceWorker: {
 					redirect: request.redirect,
 				},
 			} = event).respondWith(
-				router(request).response || (request.resolved ? fetch(request.resolved, request.init) : fetch(event.request)),
+				router(request).response || (request.resolved ? fetch(request.resolved, request.init) : fetch(event.request, request.init)),
 			);
 		} catch (exception) {
 			request.type = 'error';
