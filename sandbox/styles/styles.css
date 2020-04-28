@@ -1,0 +1,25 @@
+﻿html {
+  --shade: #eb0e;
+  --shade-dark: #960e;
+}
+
+html,
+body,
+body > main,
+sandbox-frame {
+  /* padding: 0 !important; */
+  margin: 0 !important;
+}
+
+body > main {
+  width: unset;
+}
+
+.flush {
+  padding: 0.25ch;
+  /* margin: 0; */
+}
+
+[hidden] {
+  display: none;
+}

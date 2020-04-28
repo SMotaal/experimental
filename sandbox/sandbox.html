@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <title>smotaal.io/sandbox</title>
+  <meta charset="utf-8" />
+  <meta name=viewport content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta http-equiv=Content-Security-Policy
+        content="default-src 'self' 'unsafe-inline'  https://* http://*.smotaal.io; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com/@outmark/ https://unpkg.com/@smotaal.io/ https://unpkg.com/@smotaal/ https://*.smotaal.io https://*.markout.dev; connect-src *;" />
+  <link rel=stylesheet href="./sandbox.css" />
+  <link rel=preload as=style id="style:styles/markout.css" href="/markout/styles/markout.css" />
+  <link rel=stylesheet href="../sandbox/styles/styles.css" />
+  <script type=module src="./sandbox.js"></script>
+</head>
+
+<body>
+  <main>
+    <sandbox-frame class="flush">
+      <markout-content src="./sandbox.md"></markout-content>
+    </sandbox-frame>
+  </main>
+</body>
+
+</html>
