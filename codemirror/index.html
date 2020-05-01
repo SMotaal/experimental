@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CodeMirror demo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name=color-scheme content="light dark" />
+  <link href="./browser/codemirror/codemirror.css" rel="stylesheet">
+  <script type=module>
+    import './browser/codemirror/extensions/wast-mode.js';
+    import {CodeMirror} from './browser/codemirror/codemirror.js';
+
+    CodeMirror(element => {
+      document.body.appendChild(element);
+    }, {
+      mode: 'wast',
+      lineNumbers: true,
+    });
+
+  </script>
+  <style>
+    html {
+      display: grid;
+      min-height: 100%;
+      min-width: 100%;
+    }
+
+    body {
+      display: grid;
+      /* grid-template: 'editor'; */
+      grid-auto-flow: column;
+      grid-auto-rows: 1fr;
+    }
+
+    body>.CodeMirror {
+      /* grid-area: editor; */
+      outline: 1px solid red;
+      min-height: 100%;
+    }
+  </style>
+</head>
+
+<body></body>
+
+</html>
