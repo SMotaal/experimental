@@ -15,41 +15,66 @@
 -->
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <title>wat2wasm demo</title>
   <link href="../wasm/@WebAssembly/wabt/demo/third_party/codemirror/codemirror.css" rel="stylesheet">
   <link href="../wasm/@WebAssembly/wabt/demo/custom.css" rel="stylesheet">
+  <style>
+    body>header {
+      /* display: flex; */
+      display: grid;
+      grid-auto-flow: column dense;
+      /* flex-wrap: wrap; */
+      /* white-space: nowrap; */
+    }
+
+    header>details:first-child {
+      /* display: contents; */
+    }
+
+    header>details:first-child>summary {
+      /* display: contents; */
+      border: none;
+      outline: none;
+    }
+  </style>
 </head>
+
 <body>
-  <header hidden>
-    <h1>wat2wasm demo</h1>
-    <p>WebAssembly has a
-      <a href="https://webassembly.github.io/spec/core/text/index.html">text format</a>
-      and a
-      <a href="https://webassembly.github.io/spec/core/binary/index.html">binary format</a>.
-      This demo converts from the text format to the binary format.
-    </p>
-    <p>
-      Enter WebAssembly text in the textarea on the left. The right side will
-      either show an error, or will show a log with a description of the
-      generated binary file.
-    </p>
-    <div>Enabled features:</div>
-    <div>
-      <input type="checkbox" id="exceptions"><label for="exceptions">exceptions</label>
-      <input type="checkbox" id="mutable_globals" checked><label for="mutable_globals">mutable globals</label>
-      <input type="checkbox" id="sat_float_to_int"><label for="sat_float_to_int">saturating float to int</label>
-      <input type="checkbox" id="sign_extension"><label for="sign_extension">sign extension</label>
-    </div>
-    <div>
-      <input type="checkbox" id="simd"><label for="simd">simd</label>
-      <input type="checkbox" id="threads"><label for="threads">threads</label>
-      <input type="checkbox" id="multi_value"><label for="multi_value">multi value</label>
-      <input type="checkbox" id="tail_call"><label for="tail_call">tail call</label>
-      <input type="checkbox" id="bulk_memory"><label for="bulk_memory">bulk memory</label>
-      <input type="checkbox" id="reference_types"><label for="reference_types">reference types</label>
+  <header>
+    <details>
+      <summary></summary>
+      <div style="position:absolute;background:#fffc border-box;border:1em solid #0000;">
+        <h1>wat2wasm demo</h1>
+        <p>WebAssembly has a
+          <a href="https://webassembly.github.io/spec/core/text/index.html">text format</a>
+          and a
+          <a href="https://webassembly.github.io/spec/core/binary/index.html">binary format</a>.
+          This demo converts from the text format to the binary format.
+        </p>
+        <p>
+          Enter WebAssembly text in the textarea on the left. The right side will
+          either show an error, or will show a log with a description of the
+          generated binary file.
+        </p>
+      </div>
+    </details>
+    <div id="features" style="display:flex; flex-wrap:wrap; white-space: nowrap;">
+      <div><label for="exceptions"><input type="checkbox" id="exceptions">exceptions</label></div>
+      <div><label for="mutable_globals"><input type="checkbox" id="mutable_globals" checked>mutable globals</label>
+      </div>
+      <div><label for="sat_float_to_int"><input type="checkbox" id="sat_float_to_int">saturating float to int</label>
+      </div>
+      <div><label for="sign_extension"><input type="checkbox" id="sign_extension">sign extension</label></div>
+      <div><label for="simd"><input type="checkbox" id="simd">simd</label></div>
+      <div><label for="threads"><input type="checkbox" id="threads">threads</label></div>
+      <div><label for="multi_value"><input type="checkbox" id="multi_value">multi value</label></div>
+      <div><label for="tail_call"><input type="checkbox" id="tail_call">tail call</label></div>
+      <div><label for="bulk_memory"><input type="checkbox" id="bulk_memory">bulk memory</label></div>
+      <div><label for="reference_types"><input type="checkbox" id="reference_types">reference types</label></div>
     </div>
   </header>
   <main>
@@ -91,4 +116,5 @@
   <script src="examples.js"></script>
   <script src="demo.js"></script>
 </body>
+
 </html>

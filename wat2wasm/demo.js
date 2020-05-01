@@ -20,10 +20,24 @@ Split(['#top-row', '#bottom-row'], {
   direction: 'vertical',
 });
 
-var features = {};
+let features = {};
 
-WabtModule().then(function(wabt) {
-  var FEATURES = [
+console.log(WabtModule());
+
+(async () => ({
+  wabt: WabtModule(),
+  wasmFeatures: Object.fromEntries(
+    await Promise.all(
+      Object.entries((await import('./wasm-feature-detect.mjs')).wasmFeatureDetect).map(async ([feature, detect]) => [
+        feature,
+        await detect(),
+      ]),
+    ),
+  ),
+}))().then(function ({wabt, wasmFeatures}) {
+  // console.log({wabt, wasmFeatures});
+  // return;
+  let FEATURES = [
     'exceptions',
     'mutable_globals',
     'sat_float_to_int',
@@ -36,29 +50,30 @@ WabtModule().then(function(wabt) {
     'reference_types',
   ];
 
-  var kCompileMinMS = 100;
+  let kCompileMinMS = 100;
 
-  var outputEl = document.getElementById('output');
-  var jsLogEl = document.getElementById('js_log');
-  var selectEl = document.getElementById('select');
-  var downloadEl = document.getElementById('download');
-  var downloadLink = document.getElementById('downloadLink');
-  var binaryBuffer = null;
-  var binaryBlobUrl = null;
+  const outputEl = /** @type {HTMLPreElement} event */ (document.getElementById('output'));
+  const jsLogEl = /** @type {HTMLPreElement} event */ (document.getElementById('js_log'));
+  const selectEl = /** @type {HTMLSelectElement} event */ (document.getElementById('select'));
+  const downloadEl = /** @type {HTMLButtonElement} event */ (document.getElementById('download'));
+  const featuresEl = /** @type {HTMLButtonElement} event */ (document.getElementById('features'));
+  const downloadLink = /** @type {HTMLAnchorElement} event */ (document.getElementById('downloadLink'));
+  let binaryBuffer = null;
+  let binaryBlobUrl = null;
 
-  for (var feature of FEATURES) {
-    var featureEl = document.getElementById(feature);
-    features[feature] = featureEl.checked;
+  for (let feature of FEATURES) {
+    let featureEl = /** @type {HTMLInputElement} event */ (document.getElementById(feature));
+    features[feature] = featureEl.checked || (wasmFeatures && wasmFeatures[feature] && (featureEl.checked = true));
     featureEl.addEventListener('change', event => {
-      var feature = event.target.id;
-      features[feature] = event.target.checked;
+      let feature = event.target.id;
+      features[feature] = /** @type {HTMLInputElement} event */ (event.target).checked;
       onWatChange();
     });
   }
+  console.log({wasmFeatures, features});
+  let wasmInstance = null;
 
-  var wasmInstance = null;
-
-  var wrappedConsole = Object.create(console);
+  let wrappedConsole = Object.create(console);
 
   wrappedConsole.log = (...args) => {
     let line = args.map(String).join('') + '\n';
@@ -66,7 +81,7 @@ WabtModule().then(function(wabt) {
     console.log(...args);
   };
 
-  var watEditor = CodeMirror(
+  let watEditor = CodeMirror(
     elt => {
       document.getElementById('top-left').appendChild(elt);
     },
@@ -76,7 +91,7 @@ WabtModule().then(function(wabt) {
     },
   );
 
-  var jsEditor = CodeMirror(
+  let jsEditor = CodeMirror(
     elt => {
       document.getElementById('bottom-left').appendChild(elt);
     },
@@ -87,10 +102,10 @@ WabtModule().then(function(wabt) {
   );
 
   function debounce(f, wait) {
-    var lastTime = 0;
-    var timeoutId = -1;
-    var wrapped = function() {
-      var time = +new Date();
+    let lastTime = 0;
+    let timeoutId = -1;
+    let wrapped = function () {
+      let time = +new Date();
       if (time - lastTime < wait) {
         if (timeoutId == -1) timeoutId = setTimeout(wrapped, lastTime + wait - time);
         return;
@@ -105,21 +120,22 @@ WabtModule().then(function(wabt) {
 
   function compile() {
     outputEl.textContent = '';
-    var binaryOutput;
+    let binaryOutput;
+    let module;
     try {
-      var options = {
+      let options = {
         source: watEditor.getValue(),
         fileame: 'test.wast',
         features,
       };
-      var module = wabt.parseWat(options.fileame, options.source, options.features);
+      module = wabt.parseWat(options.fileame, options.source, options.features);
       module.resolveNames();
       module.validate(features);
-      var binaryOutput = module.toBinary({log: true, write_debug_names: true});
+      let binaryOutput = module.toBinary({log: true, write_debug_names: true});
       console.log('compile(%o)\n\t=> module %o\n\t=> output %o', options, module, binaryOutput);
       outputEl.textContent = binaryOutput.log;
       binaryBuffer = binaryOutput.buffer;
-      var blob = new Blob([binaryOutput.buffer]);
+      let blob = new Blob([binaryOutput.buffer]);
       if (binaryBlobUrl) {
         URL.revokeObjectURL(binaryBlobUrl);
       }
@@ -147,39 +163,45 @@ WabtModule().then(function(wabt) {
     }
   }
 
-  var onWatChange = debounce(compile, kCompileMinMS);
-  var onJsChange = debounce(run, kCompileMinMS);
+  let onWatChange = debounce(compile, kCompileMinMS);
+  let onJsChange = debounce(run, kCompileMinMS);
 
   function setExample(index) {
-    var example = examples[index];
+    let example = examples[index];
     watEditor.setValue(example.contents);
     onWatChange();
     jsEditor.setValue(example.js);
     onJsChange();
   }
 
-  function onSelectChanged(e) {
-    setExample(this.selectedIndex);
-  }
-
-  function onDownloadClicked(e) {
-    // See https://developer.mozilla.com/en-US/docs/Web/API/MouseEvent
-    var event = new MouseEvent('click', {
-      view: window,
-      bubbles: true,
-      cancelable: true,
-    });
-    downloadLink.dispatchEvent(event);
-  }
-
   watEditor.on('change', onWatChange);
   jsEditor.on('change', onJsChange);
-  selectEl.addEventListener('change', onSelectChanged);
-  downloadEl.addEventListener('click', onDownloadClicked);
+  selectEl.addEventListener(
+    'change',
+    {
+      onchange(event) {
+        setExample(this.selectedIndex);
+      },
+    }.onchange,
+  );
+  downloadEl.addEventListener(
+    'click',
+    {
+      onDownloadClicked(e) {
+        // See https://developer.mozilla.com/en-US/docs/Web/API/MouseEvent
+        let event = new MouseEvent('click', {
+          view: window,
+          bubbles: true,
+          cancelable: true,
+        });
+        downloadLink.dispatchEvent(event);
+      },
+    }.onDownloadClicked,
+  );
 
-  for (var i = 0; i < examples.length; ++i) {
-    var example = examples[i];
-    var option = document.createElement('option');
+  for (let i = 0; i < examples.length; ++i) {
+    let example = examples[i];
+    let option = document.createElement('option');
     option.textContent = example.name;
     selectEl.appendChild(option);
   }
