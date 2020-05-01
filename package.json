@@ -17,7 +17,7 @@
     "markout:pull": "(git stash && git subtree pull --squash --prefix=markout/ experimental-markout master); git stash pop",
     "markout:push": "git subtree push --prefix=markout/ experimental-markout master",
     "wasm:init": "git remote add experimental-wasm https://github.com/ConRes/experimental-wasm.git",
-    "wasm:add": "git subtree add --squash --prefix=wasm/ experimental-wasm master",
+    "wasm:add": "(git stash && git subtree add --squash --prefix=wasm/ experimental-wasm master); git stash pop",
     "wasm:pull": "(git stash && git subtree pull --squash --prefix=wasm/ experimental-wasm master); git stash pop",
     "wasm:push": "git subtree push --prefix=wasm/ experimental-wasm master"
   },
