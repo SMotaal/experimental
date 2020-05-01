@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "@smotaal.io/experimental-tasks",
+  "description": "smotaal.io/experimental/tasks",
+  "version": "0.0.0-experimental.1",
+  "author": "Saleh Abdel Motaal <saleh@smotaal.io>",
+  "homepage": "https://smotaal.io/#/experimental/tasks/",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {},
+  "bin": {
+    "run": "./bin/run",
+    "subtree:pull": "./git/subtree/pull.js"
+  },
+  "devDependencies": {
+    "@smotaal.io/tools": "*",
+    "@types/node": "*",
+    "http-server": "*",
+    "prettier": "*",
+    "rollup": "*",
+    "typescript": "*"
+  },
+  "workspaces": {
+    "nohoist": []
+  }
+}

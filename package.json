@@ -26,13 +26,15 @@
     "http-server": "*",
     "prettier": "*",
     "rollup": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "tasks": "file:./tasks/"
   },
   "workspaces": {
     "packages": [
       "wasm",
       "ghostscript",
       "container",
+      "tasks",
       "*/experiments/*"
     ],
     "nohoist": []
