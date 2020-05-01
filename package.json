@@ -12,6 +12,7 @@
     "prepare": "node -e 'require(`@smotaal.io/tools/scripts/update-packages-log.cjs`)'",
     "serve": "http-server --cors -s",
     "chrome": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome",
+    "wasm:init": "git remote add experimental-wasm https://github.com/ConRes/experimental-wasm.git",
     "wasm:add": "git subtree add --squash --prefix=wasm/ experimental-wasm master",
     "wasm:pull": "(git stash && git subtree pull --squash --prefix=wasm/ experimental-wasm master); git stash pop",
     "wasm:push": "git subtree push --prefix=wasm/ experimental-wasm master"
