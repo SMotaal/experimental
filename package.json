@@ -13,7 +13,8 @@
     "serve": "http-server --cors -s",
     "chrome": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome",
     "wasm:add": "git subtree add --squash --prefix=wasm/ experimental-wasm master",
-    "wasm:pull": "git subtree pull --squash --prefix=wasm/ experimental-wasm master"
+    "wasm:pull": "(git stash && git subtree pull --squash --prefix=wasm/ experimental-wasm master); git stash pop",
+    "wasm:push": "git subtree push --prefix=wasm/ experimental-wasm master"
   },
   "devDependencies": {
     "@smotaal.io/tools": "*",
