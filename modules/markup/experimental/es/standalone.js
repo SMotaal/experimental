@@ -1,1 +1,1 @@
-export * from '../../../../../markup/experimental/es/standalone.js';
+export * from '../../../../../markup/packages/matcher/experimental/es-tokenizer/es-tokenizer.standalone.js';
