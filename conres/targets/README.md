@@ -111,7 +111,7 @@ The formal syntax is tentatively documented in the public [Fluent Data Format](/
 
 ### Matcher Definitions
 
-```js
+```js line-wrap markup-mode=es
 sequences = {
 	NUMERIC: sequence`
 		(?:(?:[-+]|\b)(?:\d*\.\d+|\d+(?:\.(?:\d*)|)|\d+)%?(?=\W|$))|
