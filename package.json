@@ -41,6 +41,7 @@
       "*/experiments/*"
     ],
     "packages": [
+      "psychometrics",
       "modules",
       "modules/shim"
     ],
