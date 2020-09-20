@@ -1,7 +1,9 @@
 {
   "private": true,
-  "name": "@smotaal/modules",
-  "version": "0.0.0-alpha.1",
+  "name": "@smotaal/experimental-modules-shim",
+  "version": "0.0.1",
+  "author": "Saleh Abdel Motaal <saleh@smotaal.io>",
+  "repository": "https://github.com/SMotaal/experimental.git",
   "scripts": {
     "serve": "http-server --cors -s",
     "bundle": "rollup -c rollup.config.js",
@@ -15,7 +17,9 @@
   "main": "esm.mjs",
   "devDependencies": {
     "@smotaal.io/tools": "*",
-    "http-server": "*",
-    "rollup": "*"
-  }
+    "prettier": "*",
+    "rollup": "*",
+    "typescript": "*"
+  },
+  "prettier": "@smotaal.io/tools/prettier"
 }

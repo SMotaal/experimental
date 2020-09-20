@@ -1,4 +1,18 @@
 {
+  "private": true,
+  "name": "@smotaal/experimental-modules",
+  "version": "0.0.1",
+  "author": "Saleh Abdel Motaal <saleh@smotaal.io>",
+  "repository": "https://github.com/SMotaal/experimental.git",
+  "license": "MIT",
   "type": "module",
-  "exports": {}
+  "exports": {},
+  "devDependencies": {
+    "@smotaal.io/tools": "*",
+    "prettier": "*",
+    "rollup": "*",
+    "typescript": "*"
+  },
+  "workspaces": { "packages": ["shim"] },
+  "prettier": "@smotaal.io/tools/prettier"
 }

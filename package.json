@@ -41,6 +41,8 @@
       "*/experiments/*"
     ],
     "packages": [
+      "modules",
+      "modules/shim"
     ],
     "nohoist": []
   },
