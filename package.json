@@ -27,17 +27,22 @@
     "http-server": "*",
     "prettier": "*",
     "rollup": "*",
-    "typescript": "*",
+    "typescript": "*"
+  },
+  "devDependencies!": {
     "tasks": "file:./tasks/"
   },
   "workspaces": {
-    "packages": [
+    "packages!": [
       "wasm",
       "ghostscript",
       "container",
       "tasks",
       "*/experiments/*"
     ],
+    "packages": [
+    ],
     "nohoist": []
-  }
+  },
+  "prettier": "@smotaal.io/tools/prettier"
 }
