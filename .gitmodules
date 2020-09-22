@@ -1,0 +1,4 @@
+[submodule "quasi-parser-generator"]
+	path = quasi-parser-generator
+	url = https://github.com/SMotaal/experimental-quasi-parser-generator.git
+	branch = experimental
