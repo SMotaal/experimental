@@ -3,7 +3,11 @@
   "name": "@smotaal/experimental-modules-shim",
   "version": "0.0.1",
   "author": "Saleh Abdel Motaal <saleh@smotaal.io>",
-  "repository": "https://github.com/SMotaal/experimental.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SMotaal/experimental.git",
+    "directory": "modules/shim"
+  },
   "scripts": {
     "serve": "http-server --cors -s",
     "bundle": "rollup -c rollup.config.js",
