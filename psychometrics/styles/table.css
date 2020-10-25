@@ -1,0 +1,88 @@
+table.questions {
+  counter-reset: question;
+  text-align: center;
+  border: 0 solid currentColor;
+  border-collapse: collapse;
+  /* border-spacing: 1em; */
+}
+
+table.questions>tbody,
+table.questions>thead,
+table.questions>tfoot,
+table.questions>*>tr,
+table.questions>*>tr>td,
+table.questions>*>tr>th {
+  border-style: inherit;
+  border-color: inherit;
+  border-width: inherit;
+}
+
+table.questions tr.question {
+  counter-increment: question;
+
+}
+
+table.questions tr.question> :first-child {
+  text-align: left;
+  font-weight: normal;
+  padding-inline-start: 3.5em;
+  white-space: normal;
+  /* outline: 1px solid red; */
+  /* text-indent: -3em; */
+}
+
+table.questions tr.question> :first-child::before {
+  font-weight: bold;
+  content: counters(question, ".") ")";
+  width: 3em;
+  text-align: right;
+  display: inline-block;
+  margin-inline-start: -3.5em;
+  margin-inline-end: 0.5em;
+  /* outline: 1px solid red; */
+}
+
+table.questions tr.result> :first-child {
+  text-align: right;
+  font-weight: bold;
+}
+
+/* table.questions tr.result> :first-child::after {
+  content: ":";
+  font-weight: normal;
+  padding-inline-end: 0.5em;
+} */
+
+table.questions tr>td,
+table.questions tr>th {
+  padding-block-start: 0.5em;
+  padding-block-end: 0.5em;
+}
+
+table.questions tbody tr:first-child>td,
+table.questions tbody tr:first-child>th {
+  padding-block-start: 1em;
+}
+
+table.questions tbody tr:last-child>td,
+table.questions tbody tr:last-child>th {
+  padding-block-end: 1em;
+}
+
+table.questions thead tr:last-child>td,
+table.questions thead tr:last-child>th,
+table.questions tfoot tr:first-child>td,
+table.questions tfoot tr:first-child>th {
+  border-block-style: solid;
+  border-block-color: red;
+}
+
+table.questions thead tr:last-child>td,
+table.questions thead tr:last-child>th {
+  border-block-end-width: 1px;
+}
+
+table.questions tfoot tr:first-child>td,
+table.questions tfoot tr:first-child>th {
+  border-block-start-width: 1px;
+}
