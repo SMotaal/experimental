@@ -13,17 +13,42 @@ export class TEQResults {
   constructor(source) {
     this.source = source;
 
-    this.entries = Object.freeze(
-      /** @type {Entries} */ ({
-        ...((source != null &&
-          typeof source === 'object' &&
-          ((typeof HTMLFormElement === 'function' &&
-            source instanceof HTMLFormElement &&
-            Object.fromEntries([...new FormData(source)])) ||
-            (typeof FormData === 'function' && source instanceof FormData && Object.fromEntries([...source])))) ||
-          undefined),
-      }),
-    );
+    this.form =
+      (source != null &&
+        typeof source === 'object' &&
+        typeof HTMLFormElement === 'function' &&
+        source instanceof HTMLFormElement &&
+        source) ||
+      null;
+
+    if (this.form) {
+      if (this.form.elements['teq.psychometrics.score']) this.form.elements['teq.psychometrics.score'].value = '';
+      if (this.form.elements['teq.psychometrics.results']) this.form.elements['teq.psychometrics.results'].value = '';
+    }
+
+    this.formData =
+      (typeof FormData === 'function' &&
+        ((this.form && new FormData(this.form)) || (source instanceof FormData && source))) ||
+      null;
+
+    if (this.formData) {
+      this.formData.delete('teq.psychometrics.score');
+      this.formData.delete('teq.psychometrics.results');
+    }
+
+    this.entries = Object.freeze(/** @type {Entries} */ (Object.fromEntries([...this.formData])));
+
+    // this.entries = Object.freeze(
+    //   /** @type {Entries} */ ({
+    //     ...((source != null &&
+    //       typeof source === 'object' &&
+    //       ((typeof HTMLFormElement === 'function' &&
+    //         source instanceof HTMLFormElement &&
+    //         Object.fromEntries([...new FormData(source)])) ||
+    //         (typeof FormData === 'function' && source instanceof FormData && Object.fromEntries([...source])))) ||
+    //       undefined),
+    //   }),
+    // );
     this.psychometrics = /** @type {Psychometrics} */ ({
       ...new.target.psychometrics,
       items: [...new.target.psychometrics.items],
@@ -42,6 +67,16 @@ export class TEQResults {
 
     Object.freeze(this.psychometrics);
     Object.freeze(this);
+
+    if (this.formData) {
+      this.formData.set('teq.psychometrics.score', String(this.psychometrics.score));
+      this.formData.set('teq.psychometrics.results', new Blob([JSON.stringify(this.psychometrics)], {type: 'text/json'}));
+    }
+
+    if (this.form) {
+      if (this.form.elements['teq.psychometrics.score'])
+        this.form.elements['teq.psychometrics.score'].value = this.psychometrics.score;
+    }
   }
 
   /** @param {Source} [source] */
@@ -52,7 +87,9 @@ export class TEQResults {
   /** @param {Source} source */
   static score(source) {
     const results = (this || TEQResults).from(source);
-    console.log('%O', (this || TEQResults).score, results);
+    // console.log('%O', (this || TEQResults).score, results);
+    console.log(results);
+    return results;
   }
 }
 

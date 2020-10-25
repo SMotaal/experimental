@@ -7,472 +7,415 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta http-equiv="Content-Security-Policy"
         content="default-src 'self' 'unsafe-inline' https://* http://*.smotaal.io; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com/@smotaal.io/ https://*.smotaal.io; connect-src *;" />
-  <meta name="theme-color" content="#262f36">
-  <meta name="background-color" content="#999999">
-  <!-- <script>(typeof self !== 'object' || !self || self.globalThis === self || (self.globalThis = self))</script> -->
-  <!-- <link rel="icon" sizes="72x72" href="./icon-72x72.png"> -->
-  <!-- <link rel="icon" sizes="192x192" href="./icon-192x192.png"> -->
-  <!-- <link rel="apple-touch-icon" href="./icon-192x192.png"> -->
-  <!-- <script>
-    document.currentScript.after(Object.assign(document.createElement('link'), {
-      rel: 'stylesheet',
-      href: '/fonts/iosevka.css',
-      fallback: 'https://smotaal.io/fonts/iosevka.css',
-      onerror() {
-        this.href !== this.fallback && (this.href = this.fallback) ? this.previousSiblingElement.after(this) : this.remove()
-      }
-    }));
-  </script> -->
-  <!-- <link rel="stylesheet" href="./demo.css" /> -->
+  <meta name="theme-color" content="#262f36" />
+  <meta name="background-color" content="#999999" />
+  <link rel="stylesheet" href="/markout/styles/root.css" />
+  <link rel="stylesheet" href="../styles/table.css" />
 </head>
 
 <body>
-  <form onsubmit="import('./teq.js').then(({scoreTEQ})=>scoreTEQ(this)); event.preventDefault();">
-    <fieldset name="teq.psychometrics.items">
-      <table class="vertical">
+  <main>
+    <form onchange="event.preventDefault(); import('./teq.js').then(({scoreTEQ})=>scoreTEQ(this));"
+          onsubmit="event.preventDefault();"
+          ondblclick="event.target.checked && !event.target.required && (event.target.checked = false)">
+      <table class="questions" width="100%">
+        <colgroup>
+          <col class="prompt">
+          <col class="response">
+          <col class="response">
+          <col class="response">
+          <col class="response">
+        </colgroup>
         <thead>
           <tr class="heading">
-            <td class="blank">&nbsp;</td>
-            <th class="heading" scope="col"><span>Never</span></th>
-            <th class="heading" scope="col"><span>Rarely</span></th>
-            <th class="heading" scope="col"><span>Sometimes</span></th>
-            <th class="heading" scope="col"><span>Often</span></th>
-            <th class="heading" scope="col"><span>Always</span></th>
+            <th scope="col"></th>
+            <th scope="col" width="10%"><span>Never</span></th>
+            <th scope="col" width="10%"><span>Rarely</span></th>
+            <th scope="col" width="10%"><span>Sometimes</span></th>
+            <th scope="col" width="10%"><span>Often</span></th>
+            <th scope="col" width="10%"><span>Always</span></th>
           </tr>
         </thead>
         <tbody>
           <tr class="question">
-            <td class="prompt">
-              <span class="num">1. </span>
-              When someone else is feeling excited, I tend to get excited too.
-            </td>
-            <td class="response">
+            <th scope=row>When someone else is feeling excited, I tend to get excited too.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[1].score">Never</label>
               <input type="radio" value="0" name="teq.psychometrics.items[1].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[1].score">Rarely</label>
               <input type="radio" value="1" name="teq.psychometrics.items[1].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[1].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[1].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[1].score">Often</label>
               <input type="radio" value="3" name="teq.psychometrics.items[1].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[1].score">Always</label>
               <input type="radio" value="4" name="teq.psychometrics.items[1].score" title="Always" required>
             </td>
           </tr>
           <tr class="question even">
-            <td class="prompt">
-              <span class="num">2. </span>
-              Other people’s misfortunes do not disturb me a great deal.
-            </td>
-            <td class="response">
+            <th scope=row>Other people’s misfortunes do not disturb me a great deal.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[2].score">Never</label>
               <input type="radio" value="4" name="teq.psychometrics.items[2].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[2].score">Rarely</label>
               <input type="radio" value="3" name="teq.psychometrics.items[2].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[2].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[2].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[2].score">Often</label>
               <input type="radio" value="1" name="teq.psychometrics.items[2].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[2].score">Always</label>
               <input type="radio" value="0" name="teq.psychometrics.items[2].score" title="Always" required>
             </td>
           </tr>
           <tr class="question">
-            <td class="prompt">
-              <span class="num">3. </span>
-              It upsets me to see someone being treated disrespectfully.
-            </td>
-            <td class="response">
+            <th scope=row>It upsets me to see someone being treated disrespectfully.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[3].score">Never</label>
               <input type="radio" value="0" name="teq.psychometrics.items[3].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[3].score">Rarely</label>
               <input type="radio" value="1" name="teq.psychometrics.items[3].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[3].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[3].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[3].score">Often</label>
               <input type="radio" value="3" name="teq.psychometrics.items[3].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[3].score">Always</label>
               <input type="radio" value="4" name="teq.psychometrics.items[3].score" title="Always" required>
             </td>
           </tr>
           <tr class="question even">
-            <td class="prompt">
-              <span class="num">4. </span>
-              I remain unaffected when someone close to me is happy.
-            </td>
-            <td class="response">
+            <th scope=row>I remain unaffected when someone close to me is happy.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[4].score">Never</label>
               <input type="radio" value="4" name="teq.psychometrics.items[4].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[4].score">Rarely</label>
               <input type="radio" value="3" name="teq.psychometrics.items[4].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[4].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[4].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[4].score">Often</label>
               <input type="radio" value="1" name="teq.psychometrics.items[4].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[4].score">Always</label>
               <input type="radio" value="0" name="teq.psychometrics.items[4].score" title="Always" required>
             </td>
           </tr>
           <tr class="question">
-            <td class="prompt">
-              <span class="num">5. </span>
-              I enjoy making other people feel better.
-            </td>
-            <td class="response">
+            <th scope=row>I enjoy making other people feel better.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[5].score">Never</label>
               <input type="radio" value="0" name="teq.psychometrics.items[5].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[5].score">Rarely</label>
               <input type="radio" value="1" name="teq.psychometrics.items[5].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[5].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[5].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[5].score">Often</label>
               <input type="radio" value="3" name="teq.psychometrics.items[5].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[5].score">Always</label>
               <input type="radio" value="4" name="teq.psychometrics.items[5].score" title="Always" required>
             </td>
           </tr>
           <tr class="question even">
-            <td class="prompt">
-              <span class="num">6. </span>
-              I have tender, concerned feelings for people less fortunate than me.
-            </td>
-            <td class="response">
+            <th scope=row>I have tender, concerned feelings for people less fortunate than me.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[6].score">Never</label>
               <input type="radio" value="0" name="teq.psychometrics.items[6].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[6].score">Rarely</label>
               <input type="radio" value="1" name="teq.psychometrics.items[6].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[6].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[6].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[6].score">Often</label>
               <input type="radio" value="3" name="teq.psychometrics.items[6].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[6].score">Always</label>
               <input type="radio" value="4" name="teq.psychometrics.items[6].score" title="Always" required>
             </td>
           </tr>
           <tr class="question">
-            <td class="prompt">
-              <span class="num">7. </span>
-              When a friend starts to talk about his\her problems, I try to steer the conversation towards something
-              else.
-            </td>
-            <td class="response">
+            <th scope=row>When a friend starts to talk about his\her problems, I try to steer the conversation towards
+              somethingelse.
+            </th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[7].score">Never</label>
               <input type="radio" value="4" name="teq.psychometrics.items[7].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[7].score">Rarely</label>
               <input type="radio" value="3" name="teq.psychometrics.items[7].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[7].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[7].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[7].score">Often</label>
               <input type="radio" value="1" name="teq.psychometrics.items[7].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[7].score">Always</label>
               <input type="radio" value="0" name="teq.psychometrics.items[7].score" title="Always" required>
             </td>
           </tr>
           <tr class="question even">
-            <td class="prompt">
-              <span class="num">8. </span>
-              I can tell when others are sad even when they do not say anything.
-            </td>
-            <td class="response">
+            <th scope=row>I can tell when others are sad even when they do not say anything.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[8].score">Never</label>
               <input type="radio" value="0" name="teq.psychometrics.items[8].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[8].score">Rarely</label>
               <input type="radio" value="1" name="teq.psychometrics.items[8].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[8].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[8].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[8].score">Often</label>
               <input type="radio" value="3" name="teq.psychometrics.items[8].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[8].score">Always</label>
               <input type="radio" value="4" name="teq.psychometrics.items[8].score" title="Always" required>
             </td>
           </tr>
           <tr class="question">
-            <td class="prompt">
-              <span class="num">9. </span>
-              I find that I am “in tune” with other people’s moods.
-            </td>
-            <td class="response">
+            <th scope=row>I find that I am “in tune” with other people’s moods.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[9].score">Never</label>
               <input type="radio" value="0" name="teq.psychometrics.items[9].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[9].score">Rarely</label>
               <input type="radio" value="1" name="teq.psychometrics.items[9].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[9].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[9].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[9].score">Often</label>
               <input type="radio" value="3" name="teq.psychometrics.items[9].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[9].score">Always</label>
               <input type="radio" value="4" name="teq.psychometrics.items[9].score" title="Always" required>
             </td>
           </tr>
           <tr class="question even">
-            <td class="prompt">
-              <span class="num">10. </span>
-              I do not feel sympathy for people who cause their own serious illnesses.
-            </td>
-            <td class="response">
+            <th scope=row>I do not feel sympathy for people who cause their own serious illnesses.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[10].score">Never</label>
               <input type="radio" value="4" name="teq.psychometrics.items[10].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[10].score">Rarely</label>
               <input type="radio" value="3" name="teq.psychometrics.items[10].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[10].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[10].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[10].score">Often</label>
               <input type="radio" value="1" name="teq.psychometrics.items[10].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[10].score">Always</label>
               <input type="radio" value="0" name="teq.psychometrics.items[10].score" title="Always" required>
             </td>
           </tr>
           <tr class="question">
-            <td class="prompt">
-              <span class="num">11. </span>
-              I become irritated when someone cries.
-            </td>
-            <td class="response">
+            <th scope=row>I become irritated when someone cries.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[11].score">Never</label>
               <input type="radio" value="4" name="teq.psychometrics.items[11].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[11].score">Rarely</label>
               <input type="radio" value="3" name="teq.psychometrics.items[11].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[11].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[11].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[11].score">Often</label>
               <input type="radio" value="1" name="teq.psychometrics.items[11].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[11].score">Always</label>
               <input type="radio" value="0" name="teq.psychometrics.items[11].score" title="Always" required>
             </td>
           </tr>
           <tr class="question even">
-            <td class="prompt">
-              <span class="num">12. </span>
-              I am not really interested in how other people feel.
-            </td>
-            <td class="response">
+            <th scope=row>I am not really interested in how other people feel.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[12].score">Never</label>
               <input type="radio" value="4" name="teq.psychometrics.items[12].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[12].score">Rarely</label>
               <input type="radio" value="3" name="teq.psychometrics.items[12].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[12].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[12].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[12].score">Often</label>
               <input type="radio" value="1" name="teq.psychometrics.items[12].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[12].score">Always</label>
               <input type="radio" value="0" name="teq.psychometrics.items[12].score" title="Always" required>
             </td>
           </tr>
           <tr class="question">
-            <td class="prompt">
-              <span class="num">13. </span>
-              I get a strong urge to help when I see someone who is upset.
-            </td>
-            <td class="response">
+            <th scope=row>I get a strong urge to help when I see someone who is upset.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[13].score">Never</label>
               <input type="radio" value="0" name="teq.psychometrics.items[13].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[13].score">Rarely</label>
               <input type="radio" value="1" name="teq.psychometrics.items[13].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[13].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[13].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[13].score">Often</label>
               <input type="radio" value="3" name="teq.psychometrics.items[13].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[13].score">Always</label>
               <input type="radio" value="4" name="teq.psychometrics.items[13].score" title="Always" required>
             </td>
           </tr>
           <tr class="question even">
-            <td class="prompt">
-              <span class="num">14. </span>
-              When I see someone being treated unfairly, I do not feel very much pity for them.
-            </td>
-            <td class="response">
+            <th scope=row>When I see someone being treated unfairly, I do not feel very much pity for them.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[14].score">Never</label>
               <input type="radio" value="4" name="teq.psychometrics.items[14].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[14].score">Rarely</label>
               <input type="radio" value="3" name="teq.psychometrics.items[14].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[14].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[14].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[14].score">Often</label>
               <input type="radio" value="1" name="teq.psychometrics.items[14].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[14].score">Always</label>
               <input type="radio" value="0" name="teq.psychometrics.items[14].score" title="Always" required>
             </td>
           </tr>
           <tr class="question">
-            <td class="prompt">
-              <span class="num">15. </span>
-              I find it silly for people to cry out of happiness.
-            </td>
-            <td class="response">
+            <th scope=row>I find it silly for people to cry out of happiness.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[15].score">Never</label>
               <input type="radio" value="4" name="teq.psychometrics.items[15].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[15].score">Rarely</label>
               <input type="radio" value="3" name="teq.psychometrics.items[15].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[15].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[15].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[15].score">Often</label>
               <input type="radio" value="1" name="teq.psychometrics.items[15].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[15].score">Always</label>
               <input type="radio" value="0" name="teq.psychometrics.items[15].score" title="Always" required>
             </td>
           </tr>
           <tr class="question">
-            <td class="prompt">
-              <span class="num">16. </span>
-              When I see someone being taken advantage of, I feel kind of protective towards him\her.
-            </td>
-            <td class="response">
+            <th scope=row>When I see someone being taken advantage of, I feel kind of protective towards him\her.</th>
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[16].score">Never</label>
               <input type="radio" value="0" name="teq.psychometrics.items[16].score" title="Never" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[16].score">Rarely</label>
               <input type="radio" value="1" name="teq.psychometrics.items[16].score" title="Rarely" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[16].score">Sometimes</label>
               <input type="radio" value="2" checked name="teq.psychometrics.items[16].score" title="Sometimes" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[16].score">Often</label>
               <input type="radio" value="3" name="teq.psychometrics.items[16].score" title="Often" required>
             </td>
-            <td class="response">
+            <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[16].score">Always</label>
               <input type="radio" value="4" name="teq.psychometrics.items[16].score" title="Always" required>
             </td>
           </tr>
         </tbody>
         <tfoot>
-          <tr>
-            <td class="submit" colspan="6">
-              <div class="submit">
-                <input type="submit" value="Score my Answers" class="submit-button">
-              </div>
-            </td>
+          <tr class="score">
+            <th colspan=6 scope="row">Score: <output name="teq.psychometrics.score" style="width:100%;">32</output></th>
           </tr>
         </tfoot>
       </table>
-    </fieldset>
-  </form>
-  <script type="module">
-  </script>
+    </form>
+  </main>
 </body>
 
 </html>
