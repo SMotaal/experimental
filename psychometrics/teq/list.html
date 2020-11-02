@@ -1,0 +1,26 @@
+<form>
+  <fieldset name="psychometrics">
+    <object name="psychometrics.teq" type="text/json" data="./teq.json"></object>
+    <datalist name="psychometrics.teq.options">
+      <option name="psychometrics.teq.options[0]" value="Never"></option>
+      <option name="psychometrics.teq.options[1]" value="Rarely"></option>
+      <option name="psychometrics.teq.options[2]" value="Sometimes"></option>
+      <option name="psychometrics.teq.options[3]" value="Always"></option>
+      <option name="psychometrics.teq.options[4]" value="Often"></option>
+    </datalist>
+    <ol>
+      <li name="psychometrics.teq.items[0]">
+        <label name="psychometrics.teq.items[0].prompt">
+          When someone else is feeling excited, I tend to get excited too.
+          <input name="psychometrics.teq.items[0].option" list="datalist" type="range" />
+        </label>
+      </li>
+      <li name="psychometrics.teq.items[1]">
+        <label name="psychometrics.teq.items[1].prompt">
+          Other people’s misfortunes do not disturb me a great deal.
+          <input name="psychometrics.teq.items[1].option" list="datalist" type="range" />
+        </label>
+      </li>
+    </ol>
+  </fieldset>
+</form>

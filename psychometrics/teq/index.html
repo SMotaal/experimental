@@ -18,6 +18,7 @@
     <form onchange="event.preventDefault(); import('./teq.js').then(({scoreTEQ})=>scoreTEQ(this));"
           onsubmit="event.preventDefault();"
           ondblclick="event.target.checked && !event.target.required && (event.target.checked = false)">
+      <object name="teq.definitions" type="text/json" data="./teq.json"></object>
       <table class="questions" width="100%">
         <colgroup>
           <col class="prompt">
@@ -176,7 +177,7 @@
             </td>
           </tr>
           <tr class="question">
-            <th scope=row>When a friend starts to talk about his\her problems, I try to steer the conversation towards
+            <th scope=row>When a friend starts to talk about his/her problems, I try to steer the conversation towards
               somethingelse.
             </th>
             <td>
@@ -385,7 +386,7 @@
             </td>
           </tr>
           <tr class="question">
-            <th scope=row>When I see someone being taken advantage of, I feel kind of protective towards him\her.</th>
+            <th scope=row>When I see someone being taken advantage of, I feel kind of protective towards him/her.</th>
             <td>
               <label class="aria-label" hidden for="teq.psychometrics.items[16].score">Never</label>
               <input type="radio" value="0" name="teq.psychometrics.items[16].score" title="Never" required>

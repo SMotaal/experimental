@@ -4,8 +4,8 @@
  * @typedef {string|number|boolean|null|undefined} primitive
  * @typedef {Record<string, primitive>} Entries
  * @typedef {HTMLFormElement|FormData|{entries: Entries}} Source
- * @typedef {Readonly<{values: Readonly<string[]>, scoring?: Readonly<Record<string, Readonly<number[]>>>}>} Psychometrics.Options
- * @typedef {{ number: number, prompt: string, scoring?: string, score?: number, value?: string }} Psychometrics.Item
+ * @typedef {Readonly<{values: Readonly<string[]>, weights?: Readonly<Record<string, Readonly<number[]>>>}>} Psychometrics.Options
+ * @typedef {{ number: number, prompt: string, weights?: string, score?: number, value?: string }} Psychometrics.Item
  * @typedef {{options?: Psychometrics.Options, items?: Psychometrics.Item[],  score?: number}} Psychometrics
  */
 export class TEQResults {
@@ -50,8 +50,8 @@ export class TEQResults {
     //   }),
     // );
     this.psychometrics = /** @type {Psychometrics} */ ({
-      ...new.target.psychometrics,
-      items: [...new.target.psychometrics.items],
+      ...new.target['psychometrics'],
+      items: [...new.target['psychometrics'].items],
       score: 0,
     });
 
@@ -70,7 +70,10 @@ export class TEQResults {
 
     if (this.formData) {
       this.formData.set('teq.psychometrics.score', String(this.psychometrics.score));
-      this.formData.set('teq.psychometrics.results', new Blob([JSON.stringify(this.psychometrics)], {type: 'text/json'}));
+      this.formData.set(
+        'teq.psychometrics.results',
+        new Blob([JSON.stringify(this.psychometrics)], {type: 'text/json'}),
+      );
     }
 
     if (this.form) {
@@ -79,104 +82,134 @@ export class TEQResults {
     }
   }
 
-  /** @param {Source} [source] */
-  static from(source) {
-    return new (this || TEQResults)(source);
-  }
+  // /** @param {Source} [source] */
+  // static from(source) {
+  //   return new (this || TEQResults)(source);
+  // }
 
   /** @param {Source} source */
-  static score(source) {
-    const results = (this || TEQResults).from(source);
-    // console.log('%O', (this || TEQResults).score, results);
+  static async score(source) {
+    console.log(source.elements['teq.definitions']);
+    const results = new (await this.ready)(source);
     console.log(results);
     return results;
   }
 }
 
+Object.defineProperty(
+  TEQResults,
+  'ready',
+  (ready => ({
+    enumerable: false,
+    /** @this {any} */
+    get() {
+      if (this === TEQResults) return ready;
+    },
+  }))(
+    (async () => {
+      const url = `${new URL('./teq.json', import.meta.url)}`;
+      const response = await fetch(url);
+      const text = await response.text();
+      Object.defineProperty(TEQResults, 'psychometrics', {
+        // enumerable: false,
+        /** @this {any} */
+        get() {
+          if (this === TEQResults) return JSON.parse(text, (key, value) => Object.freeze(value)).psychometrics;
+        },
+      });
+      // TEQResults.psychometrics = JSON.parse(text, function (key, value) {
+      //   if (value !== null && typeof value === 'object') Object.freeze(value);
+      //   return value;
+      // }).psychometrics;
+      return TEQResults;
+    })(),
+  ),
+);
+
 /** @param {TEQResults['source']} source */
 export const scoreTEQ = source => TEQResults.score(source);
 
-TEQResults.psychometrics = Object.freeze({
-  options: Object.freeze({
-    values: Object.freeze(['Never', 'Rarely', 'Sometimes', 'Often', 'Always']),
-    scoring: Object.freeze({
-      standard: Object.freeze([0, 1, 2, 3, 4]),
-      inverted: Object.freeze([4, 3, 2, 1, 0]),
-    }),
-  }),
-  items: Object.freeze([
-    Object.freeze({
-      number: 1,
-      prompt: 'When someone else is feeling excited, I tend to get excited too.',
-      scoring: 'standard',
-    }),
-    Object.freeze({
-      number: 2,
-      prompt: 'Other people’s misfortunes do not disturb me a great deal.',
-      scoring: 'inverted',
-    }),
-    Object.freeze({
-      number: 3,
-      prompt: 'It upsets me to see someone being treated disrespectfully.',
-      scoring: 'standard',
-    }),
-    Object.freeze({
-      number: 4,
-      prompt: 'I remain unaffected when someone close to me is happy.',
-      scoring: 'inverted',
-    }),
-    Object.freeze({number: 5, prompt: 'I enjoy making other people feel better.', scoring: 'standard'}),
-    Object.freeze({
-      number: 6,
-      prompt: 'I have tender, concerned feelings for people less fortunate than me.',
-      scoring: 'standard',
-    }),
-    Object.freeze({
-      number: 7,
-      prompt:
-        'When a friend starts to talk about hisher problems, I try to steer the conversation towards something else.',
-      scoring: 'inverted',
-    }),
-    Object.freeze({
-      number: 8,
-      prompt: 'I can tell when others are sad even when they do not say anything.',
-      scoring: 'standard',
-    }),
-    Object.freeze({
-      number: 9,
-      prompt: 'I find that I am “in tune” with other people’s moods.',
-      scoring: 'standard',
-    }),
-    Object.freeze({
-      number: 10,
-      prompt: 'I do not feel sympathy for people who cause their own serious illnesses.',
-      scoring: 'inverted',
-    }),
-    Object.freeze({number: 11, prompt: 'I become irritated when someone cries.', scoring: 'inverted'}),
-    Object.freeze({
-      number: 12,
-      prompt: 'I am not really interested in how other people feel.',
-      scoring: 'inverted',
-    }),
-    Object.freeze({
-      number: 13,
-      prompt: 'I get a strong urge to help when I see someone who is upset.',
-      scoring: 'standard',
-    }),
-    Object.freeze({
-      number: 14,
-      prompt: 'When I see someone being treated unfairly, I do not feel very much pity for them.',
-      scoring: 'inverted',
-    }),
-    Object.freeze({
-      number: 15,
-      prompt: 'I find it silly for people to cry out of happiness.',
-      scoring: 'inverted',
-    }),
-    Object.freeze({
-      number: 16,
-      prompt: 'When I see someone being taken advantage of, I feel kind of protective towards himher.',
-      scoring: 'standard',
-    }),
-  ]),
-});
+// TEQResults.psychometrics = Object.freeze({
+//   options: Object.freeze({
+//     values: Object.freeze(['Never', 'Rarely', 'Sometimes', 'Often', 'Always']),
+//     weights: Object.freeze({
+//       standard: Object.freeze([0, 1, 2, 3, 4]),
+//       inverted: Object.freeze([4, 3, 2, 1, 0]),
+//     }),
+//   }),
+//   items: Object.freeze([
+//     Object.freeze({
+//       number: 1,
+//       prompt: 'When someone else is feeling excited, I tend to get excited too.',
+//       weights: 'standard',
+//     }),
+//     Object.freeze({
+//       number: 2,
+//       prompt: 'Other people’s misfortunes do not disturb me a great deal.',
+//       weights: 'inverted',
+//     }),
+//     Object.freeze({
+//       number: 3,
+//       prompt: 'It upsets me to see someone being treated disrespectfully.',
+//       weights: 'standard',
+//     }),
+//     Object.freeze({
+//       number: 4,
+//       prompt: 'I remain unaffected when someone close to me is happy.',
+//       weights: 'inverted',
+//     }),
+//     Object.freeze({number: 5, prompt: 'I enjoy making other people feel better.', weights: 'standard'}),
+//     Object.freeze({
+//       number: 6,
+//       prompt: 'I have tender, concerned feelings for people less fortunate than me.',
+//       weights: 'standard',
+//     }),
+//     Object.freeze({
+//       number: 7,
+//       prompt:
+//         'When a friend starts to talk about hisher problems, I try to steer the conversation towards something else.',
+//       weights: 'inverted',
+//     }),
+//     Object.freeze({
+//       number: 8,
+//       prompt: 'I can tell when others are sad even when they do not say anything.',
+//       weights: 'standard',
+//     }),
+//     Object.freeze({
+//       number: 9,
+//       prompt: 'I find that I am “in tune” with other people’s moods.',
+//       weights: 'standard',
+//     }),
+//     Object.freeze({
+//       number: 10,
+//       prompt: 'I do not feel sympathy for people who cause their own serious illnesses.',
+//       weights: 'inverted',
+//     }),
+//     Object.freeze({number: 11, prompt: 'I become irritated when someone cries.', weights: 'inverted'}),
+//     Object.freeze({
+//       number: 12,
+//       prompt: 'I am not really interested in how other people feel.',
+//       weights: 'inverted',
+//     }),
+//     Object.freeze({
+//       number: 13,
+//       prompt: 'I get a strong urge to help when I see someone who is upset.',
+//       weights: 'standard',
+//     }),
+//     Object.freeze({
+//       number: 14,
+//       prompt: 'When I see someone being treated unfairly, I do not feel very much pity for them.',
+//       weights: 'inverted',
+//     }),
+//     Object.freeze({
+//       number: 15,
+//       prompt: 'I find it silly for people to cry out of happiness.',
+//       weights: 'inverted',
+//     }),
+//     Object.freeze({
+//       number: 16,
+//       prompt: 'When I see someone being taken advantage of, I feel kind of protective towards himher.',
+//       weights: 'standard',
+//     }),
+//   ]),
+// });

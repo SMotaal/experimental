@@ -1,0 +1,77 @@
+{
+  "psychometrics": {
+    "teq": {
+      "options": ["Never", "Rarely", "Sometimes", "Often", "Always"],
+      "weights": {
+        "standard": {"Never": 0, "Rarely": 1, "Sometimes": 2, "Often": 3, "Always": 4},
+        "inverted": {"Never": 4, "Rarely": 3, "Sometimes": 2, "Often": 1, "Always": 0}
+      },
+      "items": [
+        {
+          "prompt": "When someone else is feeling excited, I tend to get excited too.",
+          "weights": "standard"
+        },
+        {
+          "prompt": "Other people’s misfortunes do not disturb me a great deal.",
+          "weights": "inverted"
+        },
+        {
+          "prompt": "It upsets me to see someone being treated disrespectfully.",
+          "weights": "standard"
+        },
+        {
+          "prompt": "I remain unaffected when someone close to me is happy.",
+          "weights": "inverted"
+        },
+        {
+          "prompt": "I enjoy making other people feel better.",
+          "weights": "standard"
+        },
+        {
+          "prompt": "I have tender, concerned feelings for people less fortunate than me.",
+          "weights": "standard"
+        },
+        {
+          "prompt": "When a friend starts to talk about his/her problems, I try to steer the conversation towards something else.",
+          "weights": "inverted"
+        },
+        {
+          "prompt": "I can tell when others are sad even when they do not say anything.",
+          "weights": "standard"
+        },
+        {
+          "prompt": "I find that I am “in tune” with other people’s moods.",
+          "weights": "standard"
+        },
+        {
+          "prompt": "I do not feel sympathy for people who cause their own serious illnesses.",
+          "weights": "inverted"
+        },
+        {
+          "prompt": "I become irritated when someone cries.",
+          "weights": "inverted"
+        },
+        {
+          "prompt": "I am not really interested in how other people feel.",
+          "weights": "inverted"
+        },
+        {
+          "prompt": "I get a strong urge to help when I see someone who is upset.",
+          "weights": "standard"
+        },
+        {
+          "prompt": "When I see someone being treated unfairly, I do not feel very much pity for them.",
+          "weights": "inverted"
+        },
+        {
+          "prompt": "I find it silly for people to cry out of happiness.",
+          "weights": "inverted"
+        },
+        {
+          "prompt": "When I see someone being taken advantage of, I feel kind of protective towards him/her.",
+          "weights": "standard"
+        }
+      ]
+    }
+  }
+}
