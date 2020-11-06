@@ -1,0 +1,319 @@
+{
+  "psychometrics": {
+    "eq": {
+      "description": "Empathy Quotient (EQ)",
+      "meta": {
+        "links": {
+          "overview": "https://embraceasd.com/empathy-quotient/"
+        }
+      },
+      "options": ["Definitely Agree", "Slightly Agree", "Slightly Disagree", "Definitely Disagree"],
+      "scales": {
+        "standard": {"Definitely Agree": 2, "Slightly Agree": 1, "Slightly Disagree": 1, "Definitely Disagree": 2},
+        "null": {"Definitely Agree": 0, "Slightly Agree": 0, "Slightly Disagree": 0, "Definitely Disagree": 0}
+      },
+      "items": [
+        {
+          "number": 1,
+          "prompt": "I can easily tell if someone else wants to enter a conversation.",
+          "scale": "standard"
+        },
+        {
+          "number": 2,
+          "prompt": "I prefer animals to humans.",
+          "scale": null
+        },
+        {
+          "number": 3,
+          "prompt": "I try to keep up with the current trends and fashions.",
+          "scale": null
+        },
+        {
+          "number": 4,
+          "prompt": "I find it difficult to explain to others things that I understand easily, when they don’t understand it the first time.",
+          "scale": "standard"
+        },
+        {
+          "number": 5,
+          "prompt": "I dream most nights.",
+          "scale": null
+        },
+        {
+          "number": 6,
+          "prompt": "I really enjoy caring for other people.",
+          "scale": "standard"
+        },
+        {
+          "number": 7,
+          "prompt": "I try to solve my own problems rather than discussing them with others.",
+          "scale": null
+        },
+        {
+          "number": 8,
+          "prompt": "I find it hard to know what to do in a social situation.",
+          "scale": "standard"
+        },
+        {
+          "number": 9,
+          "prompt": "I am at my best first thing in the morning.",
+          "scale": null
+        },
+        {
+          "number": 10,
+          "prompt": "People often tell me that I went too far in driving my point home in a discussion.",
+          "scale": "standard"
+        },
+        {
+          "number": 11,
+          "prompt": "It doesn’t bother me too much if I am late meeting a friend.",
+          "scale": "standard"
+        },
+        {
+          "number": 12,
+          "prompt": "Friendships and relationships are just too difficult, so I tend not to bother with them.",
+          "scale": "standard"
+        },
+        {
+          "number": 13,
+          "prompt": "I would never break a law, no matter how minor.",
+          "scale": null
+        },
+        {
+          "number": 14,
+          "prompt": "I often find it difficult to judge if something is rude or polite.",
+          "scale": "standard"
+        },
+        {
+          "number": 15,
+          "prompt": "In a conversation, I tend to focus on my own thoughts rather than on what my listener might be thinking.",
+          "scale": "standard"
+        },
+        {
+          "number": 16,
+          "prompt": "I prefer practical jokes to verbal humor.",
+          "scale": null
+        },
+        {
+          "number": 17,
+          "prompt": "I live life for today rather than the future.",
+          "scale": null
+        },
+        {
+          "number": 18,
+          "prompt": "When I was a child, I enjoyed cutting up worms to see what would happen.",
+          "scale": "standard"
+        },
+        {
+          "number": 19,
+          "prompt": "I can pick up quickly if someone says one thing but means another.",
+          "scale": "standard"
+        },
+        {
+          "number": 20,
+          "prompt": "I tend to have very strong opinions about morality.",
+          "scale": null
+        },
+        {
+          "number": 21,
+          "prompt": "It is hard for me to see why some things upset people so much.",
+          "scale": "standard"
+        },
+        {
+          "number": 22,
+          "prompt": "I find it easy to put myself in somebody else’s shoes.",
+          "scale": "standard"
+        },
+        {
+          "number": 23,
+          "prompt": "I think that good manners are the most important thing a parent can teach their child.",
+          "scale": null
+        },
+        {
+          "number": 24,
+          "prompt": "I like to do things on the spur of the moment.",
+          "scale": null
+        },
+        {
+          "number": 25,
+          "prompt": "I am good at predicting how someone will feel.",
+          "scale": "standard"
+        },
+        {
+          "number": 26,
+          "prompt": "I am quick to spot when someone in a group is feeling awkward or uncomfortable.",
+          "scale": "standard"
+        },
+        {
+          "number": 27,
+          "prompt": "If I say something that someone else is offended by, I think that that’s their problem, not mine.",
+          "scale": "standard"
+        },
+        {
+          "number": 28,
+          "prompt": "If anyone asked me if I liked their haircut, I would reply truthfully, even if I didn’t like it.",
+          "scale": "standard"
+        },
+        {
+          "number": 29,
+          "prompt": "I can’t always see why someone should have felt offended by a remark.",
+          "scale": "standard"
+        },
+        {
+          "number": 30,
+          "prompt": "People often tell me that I am very unpredictable.",
+          "scale": null
+        },
+        {
+          "number": 31,
+          "prompt": "I enjoy being the center of attention at any social gathering.",
+          "scale": null
+        },
+        {
+          "number": 32,
+          "prompt": "Seeing people cry doesn’t really upset me.",
+          "scale": "standard"
+        },
+        {
+          "number": 33,
+          "prompt": "I enjoy having discussions about politics.",
+          "scale": null
+        },
+        {
+          "number": 34,
+          "prompt": "I am very blunt, which some people take to be rudeness, even though this is unintentional.",
+          "scale": "standard"
+        },
+        {
+          "number": 35,
+          "prompt": "I don’t find social situations confusing.",
+          "scale": "standard"
+        },
+        {
+          "number": 36,
+          "prompt": "Other people tell me I am good at understanding how they are feeling and what they are thinking.",
+          "scale": "standard"
+        },
+        {
+          "number": 37,
+          "prompt": "When I talk to people, I tend to talk about their experiences rather than my own.",
+          "scale": "standard"
+        },
+        {
+          "number": 38,
+          "prompt": "It upsets me to see an animal in pain.",
+          "scale": "standard"
+        },
+        {
+          "number": 39,
+          "prompt": "I am able to make decisions without being influenced by people’s feelings.",
+          "scale": "standard"
+        },
+        {
+          "number": 40,
+          "prompt": "I can’t relax until I have done everything I had planned to do that day.",
+          "scale": null
+        },
+        {
+          "number": 41,
+          "prompt": "I can easily tell if someone else is interested or bored with what I am saying.",
+          "scale": "standard"
+        },
+        {
+          "number": 42,
+          "prompt": "I get upset if I see people suffering on news programs.",
+          "scale": "standard"
+        },
+        {
+          "number": 43,
+          "prompt": "Friends usually talk to me about their problems as they say that I am very understanding.",
+          "scale": "standard"
+        },
+        {
+          "number": 44,
+          "prompt": "I can sense if I am intruding, even if the other person doesn’t tell me.",
+          "scale": "standard"
+        },
+        {
+          "number": 45,
+          "prompt": "I often start new hobbies, but quickly become bored with them and move on to something else.",
+          "scale": null
+        },
+        {
+          "number": 46,
+          "prompt": "People sometimes tell me that I have gone too far with teasing.",
+          "scale": "standard"
+        },
+        {
+          "number": 47,
+          "prompt": "I would be too nervous to go on a big rollercoaster.",
+          "scale": null
+        },
+        {
+          "number": 48,
+          "prompt": "Other people often say that I am insensitive, though I don’t always see why.",
+          "scale": "standard"
+        },
+        {
+          "number": 49,
+          "prompt": "If I see a stranger in a group, I think that it is up to them to make an effort to join in.",
+          "scale": "standard"
+        },
+        {
+          "number": 50,
+          "prompt": "I usually stay emotionally detached when watching a film.",
+          "scale": "standard"
+        },
+        {
+          "number": 51,
+          "prompt": "I like to be very organized in day-to-day life and often makes lists of the chores I have to do.",
+          "scale": null
+        },
+        {
+          "number": 52,
+          "prompt": "I can tune into how someone else feels rapidly and intuitively.",
+          "scale": "standard"
+        },
+        {
+          "number": 53,
+          "prompt": "I don’t like to take risks.",
+          "scale": null
+        },
+        {
+          "number": 54,
+          "prompt": "I can easily work out what another person might want to talk about.",
+          "scale": "standard"
+        },
+        {
+          "number": 55,
+          "prompt": "I can tell if someone is masking their true emotion.",
+          "scale": "standard"
+        },
+        {
+          "number": 56,
+          "prompt": "Before making a decision, I always weigh up the pros and cons.",
+          "scale": null
+        },
+        {
+          "number": 57,
+          "prompt": "I don’t consciously work out the rules of social situations.",
+          "scale": "standard"
+        },
+        {
+          "number": 58,
+          "prompt": "I am good at predicting what someone will do.",
+          "scale": "standard"
+        },
+        {
+          "number": 59,
+          "prompt": "I tend to get emotionally involved with a friend’s problems.",
+          "scale": "standard"
+        },
+        {
+          "number": 60,
+          "prompt": "I can usually appreciate the other person’s viewpoint, even if I don’t agree with it.",
+          "scale": "standard"
+        }
+      ]
+    }
+  }
+}

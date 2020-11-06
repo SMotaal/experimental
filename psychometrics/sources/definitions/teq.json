@@ -1,0 +1,99 @@
+{
+  "psychometrics": {
+    "teq": {
+      "description": "Toronto Empathy Questionnaire (TEQ)",
+      "meta": {
+        "links": {
+          "overview": "https://embraceasd.com/toronto-empathy-questionnaire/"
+        }
+      },
+      "options": ["Never", "Rarely", "Sometimes", "Often", "Always"],
+      "scales": {
+        "standard": {"Never": 0, "Rarely": 1, "Sometimes": 2, "Often": 3, "Always": 4},
+        "inverted": {"Never": 4, "Rarely": 3, "Sometimes": 2, "Often": 1, "Always": 0}
+      },
+      "items": [
+        {
+          "number": 1,
+          "prompt": "When someone else is feeling excited, I tend to get excited too.",
+          "scale": "standard"
+        },
+        {
+          "number": 2,
+          "prompt": "Other people’s misfortunes do not disturb me a great deal.",
+          "scale": "inverted"
+        },
+        {
+          "number": 3,
+          "prompt": "It upsets me to see someone being treated disrespectfully.",
+          "scale": "standard"
+        },
+        {
+          "number": 4,
+          "prompt": "I remain unaffected when someone close to me is happy.",
+          "scale": "inverted"
+        },
+        {
+          "number": 5,
+          "prompt": "I enjoy making other people feel better.",
+          "scale": "standard"
+        },
+        {
+          "number": 6,
+          "prompt": "I have tender, concerned feelings for people less fortunate than me.",
+          "scale": "standard"
+        },
+        {
+          "number": 7,
+          "prompt": "When a friend starts to talk about his/her problems, I try to steer the conversation towards something else.",
+          "scale": "inverted"
+        },
+        {
+          "number": 8,
+          "prompt": "I can tell when others are sad even when they do not say anything.",
+          "scale": "standard"
+        },
+        {
+          "number": 9,
+          "prompt": "I find that I am “in tune” with other people’s moods.",
+          "scale": "standard"
+        },
+        {
+          "number": 10,
+          "prompt": "I do not feel sympathy for people who cause their own serious illnesses.",
+          "scale": "inverted"
+        },
+        {
+          "number": 11,
+          "prompt": "I become irritated when someone cries.",
+          "scale": "inverted"
+        },
+        {
+          "number": 12,
+          "prompt": "I am not really interested in how other people feel.",
+          "scale": "inverted"
+        },
+        {
+          "number": 13,
+          "prompt": "I get a strong urge to help when I see someone who is upset.",
+          "scale": "standard"
+        },
+        {
+          "number": 14,
+          "prompt": "When I see someone being treated unfairly, I do not feel very much pity for them.",
+          "scale": "inverted"
+        },
+        {
+          "number": 15,
+          "prompt": "I find it silly for people to cry out of happiness.",
+          "scale": "inverted"
+        },
+        {
+          "number": 16,
+          "prompt": "When I see someone being taken advantage of, I feel kind of protective towards him/her.",
+          "scale": "standard"
+        }
+      ]
+    }
+  }
+}

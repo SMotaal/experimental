@@ -1,0 +1,128 @@
+{
+  "psychometrics": {
+    "asrs-v1.1": {
+      "description": "Adult ADHD Self-Report Scale (ASRS-v1.1)",
+      "meta": {
+        "links": {
+          "canonical": "https://add.org/wp-content/uploads/2015/03/adhd-questionnaire-ASRS111.pdf"
+        }
+      },
+      "options": ["Never", "Rarely", "Sometimes", "Often", "Very Often"],
+      "scales": {
+        "standard": {"Never": 0, "Rarely": 0, "Sometimes": 1, "Often": 1, "Very Often": 1},
+        "incremented": {"Never": 0, "Rarely": 0, "Sometimes": 0, "Often": 1, "Very Often": 1}
+      },
+      "subscales": {"Part A": {"items": {"length": 6}}},
+      "items": [
+        {
+          "number": 1,
+          "prompt": "How often do you have trouble wrapping up the final details of a project, once the challenging parts have been done?",
+          "scale": "standard",
+          "subscale": "Part A"
+        },
+        {
+          "number": 2,
+          "prompt": "How often do you have difficulty getting things in order when you have to do a task that requires organization?",
+          "scale": "standard",
+          "subscale": "Part A"
+        },
+        {
+          "number": 3,
+          "prompt": "How often do you have problems remembering appointments or obligations?",
+          "scale": "standard",
+          "subscale": "Part A"
+        },
+        {
+          "number": 4,
+          "prompt": "When you have a task that requires a lot of thought, how often do you avoid or delay getting started?",
+          "scale": "incremented",
+          "subscale": "Part A"
+        },
+        {
+          "number": 5,
+          "prompt": "How often do you fidget or squirm with your hands or feet when you have to sit down for a long time?",
+          "scale": "incremented",
+          "subscale": "Part A"
+        },
+        {
+          "number": 6,
+          "prompt": "How often do you feel overly active and compelled to do things, like you were driven by a motor?",
+          "scale": "incremented",
+          "subscale": "Part A"
+        },
+        {
+          "number": 7,
+          "prompt": "How often do you make careless mistakes when you have to work on a boring or difficult project?",
+          "scale": "incremented",
+          "subscale": "Part B"
+        },
+        {
+          "number": 8,
+          "prompt": "How often do you have difficulty keeping your attention when you are doing boring or repetitive work?",
+          "scale": "incremented",
+          "subscale": "Part B"
+        },
+        {
+          "number": 9,
+          "prompt": "How often do you have difficulty concentrating on what people say to you, even when they are speaking to you directly?",
+          "scale": "standard",
+          "subscale": "Part B"
+        },
+        {
+          "number": 10,
+          "prompt": "How often do you misplace or have difficulty finding things at home or at work?",
+          "scale": "incremented",
+          "subscale": "Part B"
+        },
+        {
+          "number": 11,
+          "prompt": "How often are you distracted by activity or noise around you?",
+          "scale": "incremented",
+          "subscale": "Part B"
+        },
+        {
+          "number": 12,
+          "prompt": "How often do you leave your seat in meetings or other situations in which you are expected to remain seated?",
+          "scale": "standard",
+          "subscale": "Part B"
+        },
+        {
+          "number": 13,
+          "prompt": "How often do you feel restless or fidgety?",
+          "scale": "incremented",
+          "subscale": "Part B"
+        },
+        {
+          "number": 14,
+          "prompt": "How often do you have difficulty unwinding and relaxing when you have time to yourself?",
+          "scale": "incremented",
+          "subscale": "Part B"
+        },
+        {
+          "number": 15,
+          "prompt": "How often do you find yourself talking too much when you are in social situations?",
+          "scale": "incremented",
+          "subscale": "Part B"
+        },
+        {
+          "number": 16,
+          "prompt": "When you’re in a conversation, how often do you find yourself finishing the sentences of the people you are talking to, before they can finish them themselves?",
+          "scale": "standard",
+          "subscale": "Part B"
+        },
+        {
+          "number": 17,
+          "prompt": "How often do you have difficulty waiting your turn in situations when turn taking is required?",
+          "scale": "incremented",
+          "subscale": "Part B"
+        },
+        {
+          "number": 18,
+          "prompt": "How often do you interrupt others when they are busy?",
+          "scale": "standard",
+          "subscale": "Part B"
+        }
+      ]
+    }
+  }
+}

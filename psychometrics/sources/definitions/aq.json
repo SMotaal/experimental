@@ -1,0 +1,280 @@
+{
+  "psychometrics": {
+    "aq": {
+      "description": "Autism Spectrum Quotient (AQ)",
+      "meta": {
+        "links": {
+          "overview": "https://embraceasd.com/autism-spectrum-quotient/"
+        }
+      },
+      "options": ["Definitely Agree", "Slightly Agree", "Slightly Disagree", "Definitely Disagree"],
+      "scales": {
+        "standard": {"Definitely Agree": 1, "Slightly Agree": 2, "Slightly Disagree": 3, "Definitely Disagree": 4},
+        "inverted": {"Definitely Agree": 4, "Slightly Agree": 3, "Slightly Disagree": 2, "Definitely Disagree": 1}
+      },
+      "subscales": {"AQ-10": {"items": {"length": 10}}},
+      "items": [
+        {
+          "number": 1,
+          "prompt": "I prefer to do things with others rather than on my own.",
+          "scale": "standard"
+        },
+        {
+          "number": 2,
+          "prompt": "I prefer to do things the same way over and over again.",
+          "scale": "standard"
+        },
+        {
+          "number": 3,
+          "prompt": "If I try to imagine something, I find it very easy to create a picture in my mind.",
+          "scale": "standard"
+        },
+        {
+          "number": 4,
+          "prompt": "I frequently get so strongly absorbed in one thing that I lose sight of other things.",
+          "scale": "standard"
+        },
+        {
+          "number": 5,
+          "prompt": "I often notice small sounds when others do not.",
+          "scale": "standard",
+          "subscale": "AQ-10"
+        },
+        {
+          "number": 6,
+          "prompt": "I usually notice car number plates or similar strings of information.",
+          "scale": "standard"
+        },
+        {
+          "number": 7,
+          "prompt": "Other people frequently tell me that what I've said is impolite, even though I think it is polite.",
+          "scale": "standard"
+        },
+        {
+          "number": 8,
+          "prompt": "When I'm reading a story, I can easily imagine what the characters might look like.",
+          "scale": "standard"
+        },
+        {
+          "number": 9,
+          "prompt": "I am fascinated by dates.",
+          "scale": "standard"
+        },
+        {
+          "number": 10,
+          "prompt": "In a social group, I can easily keep track of several different people's conversations.",
+          "scale": "standard"
+        },
+        {
+          "number": 11,
+          "prompt": "I find social situations easy.",
+          "scale": "standard"
+        },
+        {
+          "number": 12,
+          "prompt": "I tend to notice details that others do not.",
+          "scale": "standard"
+        },
+        {
+          "number": 13,
+          "prompt": "I would rather go to a library than a party.",
+          "scale": "standard"
+        },
+        {
+          "number": 14,
+          "prompt": "I find making up stories easy.",
+          "scale": "standard"
+        },
+        {
+          "number": 15,
+          "prompt": "I find myself drawn more strongly to people than to things.",
+          "scale": "standard"
+        },
+        {
+          "number": 16,
+          "prompt": "I tend to have very strong interests which I get upset about if I can't pursue",
+          "scale": "standard"
+        },
+        {
+          "number": 17,
+          "prompt": "I enjoy social chit-chat.",
+          "scale": "standard"
+        },
+        {
+          "number": 18,
+          "prompt": "When I talk, it isn't always easy for others to get a word in edgeways.",
+          "scale": "standard"
+        },
+        {
+          "number": 19,
+          "prompt": "I am fascinated by numbers.",
+          "scale": "standard"
+        },
+        {
+          "number": 20,
+          "prompt": "When I'm reading a story, I find it difficult to work out the characters' intentions.",
+          "scale": "standard",
+          "subscale": "AQ-10"
+        },
+        {
+          "number": 21,
+          "prompt": "I don't particularly enjoy reading fiction.",
+          "scale": "standard"
+        },
+        {
+          "number": 22,
+          "prompt": "I find it hard to make new friends.",
+          "scale": "standard"
+        },
+        {
+          "number": 23,
+          "prompt": "I notice patterns in things all the time.",
+          "scale": "standard"
+        },
+        {
+          "number": 24,
+          "prompt": "I would rather go to the theatre than a museum.",
+          "scale": "standard"
+        },
+        {
+          "number": 25,
+          "prompt": "It does not upset me if my daily routine is disturbed.",
+          "scale": "standard"
+        },
+        {
+          "number": 26,
+          "prompt": "I frequently find that I don't know how to keep a conversation going.",
+          "scale": "standard"
+        },
+        {
+          "number": 27,
+          "prompt": "I find it easy to 'read between the lines' when someone is talking to me.",
+          "scale": "standard",
+          "subscale": "AQ-10"
+        },
+        {
+          "number": 28,
+          "prompt": "I usually concentrate more on the whole picture, rather than the small details.",
+          "scale": "standard",
+          "subscale": "AQ-10"
+        },
+        {
+          "number": 29,
+          "prompt": "I am not very good at remembering phone numbers.",
+          "scale": "standard"
+        },
+        {
+          "number": 30,
+          "prompt": "I don't usually notice small changes in a situation, or a person's appearance.",
+          "scale": "standard"
+        },
+        {
+          "number": 31,
+          "prompt": "I know how to tell if someone listening to me is getting bored.",
+          "scale": "standard",
+          "subscale": "AQ-10"
+        },
+        {
+          "number": 32,
+          "prompt": "I find it easy to do more than one thing at once.",
+          "scale": "standard",
+          "subscale": "AQ-10"
+        },
+        {
+          "number": 33,
+          "prompt": "When I talk on the phone, I'm not sure when it's my turn to speak.",
+          "scale": "standard"
+        },
+        {
+          "number": 34,
+          "prompt": "I enjoy doing things spontaneously.",
+          "scale": "standard"
+        },
+        {
+          "number": 35,
+          "prompt": "I am often the last to understand the point of a joke.",
+          "scale": "standard"
+        },
+        {
+          "number": 36,
+          "prompt": "I find it easy to work out what someone is thinking or feeling just by looking at their face.",
+          "scale": "standard",
+          "subscale": "AQ-10"
+        },
+        {
+          "number": 37,
+          "prompt": "If there is an interruption, I can switch back to what I was doing very quickly.",
+          "scale": "standard",
+          "subscale": "AQ-10"
+        },
+        {
+          "number": 38,
+          "prompt": "I am good at social chit-chat.",
+          "scale": "standard"
+        },
+        {
+          "number": 39,
+          "prompt": "People often tell me that I keep going on and on about the same thing.",
+          "scale": "standard"
+        },
+        {
+          "number": 40,
+          "prompt": "When I was young, I used to enjoy playing games involving pretending with other children.",
+          "scale": "standard"
+        },
+        {
+          "number": 41,
+          "prompt": "I like to collect information about categories of things.",
+          "scale": "standard",
+          "subscale": "AQ-10"
+        },
+        {
+          "number": 42,
+          "prompt": "I find it difficult to imagine what it would be like to be someone else.",
+          "scale": "standard"
+        },
+        {
+          "number": 43,
+          "prompt": "I like to plan any activities I participate in carefully.",
+          "scale": "standard"
+        },
+        {
+          "number": 44,
+          "prompt": "I enjoy social occasions.",
+          "scale": "standard"
+        },
+        {
+          "number": 45,
+          "prompt": "I find it difficult to work out people's intentions.",
+          "scale": "standard",
+          "subscale": "AQ-10"
+        },
+        {
+          "number": 46,
+          "prompt": "New situations make me anxious.",
+          "scale": "standard"
+        },
+        {
+          "number": 47,
+          "prompt": "I enjoy meeting new people.",
+          "scale": "standard"
+        },
+        {
+          "number": 48,
+          "prompt": "I am a good diplomat.",
+          "scale": "standard"
+        },
+        {
+          "number": 49,
+          "prompt": "I am not very good at remembering people's date of birth.",
+          "scale": "standard"
+        },
+        {
+          "number": 50,
+          "prompt": "I find it very easy to play games with children that involve pretending.",
+          "scale": "standard"
+        }
+      ]
+    }
+  }
+}

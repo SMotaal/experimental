@@ -1,0 +1,122 @@
+{
+  "psychometrics": {
+    "rbq-2a": {
+      "description": "Adult Repetitive Behaviours Questionnaire-2 (RBQ-2A)",
+      "meta": {
+        "links": {
+          "overview": "https://embraceasd.com/rbq-2a/"
+        }
+      },
+      "options": ["Never or Rarely", "One or More Time Daily", "15 or More Times Daily"],
+      "scales": {
+        "standard": {
+          "Never or Rarely": 1,
+          "One or More Time Daily": 2,
+          "15 or More Times Daily": 3
+        }
+      },
+      "items": [
+        {
+          "number": 1,
+          "prompt": "Do you like to arrange items in rows or patterns?",
+          "scale": "standard"
+        },
+        {
+          "number": 2,
+          "prompt": "Do you repetitively fiddle with items?",
+          "scale": "standard"
+        },
+        {
+          "number": 3,
+          "prompt": "Do you like to spin yourself around and around?",
+          "scale": "standard"
+        },
+        {
+          "number": 4,
+          "prompt": "Do you rock backwards and forwards, or side to side, either when sitting or when standing?",
+          "scale": "standard"
+        },
+        {
+          "number": 5,
+          "prompt": "Do you pace or move around repetitively?",
+          "scale": "standard"
+        },
+        {
+          "number": 6,
+          "prompt": "Do you make repetitive hand and/or finger movements?",
+          "scale": "standard"
+        },
+        {
+          "number": 7,
+          "prompt": "Do you have a fascination with specific objects?",
+          "scale": "standard"
+        },
+        {
+          "number": 8,
+          "prompt": "Do you like to look at objects from particular or unusual angles?",
+          "scale": "standard"
+        },
+        {
+          "number": 9,
+          "prompt": "Do you have a special interest in the smell of people or objects?",
+          "scale": "standard"
+        },
+        {
+          "number": 10,
+          "prompt": "Do you have a special interest in the feel of different surfaces?",
+          "scale": "standard"
+        },
+        {
+          "number": 11,
+          "prompt": "Do you have any special objects you like to carry around?",
+          "scale": "standard"
+        },
+        {
+          "number": 12,
+          "prompt": "Do you collect or hoard items of any sort?",
+          "scale": "standard"
+        },
+        {
+          "number": 13,
+          "prompt": "Do you insist on things at home remaining the same?",
+          "scale": "standard"
+        },
+        {
+          "number": 14,
+          "prompt": "Do you get upset about minor changes to objects?",
+          "scale": "standard"
+        },
+        {
+          "number": 15,
+          "prompt": "Do you insist that aspects of daily routine must remain the same?",
+          "scale": "standard"
+        },
+        {
+          "number": 16,
+          "prompt": "Do you insist on doing things in a certain way or re-doing things until they ‘‘just right’’?",
+          "scale": "standard"
+        },
+        {
+          "number": 17,
+          "prompt": "Do you play the same music, game or video, or read the same book repeatedly?",
+          "scale": "standard"
+        },
+        {
+          "number": 18,
+          "prompt": "Do you insist on wearing the same clothes or refuse to wear new clothes?",
+          "scale": "standard"
+        },
+        {
+          "number": 19,
+          "prompt": "Do you insist on eating the same foods, or a very small range of foods, at every meal?",
+          "scale": "standard"
+        },
+        {
+          "number": 20,
+          "prompt": "What sort of activity will you choose if you are left to occupy yourself?",
+          "scale": "standard"
+        }
+      ]
+    }
+  }
+}
