@@ -1,0 +1,9 @@
+/* <style id="wpdiscuz-frontend-minimal-css-inline-css" type="text/css" cph-ssorder="12"> */
+
+#wpdcom .ql-snow .ql-tooltip[data-mode='link']::before {
+  content: 'Enter link:';
+}
+
+#wpdcom .ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+  content: 'Save';
+}
