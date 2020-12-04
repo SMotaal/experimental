@@ -68,6 +68,7 @@
                   <form onsubmit="event.preventDefault(); (async form => (await import('./psychometrics.js')).scoreForm(form))(this);"
                         ondblclick="event.target.checked === true && !event.target.required && (event.target.checked = false)">
                     <script type="text/javascript">
+                      // This script is only needed for live rendering
                       (async form => (await import('./psychometrics.js')).renderForm(form))(document.currentScript.closest('form'));
                     </script>
                   </form>
