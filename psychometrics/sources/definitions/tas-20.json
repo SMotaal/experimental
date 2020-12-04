@@ -1,10 +1,12 @@
 {
   "psychometrics": {
     "tas-20": {
+      "id": "psychometrics:tas-20",
+      "psychometric": "TAS-20",
       "description": "Toronto Alexithymia Scale (TAS-20)",
       "meta": {
         "links": {
-          "overview": "https://webcache.googleusercontent.com/search?q=cache:tsXp9_638egJ:https://embraceasd.com/toronto-alexithymia-scale/+&cd=1&hl=en&ct=clnk&gl=ca"
+          "overview": "https://embraceasd.com/toronto-alexithymia-scale/"
         }
       },
       "options": ["Strongly Disagree", "Disagree", "Neither Agree nor Disagree", "Agree", "Strongly Agree"],
@@ -25,130 +27,130 @@
         }
       },
       "subscales": {
-        "Difficulty Identifying Feelings": {"items": {"length": 5}},
-        "Difficulty Describing Feelings": {"items": {"length": 7}},
-        "Externally-Oriented Thinking": {"items": {"length": 8}}
+        "dif": {"description": "Difficulty Identifying Feelings", "items": {"length": 5}, "scaling": 1.0},
+        "ddf": {"description": "Difficulty Describing Feelings", "items": {"length": 7}, "scaling": 1.0},
+        "eot": {"description": "Externally-Oriented Thinking", "items": {"length": 8}, "scaling": 1.0}
       },
       "items": [
         {
           "number": 1,
           "prompt": "I am often confused about what emotion I am feeling.",
           "scale": "standard",
-          "subscale": "Difficulty Identifying Feelings"
+          "subscale": "dif"
         },
         {
           "number": 2,
           "prompt": "It is difficult for me to find the right words for my feelings.",
           "scale": "standard",
-          "subscale": "Difficulty Describing Feelings"
+          "subscale": "ddf"
         },
         {
           "number": 3,
           "prompt": "I have physical sensations that even doctors don’t understand.",
           "scale": "standard",
-          "subscale": "Difficulty Identifying Feelings"
+          "subscale": "dif"
         },
         {
           "number": 4,
           "prompt": "I am able to describe my feelings easily.",
           "scale": "inverted",
-          "subscale": "Difficulty Describing Feelings"
+          "subscale": "ddf"
         },
         {
           "number": 5,
           "prompt": "I prefer to analyze problems rather than just describe them.",
           "scale": "inverted",
-          "subscale": "Externally-Oriented Thinking"
+          "subscale": "eot"
         },
         {
           "number": 6,
           "prompt": "When I am upset. I don’t know if I am sad, frightened, or angry. ",
           "scale": "standard",
-          "subscale": "Difficulty Identifying Feelings"
+          "subscale": "dif"
         },
         {
           "number": 7,
           "prompt": "I am often puzzled by sensations in my body.",
           "scale": "standard",
-          "subscale": "Difficulty Identifying Feelings"
+          "subscale": "dif"
         },
         {
           "number": 8,
           "prompt": "I prefer to just let things happen rather than to understand why they turned out that way.",
           "scale": "standard",
-          "subscale": "Externally-Oriented Thinking"
+          "subscale": "eot"
         },
         {
           "number": 9,
           "prompt": "I have feelings that I can’t quite identify.",
           "scale": "standard",
-          "subscale": "Difficulty Identifying Feelings"
+          "subscale": "dif"
         },
         {
           "number": 10,
           "prompt": "Being in touch with emotions is essential.",
           "scale": "inverted",
-          "subscale": "Externally-Oriented Thinking"
+          "subscale": "eot"
         },
         {
           "number": 11,
           "prompt": "I find it hard to describe how I feel about people.",
           "scale": "standard",
-          "subscale": "Difficulty Describing Feelings"
+          "subscale": "ddf"
         },
         {
           "number": 12,
           "prompt": "People tell me to describe my feelings more.",
           "scale": "standard",
-          "subscale": "Difficulty Describing Feelings"
+          "subscale": "ddf"
         },
         {
           "number": 13,
           "prompt": "I don’t know what’s going on inside me.",
           "scale": "standard",
-          "subscale": "Difficulty Identifying Feelings"
+          "subscale": "dif"
         },
         {
           "number": 14,
           "prompt": "I often don’t know why I am angry.",
           "scale": "standard",
-          "subscale": "Difficulty Identifying Feelings"
+          "subscale": "dif"
         },
         {
           "number": 15,
           "prompt": "I prefer talking to people about their daily activities rather than their feelings.",
           "scale": "standard",
-          "subscale": "Externally-Oriented Thinking"
+          "subscale": "eot"
         },
         {
           "number": 16,
           "prompt": "I prefer to watch “light” entertainment shows rather than psychological dramas.",
           "scale": "standard",
-          "subscale": "Externally-Oriented Thinking"
+          "subscale": "eot"
         },
         {
           "number": 17,
           "prompt": "It is difficult for me to reveal my innermost feelings. even to close friends.",
           "scale": "standard",
-          "subscale": "Difficulty Describing Feelings"
+          "subscale": "ddf"
         },
         {
           "number": 18,
           "prompt": "I can feel close to someone, even in moments of silence.",
           "scale": "inverted",
-          "subscale": "Externally-Oriented Thinking"
+          "subscale": "eot"
         },
         {
           "number": 19,
           "prompt": "I find examination of my feelings useful in solving personal problems.",
           "scale": "inverted",
-          "subscale": "Externally-Oriented Thinking"
+          "subscale": "eot"
         },
         {
           "number": 20,
           "prompt": "I look for hidden meanings in movies or plays.",
           "scale": "standard",
-          "subscale": "Externally-Oriented Thinking"
+          "subscale": "eot"
         }
       ]
     }
