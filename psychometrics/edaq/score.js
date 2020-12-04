@@ -1,157 +1,10 @@
 //@ts-check
 
-/**
- * @typedef {string|number|boolean|null|undefined} primitive
- * @typedef {Record<string, primitive>} Entries
- * @typedef {HTMLFormElement|FormData|{entries: Entries}} Source
- * @typedef {string[] | Readonly<{values: Readonly<string[]>, scoring?: Readonly<Record<string, Readonly<number[]>>>}>} Psychometrics.Options
- * @typedef {{ number: number, prompt: string, scale?: string, subscale?: string, score?: number, value?: string, psychometric?: string }} Psychometrics.Item
- * @typedef {Record<string, number>} Psychometrics.Scale
- * @typedef {Record<string, Psychometrics.Scale>} Psychometrics.Scales
- * @typedef {{items?: number[]|{length:number}, score?: number}} Psychometrics.Subscale
- * @typedef {Record<string, Psychometrics.Subscale>} Psychometrics.Subscales
- * @typedef {{id?: string, psychometric?: string, options?: Psychometrics.Options, items?: Psychometrics.Item[],  score?: number, scales?: Psychometrics.Scales, subscales?: Psychometrics.Subscales, scores?: Record<string, number>}} Psychometrics
- * @typedef {Partial<Pick<typeof EDAQResults, 'definitions' | 'mappings'>>} Options
- */
-export class EDAQResults {
-  /**
-   * @param {Source} [source]
-   * @param {Options} [options]
-   */
-  constructor(source, options) {
-    this.definitions = Object.freeze({
-      ...new.target.definitions,
-      ...(options && options.definitions),
-    });
+import {PsychometricsResults} from '../classes/psychometrics-results.js';
 
-    this.mappings = Object.freeze({
-      ...new.target.mappings,
-      ...(options && options.mappings),
-      columnIds: Object.freeze({
-        ...(new.target.mappings && new.target.mappings.columnIds),
-        ...(options && options.mappings && options.mappings.columndIds),
-      }),
-      rowIds: Object.freeze({
-        ...(new.target.mappings && new.target.mappings.rowIds),
-        ...(options && options.mappings && options.mappings.rowIds),
-      }),
-    });
+// export class EDAQResults extends PsychometricsResults {}
 
-    this.source = source;
-
-    this.form =
-      (source != null &&
-        typeof source === 'object' &&
-        typeof HTMLFormElement === 'function' &&
-        source instanceof HTMLFormElement &&
-        source) ||
-      null;
-
-    this.formData =
-      (typeof FormData === 'function' &&
-        ((this.form && new FormData(this.form)) || (source instanceof FormData && source))) ||
-      null;
-
-    if (this.form) {
-      this.entries = new FormData(this.form);
-      this.elements = this.form.elements;
-    } else if (this.formData) {
-      this.entries = this.formData;
-      this.elements = undefined;
-    } else {
-      this.entries = new Map(Object.entries(source));
-      this.elements = undefined;
-    }
-
-    new.target.update(this);
-
-    this.scores = Object.freeze(new.target.score(this));
-
-    Object.freeze(this);
-
-    new.target.update(this);
-  }
-
-  // static calculate
-
-  /** @param {Source} [source] */
-  static from(source) {
-    return new (this || EDAQResults)(source);
-  }
-
-  /** @param {Pick<EDAQResults, 'scores' | 'form' | 'entries' | 'mappings'>} instance */
-  static update({scores, form, entries, mappings: {columnIds, rowIds, idSeparator = ';'} = this.mappings}) {
-    const logs = [];
-    if (form) {
-      const {elements} = form;
-      for (const rowKey in rowIds) {
-        const rowId = rowIds[rowKey];
-        const rowValue = entries.get(rowId);
-        const rowElement = elements[rowId];
-        rowElement &&
-          'value' in rowElement &&
-          rowElement.value !== rowValue &&
-          ((rowElement.value = rowValue || ''), logs.push({rowKey, rowId, rowValue, rowElement}));
-        for (const columnKey in columnIds) {
-          const columnId = columnIds[columnKey];
-          const entryId = `${rowId}${idSeparator}${columnId}`;
-          const entryValue = entries.get(entryId);
-          const columnElement = elements[entryId];
-
-          columnElement &&
-            'value' in columnElement &&
-            columnElement.value !== entryValue &&
-            ((columnElement.value = entryValue || ''),
-            logs.push({rowKey, columnKey, rowId, columnId, entryId, entryValue, formElement: columnElement}));
-        }
-      }
-    }
-    // console.log('update', logs);
-  }
-
-  /** @param {Pick<EDAQResults, 'entries' | 'definitions' | 'mappings'>} instance */
-  static score({
-    entries,
-    definitions = this.definitions,
-    mappings: {columnIds, rowIds, totalRow = 'total', totalColumn = 'score', idSeparator = ';'} = this.mappings,
-  }) {
-    const logs = [];
-    const scores = {};
-    const totals = {};
-
-    for (const {number, scale, subscale} of definitions.items) {
-      const {[number]: columns = (scores[number] = {})} = scores;
-      const score = Number(definitions.scales[scale][/** @type {string} */ (entries.get(rowIds[number]))]);
-      for (const columnKey in columnIds) {
-        totals[columnKey] =
-          (totals[columnKey] || 0) +
-          ((columns[columnKey] = columnKey === totalColumn || columnKey === subscale ? score : NaN) || 0);
-      }
-    }
-
-    scores[totalRow] = totals;
-
-    for (const rowKey in rowIds) {
-      const rowId = rowIds[rowKey];
-      for (const columnKey in columnIds) {
-        const columnId = columnIds[columnKey];
-        const entryId = `${rowId}${idSeparator}${columnId}`;
-        const entryValue = scores[rowKey][columnKey];
-        isNaN(entryValue) ? entries.delete(entryId) : entries.set(entryId, `${entryValue}`);
-        logs.push({rowKey, rowId, columnKey, columnId, entryId, entryValue});
-      }
-    }
-
-    // console.log('score', logs);
-
-    return scores;
-  }
-}
-
-/** @param {EDAQResults['source']} source */
-export const scoreForm = (source, mappings) => EDAQResults.from(source, {mappings});
-
-EDAQResults.definitions = JSON.parse(
+const definitions = JSON.parse(
   /* json */ `{
     "id": "psychometrics:edaq",
     "psychometric": "EDAq",
@@ -318,26 +171,42 @@ EDAQResults.definitions = JSON.parse(
   (key, value) => Object.freeze(value),
 );
 
-EDAQResults.mappings = Object.freeze({
+const mappings = Object.freeze({
   idSeparator: ':',
   totalRow: 'total',
   totalColumn: 'score',
   columnIds: Object.freeze(
     Object.fromEntries(
-      [
-        'score',
-        ...(EDAQResults.definitions.subscales ? Object.keys(EDAQResults.definitions.subscales) : []),
-      ].map(column => [column, `${column}`]),
+      ['score', ...(definitions.subscales ? Object.keys(definitions.subscales) : [])].map(column => [
+        column,
+        `${column}`,
+      ]),
     ),
   ),
   rowIds: Object.freeze(
     Object.fromEntries(
       [
         'total',
-        ...Array(EDAQResults.definitions.items.length)
+        ...Array(definitions.items.length)
           .fill(undefined)
           .map((v, i) => `${1 + i}`),
       ].map(row => [row, `psychometrics:edaq:${row}`]),
     ),
   ),
 });
+
+/** @param {HTMLFormElement} form */
+export const scoreForm = form => {
+  const results = new PsychometricsResults(form, {definitions, mappings});
+  const {
+    mappings: {totalRow = 'total'},
+    scores: {
+      [totalRow]: {missed},
+    },
+  } = results;
+  // console.log(results);
+  const scoreIncomplete = form.querySelector('#score-incomplete');
+  const scoreCard = form.querySelector('#score-card');
+  scoreIncomplete && (scoreIncomplete.hidden = !(missed > 0));
+  scoreCard && (scoreCard.hidden = missed > 0);
+};
