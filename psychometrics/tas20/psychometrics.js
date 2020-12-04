@@ -1,6 +1,4 @@
-// import {definitions, mappings} from './model.js';
-// import {PsychometricsRenderer} from '../classes/psychometrics-renderer.js';
-// import {PsychometricsResults} from '../classes/psychometrics-results.js';
+//@ts-check
 
 const options = (async () => {
   const [id, definitions] = Object.entries(
@@ -32,6 +30,7 @@ const options = (async () => {
   return Object.freeze({definitions, mappings});
 })();
 
+/** @param {HTMLFormElement} form */
 export const renderForm = async form => {
   const {PsychometricsRenderer} = await import('../classes/psychometrics-renderer.js');
 
