@@ -1,7 +1,9 @@
 {
   "psychometrics": {
     "esq-r": {
-      "description": "Executive Skills Questionnaire-Revised (ESQ-R)",
+      "id": "psychometrics:esq-r",
+      "psychometric": "ESQ-R",
+      "description": "Executive Skills Questionnaire-Revised",
       "meta": {
         "links": {
           "overview": "https://embraceasd.com/executive-skills-questionnaire-revised/"
@@ -17,162 +19,162 @@
         }
       },
       "subscales": {
-        "Plan Management": {"items": {"length": 11}},
-        "Time Management": {"items": {"length": 4}},
-        "Organization": {"items": {"length": 3}},
-        "Emotional Regulation": {"items": {"length": 3}},
-        "Behavioral Regulation": {"items": {"length": 4}}
+        "plan-management": {"subscale": "Plan Management", "items": {"length": 11}},
+        "time-management": {"subscale": "Time Management", "items": {"length": 4}},
+        "organization": {"subscale": "Organization", "items": {"length": 3}},
+        "emotional-regulation": {"subscale": "Emotional Regulation", "items": {"length": 3}},
+        "behavioral-regulation": {"subscale": "Behavioral Regulation", "items": {"length": 4}}
       },
       "items": [
         {
           "number": 1,
           "prompt": "I act on impulse.",
           "scale": "standard",
-          "subscale": "Behavioral Regulation"
+          "subscale": "behavioral-regulation"
         },
         {
           "number": 2,
           "prompt": "I say things without thinking.",
           "scale": "standard",
-          "subscale": "Behavioral Regulation"
+          "subscale": "behavioral-regulation"
         },
         {
           "number": 3,
           "prompt": "I lose things.",
           "scale": "standard",
-          "subscale": "Organization"
+          "subscale": "organization"
         },
         {
           "number": 4,
           "prompt": "I have a short fuse.",
           "scale": "standard",
-          "subscale": "Emotional Regulation"
+          "subscale": "emotional-regulation"
         },
         {
           "number": 5,
           "prompt": "I get upset when things don’t go as planned.",
           "scale": "standard",
-          "subscale": "Emotional Regulation"
+          "subscale": "emotional-regulation"
         },
         {
           "number": 6,
           "prompt": "I run out of steam before finishing a task.",
           "scale": "standard",
-          "subscale": "Plan Management"
+          "subscale": "plan-management"
         },
         {
           "number": 7,
           "prompt": "It’s hard for me to set priorities when I have a lot of things to do.",
           "scale": "standard",
-          "subscale": "Plan Management"
+          "subscale": "plan-management"
         },
         {
           "number": 8,
           "prompt": "My desk or workspace is a mess.",
           "scale": "standard",
-          "subscale": "Organization"
+          "subscale": "organization"
         },
         {
           "number": 9,
           "prompt": "I have trouble keeping my house or room clean.",
           "scale": "standard",
-          "subscale": "Organization"
+          "subscale": "organization"
         },
         {
           "number": 10,
           "prompt": "I have trouble estimating how long it will take to complete a task.",
           "scale": "standard",
-          "subscale": "Time Management"
+          "subscale": "time-management"
         },
         {
           "number": 11,
           "prompt": "I’m slow at getting ready for school, work, or appointments.",
           "scale": "standard",
-          "subscale": "Time Management"
+          "subscale": "time-management"
         },
         {
           "number": 12,
           "prompt": "If the first solution to a problem doesn’t work, I have trouble thinking of a different one.",
           "scale": "standard",
-          "subscale": "Plan Management"
+          "subscale": "plan-management"
         },
         {
           "number": 13,
           "prompt": "I skip checking my work for mistakes, even when the stakes are high.",
           "scale": "standard",
-          "subscale": "Plan Management"
+          "subscale": "plan-management"
         },
         {
           "number": 14,
           "prompt": "I get annoyed when tasks are too hard.",
           "scale": "standard",
-          "subscale": "Plan Management"
+          "subscale": "plan-management"
         },
         {
           "number": 15,
           "prompt": "It’s hard for me to put aside fun activities to start things I know I need to do.",
           "scale": "standard",
-          "subscale": "Time Management"
+          "subscale": "time-management"
         },
         {
           "number": 16,
           "prompt": "I have trouble with tasks where I have to come up with my own ideas.",
           "scale": "standard",
-          "subscale": "Plan Management"
+          "subscale": "plan-management"
         },
         {
           "number": 17,
           "prompt": "It’s hard for me to tell how well I'm doing on a task.",
           "scale": "standard",
-          "subscale": "Plan Management"
+          "subscale": "plan-management"
         },
         {
           "number": 18,
           "prompt": "I have trouble reaching long-term goals.",
           "scale": "standard",
-          "subscale": "Plan Management"
+          "subscale": "plan-management"
         },
         {
           "number": 19,
           "prompt": "I “go with my gut” when making decisions.",
           "scale": "standard",
-          "subscale": "Behavioral Regulation"
+          "subscale": "behavioral-regulation"
         },
         {
           "number": 20,
           "prompt": "I get so wrapped up in what I’m doing that I forget about other things I need to do.",
           "scale": "standard",
-          "subscale": "Time Management"
+          "subscale": "time-management"
         },
         {
           "number": 21,
           "prompt": "Little things frustrate me.",
           "scale": "standard",
-          "subscale": "Emotional Regulation"
+          "subscale": "emotional-regulation"
         },
         {
           "number": 22,
           "prompt": "I have trouble getting back on track if I’m interrupted.",
           "scale": "standard",
-          "subscale": "Plan Management"
+          "subscale": "plan-management"
         },
         {
           "number": 23,
           "prompt": "I have trouble making a plan.",
           "scale": "standard",
-          "subscale": "Plan Management"
+          "subscale": "plan-management"
         },
         {
           "number": 24,
           "prompt": "I miss the big picture.",
           "scale": "standard",
-          "subscale": "Plan Management"
+          "subscale": "plan-management"
         },
         {
           "number": 25,
           "prompt": "I live for the moment.",
           "scale": "standard",
-          "subscale": "Behavioral Regulation"
+          "subscale": "behavioral-regulation"
         }
       ]
     }

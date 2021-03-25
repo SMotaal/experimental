@@ -1,7 +1,9 @@
 {
   "psychometrics": {
     "rbq-2a": {
-      "description": "Adult Repetitive Behaviours Questionnaire-2 (RBQ-2A)",
+      "id": "psychometrics:rbq-2a",
+      "psychometric": "RBQ-2A",
+      "description": "Adult Repetitive Behaviours Questionnaire v2",
       "meta": {
         "links": {
           "overview": "https://embraceasd.com/rbq-2a/"
@@ -15,6 +17,7 @@
           "15 or More Times Daily": 3
         }
       },
+      "scaling": false,
       "items": [
         {
           "number": 1,

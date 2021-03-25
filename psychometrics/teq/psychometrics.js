@@ -1,1 +1,0 @@
-../tas20/psychometrics.js

@@ -1,7 +1,9 @@
 {
   "psychometrics": {
     "sq-r": {
-      "description": "Systemizing Quotient-Revised (SQ-R)",
+      "id": "psychometrics:sq-r",
+      "psychometric": "SQ-R",
+      "description": "Systemizing Quotient-Revised",
       "meta": {
         "links": {
           "overview": "https://embraceasd.com/systemizing-quotient-revised/"

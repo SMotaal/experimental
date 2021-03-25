@@ -1,0 +1,162 @@
+{
+  "psychometrics": {
+    "eda-qa": {
+      "id": "psychometrics:eda-qa",
+      "psychometric": "EDA-QA",
+      "description": "The Extreme Demand Avoidance Questionnaire",
+      "meta": {
+        "links": {
+          "overview": "https://embraceasd.com/extreme-demand-avoidance-questionnaire/",
+          "source": "https://lizonions.files.wordpress.com/2019/09/180515_edaq-en.pdf"
+        }
+      },
+      "options": ["Not True", "Somewhat True", "Mostly True", "Very True"],
+      "scales": {
+        "standard": {
+          "Not True": 0,
+          "Somewhat True": 1,
+          "Mostly True": 2,
+          "Very True": 3
+        },
+        "inverted": {
+          "Not True": 3,
+          "Somewhat True": 2,
+          "Mostly True": 1,
+          "Very True": 0
+        }
+      },
+      "items": [
+        {
+          "number": 1,
+          "prompt": "I obsessively resist and avoid ordinary demands and requests",
+          "scale": "standard"
+        },
+        {
+          "number": 2,
+          "prompt": "I complain about illness or physical incapacity to avoid a request or demand",
+          "scale": "standard"
+        },
+        {
+          "number": 3,
+          "prompt": "I am driven by the need to be in charge",
+          "scale": "standard"
+        },
+        {
+          "number": 4,
+          "prompt": "I find everyday pressures (e.g. having to go on a routine trip/visit dentist) intolerably stressful",
+          "scale": "standard"
+        },
+        {
+          "number": 5,
+          "prompt": "I tell other people how they should behave, but do not feel these rules apply to me",
+          "scale": "standard"
+        },
+        {
+          "number": 6,
+          "prompt": "I mimic other people’s mannerisms and styles (e.g., use phrases adopted from other people to express myself to others)",
+          "scale": "standard"
+        },
+        {
+          "number": 7,
+          "prompt": "I have difficulty complying with demands and requests from others unless they are carefully presented",
+          "scale": "standard"
+        },
+        {
+          "number": 8,
+          "prompt": "I take on roles or characters (from TV/real life) and ‘act them out’",
+          "scale": "standard"
+        },
+        {
+          "number": 9,
+          "prompt": "I show little shame or embarrassment (e.g., I might throw a tantrum in public and not be embarrassed)",
+          "scale": "standard"
+        },
+        {
+          "number": 10,
+          "prompt": "I invent fantasy worlds or games and act them out",
+          "scale": "standard"
+        },
+        {
+          "number": 11,
+          "prompt": "I am good at getting around others and making them do as I want",
+          "scale": "standard"
+        },
+        {
+          "number": 12,
+          "prompt": "I am unaware or indifferent to the differences between myself and figures of authority (e.g. parents, teachers, and police)",
+          "scale": "standard"
+        },
+        {
+          "number": 13,
+          "prompt": "I will still sometimes have a ‘meltdown’ (e.g. scream, tantrum, hit, or kick) if I feel pressurized to do something",
+          "scale": "standard"
+        },
+        {
+          "number": 14,
+          "prompt": "I like to be told I have done a good job",
+          "scale": "inverted"
+        },
+        {
+          "number": 15,
+          "prompt": "I have a very rapidly changing mood (e.g., I can switch from affectionate to angry in an instant)",
+          "scale": "standard"
+        },
+        {
+          "number": 16,
+          "prompt": "I know what to do or say to upset particular people",
+          "scale": "standard"
+        },
+        {
+          "number": 17,
+          "prompt": "I blame or target a particular person/persons",
+          "scale": "standard"
+        },
+        {
+          "number": 18,
+          "prompt": "I deny things I have done, even if I am caught “red-handed”",
+          "scale": "standard"
+        },
+        {
+          "number": 19,
+          "prompt": "I can be distracted (preoccupied) ‘from within’ (i.e., absorbed in my own world)",
+          "scale": "standard"
+        },
+        {
+          "number": 20,
+          "prompt": "I make an effort to maintain my reputation with other people",
+          "scale": "inverted"
+        },
+        {
+          "number": 21,
+          "prompt": "I sometimes use outrageous or shocking behaviour to get out of doing something",
+          "scale": "standard"
+        },
+        {
+          "number": 22,
+          "prompt": "I have periods when I have extremely emotional responses (e.g. crying/giggling, becoming furious) to what others would think small events",
+          "scale": "standard"
+        },
+        {
+          "number": 23,
+          "prompt": "I ensure any social interaction is on my own terms",
+          "scale": "standard"
+        },
+        {
+          "number": 24,
+          "prompt": "I prefer to interact with others in an adopted role or communicate through props or objects",
+          "scale": "standard"
+        },
+        {
+          "number": 25,
+          "prompt": "I seek to quibble and change rules set by others",
+          "scale": "standard"
+        },
+        {
+          "number": 26,
+          "prompt": "I can be passive and difficult to engage",
+          "scale": "standard"
+        }
+      ]
+    }
+  }
+}

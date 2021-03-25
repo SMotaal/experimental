@@ -56,25 +56,77 @@ export class PsychometricsResults {
     this.update();
 
     {
+      const {
+        empty,
+        definitions,
+        definitions: {items = empty, scales = empty, subscales = empty},
+        entries,
+        mappings: {columnIds, rowIds, totalRow = 'total', totalColumn = 'score', idSeparator = ':'},
+      } = this;
+
+      const defaultScale = Object.keys(scales)[0];
+
+      const stats = {};
+      const weights = {};
+
       // const logs = [];
       const scores = {};
       const totals = {};
 
-      const {columnIds, rowIds, totalRow = 'total', totalColumn = 'score', idSeparator = ':'} = this.mappings;
+      stats[totalColumn] = {expected: items.length, required: 0, missed: 0, skipped: 0, scored: 0, ignored: 0};
+      // stats[totalRow] = {expected: undefined, required: 0, missed: 0, skipped: 0, scored: 0};
 
-      totals.missed = 0;
-      totals.scored = 0;
+      for (const {required = true} of items) {
+        if (required === true) stats[totalColumn].required++;
+      }
 
-      for (const {number, scale, subscale} of this.definitions.items) {
+      for (const subscale in subscales) {
+        const {items = empty, required} = subscales[subscale] || empty;
+        const expected =
+          items !== empty && items.length > 0 && ~~items.length === items.length ? Number(items.length) : undefined;
+
+        stats[subscale] = {
+          expected,
+          required:
+            required === true ? expected : required > 0 && ~~required === required ? Number(required) : undefined,
+          missed: 0,
+          skipped: 0,
+          scored: 0,
+          ignored: 0,
+        };
+      }
+
+      for (const {number, scale = defaultScale, required = true, subscale} of items) {
         const {[number]: columns = (scores[number] = {})} = scores;
-        const score = Number(this.definitions.scales[scale][/** @type {string} */ (this.entries.get(rowIds[number]))]);
-        isNaN(score) ? totals.missed++ : totals.scored++;
+        const score =
+          scale === null ? null : Number(scales[scale][/** @type {string} */ (entries.get(rowIds[number]))]);
         for (const columnKey in columnIds) {
           totals[columnKey] =
             (totals[columnKey] || 0) +
-            ((columns[columnKey] = columnKey === totalColumn || columnKey === subscale ? score : NaN) || 0);
+            ((columns[columnKey] =
+              columnKey !== totalColumn && columnKey !== subscale
+                ? NaN
+                : score === null
+                ? (stats[columnKey].scored++, stats[columnKey].ignored++, NaN)
+                : !isNaN(score)
+                ? (stats[columnKey].scored++, score)
+                : (stats[columnKey].skipped++,
+                  stats[columnKey].scored > stats[columnKey].required || stats[columnKey].missed++,
+                  NaN)) || 0);
         }
         Object.freeze(columns);
+      }
+
+      for (const columnKey in columnIds) {
+        const {scaling = false} = (columnKey === totalColumn ? definitions : subscales[columnKey]) || empty;
+        weights[columnKey] =
+          stats[columnKey].scored < stats[columnKey].required
+            ? NaN
+            : scaling === true
+            ? 1 / stats[columnKey].scored
+            : scaling === false || isNaN(scaling)
+            ? 1
+            : Number(scaling);
       }
 
       scores[totalRow] = totals;
@@ -84,7 +136,7 @@ export class PsychometricsResults {
         for (const columnKey in columnIds) {
           const columnId = columnIds[columnKey];
           const entryId = `${rowId}${idSeparator}${columnId}`;
-          const entryValue = scores[rowKey][columnKey];
+          const entryValue = scores[rowKey][columnKey] * (weights[columnKey] || 1);
           isNaN(entryValue) ? this.entries.delete(entryId) : this.entries.set(entryId, `${entryValue}`);
           // logs.push({rowKey, rowId, columnKey, columnId, entryId, entryValue});
         }
@@ -92,6 +144,8 @@ export class PsychometricsResults {
 
       this.scores = Object.freeze(scores);
       this.totals = Object.freeze(totals);
+      this.weights = Object.freeze(weights);
+      this.stats = Object.freeze(stats);
 
       // console.log('score', logs);
     }
@@ -143,3 +197,5 @@ export class PsychometricsResults {
     // console.log('update', logs);
   }
 }
+
+PsychometricsResults.prototype.empty = Object.freeze(/** @type {{} & Iterable<void>} */ ([]));

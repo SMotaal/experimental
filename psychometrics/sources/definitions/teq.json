@@ -3,7 +3,7 @@
     "teq": {
       "id": "psychometrics:teq",
       "psychometric": "TEQ",
-      "description": "Toronto Empathy Questionnaire (TEQ)",
+      "description": "Toronto Empathy Questionnaire",
       "meta": {
         "links": {
           "overview": "https://embraceasd.com/toronto-empathy-questionnaire/"
@@ -14,7 +14,6 @@
         "standard": {"Never": 0, "Rarely": 1, "Sometimes": 2, "Often": 3, "Always": 4},
         "inverted": {"Never": 4, "Rarely": 3, "Sometimes": 2, "Often": 1, "Always": 0}
       },
-      "subscales": {},
       "items": [
         {
           "number": 1,

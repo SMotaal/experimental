@@ -1,7 +1,9 @@
 {
   "psychometrics": {
     "aq": {
-      "description": "Autism Spectrum Quotient (AQ)",
+      "id": "psychometrics:aq",
+      "psychometric": "AQ",
+      "description": "Autism Spectrum Quotient",
       "meta": {
         "links": {
           "overview": "https://embraceasd.com/autism-spectrum-quotient/"
@@ -12,7 +14,7 @@
         "standard": {"Definitely Agree": 1, "Slightly Agree": 2, "Slightly Disagree": 3, "Definitely Disagree": 4},
         "inverted": {"Definitely Agree": 4, "Slightly Agree": 3, "Slightly Disagree": 2, "Definitely Disagree": 1}
       },
-      "subscales": {"AQ-10": {"items": {"length": 10}}},
+      "subscales": {"aq-10": {"subscale": "AQ-10", "items": {"length": 10}}},
       "items": [
         {
           "number": 1,

@@ -1,7 +1,9 @@
 {
   "psychometrics": {
     "esq": {
-      "description": "Executive Skills Questionnaire (ESQ)",
+      "id": "psychometrics:esq",
+      "psychometric": "ESQ",
+      "description": "Executive Skills Questionnaire",
       "meta": {
         "links": {
           "overview": "https://embraceasd.com/executive-skills-questionnaire/"
@@ -28,235 +30,235 @@
         }
       },
       "subscales": {
-        "Response Inhibition": {"items": {"length": 3}},
-        "Working Memory": {"items": {"length": 3}},
-        "Emotional Control": {"items": {"length": 3}},
-        "Task Initiation": {"items": {"length": 3}},
-        "Sustained Attention": {"items": {"length": 3}},
-        "Planning & Prioritization": {"items": {"length": 3}},
-        "Organization": {"items": {"length": 3}},
-        "Time Management": {"items": {"length": 3}},
-        "Flexibility": {"items": {"length": 3}},
-        "Metacognition": {"items": {"length": 3}},
-        "Goal-Directed Persistence": {"items": {"length": 3}},
-        "Stress Tolerance": {"items": {"length": 3}}
+        "response-inhibition": {"subscale": "Response Inhibition", "items": {"length": 3}, "scaling": true},
+        "working-memory": {"subscale": "Working Memory", "items": {"length": 3}, "scaling": true},
+        "emotional-control": {"subscale": "Emotional Control", "items": {"length": 3}, "scaling": true},
+        "task-initiation": {"subscale": "Task Initiation", "items": {"length": 3}, "scaling": true},
+        "sustained-attention": {"subscale": "Sustained Attention", "items": {"length": 3}, "scaling": true},
+        "planning-prioritization": {"subscale": "Planning & Prioritization", "items": {"length": 3}, "scaling": true},
+        "organization": {"subscale": "Organization", "items": {"length": 3}, "scaling": true},
+        "time-management": {"subscale": "Time Management", "items": {"length": 3}, "scaling": true},
+        "flexibility": {"subscale": "Flexibility", "items": {"length": 3}, "scaling": true},
+        "metacognition": {"subscale": "Metacognition", "items": {"length": 3}, "scaling": true},
+        "goal-directed-persistence": {"subscale": "Goal-Directed Persistence", "items": {"length": 3}, "scaling": true},
+        "stress-tolerance": {"subscale": "Stress Tolerance", "items": {"length": 3}, "scaling": true}
       },
       "items": [
         {
           "number": 1,
           "prompt": "I don’t jump to conclusions.",
           "scale": "standard",
-          "subscale": "Response Inhibition"
+          "subscale": "response-inhibition"
         },
         {
           "number": 2,
           "prompt": "I think before I speak.",
           "scale": "standard",
-          "subscale": "Response Inhibition"
+          "subscale": "response-inhibition"
         },
         {
           "number": 3,
           "prompt": "I don’t take action without having all the facts.",
           "scale": "standard",
-          "subscale": "Response Inhibition"
+          "subscale": "response-inhibition"
         },
         {
           "number": 4,
           "prompt": "I have a good memory for facts, dates, and details.",
           "scale": "standard",
-          "subscale": "Working Memory"
+          "subscale": "working-memory"
         },
         {
           "number": 5,
           "prompt": "I am very good at remembering the things I have committed to do.",
           "scale": "standard",
-          "subscale": "Working Memory"
+          "subscale": "working-memory"
         },
         {
           "number": 6,
           "prompt": "I seldom need reminders to complete tasks.",
           "scale": "standard",
-          "subscale": "Working Memory"
+          "subscale": "working-memory"
         },
         {
           "number": 7,
           "prompt": "My emotions seldom get in the way when performing on the job.",
           "scale": "standard",
-          "subscale": "Emotional Control"
+          "subscale": "emotional-control"
         },
         {
           "number": 8,
           "prompt": "Little things do not affect me emotionally or distract me from the task at hand.",
           "scale": "standard",
-          "subscale": "Emotional Control"
+          "subscale": "emotional-control"
         },
         {
           "number": 9,
           "prompt": "I can defer my personal feelings until after a task has been completed.",
           "scale": "standard",
-          "subscale": "Emotional Control"
+          "subscale": "emotional-control"
         },
         {
           "number": 10,
           "prompt": "No matter what the task, I believe in getting started as soon as possible.",
           "scale": "standard",
-          "subscale": "Task Initiation"
+          "subscale": "task-initiation"
         },
         {
           "number": 11,
           "prompt": "Procrastination is usually not a problem for me.",
           "scale": "standard",
-          "subscale": "Task Initiation"
+          "subscale": "task-initiation"
         },
         {
           "number": 12,
           "prompt": "I seldom leave tasks to the last minute.",
           "scale": "standard",
-          "subscale": "Task Initiation"
+          "subscale": "task-initiation"
         },
         {
           "number": 13,
           "prompt": "I find it easy to stay focused on my work.",
           "scale": "standard",
-          "subscale": "Sustained Attention"
+          "subscale": "sustained-attention"
         },
         {
           "number": 14,
           "prompt": "Once I start an assignment, I work diligently until it’s completed.",
           "scale": "standard",
-          "subscale": "Sustained Attention"
+          "subscale": "sustained-attention"
         },
         {
           "number": 15,
           "prompt": "Even when interrupted, I find it easy to get back and complete the job at hand.",
           "scale": "standard",
-          "subscale": "Sustained Attention"
+          "subscale": "sustained-attention"
         },
         {
           "number": 16,
           "prompt": "When I plan out my day, I identify priorities and stick to them.",
           "scale": "standard",
-          "subscale": "Planning & Prioritization"
+          "subscale": "planning-prioritization"
         },
         {
           "number": 17,
           "prompt": "When I have a lot to do, I can easily focus on the most important things.",
           "scale": "standard",
-          "subscale": "Planning & Prioritization"
+          "subscale": "planning-prioritization"
         },
         {
           "number": 18,
           "prompt": "I typically break big tasks down into subtasks and timelines.",
           "scale": "standard",
-          "subscale": "Planning & Prioritization"
+          "subscale": "planning-prioritization"
         },
         {
           "number": 19,
           "prompt": "I am an organized person.",
           "scale": "standard",
-          "subscale": "Organization"
+          "subscale": "organization"
         },
         {
           "number": 20,
           "prompt": "It is natural for me to keep my work area neat and organized.",
           "scale": "standard",
-          "subscale": "Organization"
+          "subscale": "organization"
         },
         {
           "number": 21,
           "prompt": "I am good at maintaining systems for organizing my work.",
           "scale": "standard",
-          "subscale": "Organization"
+          "subscale": "organization"
         },
         {
           "number": 22,
           "prompt": "At the end of the day, I’ve usually finished what I set out to do.",
           "scale": "standard",
-          "subscale": "Time Management"
+          "subscale": "time-management"
         },
         {
           "number": 23,
           "prompt": "I am good at estimating how long it takes to do something.",
           "scale": "standard",
-          "subscale": "Time Management"
+          "subscale": "time-management"
         },
         {
           "number": 24,
           "prompt": "I am usually on time for appointments and activities.",
           "scale": "standard",
-          "subscale": "Time Management"
+          "subscale": "time-management"
         },
         {
           "number": 25,
           "prompt": "I take unexpected events in stride.",
           "scale": "standard",
-          "subscale": "Flexibility"
+          "subscale": "flexibility"
         },
         {
           "number": 26,
           "prompt": "I easily adjust to changes in plans and priorities.",
           "scale": "standard",
-          "subscale": "Flexibility"
+          "subscale": "flexibility"
         },
         {
           "number": 27,
           "prompt": "I consider myself to be flexible and adaptive to change.",
           "scale": "standard",
-          "subscale": "Flexibility"
+          "subscale": "flexibility"
         },
         {
           "number": 28,
           "prompt": "I routinely evaluate my performance and devise methods for personal improvement.",
           "scale": "standard",
-          "subscale": "Metacognition"
+          "subscale": "metacognition"
         },
         {
           "number": 29,
           "prompt": "I am able to step back from a situation in order to make objective decisions.",
           "scale": "standard",
-          "subscale": "Metacognition"
+          "subscale": "metacognition"
         },
         {
           "number": 30,
           "prompt": "I “read” situations well and can adjust my behavior based on the reactions of others.",
           "scale": "standard",
-          "subscale": "Metacognition"
+          "subscale": "metacognition"
         },
         {
           "number": 31,
           "prompt": "I think of myself as being driven to meet my goals.",
           "scale": "standard",
-          "subscale": "Goal-Directed Persistence"
+          "subscale": "goal-directed-persistence"
         },
         {
           "number": 32,
           "prompt": "I easily give up immediate pleasures to work on long-term goals.",
           "scale": "standard",
-          "subscale": "Goal-Directed Persistence"
+          "subscale": "goal-directed-persistence"
         },
         {
           "number": 33,
           "prompt": "I believe in setting and achieving high levels of performance.",
           "scale": "standard",
-          "subscale": "Goal-Directed Persistence"
+          "subscale": "goal-directed-persistence"
         },
         {
           "number": 34,
           "prompt": "I enjoy working in a highly demanding, fast-paced environment.",
           "scale": "standard",
-          "subscale": "Stress Tolerance"
+          "subscale": "stress-tolerance"
         },
         {
           "number": 35,
           "prompt": "A certain amount of pressure helps me to perform at my best.",
           "scale": "standard",
-          "subscale": "Stress Tolerance"
+          "subscale": "stress-tolerance"
         },
         {
           "number": 36,
           "prompt": "Jobs that include a fair degree of unpredictability appeal to me.",
           "scale": "standard",
-          "subscale": "Stress Tolerance"
+          "subscale": "stress-tolerance"
         }
       ]
     }
