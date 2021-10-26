@@ -6,13 +6,14 @@
       "description": "Autism Spectrum Quotient",
       "meta": {
         "links": {
-          "overview": "https://embraceasd.com/autism-spectrum-quotient/"
+          "overview": "https://embraceasd.com/autism-spectrum-quotient/",
+          "article": "https://www.researchgate.net/publication/226202894_The_Autism-Spectrum_Quotient_AQ_Evidence_from_Asperger_SyndromeHigh-Functioning_Autism_Malesand_Females_Scientists_and_Mathematicians"
         }
       },
       "options": ["Definitely Agree", "Slightly Agree", "Slightly Disagree", "Definitely Disagree"],
       "scales": {
-        "standard": {"Definitely Agree": 1, "Slightly Agree": 2, "Slightly Disagree": 3, "Definitely Disagree": 4},
-        "inverted": {"Definitely Agree": 4, "Slightly Agree": 3, "Slightly Disagree": 2, "Definitely Disagree": 1}
+        "standard": {"Definitely Agree": 1, "Slightly Agree": 1, "Slightly Disagree": 0, "Definitely Disagree": 0},
+        "inverted": {"Definitely Agree": 0, "Slightly Agree": 0, "Slightly Disagree": 1, "Definitely Disagree": 1}
       },
       "subscales": {"aq-10": {"subscale": "AQ-10", "items": {"length": 10}}},
       "items": [
