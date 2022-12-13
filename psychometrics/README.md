@@ -8,10 +8,10 @@ This project intented for all the work to be open source and fully operational o
 
 1. This project was initally developed as part of my volunteering efforts in one of the Autism communities not disclosed here.
    - I'd like to express my gratitude and respect to everyone involved in such communities. I also especially want to recognize and thank those who go out of their way and often beyond their means trying to do what is meaningful to make a difference.
-   - Community memebers interested in including more psychometrics in this repository may reach out by opening an issue on this repository.
-2. This project includes data files for several psychometric instruments that generated based on existing psychometrics developed by many authors.
+   - Community memebers interested in including more psychometrics in this repository may reach out by [opening an issue on this repository](https://github.com/SMotaal/experimental/issues/new).
+2. This project includes data files for several existing psychometric instruments that were developed by their respective authors.
    - I'd like to express my gratitude and respect to all those authors. I'd also especially want to recognize and thank those who go out of their way to make their psychometrics publically available.
-   - Authors of psychometric instruments included in this repository may reach out to me by opening an issue on this repository and I will do everything necessary to remove all public facing artifacts for their respective instruments.
+   - Authors of psychometric instruments included in this repository may reach out to me [by opening an issue on this repository](https://github.com/SMotaal/experimental/issues/new) and I will do everything necessary to remove all public facing artifacts for their respective instruments.
 
 # Live Demos
 
