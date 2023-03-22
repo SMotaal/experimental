@@ -16,7 +16,7 @@ This project intented for all the work to be open source and fully operational o
    - I write code, I am always happy to leave it in the public domain so that others may reference it in their own implementation.
      > **Note**: This is experimental code and not code ready for production, this takes a lot more work.
    - I don't own nor license any of the tests in any capacity.
-     > **Note**: All included tests where found in open access publications.
+     > **Note**: All included tests were found in open access publications.
    - All ethical and legal responsibilities towards the original authors must be assumed by any individuals opting to reference this code.
      > **Note**: I cannot commit to nor assume any responsibility on the decisions made moving forward from here.
 
