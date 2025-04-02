@@ -87,6 +87,8 @@ export const initializeSource = async options => {
     ),
   });
 
+  options?.onload?.(options.definitions);
+
   return options;
   // return Object.freeze({definitions: options.definitions, mappings: options.mappings});
 };
