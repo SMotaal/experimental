@@ -3,7 +3,7 @@
     "arbi-q": {
       "id": "psychometrics:arbi-q",
       "psychometric": "ARBI-Q",
-      "description": "Adult Repetitive Behaviours Questionnaire v2",
+      "description": "Adult Repetitive Behaviors and Interests Questionnaire",
       "meta": {
         "links": {
           "overview": "https://www.researchgate.net/publication/389945655"
