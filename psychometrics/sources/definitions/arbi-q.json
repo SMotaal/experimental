@@ -1,0 +1,208 @@
+{
+  "psychometrics": {
+    "arbi-q": {
+      "id": "psychometrics:arbi-q",
+      "psychometric": "ARBI-Q",
+      "description": "Adult Repetitive Behaviours Questionnaire v2",
+      "meta": {
+        "links": {
+          "overview": "https://www.researchgate.net/publication/389945655"
+        }
+      },
+      "options": [
+        "Very untrue of me",
+        "Untrue of me",
+        "Slightly untrue of me",
+        "Slightly true of me",
+        "True of me",
+        "Very true of me"
+      ],
+      "scales": {
+        "standard": {
+          "Very untrue of me": 0,
+          "Untrue of me": 1,
+          "Slightly untrue of me": 2,
+          "Slightly true of me": 3,
+          "True of me": 4,
+          "Very true of me": 5
+        }
+      },
+      "subscales": {
+        "rigidity-sameness": {
+          "subscale": "Rigidity / Sameness",
+          "items": {
+            "length": 8
+          },
+          "scaling": true
+        },
+        "circumscribed-special-interests": {
+          "subscale": "Circumscribed (\u201cSpecial\u201d) Interests",
+          "items": {
+            "length": 5
+          },
+          "scaling": true
+        },
+        "sensory-motor-stimming": {
+          "subscale": "Sensory-Motor (\u201cStimming\u201d)",
+          "items": {
+            "length": 7
+          },
+          "scaling": true
+        },
+        "miscellaneous-compulsive": {
+          "subscale": "Miscellaneous/Compulsive",
+          "items": {
+            "length": 4
+          },
+          "scaling": true
+        }
+      },
+      "items": [
+        {
+          "number": 1,
+          "prompt": "I have a strong desire to keep the same schedule or routine every day.",
+          "scale": "standard",
+          "subscale": "rigidity-sameness"
+        },
+        {
+          "number": 2,
+          "prompt": "I have memorized a lot of facts about very specific or obscure topics.",
+          "scale": "standard",
+          "subscale": "circumscribed-special-interests"
+        },
+        {
+          "number": 3,
+          "prompt": "While I focus on other things, I tend to fidget repetitively with nearby objects (e.g., rolling them between my fingers, bending/folding them, or tearing them apart).",
+          "scale": "standard",
+          "subscale": "sensory-motor-stimming"
+        },
+        {
+          "number": 4,
+          "prompt": "Once I start doing something a certain way, I feel like it has to be done that way every time.",
+          "scale": "standard",
+          "subscale": "rigidity-sameness"
+        },
+        {
+          "number": 5,
+          "prompt": "I like to repeat certain activities over and over again until they feel \u201cjust right.\u201d",
+          "scale": "standard",
+          "subscale": "miscellaneous-compulsive"
+        },
+        {
+          "number": 6,
+          "prompt": "I often move my hands or fingers in ways that other people find unusual (e.g., flapping, flicking/twisting, tensing in certain positions).",
+          "scale": "standard",
+          "subscale": "sensory-motor-stimming"
+        },
+        {
+          "number": 7,
+          "prompt": "I get so caught up in my interests that I skip meals or other important activities.",
+          "scale": "standard",
+          "subscale": "circumscribed-special-interests"
+        },
+        {
+          "number": 8,
+          "prompt": "Unexpected changes of plans can cause me to break down emotionally.",
+          "scale": "standard",
+          "subscale": "rigidity-sameness"
+        },
+        {
+          "number": 9,
+          "prompt": "I frequently pick at my skin, bite my nails, and/or tug at my hair.",
+          "scale": "standard",
+          "subscale": "sensory-motor-stimming"
+        },
+        {
+          "number": 10,
+          "prompt": "I become upset when objects in my house are not \u201cin their place.\u201d",
+          "scale": "standard",
+          "subscale": "rigidity-sameness"
+        },
+        {
+          "number": 11,
+          "prompt": "I like to repeatedly say certain words or phrases I've heard before (e.g., lines from movies or things someone else said).",
+          "scale": "standard",
+          "subscale": "miscellaneous-compulsive"
+        },
+        {
+          "number": 12,
+          "prompt": "I am much more bothered than other people by small changes in my daily routine.",
+          "scale": "standard",
+          "subscale": "rigidity-sameness"
+        },
+        {
+          "number": 13,
+          "prompt": "I often look at objects in ways that most other people don't (e.g., out of the corner of my eye, at a very close distance).",
+          "scale": "standard",
+          "subscale": "sensory-motor-stimming"
+        },
+        {
+          "number": 14,
+          "prompt": "When I am interested in a topic, I try to learn as much as I possibly can about it.",
+          "scale": "standard",
+          "subscale": "circumscribed-special-interests"
+        },
+        {
+          "number": 15,
+          "prompt": "I have a hard time when I can't do something the way I am used to doing it.",
+          "scale": "standard",
+          "subscale": "rigidity-sameness"
+        },
+        {
+          "number": 16,
+          "prompt": "I like to explore objects by running my hands across them.",
+          "scale": "standard",
+          "subscale": "sensory-motor-stimming"
+        },
+        {
+          "number": 17,
+          "prompt": "Once I get started talking about my interests, I have a hard time changing the subject or letting others talk.",
+          "scale": "standard",
+          "subscale": "circumscribed-special-interests"
+        },
+        {
+          "number": 18,
+          "prompt": "When I am thinking, I like to pace back and forth or walk in a specific pattern.",
+          "scale": "standard",
+          "subscale": "sensory-motor-stimming"
+        },
+        {
+          "number": 19,
+          "prompt": "I become very upset when other people bend or break established rules.",
+          "scale": "standard",
+          "subscale": "rigidity-sameness"
+        },
+        {
+          "number": 20,
+          "prompt": "I often feel the need to do or say specific things a certain number of times (e.g., locking the door exactly three times).",
+          "scale": "standard",
+          "subscale": "miscellaneous-compulsive"
+        },
+        {
+          "number": 21,
+          "prompt": "When I am stressed or overstimulated, I like to calm myself down by making repetitive movements (e.g., spinning around, rocking back and forth).",
+          "scale": "standard",
+          "subscale": "sensory-motor-stimming"
+        },
+        {
+          "number": 22,
+          "prompt": "Other people get frustrated by how \u201cstuck in my ways\u201d (inflexible) I am.",
+          "scale": "standard",
+          "subscale": "rigidity-sameness"
+        },
+        {
+          "number": 23,
+          "prompt": "I spend as much of my free time as possible engaging in a few specific activities.",
+          "scale": "standard",
+          "subscale": "circumscribed-special-interests"
+        },
+        {
+          "number": 24,
+          "prompt": "I become fixated on certain thoughts or ideas and can't get my mind off them.",
+          "scale": "standard",
+          "subscale": "miscellaneous-compulsive"
+        }
+      ]
+    }
+  }
+}
