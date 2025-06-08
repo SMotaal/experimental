@@ -1,0 +1,231 @@
+{
+  "psychometrics": {
+    "aadd-v5.0": {
+      "id": "psychometrics:aadd-v5.0",
+      "psychometric": "AADD-V5.0",
+      "description": "Jasper/Goldberg Adult ADD Screening Examination - Version 5.0",
+      "meta": {
+        "links": {
+          "overview": "https://cineicc.uc.pt/jasper-goldberg-adult-add-screening-examination-add-se/",
+          "source": "https://www.northbaycounselling.com/wp-content/uploads/2022/05/adultaddscreening.pdf"
+        }
+      },
+      "options": [
+        "Not at all",
+        "Just a little",
+        "Somewhat",
+        "Moderately",
+        "Quite a lot",
+        "Very much"
+      ],
+      "scales": {
+        "standard": {
+          "Not at all": 0,
+          "Just a little": 1,
+          "Somewhat": 2,
+          "Moderately": 3,
+          "Quite a lot": 4,
+          "Very much": 5
+        }
+      },
+      "scoring": {
+        "method": "summation"
+      },
+      "items": [
+        {
+          "number": 1,
+          "prompt": "At home, work, or school, I find my mind wandering from tasks that are uninteresting or difficult.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 2,
+          "prompt": "I find it difficult to read written material unless it is very interesting or very easy.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 3,
+          "prompt": "Especially in groups, I find it hard to stay focused on what is being said in conversations.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 4,
+          "prompt": "I have a quick temper… a short fuse.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 5,
+          "prompt": "I am irritable, and get upset by minor annoyances.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 6,
+          "prompt": "I say things without thinking, and later regret having said them.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 7,
+          "prompt": "I make quick decisions without thinking enough about their possible bad results.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 8,
+          "prompt": "My relationships with people are made difficult by my tendency to talk first and think later.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 9,
+          "prompt": "My moods have highs and lows.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 10,
+          "prompt": "I have trouble planning in what order to do a series of tasks or activities.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 11,
+          "prompt": "I easily become upset.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 12,
+          "prompt": "I seem to be thin skinned and many things upset me.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 13,
+          "prompt": "I almost always am on the go.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 14,
+          "prompt": "I am more comfortable when moving than when sitting still.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 15,
+          "prompt": "In conversations, I start to answer questions before the questions have been fully asked.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 16,
+          "prompt": "I usually work on more than one project at a time, and fail to finish many of them.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 17,
+          "prompt": "There is a lot of \u201cstatic\u201d or \u201cchatter\u201d in my head.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 18,
+          "prompt": "Even when sitting quietly, I am usually moving my hands or feet.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 19,
+          "prompt": "In group activities it is hard for me to wait my turn.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 20,
+          "prompt": "My mind gets so cluttered that it is hard for it to function.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 21,
+          "prompt": "My thoughts bounce around as if my mind is a pinball machine.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 22,
+          "prompt": "My brain feels as if it is a television set with all the channels going at once.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 23,
+          "prompt": "I am unable to stop daydreaming.",
+          "scale": "standard",
+          "required": true
+        },
+        {
+          "number": 24,
+          "prompt": "I am distressed by the disorganized way my brain works.",
+          "scale": "standard",
+          "required": true
+        }
+      ],
+      "validation": {
+        "tests": [
+          {
+            "test": "Scoring",
+            "cases": [
+              {
+                "input": {
+                  "responses": [
+                    "Not at all",
+                    "Just a little",
+                    "Somewhat",
+                    "Moderately",
+                    "Quite a lot",
+                    "Very much",
+                    "Not at all",
+                    "Just a little",
+                    "Somewhat",
+                    "Moderately",
+                    "Quite a lot",
+                    "Very much",
+                    "Not at all",
+                    "Just a little",
+                    "Somewhat",
+                    "Moderately",
+                    "Quite a lot",
+                    "Very much",
+                    "Not at all",
+                    "Just a little",
+                    "Somewhat",
+                    "Moderately",
+                    "Quite a lot",
+                    "Very much",
+                    "Not at all",
+                    "Just a little",
+                    "Somewhat",
+                    "Moderately",
+                    "Quite a lot"
+                  ]
+                },
+                "expected": {
+                  "scores": {
+                    "aadd-v5.0": 70
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
