@@ -3,7 +3,7 @@
     "dass-21": {
       "id": "psychometrics:dass-21",
       "psychometric": "DASS-21",
-      "description": "Depression Anxiety Stress Scales-21",
+      "description": "Depression Anxiety Stress Scales 21",
       "meta": {
         "links": {
           "overview": "https://pubmed.ncbi.nlm.nih.gov/22930477/",
