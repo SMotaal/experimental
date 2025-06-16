@@ -7,7 +7,7 @@ import http from 'http';
 import url from 'url';
 
 const TimingAttackProtectionSeconds = 0.025;
-const SleepTiming = 0.15; // seconds
+const SleepTiming = 0.15 / 2; // seconds
 
 var IOLoopCounter = 0;
 
